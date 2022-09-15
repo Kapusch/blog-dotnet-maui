@@ -10,9 +10,12 @@ namespace NightClub.Views
     {
         public HomePage()
         {
-            On<iOS>().SafeAreaInsets();
+            #region Page configuration
 
+            On<iOS>().SafeAreaInsets();
             NavigationPage.SetHasNavigationBar(this, false);
+
+            #endregion
 
             BackgroundColor = Colors.Black;
 

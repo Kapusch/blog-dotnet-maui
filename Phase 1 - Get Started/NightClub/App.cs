@@ -8,7 +8,7 @@ public class App : Application
     {
         Console.WriteLine("[NightClub] App - Constructor");
 
-        MainPage = new HomePage();
+        MainPage = new ContentPage();
     }
 
     /// <summary>
@@ -19,6 +19,8 @@ public class App : Application
         base.OnStart();
 
         Console.WriteLine("[NightClub] App - OnStart");
+
+        MainPage = new HomePage();
     }
 
     /// <summary>

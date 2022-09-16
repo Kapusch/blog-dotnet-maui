@@ -10,12 +10,7 @@ namespace NightClub.Views
     {
         public HomePage()
         {
-            #region Page configuration
-
-            On<iOS>().SafeAreaInsets();
-            NavigationPage.SetHasNavigationBar(this, false);
-
-            #endregion
+            Console.WriteLine("[NightClub] HomePage - Constructor");
 
             BackgroundColor = Colors.Black;
 
@@ -46,5 +41,19 @@ namespace NightClub.Views
         } .Bold() .Paddings(50, 2, 50, 2) .CenterHorizontal();
 
         #endregion
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            Console.WriteLine("[NightClub] HomePage - OnAppearing");
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            Console.WriteLine("[NightClub] HomePage - OnDisappearing");
+        }
     }
 }

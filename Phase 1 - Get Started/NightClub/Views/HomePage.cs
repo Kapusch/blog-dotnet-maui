@@ -42,6 +42,9 @@ namespace NightClub.Views
 
         #endregion
 
+        /// <summary>
+        /// Event raised when HomePage appears on screen
+        /// </summary>
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -49,6 +52,9 @@ namespace NightClub.Views
             Console.WriteLine("[NightClub] HomePage - OnAppearing");
         }
 
+        /// <summary>
+        /// Event raised when HomePage disappears from screen
+        /// </summary>
         protected override void OnDisappearing()
         {
             base.OnDisappearing();

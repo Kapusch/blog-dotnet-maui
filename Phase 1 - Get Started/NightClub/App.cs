@@ -11,6 +11,9 @@ public class App : Application
         MainPage = new HomePage();
     }
 
+    /// <summary>
+    /// Event raised when running a fresh app start (e.g. after phone is turned on)
+    /// </summary>
     protected override void OnStart()
     {
         base.OnStart();
@@ -18,6 +21,9 @@ public class App : Application
         Console.WriteLine("[NightClub] App - OnStart");
     }
 
+    /// <summary>
+    /// Event raised when the app is not focus anymore (e.g. when switching to another app)
+    /// </summary>
     protected override void OnSleep()
     {
         base.OnSleep();
@@ -25,6 +31,9 @@ public class App : Application
         Console.WriteLine("[NightClub] App - OnSleep");
     }
 
+    /// <summary>
+    /// Event raised when the app goes to the foreground (e.g. when returning to the app)
+    /// </summary>
     protected override void OnResume()
     {
         base.OnResume();

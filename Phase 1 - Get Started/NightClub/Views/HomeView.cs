@@ -2,6 +2,7 @@
 using CommunityToolkit.Maui.Markup;
 using Microsoft.Maui.Controls.PlatformConfiguration;
 using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
+using NightClub.ViewModels;
 using NavigationPage = Microsoft.Maui.Controls.NavigationPage;
 
 namespace NightClub.Views
@@ -11,6 +12,8 @@ namespace NightClub.Views
         public HomeView()
         {
             Console.WriteLine("[NightClub] HomePage - Constructor");
+
+            BindingContext = new HomeViewModel();
 
             BackgroundColor = Colors.Black;
 
@@ -38,7 +41,8 @@ namespace NightClub.Views
             TextColor = Colors.White,
             BackgroundColor = Colors.Magenta,
             CornerRadius = 10
-        } .Bold() .Paddings(50, 2, 50, 2) .CenterHorizontal();
+        } .Bold() .Paddings(50, 2, 50, 2) .CenterHorizontal()
+            .BindCommand("EnterCommand");
 
         #endregion
 

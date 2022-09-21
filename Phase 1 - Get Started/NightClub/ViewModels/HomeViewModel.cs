@@ -11,7 +11,7 @@ namespace NightClub.ViewModels
         }
 
         [RelayCommand]
-        void EnterCommand()
+        void Enter()
         {
             Console.WriteLine("[NightClub] HomePage - EnterCommand has been executed from the UI");
         }

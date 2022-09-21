@@ -6,9 +6,9 @@ using NavigationPage = Microsoft.Maui.Controls.NavigationPage;
 
 namespace NightClub.Views
 {
-    public class HomePage : ContentPage
+    public class HomeView : ContentPage
     {
-        public HomePage()
+        public HomeView()
         {
             Console.WriteLine("[NightClub] HomePage - Constructor");
 

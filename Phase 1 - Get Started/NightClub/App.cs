@@ -20,7 +20,7 @@ public class App : Application
 
         Console.WriteLine("[NightClub] App - OnStart");
 
-        MainPage = new HomePage();
+        MainPage = new HomeView();
     }
 
     /// <summary>

@@ -1,6 +1,7 @@
 ﻿using System;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using NightClub.Views;
 
 namespace NightClub.ViewModels
 {
@@ -13,10 +14,8 @@ namespace NightClub.ViewModels
         [RelayCommand]
         async Task Enter()
         {
-            await Application.Current.MainPage.DisplayAlert(
-                "Well Done !",
-                "You have successfully reached the end of this chapter.",
-                "Next !");
+            await Application.Current.MainPage.Navigation.PushAsync(
+                new MusicPlayerView());
         }
     }
 }

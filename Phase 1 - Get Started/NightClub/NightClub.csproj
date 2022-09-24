@@ -41,7 +41,7 @@
 
 	<!-- NuGet Packages -->
 	<ItemGroup>
-	  <PackageReference Include="CommunityToolkit.Maui.Markup" Version="1.1.0" />
+	  <PackageReference Include="CommunityToolkit.Maui.Markup" Version="1.1.1" />
 	  <PackageReference Include="CommunityToolkit.Maui" Version="1.3.0" />
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 	</ItemGroup>

@@ -15,6 +15,7 @@ namespace NightClub.Views
 
             BindingContext = new HomeViewModel();
 
+            NavigationPage.SetHasNavigationBar(this, false);
             BackgroundColor = Colors.Black;
 
             Content = new VerticalStackLayout

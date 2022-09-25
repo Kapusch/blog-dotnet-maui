@@ -1,5 +1,6 @@
-﻿namespace NightClub.Views;
+﻿using CommunityToolkit.Maui.Markup;
 
+namespace NightClub.Views;
 public class MusicPlayerView : ContentPage
 {
 	public MusicPlayerView()

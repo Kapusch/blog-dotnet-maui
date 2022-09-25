@@ -3,13 +3,33 @@
 public class MusicPlayerView : ContentPage
 {
 	public MusicPlayerView()
-	{
-		Content = new VerticalStackLayout
-		{
-			Children = {
-				new Label { HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, Text = "Welcome to .NET MAUI!"
-				}
-			}
-		};
-	}
+    {
+        Console.WriteLine("[NightClub] MusicPlayerView - Constructor");
+
+        NavigationPage.SetHasNavigationBar(this, false);
+        BackgroundColor = Colors.Black;
+    }
+
+    #region Controls
+    #endregion
+
+    /// <summary>
+    /// Event raised when MusicPlayerView appears on screen
+    /// </summary>
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        Console.WriteLine("[NightClub] MusicPlayerView - OnAppearing");
+    }
+
+    /// <summary>
+    /// Event raised when MusicPlayerView disappears from screen
+    /// </summary>
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+
+        Console.WriteLine("[NightClub] MusicPlayerView - OnDisappearing");
+    }
 }

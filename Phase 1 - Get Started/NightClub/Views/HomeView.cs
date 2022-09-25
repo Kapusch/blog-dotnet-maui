@@ -43,6 +43,8 @@ public class HomeView : ContentPage
 
     #endregion
 
+    #region Events
+
     /// <summary>
     /// Event raised when HomePage appears on screen
     /// </summary>
@@ -62,4 +64,6 @@ public class HomeView : ContentPage
 
         Console.WriteLine("[NightClub] HomePage - OnDisappearing");
     }
+
+    #endregion
 }

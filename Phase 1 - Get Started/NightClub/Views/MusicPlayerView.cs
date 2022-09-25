@@ -7,7 +7,6 @@ public class MusicPlayerView : ContentPage
         Console.WriteLine("[NightClub] MusicPlayerView - Constructor");
 
         NavigationPage.SetHasNavigationBar(this, false);
-        BackgroundColor = Colors.Black;
     }
 
     #region Controls

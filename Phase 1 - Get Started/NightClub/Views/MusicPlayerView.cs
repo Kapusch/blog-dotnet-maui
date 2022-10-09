@@ -55,7 +55,26 @@ public class MusicPlayerView : ContentPage
         {
             ElapsedTime.Row(0).Column(1),
             TimeTracker.Row(0).Column(2).ColumnSpan(3),
-            RemainingTime.Row(0).Column(5)
+            RemainingTime.Row(0).Column(5),
+
+            RepeatOnceButton.Row(1).Column(1),
+            MediaControlLayout.Row(1).Column(2).ColumnSpan(3),
+            DownloadButton.Row(1).Column(5),
+        }
+    };
+
+    Grid MediaControlLayout => new Grid
+    {
+        ColumnDefinitions = Columns.Define(
+                Stars(30),
+                Stars(40),
+                Stars(30)),
+        ColumnSpacing = 0,
+        Children =
+        {
+            SkipPreviousButton.Column(0),
+            PlayButton.Column(1),
+            SkipNextButton.Column(2)
         }
     };
 
@@ -79,17 +98,6 @@ public class MusicPlayerView : ContentPage
         Value = 20
     };
 
-    /*
-            <Slider
-                x:Name="timeTracker"
-                Grid.Row="0"
-                Grid.Column="1"
-                DragCompleted="TimeTracker_DragCompleted"
-                DragStarted="TimeTracker_DragStarted"
-                Maximum="{Binding Duration, Converter={StaticResource TimeSpanConverter}, Source={x:Reference mediaPlayer}}"
-                MaximumTrackColor="{StaticResource Black}"
-                MinimumTrackColor="{StaticResource LightSalmonPink}" />*/
-
     Label RemainingTime => new Label
     {
         FontSize = 14,
@@ -101,7 +109,46 @@ public class MusicPlayerView : ContentPage
 
     #region Media Control Panel
 
+    ImageButton RepeatOnceButton => new ImageButton
+    {
+        CornerRadius = 5,
+        HeightRequest = 25,
+        WidthRequest = 25,
+        Source = "repeat_once",
+        BackgroundColor = Colors.Black
+    };
 
+    ImageButton SkipPreviousButton => new ImageButton
+    {
+        HeightRequest = 75,
+        WidthRequest = 75,
+        Source = "skip_previous"
+    };
+
+    ImageButton PlayButton => new ImageButton
+    {
+        CornerRadius = 50,
+        HeightRequest = 100,
+        WidthRequest = 100,
+        Source = "play",
+        BackgroundColor = Colors.Black
+    };
+
+    ImageButton SkipNextButton => new ImageButton
+    {
+        HeightRequest = 75,
+        WidthRequest = 75,
+        Source = "skip_next"
+    };
+
+    ImageButton DownloadButton => new ImageButton
+    {
+        CornerRadius = 5,
+        HeightRequest = 25,
+        WidthRequest = 25,
+        Source = "download",
+        BackgroundColor = Colors.Black
+    };
 
     #endregion
 

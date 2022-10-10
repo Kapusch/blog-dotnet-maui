@@ -28,8 +28,7 @@ public class HomeView : ContentPage
 
     Image NightClubImage => new Image
     {
-        // .NET MAUI converts SVG files to PNG files.
-        Source = "night_club.png"
+        Source = "night_club"
     };
 
     Button EnterButton => new Button

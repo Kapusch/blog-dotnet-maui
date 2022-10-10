@@ -60,6 +60,9 @@ public class MusicPlayerView : ContentPage
             RepeatOnceButton.Row(1).Column(1),
             MediaControlLayout.Row(1).Column(2).ColumnSpan(3),
             DownloadButton.Row(1).Column(5),
+
+            MuteButton.Row(2).Column(1),
+            VolumeTracker.Row(2).Column(2).ColumnSpan(3),
         }
     };
 
@@ -154,7 +157,21 @@ public class MusicPlayerView : ContentPage
 
     #region Volume Tracker
 
+    ImageButton MuteButton => new ImageButton
+    {
+        HeightRequest = 25,
+        WidthRequest = 25,
+        Source = "volume_medium"
+    };
 
+    Slider VolumeTracker => new Slider
+    {
+        Minimum = 0,
+        MinimumTrackColor = Colors.Black,
+        Maximum = 100,
+        MaximumTrackColor = Colors.Gray,
+        Value = 60
+    };
 
     #endregion
 

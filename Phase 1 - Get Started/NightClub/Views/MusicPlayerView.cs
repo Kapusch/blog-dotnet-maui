@@ -95,25 +95,38 @@ public class MusicPlayerView : ContentPage
     Label ElapsedTime => new Label
     {
         FontSize = 14,
-        Text = "0:36",
         TextColor = Colors.White
-    }.TextCenter();
+    } .TextCenter()
+      .Bind(
+        Label.TextProperty,
+        "MediaPlayer.CurrentPosition",
+        BindingMode.OneWay,
+        convert: (double elapsedTime) => TimeSpan.FromSeconds(elapsedTime),
+        stringFormat: "{0:mm\\:ss}");
 
     Slider TimeTracker => new Slider
     {
         Minimum = 0,
         MinimumTrackColor = Colors.LightSalmon,
-        Maximum = 100,
-        MaximumTrackColor = Colors.Black,
-        Value = 20
-    };
+        MaximumTrackColor = Colors.Black
+    } .Bind(
+        Slider.MaximumProperty,
+        "MediaPlayer.Duration")
+      .Bind(
+        Slider.ValueProperty,
+        "MediaPlayer.CurrentPosition");
 
     Label RemainingTime => new Label
     {
         FontSize = 14,
-        Text = "2:57",
         TextColor = Colors.White
-    }.TextCenter();
+    } .TextCenter()
+      .Bind(
+        Label.TextProperty,
+        "MediaPlayer.Duration",
+        BindingMode.OneWay,
+        convert: (double duration) => TimeSpan.FromSeconds(duration),
+        stringFormat: "{0:mm\\:ss}");
 
     #endregion
 

@@ -1,4 +1,6 @@
-﻿using CommunityToolkit.Maui.Markup;
+﻿using CommunityToolkit.Maui.Converters;
+using CommunityToolkit.Maui.Markup;
+using static CommunityToolkit.Maui.Converters.CompareConverter<object>;
 using static CommunityToolkit.Maui.Markup.GridRowsColumns;
 
 namespace NightClub.Views;
@@ -10,6 +12,8 @@ public class MusicPlayerView : ContentPage
 
         NavigationPage.SetHasNavigationBar(this, false);
         BackgroundColor = Colors.DimGray;
+
+        MuteButton.Triggers.Add(VolumeOffTrigger);
 
         Content = new Grid
         {
@@ -157,14 +161,27 @@ public class MusicPlayerView : ContentPage
 
     #region Volume Tracker
 
-    ImageButton MuteButton => new ImageButton
+    ImageButton MuteButton = new ImageButton
     {
         HeightRequest = 25,
         WidthRequest = 25,
         Source = "volume_medium"
     };
 
-    Slider VolumeTracker => new Slider
+    #region Mute Button Visual States
+
+    DataTrigger VolumeOffTrigger => new(typeof(ImageButton))
+    {
+        Binding = new Binding(nameof(Slider.Value), source: VolumeTracker),
+        Value = 0d,
+        Setters = {
+                new Setter { Property = ImageButton.SourceProperty, Value = "volume_off" }
+            }
+    };
+
+    #endregion
+
+    Slider VolumeTracker = new Slider
     {
         Minimum = 0,
         MinimumTrackColor = Colors.Black,

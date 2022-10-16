@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Maui.Converters;
 using CommunityToolkit.Maui.Markup;
+using NightClub.ViewModels;
 using static CommunityToolkit.Maui.Converters.CompareConverter<object>;
 using static CommunityToolkit.Maui.Markup.GridRowsColumns;
 
@@ -9,6 +10,8 @@ public class MusicPlayerView : ContentPage
 	public MusicPlayerView()
     {
         Console.WriteLine("[NightClub] MusicPlayerView - Constructor");
+
+        BindingContext = new MusicPlayerViewModel();
 
         NavigationPage.SetHasNavigationBar(this, false);
         BackgroundColor = Colors.DimGray;

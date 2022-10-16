@@ -11,12 +11,16 @@ namespace NightClub.ViewModels
         {
         }
 
+        #region Commands
+
         [RelayCommand]
         async Task Enter()
         {
             await Application.Current.MainPage.Navigation.PushAsync(
                 new MusicPlayerView());
         }
+
+        #endregion
     }
 }
 

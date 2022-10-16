@@ -142,7 +142,7 @@ public class MusicPlayerView : ContentPage
         WidthRequest = 100,
         Source = "play",
         BackgroundColor = Colors.Black
-    };
+    } .BindCommand("PlayCommand");
 
     ImageButton SkipNextButton => new ImageButton
     {

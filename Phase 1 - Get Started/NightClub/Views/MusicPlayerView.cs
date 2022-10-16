@@ -16,6 +16,7 @@ public class MusicPlayerView : ContentPage
         NavigationPage.SetHasNavigationBar(this, false);
         BackgroundColor = Colors.DimGray;
 
+        //InitPlayButton();
         InitMuteButton();
 
         Content = new Grid
@@ -153,9 +154,40 @@ public class MusicPlayerView : ContentPage
         CornerRadius = 50,
         HeightRequest = 100,
         WidthRequest = 100,
-        Source = "play",
         BackgroundColor = Colors.Black
-    } .BindCommand("PlayCommand");
+    } .BindCommand("PlayCommand")
+      .Bind(
+        ImageButton.SourceProperty,
+        "MediaPlayer.IsPlaying",
+        convert: (bool isPlaying) => isPlaying ? "pause" : "play");
+
+    //#region Play Button Visual States
+
+    //DataTrigger PlayTrigger => new(typeof(ImageButton))
+    //{
+    //    Binding = new Binding("MediaPlayer.IsPlaying"),
+    //    Value = true,
+    //    Setters = {
+    //            new Setter { Property = ImageButton.SourceProperty, Value = "pause" }
+    //        }
+    //};
+
+    //DataTrigger PauseTrigger => new(typeof(ImageButton))
+    //{
+    //    Binding = new Binding("MediaPlayer.IsPlaying"),
+    //    Value = false,
+    //    Setters = {
+    //            new Setter { Property = ImageButton.SourceProperty, Value = "play" }
+    //        }
+    //};
+
+    //void InitPlayButton()
+    //{
+    //    PlayButton.Triggers.Add(PlayTrigger);
+    //    PlayButton.Triggers.Add(PauseTrigger);
+    //}
+
+    //#endregion
 
     ImageButton SkipNextButton => new ImageButton
     {

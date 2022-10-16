@@ -13,7 +13,7 @@ public class MusicPlayerView : ContentPage
         NavigationPage.SetHasNavigationBar(this, false);
         BackgroundColor = Colors.DimGray;
 
-        MuteButton.Triggers.Add(VolumeOffTrigger);
+        InitMuteButton();
 
         Content = new Grid
         {
@@ -164,8 +164,7 @@ public class MusicPlayerView : ContentPage
     ImageButton MuteButton = new ImageButton
     {
         HeightRequest = 25,
-        WidthRequest = 25,
-        Source = "volume_medium"
+        WidthRequest = 25
     };
 
     #region Mute Button Visual States
@@ -178,6 +177,58 @@ public class MusicPlayerView : ContentPage
                 new Setter { Property = ImageButton.SourceProperty, Value = "volume_off" }
             }
     };
+
+    MultiTrigger VolumeLowTrigger = new(typeof(ImageButton))
+    {
+        Setters = {
+                new Setter { Property = ImageButton.SourceProperty, Value = "volume_low" }
+            }
+    };
+
+    MultiTrigger VolumeMediumTrigger = new(typeof(ImageButton))
+    {
+        Setters = {
+                new Setter { Property = ImageButton.SourceProperty, Value = "volume_medium" }
+            }
+    };
+
+    MultiTrigger VolumeHighTrigger = new(typeof(ImageButton))
+    {
+        Setters = {
+                new Setter { Property = ImageButton.SourceProperty, Value = "volume_high" }
+            }
+    };
+
+    void InitMuteButton()
+    {
+        BindingCondition CreateRangeCondition(OperatorType comparison, double value) => new BindingCondition
+        {
+            Binding = new Binding(
+                        nameof(Slider.Value),
+                        source: VolumeTracker,
+                        converter: new CompareConverter
+                        {
+                            ComparisonOperator = comparison,
+                            ComparingValue = value
+                        }),
+            Value = true
+        };
+
+        BindingCondition CreateMinRangeCondition(double value) => CreateRangeCondition(OperatorType.GreaterOrEqual, value);
+        BindingCondition CreateMaxRangeCondition(double value) => CreateRangeCondition(OperatorType.SmallerOrEqual, value);
+
+        VolumeLowTrigger.Conditions.Add(CreateMinRangeCondition(1d));
+        VolumeLowTrigger.Conditions.Add(CreateMaxRangeCondition(15d));
+        VolumeMediumTrigger.Conditions.Add(CreateMinRangeCondition(16d));
+        VolumeMediumTrigger.Conditions.Add(CreateMaxRangeCondition(50d));
+        VolumeHighTrigger.Conditions.Add(CreateMinRangeCondition(51d));
+        VolumeHighTrigger.Conditions.Add(CreateMaxRangeCondition(100d));
+
+        MuteButton.Triggers.Add(VolumeOffTrigger);
+        MuteButton.Triggers.Add(VolumeLowTrigger);
+        MuteButton.Triggers.Add(VolumeMediumTrigger);
+        MuteButton.Triggers.Add(VolumeHighTrigger);
+    }
 
     #endregion
 

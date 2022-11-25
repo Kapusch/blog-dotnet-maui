@@ -1,0 +1,81 @@
+.post-reward {
+  padding: 1rem;
+  text-align: center;
+
+  &~.post-footer {
+    margin-top: 0;
+  }
+
+  &:has(.reward-ways:empty) {
+    display: none;
+  }
+
+  .comment {
+    margin: 0.5rem 0;
+    font-weight: 500;
+  }
+
+  .reward-input:checked~.reward-ways {
+    display: block;
+  }
+
+  .reward-button {
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+    color: lighten($reward-color, 5%);
+    border: 2px solid lighten($reward-color, 10%);
+    border-radius: $global-border-radius;
+    @include transition(all 0.3s ease-out);
+    padding: 0.6rem 1rem;
+    background-color: $global-background-color;
+    vertical-align: text-top;
+    line-height: 1rem;
+
+    &:active,
+    &:hover {
+      color: #ffffff;
+      border-color: $reward-color;
+      background-color: $reward-color;
+
+      [data-theme='dark'] & {
+        color: #ffffff;
+        border-color: $reward-color-dark;
+        background-color: $reward-color-dark;
+      }
+    }
+
+    [data-theme='dark'] & {
+      color: $reward-color;
+      border-color: lighten($reward-color, 5%);
+      background-color: $global-background-color-dark;
+    }
+  }
+}
+
+.reward-ways {
+  display: none;
+  padding-top: 20px;
+
+  div {
+    display: inline-block;
+
+    span {
+      display: block;
+    }
+
+    &:hover span[data-animation] {
+      animation: var(--animation-reward, jackInTheBox) 0.8s infinite linear;
+      // The animation may affect :hover of img in dark mode
+      pointer-events: none;
+    }
+  }
+
+  img {
+    display: inline-block;
+    margin: .8em 2em 0;
+    max-width: 100%;
+    width: $reward-img-width;
+  }
+}

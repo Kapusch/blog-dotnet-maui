@@ -148,7 +148,7 @@ theme = "FixIt"
   # site default theme ["light", "dark", "auto"]
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
-  gitRepo = "https://github.com/Kapusch/blog-dotnet-maui"
+  gitRepo = "https://github.com/Kapusch/blog-dotnet-maui/tree/main/Blog"
   enableGitInfo = true
   # FixIt 0.1.1 | NEW which hash function used for SRI, when empty, no SRI is used
   # ["sha256", "sha384", "sha512", "md5"]
@@ -671,9 +671,9 @@ theme = "FixIt"
   # FixIt 0.2.14 | NEW GitHub banner in the top-right or top-left corner
   [params.githubCorner]
     enable = true
-    permalink = "https://github.com/Kapusch/blog-dotnet-maui"
+    permalink = "https://github.com/Kapusch/blog-dotnet-maui/tree/main/Blog"
     title = "View source on GitHub"
-    position = "right" # ["left", "right"]
+    position = "left" # ["left", "right"]
 
   # FixIt 0.2.14 | NEW Gravatar config
   [params.gravatar]

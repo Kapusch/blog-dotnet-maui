@@ -1,4 +1,12 @@
+# -------------------------------------------------------------------------------------
+# Website settings
+# -------------------------------------------------------------------------------------
+
 baseURL = "https://www.mauicestclair.fr"
+
+# whether to use robots.txt
+enableRobotsTXT = true
+
 # determines default content language ["en", "zh-cn", "fr", "pl", ...]
 defaultContentLanguage = "fr"
 

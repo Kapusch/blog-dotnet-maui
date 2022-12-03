@@ -641,10 +641,10 @@ theme = "FixIt"
 
   # FixIt 0.2.0 | NEW Analytics config
   [params.analytics]
-    enable = false
+    enable = true
     # Google Analytics
     [params.analytics.google]
-      id = ""
+      id = "G-0BB9XCL25S"
       # whether to anonymize IP
       anonymizeIP = true
     # Fathom Analytics

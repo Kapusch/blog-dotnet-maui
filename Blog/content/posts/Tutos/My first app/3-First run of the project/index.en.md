@@ -1,0 +1,113 @@
+---
+Topic: "First run of the project"
+Title: "First run of the project"
+Category: "Tutos"
+Subcategory: "My first app"
+Index: "3"
+PublishDate: "2023-01-01 00:00:03Z"
+Language: "English"
+Description: "It's now time to get the app running.
+We'll also take the opportunity to look at the source code 🙂"
+Tags: ["Visual Studio","C# markup"]
+featuredImagePreview: 'featured-image-preview-en'
+resources:
+- name: 'featured-image-preview-en'
+  src: 'featured-image-preview-en.jpeg'
+draft: false
+---
+
+<!--more-->
+
+<style>
+.img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
+</style>
+For our application to work, we still have two points to address: the app initialization and above all, managing its execution state.
+
+### App initialization
+
+For each targeted platform (iOS, Android, ...), a .NET MAUI application is initialized from a single entry point via the method `CreateMauiApp()` which is located in the file [MauiProgram.cs](https://github.com/Kapusch/blog-dotnet-maui/blob/main/Samples/NightClub/0%20-%20Get%20Started/NightClub/MauiProgram.cs). This is where you configure everything the app needs to work the way you want it to: web services, external dependencies, or specific fonts.
+
+### App state management
+
+But we also need something to define the current state of our application (which page to display, what if the application stops, ...). And for that, we have an `Application` class declared in the file [App.cs](https://github.com/Kapusch/blog-dotnet-maui/blob/main/Samples/NightClub/0%20-%20Get%20Started/NightClub/App.cs).
+
+### Executing the app
+
+Come on, it's time to get the application running! So choose the platform you want to target, then click on the red boxed button to start the project:
+
+<p align="center"><img class="img-sizes" src="./images/CCA585B557D8F8AFA27869ED6F96DC99.png"></p>
+
+First, you will see your project compiling with the chosen configuration (this is the build stage):
+
+<p align="center"><img class="img-sizes" src="./images/85AFA96A5BBDCA9AA60CF174671E372B.png"></p>
+
+Then your application will automatically be deployed to the chosen platform (here, a simulated iPhone 13, iOS 15.5).
+
+<p align="center"><img class="img-sizes" src="./images/FB933ED833E5286A9C4DEE2FD6747035.png"></p>
+
+And here's the result!
+
+<p align="center"><img class="img-sizes" src="./images/041628D6E57C50A8C4C89BD5FDE6A23C.png"></p>
+
+
+
+
+{{< callout emoji="🐒" text="Heeeey, but nothing happens when I click on the button!" >}}
+
+
+This is just the beginning of our app, the biggest part is ahead !
+
+### The home page
+
+The screen you just saw is the home page for which the content is specified in the file `HomeView.cs`. It’s a [ContentPage](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/pages/contentpage) (basically a page with content) which is the most common type of page.
+
+And as you can see, what it is composed about is very simple:
+
+```csharp
+public HomeView()
+{
+    BackgroundColor = Colors.Black;
+
+    Content = new VerticalStackLayout
+    {
+        Children =
+        {
+            NightClubImage,
+            EnterButton
+        }
+    }.CenterVertical();
+}
+```
+
+
+It’s a black background page whose content is defined by an image and a button that are stacked vertically in a [VerticalStackLayout](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/layouts/verticalstacklayout).
+
+And if you want to know how these two components are defined, just look a little further down in the code on the page:
+
+```csharp
+#region Controls
+
+Image NightClubImage => new Image
+{
+    // .NET MAUI converts SVG files to PNG files.
+    Source = "night_club.png"
+};
+
+Button EnterButton => new Button
+{
+    Text = "ENTER",
+    TextColor = Colors.White,
+    BackgroundColor = Colors.Magenta,
+    CornerRadius = 10
+} .Bold() .Paddings(50, 2, 50, 2) .CenterHorizontal();
+
+#endregion
+```
+
+
+
+{{< callout emoji="🐒" text="Alright! And shouldn’t we declare an action to this button?" >}}
+
+
+Correct! And we’ll see how to trigger code execution by clicking on this button, but not in any way. Indeed, we will apply this wonderful design pattern called [Model-View-Model](https://docs.microsoft.com/en-us/dotnet/maui/xaml/fundamentals/mvvm) (MVVM).
+

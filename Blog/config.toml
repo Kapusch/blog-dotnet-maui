@@ -29,6 +29,17 @@ theme = "FixIt"
     title = "MAUI, c'est clair !"
     languageCode = "fr"
     languageName = "Français"
+    [languages.fr.params.footer]
+      # license info (HTML format is supported)
+      license = "<u><a rel=\"license external nofollow noopener noreferrer\" href=\"/privacy-policy\" target=\"_blank\">Confidentialité</a></u> et <u><a rel=\"license external nofollow noopener noreferrer\" href=\"/terms-of-use\" target=\"_blank\">CGU</a></u>"
+    [languages.fr.params.home.profile]
+      subtitle = "Apprends à produire des apps sympas pour iOS, Android, macOS, et Windows, même si tu débutes !"
+      # URL of avatar shown in home page
+      avatarURL = "/main_logo.jpeg"
+      # whether to use typeit animation for subtitle
+      typeit = true
+      # whether to show social links
+      social = true
     [[languages.fr.menu.main]]
       identifier = "posts"
       # you can add extra information before the name (HTML format is supported), such as icons
@@ -98,6 +109,17 @@ theme = "FixIt"
     title = "MAUI C'est Clair !"
     languageCode = "en"
     languageName = "English"
+    [languages.en.params.footer]
+      # license info (HTML format is supported)
+      license = '<u><a rel="license external nofollow noopener noreferrer" href="/privacy-policy" target="_blank">Privacy</a></u> and <u><a rel="license external nofollow noopener noreferrer" href="/terms-of-use" target="_blank">Terms</a></u>'
+    [languages.en.params.home.profile]
+      subtitle = "Learn to build cool apps for iOS, Android, macOS, and Windows, even if you just started!"
+      # URL of avatar shown in home page
+      avatarURL = "/main_logo.jpeg"
+      # whether to use typeit animation for subtitle
+      typeit = true
+      # whether to show social links
+      social = true
     [[languages.en.menu.main]]
       identifier = "posts"
       # you can add extra information before the name (HTML format is supported), such as icons
@@ -246,7 +268,7 @@ theme = "FixIt"
     # FixIt 0.2.0 | NEW Header title config
     [params.header.title]
       # URL of the LOGO
-      logo = "/main_logo.jpeg"
+      logo = "/main_avatar.jpg"
       # title name
       name = "MAUI, c'est clair !"
       # you can add extra information before the name (HTML format is supported), such as icons
@@ -320,15 +342,15 @@ theme = "FixIt"
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = ""
       # URL of avatar shown in home page
-      avatarURL = "/main_avatar.jpg"
+      avatarURL = ""
       # FixIt 0.2.7 | CHANGED title shown in home page (HTML format is supported)
       title = ""
       # subtitle shown in home page
-      subtitle = "Learn to build cool apps with .NET MAUI for iOS, Android, macOS, and Windows, even if you just started !"
+      subtitle = ""
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
-      social = false
+      social = true
       # FixIt 0.2.0 | NEW disclaimer (HTML format is supported)
       disclaimer = ""
     # Home page posts
@@ -369,9 +391,9 @@ theme = "FixIt"
 
   # FixIt 0.2.16 | CHANGED Social config about the author
   [params.social]
-    GitHub = ""
-    Linkedin = ""
-    Twitter = ""
+    GitHub = "Kapusch"
+    Linkedin = "jebaillat"
+    Twitter = "kapuschinfo"
     Instagram = ""
     Facebook = ""
     Telegram = ""
@@ -388,7 +410,7 @@ theme = "FixIt"
     Codepen = ""
     FreeCodeCamp = ""
     Bitbucket = ""
-    Stackoverflow = ""
+    Stackoverflow = "4585688/kapusch"
     Weibo = ""
     Odnoklassniki = ""
     VK = ""
@@ -452,7 +474,7 @@ theme = "FixIt"
     Feishu = ""
     TryHackMe = ""
     Phone = ""
-    Email = ""
+    Email = "jeanemmanuel.baillat@gmail.com"
     RSS = true
 
   # FixIt 0.2.0 | CHANGED Page config
@@ -623,13 +645,13 @@ theme = "FixIt"
   # FixIt 0.2.5 | NEW TypeIt config
   [params.typeit]
     # typing speed between each step (measured in milliseconds)
-    speed = 80
+    speed = 5
     # blinking speed of the cursor (measured in milliseconds)
     cursorSpeed = 1000
     # character used for the cursor (HTML format is supported)
     cursorChar = "|"
     # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
-    duration = -1
+    duration = 2000
 
   # FixIt 0.2.15 | NEW Mermaid config
   [params.mermaid]

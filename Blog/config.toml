@@ -16,7 +16,7 @@ theme = "FixIt"
 # Author config
 [author]
   name = "Jean-Emmanuel BAILLAT"
-  email = ""
+  email = "jeanemmanuel.baillat@gmail.com"
   link = "https://github.com/Kapusch"
 
 # -------------------------------------------------------------------------------------
@@ -106,7 +106,7 @@ theme = "FixIt"
 
   [languages.en]
     weight = 2
-    title = "MAUI C'est Clair !"
+    title = "MAUI, c'est clair !"
     languageCode = "en"
     languageName = "English"
     [languages.en.params.footer]

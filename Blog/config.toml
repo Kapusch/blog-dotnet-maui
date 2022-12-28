@@ -246,7 +246,7 @@ theme = "FixIt"
     # FixIt 0.2.0 | NEW Header title config
     [params.header.title]
       # URL of the LOGO
-      logo = "/main_avatar.JPG"
+      logo = "/main_logo.jpeg"
       # title name
       name = "MAUI, c'est clair !"
       # you can add extra information before the name (HTML format is supported), such as icons
@@ -320,7 +320,7 @@ theme = "FixIt"
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = ""
       # URL of avatar shown in home page
-      avatarURL = "/main_avatar.JPG"
+      avatarURL = "/main_avatar.jpg"
       # FixIt 0.2.7 | CHANGED title shown in home page (HTML format is supported)
       title = ""
       # subtitle shown in home page

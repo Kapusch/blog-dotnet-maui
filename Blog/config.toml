@@ -82,6 +82,16 @@ theme = "FixIt"
       weight = 2
       [languages.fr.menu.main.params]
         icon = "fa-solid fa-tags"
+    [[languages.fr.menu.main]]
+      identifier = "about"
+      pre = ""
+      post = ""
+      name = "À propos"
+      url = "/about/"
+      title = ""
+      weight = 3
+      [languages.fr.menu.main.params]
+        icon = "fa-solid fa-info-circle"
 
   [languages.en]
     weight = 2
@@ -141,6 +151,16 @@ theme = "FixIt"
       weight = 2
       [languages.en.menu.main.params]
         icon = "fa-solid fa-tags"
+    [[languages.en.menu.main]]
+      identifier = "about"
+      pre = ""
+      post = ""
+      name = "About"
+      url = "/about/"
+      title = ""
+      weight = 3
+      [languages.en.menu.main.params]
+        icon = "fa-solid fa-info-circle"
 
 # -------------------------------------------------------------------------------------
 # Theme Core Configuration Settings
@@ -168,7 +188,7 @@ theme = "FixIt"
   # FixIt 0.2.12 | NEW enable PWA
   enablePWA = false
   # FixIt 0.2.14 | NEW whether to add external Icon for external links automatically
-  externalIcon = false
+  externalIcon = true
   # FixIt 0.2.14 | NEW FixIt will, by default, inject a theme meta tag in the HTML head on the home page only.
   # You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
   disableThemeInject = false

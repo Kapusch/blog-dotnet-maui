@@ -27,8 +27,9 @@ Hi Devs! 🤓
 Today we'll start building our first application! Let’s first set up your working environment, and then you’ll have something concrete soon. Let's get started!
 
 
-{{< callout emoji="🐒" text="By the way, do I need to be on Windows, MacOS or Linux?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ By the way, do I need to be on Windows, MacOS or Linux?
+{{< /admonition >}}
 
 
 
@@ -43,8 +44,9 @@ But you can also develop under Windows or Linux! More concretely:
 
 
 
-{{< callout emoji="ℹ️" text="For the purposes of this blog, I will only focus on mobile application development using Visual Studio. It is much more intuitive to use and that is what appeals to any true novice." >}}
-
+{{< admonition type=info title="‎ " open=true >}}
+For the purposes of this blog, I will only focus on mobile application development using Visual Studio. It is much more intuitive to use and that is what appeals to any true novice.
+{{< /admonition >}}
 
 
 
@@ -55,29 +57,31 @@ Let's move on to the installation of the working environment:
     1. [follow the installation steps for Windows](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin#installation-1),
     1. [follow the installation steps for MacOS](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vsmac#installation-2),
 1. Finally, download the project from GitHub. To do this, go to the [blog's code repository](https://github.com/Kapusch/blog-dotnet-maui), click on the "Code" button and download the ZIP version.
-<p align="center"><img class="img-sizes" src="./images/7B86AE88DAB3362A9B47A4007B949027.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/7B86AE88DAB3362A9B47A4007B949027.png"></p></figure>
 
 
 
 
-{{< callout emoji="ℹ️" text="Before you go further, if you are on MacOS, make sure you have [downloaded the latest version of Xcode](https://developer.apple.com/xcode/) which is required for the iPhone simulator. This is usually long to install, so I suggest you do it while reading." >}}
-
+{{< admonition type=info title="‎ " open=true >}}
+Before you go further, if you are on MacOS, make sure you have [downloaded the latest version of Xcode](https://developer.apple.com/xcode/) which is required for the iPhone simulator. This is usually long to install, so I suggest you do it while reading.
+{{< /admonition >}}
 
 
 
 Once you have unzipped the downloaded file, go to the Samples folder associated with our course (*Samples/NightClub*). The folders under it each correspond to a different part of the course:
 
-<p align="center"><img class="img-sizes" src="./images/AB6D4CEADA0C31BD182CB28EA1C158C1.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/AB6D4CEADA0C31BD182CB28EA1C158C1.png"></p></figure>
 
 For now, open the first folder (*0 - Get Started)* and double click on `NightClub.sln` to open the NightClub project in Visual Studio.
 
-<p align="center"><img class="img-sizes" src="./images/1D187B2CC26417B658FD450BB0D7B3B3.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/1D187B2CC26417B658FD450BB0D7B3B3.png"></p><figcaption class="image-caption">The NightClub project structure from Visual Studio.</figcaption></figure>
 
 
 
 
-{{< callout emoji="🐒" text="Ok! Opening the project… loading... But there are already many things in this project, can't we start from scratch?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ Ok! Opening the project… loading... But there are already many things in this project, can't we start from scratch?
+{{< /admonition >}}
 
 
 
@@ -93,8 +97,9 @@ Actually, it already is! The project you just opened is brand new, but it includ
 And that's it, how about if we <a href="../3-first-run-of-the-project/">launch that app</a> ? 🙂
 
 
-{{< callout emoji="💡" text="Going further with the [basic structure of a Visual Studio project](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/single-project?view=net-maui-7.0)" >}}
-
+{{< admonition type=tip title="‎ " open=true >}}
+Going further with the [basic structure of a Visual Studio project](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/single-project?view=net-maui-7.0)
+{{< /admonition >}}
 
 
 

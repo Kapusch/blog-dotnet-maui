@@ -34,8 +34,9 @@ Avec ce blog, je veux pouvoir aider tout développeur débutant à se lancer dan
 
 
 
-{{< callout emoji="🐒" text="Mais au fait, c’est quoi .NET MAUI ? Tu peux m'en dire plus ?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ Mais au fait, c’est quoi .NET MAUI ? Tu peux m'en dire plus ?
+{{< /admonition >}}
 
 
 
@@ -46,8 +47,9 @@ Il s'agit du framework maintenu par Microsoft pour développer des applications 
 
 
 
-{{< callout emoji="🐒" text="Et comment as-tu fait pour publier ta première application ? Ça t'a pris longtemps ?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ Et comment as-tu fait pour publier ta première application ? Ça t'a pris longtemps ?
+{{< /admonition >}}
 
 
 
@@ -63,8 +65,9 @@ Dans mon cas, cela m'a pris exactement un an entre le moment où j'ai imaginé l
 
 
 
-{{< callout emoji="🐒" text="D'accord, alors qu'est-ce que je dois savoir avant de débuter mon application ?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ D'accord, alors qu'est-ce que je dois savoir avant de débuter mon application ?
+{{< /admonition >}}
 
 
 
@@ -88,8 +91,9 @@ Tu feras sûrement quelques erreurs, mais se tromper est justement la meilleure 
 
 
 
-{{< callout emoji="🐒" text="J'ai l'idée en tête, mon design est prêt, et coder en C# ne me fait pas peur, on attaque ?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ J'ai l'idée en tête, mon design est prêt, et coder en C# ne me fait pas peur, on attaque ?
+{{< /admonition >}}
 
 
 

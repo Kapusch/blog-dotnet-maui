@@ -27,8 +27,9 @@ Salut les Dev•e•s ! 🤓
 Tu vas bientôt pouvoir créer ta première application mobile ! Juste le temps d'installer ton environnement de travail et on aura rapidement quelque chose de concret. Allez c'est parti !
 
 
-{{< callout emoji="🐒" text="Mais au fait, il faut être sous Windows, MacOS ou Linux ?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ Mais au fait, il faut être sous Windows, MacOS ou Linux ?
+{{< /admonition >}}
 
 
 
@@ -43,8 +44,9 @@ Mais tu peux tout aussi bien développer sous Windows ou Linux ! Plus concrètem
 
 
 
-{{< callout emoji="ℹ️" text="Dans le cadre de ce blog, je me concentrerais uniquement sur le développement d’application mobile à l’aide de Visual Studio. En effet, son utilisation est bien plus intuitive et c’est justement cela qui plaît à tout vrai néophyte." >}}
-
+{{< admonition type=info title="‎ " open=true >}}
+Dans le cadre de ce blog, je me concentrerais uniquement sur le développement d’application mobile à l’aide de Visual Studio. En effet, son utilisation est bien plus intuitive et c’est justement cela qui plaît à tout vrai néophyte.
+{{< /admonition >}}
 
 
 
@@ -55,29 +57,31 @@ Passons maintenant à l’installation de l’environnement de travail:
     1. [suivre les étapes d’installation sous Windows](https://learn.microsoft.com/fr-fr/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin#installation-1)
     1. [suivre les étapes d’installation sous MacOS](https://learn.microsoft.com/fr-fr/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vsmac#installation-2)
 1. Enfin, télécharge le projet depuis GitHub. Pour cela, rends-toi sur [le dépôt de code du blog](https://github.com/Kapusch/blog-dotnet-maui), clique sur le bouton “Code” et télécharge le tout au format .ZIP
-<p align="center"><img class="img-sizes" src="./images/7B86AE88DAB3362A9B47A4007B949027.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/7B86AE88DAB3362A9B47A4007B949027.png"></p></figure>
 
 
 
 
-{{< callout emoji="ℹ️" text="Avant d’aller plus loin, si tu es sous MacOS, il te faudra t’assurer d’avoir [téléchargé la dernière version d’Xcode](https://developer.apple.com/xcode) qui est requise pour le simulateur d’iPhone. Son installation peut être très longue, aussi, je te conseille de le faire en parallèle de ta lecture." >}}
-
+{{< admonition type=info title="‎ " open=true >}}
+Avant d’aller plus loin, si tu es sous MacOS, il te faudra t’assurer d’avoir [téléchargé la dernière version d’Xcode](https://developer.apple.com/xcode) qui est requise pour le simulateur d’iPhone. Son installation peut être très longue, aussi, je te conseille de le faire en parallèle de ta lecture.
+{{< /admonition >}}
 
 
 
 Une fois le fichier téléchargé décompressé, rends-toi dans le dossier des exemples associés à notre cours (*Samples/NightClub*). Les dossiers qui y sont entreposés correspondent chacun à une partie différente du cours:
 
-<p align="center"><img class="img-sizes" src="./images/AB6D4CEADA0C31BD182CB28EA1C158C1.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/AB6D4CEADA0C31BD182CB28EA1C158C1.png"></p></figure>
 
 Pour le moment, ouvre le premier dossier (*0 - Get Started)* et double-clique sur `NightClub.sln` pour ouvrir le projet NightClub dans Visual Studio.
 
-<p align="center"><img class="img-sizes" src="./images/1D187B2CC26417B658FD450BB0D7B3B3.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/1D187B2CC26417B658FD450BB0D7B3B3.png"></p><figcaption class="image-caption">La structure du projet NightClub après ouverture dans Visual Studio.</figcaption></figure>
 
 
 
 
-{{< callout emoji="🐒" text="Ok ! J’ouvre le projet, ça charge… Mais il y a déjà plein de choses dans ce projet, on ne peut pas partir de zéro ?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ Ok ! J’ouvre le projet, ça charge… Mais il y a déjà plein de choses dans ce projet, on ne peut pas partir de zéro ?
+{{< /admonition >}}
 
 
 
@@ -93,7 +97,8 @@ En fait, c’est déjà le cas ! Le projet que tu as sous les yeux est tout neuf
 Et voilà c’est tout, et si on <a href="../3-first-run-of-the-project/">lançait cette app</a> ? 🙂
 
 
-{{< callout emoji="💡" text="Aller plus loin avec la [structure de base des projets Visual Studio](https://learn.microsoft.com/fr-fr/dotnet/maui/fundamentals/single-project?view=net-maui-7.0)" >}}
-
+{{< admonition type=tip title="‎ " open=true >}}
+Aller plus loin avec la [structure de base des projets Visual Studio](https://learn.microsoft.com/fr-fr/dotnet/maui/fundamentals/single-project?view=net-maui-7.0)
+{{< /admonition >}}
 
 

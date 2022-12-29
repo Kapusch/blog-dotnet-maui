@@ -22,7 +22,7 @@ draft: false
 </style>
 Maintenant que les fondations de ta page sont prêtes, tu vas pouvoir commencer à disposer tous les éléments de contrôle. Voyons déjà pour la première ligne:
 
-<p align="center"><img class="img-sizes" src="./images/FA80B1E1F42328E22E779783E27C557F.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/FA80B1E1F42328E22E779783E27C557F.png"></p></figure>
 
 On utilisera le composant [Label](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/label) pour afficher les minutages correspondant à la position actuelle dans la piste en cours de lecture, ainsi que le temps d’écoute restant:
 
@@ -46,8 +46,9 @@ Label RemainingTime => new Label
 La taille de police définie pour ces deux labels est relativement petite. Cependant, elle s’adaptera automatiquement au niveau d’agrandissement du texte défini par l’utilisateur dans les réglages d’accessibilité de son téléphone.
 
 
-{{< callout emoji="💡" text="Aller plus loin avec l’accessibilité" >}}
-
+{{< admonition type=tip title="‎ " open=true >}}
+Aller plus loin avec l’accessibilité
+{{< /admonition >}}
 
 Et pour ce qui est de la barre de navigation, on utilisera le [Slider](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/slider):
 
@@ -84,11 +85,11 @@ Grid BottomLayout => new Grid
 
 C’est un bon début ! Cependant, si tu démarres l’application, tu constateras qu’il y un léger problème d’affichage:
 
-<p align="center"><img class="img-sizes" src="./images/6A71FCFF86082A1FEF1D2C5C1840643B.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/6A71FCFF86082A1FEF1D2C5C1840643B.png"></p></figure>
 
 Pas de panique ! Si tu te rappelles, on a initialement divisé le *BottomLayout* en 7 colonnes. Or, si notre code positionne bien notre *Slider* à partir de la case n°3 de la première ligne, il ne lui dit pas clairement où s’arrêter ! On pourrait alors simplement dire au *Slider* de s’étaler sur les colonnes suivantes, comme ceci:
 
-<p align="center"><img class="img-sizes" src="./images/EC9010D37B4268DF0FCDE7480DD1156F.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/EC9010D37B4268DF0FCDE7480DD1156F.png"></p></figure>
 
 Pour cela, on utilise la commande *ColumnSpan* pour indiquer au *Slider* de s’étendre jusqu’à 3 colonnes à partir de la case n°3 :
 
@@ -99,7 +100,7 @@ TimeTracker.Row(0).Column(2).ColumnSpan(3)
 
 Et voilà on en a fini avec la première ligne de notre grille ! Voyons ce que ça donne à l’image:
 
-<p align="center"><img class="img-sizes" src="./images/F625F9944D83A64D3BE00195F96757B2.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/F625F9944D83A64D3BE00195F96757B2.png"></p></figure>
 
 
 

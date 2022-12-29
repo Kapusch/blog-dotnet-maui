@@ -34,8 +34,9 @@ With this blog, I wish I could help any beginner developer willing to get starte
 
 
 
-{{< callout emoji="🐒" text="But, what is .NET MAUI? Can you tell me more?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ But, what is .NET MAUI? Can you tell me more?
+{{< /admonition >}}
 
 
 
@@ -46,8 +47,9 @@ It’s a framework maintained by Microsoft for developing mobile applications, b
 
 
 
-{{< callout emoji="🐒" text="And how did you get your first application published? Did it take long?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ And how did you get your first application published? Did it take long?
+{{< /admonition >}}
 
 
 
@@ -65,8 +67,9 @@ In my case, it took exactly one year from the moment I imagined the application 
 
 
 
-{{< callout emoji="🐒" text="Okay, so what do I need to know before I start my application?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ Okay, so what do I need to know before I start my application?
+{{< /admonition >}}
 
 
 
@@ -90,8 +93,9 @@ You'll probably make a few mistakes, but failing is the best way to learn, so ma
 
 
 
-{{< callout emoji="🐒" text="I have the idea in mind, my design is ready, and I’m fine coding with C#, let’s start !" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ I have the idea in mind, my design is ready, and I’m fine coding with C#, let’s start !
+{{< /admonition >}}
 
 
 

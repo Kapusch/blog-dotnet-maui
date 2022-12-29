@@ -35,25 +35,26 @@ But we also need something to define the current state of our application (which
 
 Come on, it's time to get the application running! So choose the platform you want to target, then click on the red boxed button to start the project:
 
-<p align="center"><img class="img-sizes" src="./images/CCA585B557D8F8AFA27869ED6F96DC99.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/CCA585B557D8F8AFA27869ED6F96DC99.png"></p></figure>
 
 First, you will see your project compiling with the chosen configuration (this is the build stage):
 
-<p align="center"><img class="img-sizes" src="./images/85AFA96A5BBDCA9AA60CF174671E372B.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/85AFA96A5BBDCA9AA60CF174671E372B.png"></p><figcaption class="image-caption">The current status of the project can easily be viewed at the bottom left of Visual Studio for Mac.</figcaption></figure>
 
 Then your application will automatically be deployed to the chosen platform (here, a simulated iPhone 13, iOS 15.5).
 
-<p align="center"><img class="img-sizes" src="./images/FB933ED833E5286A9C4DEE2FD6747035.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/FB933ED833E5286A9C4DEE2FD6747035.png"></p></figure>
 
 And here's the result!
 
-<p align="center"><img class="img-sizes" src="./images/041628D6E57C50A8C4C89BD5FDE6A23C.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/041628D6E57C50A8C4C89BD5FDE6A23C.png"></p></figure>
 
 
 
 
-{{< callout emoji="🐒" text="Heeeey, but nothing happens when I click on the button!" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ Heeeey, but nothing happens when I click on the button!
+{{< /admonition >}}
 
 This is just the beginning of our app, the biggest part is ahead !
 
@@ -106,8 +107,9 @@ Button EnterButton => new Button
 
 
 
-{{< callout emoji="🐒" text="Alright! And shouldn’t we declare an action to this button?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ Alright! And shouldn’t we declare an action to this button?
+{{< /admonition >}}
 
 Correct! And we’ll see how to trigger code execution by clicking on this button, but not in any way. Indeed, we will apply this wonderful design pattern called [Model-View-Model](https://docs.microsoft.com/en-us/dotnet/maui/xaml/fundamentals/mvvm) (MVVM).
 

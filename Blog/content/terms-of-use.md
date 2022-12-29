@@ -1,3 +1,8 @@
+---
+hiddenFromHomePage: true
+hiddenFromSearch: true
+---
+
 # Terms and Conditions
 
 Last updated: December 04, 2022

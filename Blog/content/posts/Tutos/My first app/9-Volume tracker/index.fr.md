@@ -22,7 +22,7 @@ draft: false
 </style>
 Et enfin, la dernière ligne de notre lecteur musical !
 
-<p align="center"><img class="img-sizes" src="./images/DF050A3B8CBC66BE41161183706F5D44.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/DF050A3B8CBC66BE41161183706F5D44.png"></p></figure>
 
 Allez, pour commencer, télécharge les différentes images utilisées pour afficher l’état du volume.
 
@@ -31,7 +31,7 @@ Allez, pour commencer, télécharge les différentes images utilisées pour affi
 
 En décompressant ce fichier, tu verras 4 nouvelles images:
 
-<p align="center"><img class="img-sizes" src="./images/D513BCCE090CD9A8DB1344EB11150F81.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/D513BCCE090CD9A8DB1344EB11150F81.png"></p></figure>
 
 Il y en aura une pour chaque niveau de volume identifié, et même quand le son sera coupé.
 
@@ -68,7 +68,7 @@ VolumeTracker.Row(2).Column(2).ColumnSpan(3),
 
 Et voilà ! 
 
-<p align="center"><img class="img-sizes" src="./images/B6353871FE88CE680890EE873B635A4D.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/B6353871FE88CE680890EE873B635A4D.png"></p></figure>
 
 Ça devient plus facile avec tout cet entraînement, est-ce que tu commences à prendre le coup de main ? Bon, il n’y avait que deux composants à définir cette fois, alors on va aller un petit plus loin. Tu te rappelles des différentes images pour notre volume ? Il est temps de leur trouver une utilité !
 
@@ -119,18 +119,19 @@ Binding = new Binding(nameof(Slider.Value), source: VolumeTracker)
 Et le changement d’icône du bouton s’opérera une fois la valeur cible atteinte.
 
 
-{{< callout emoji="🐒" text="Donc là on a un déclencheur pour modifier l’icône au moment où l’utilisateur abaissera la valeur du *Slider* à zéro. Mais pourquoi mettre un “d” après le “0” ?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ Donc là on a un déclencheur pour modifier l’icône au moment où l’utilisateur abaissera la valeur du *Slider* à zéro. Mais pourquoi mettre un “d” après le “0” ?
+{{< /admonition >}}
 
 Bien vu, ce n’était pas une erreur typographique 😄
 
 En fait, la [documentation du Slider](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/slider) précise que la propriété *Value* est de type [double](https://learn.microsoft.com/en-us/dotnet/api/system.double?view=net-6.0), pour représenter un nombre avec des décimales. Cela donne à l’utilisateur un peu plus de contrôle quand il manipule un *Slider*. Or, si tu tentes de supprimer le “d” et que tu passes ta souris au-dessus du “0” tu pourras constater qu’il n’est pas considéré comme un double, mais un [int](https://learn.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0) !
 
-<p align="center"><img class="img-sizes" src="./images/647B2233C389ED14831E420996C84B23.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/647B2233C389ED14831E420996C84B23.png"></p></figure>
 
 Et comme la propriété *Value* de notre *DataTrigger* accepte potentiellement n’importe quel type de valeur (puisqu’il est de type *object*), on doit explicitement lui indiquer comment considérer ce “0”: comme un double !  Et pour cela, on doit rajouter le “d” juste après:
 
-<p align="center"><img class="img-sizes" src="./images/6563EBE2B8F0FD2DCE8BF8C037A56960.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/6563EBE2B8F0FD2DCE8BF8C037A56960.png"></p></figure>
 
 Ne reste plus qu’à rajouter ce trigger à notre composant *MuteButton* en utilisant une méthode dédiée *InitMuteButton* et ce afin de garder notre code clair:
 
@@ -156,11 +157,12 @@ void InitMuteButton()
 
 Et voilà ! Essaye maintenant de glisser la valeur du *Slider* tout à gauche:
 
-<p align="center"><img class="img-sizes" src="./images/D29C869CE4D06ACBBDF56655AEC1C047.gif"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/D29C869CE4D06ACBBDF56655AEC1C047.gif"></p></figure>
 
 
-{{< callout emoji="💡" text="Aller plus loin —> Comprendre pourquoi on a déclaré *MuteButton* avec un “=” au lieu de “=>” comme pour les autres composants" >}}
-
+{{< admonition type=tip title="‎ " open=true >}}
+Aller plus loin —> Comprendre pourquoi on a déclaré *MuteButton* avec un “=” au lieu de “=>” comme pour les autres composants
+{{< /admonition >}}
 
 Enfin pour gérer tous les différents états du bouton, nous aurons besoin que:
 
@@ -291,5 +293,5 @@ MuteButton.Triggers.Add(VolumeHighTrigger);
 
 Et voilà, vas-y réessaye !
 
-<p align="center"><img class="img-sizes" src="./images/69F6E9FE1F935AB3D276A2E35ED17A31.gif"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/69F6E9FE1F935AB3D276A2E35ED17A31.gif"></p></figure>
 

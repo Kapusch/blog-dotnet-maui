@@ -1,3 +1,8 @@
+---
+hiddenFromHomePage: true
+hiddenFromSearch: true
+---
+
 # Privacy Policy
 
 Last updated: December 04, 2022

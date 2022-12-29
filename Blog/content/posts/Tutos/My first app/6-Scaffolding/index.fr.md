@@ -21,24 +21,26 @@ draft: false
 .img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
 </style>
 
-{{< callout emoji="ℹ️" text="Pour assurer le bon déroulement de cet article, je t’invite à repartir du projet reprenant les différentes étapes appliquées dans les articles précédents. Pour cela, [télécharge le projet](https://github.com/Kapusch/blog-dotnet-maui) si ce n’est pas déjà fait, et ouvre le projet NightClub situé dans le dossier “*2 - Navigation*”." >}}
-
+{{< admonition type=info title="‎ " open=true >}}
+Pour assurer le bon déroulement de cet article, je t’invite à repartir du projet reprenant les différentes étapes appliquées dans les articles précédents. Pour cela, [télécharge le projet](https://github.com/Kapusch/blog-dotnet-maui) si ce n’est pas déjà fait, et ouvre le projet NightClub situé dans le dossier “*2 - Navigation*”.
+{{< /admonition >}}
 
 Quand on développe une nouvelle page, le plus important c’est de réfléchir à l’organisation des éléments sur la page, et .NET MAUI nous offre [une palette de possibilités pour structurer notre page](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/layouts/). Tu vas voir, c’est un vrai travail d’architecte !
 
 
-{{< callout emoji="🐒" text="Mais au fait, à quoi doit ressembler notre page ?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ Mais au fait, à quoi doit ressembler notre page ?
+{{< /admonition >}}
 
 Très bonne question ! Si tu veux un conseil, commence toujours par élaborer le design de ta page au crayon sur une feuille. En effet, les écrans de téléphone sont petits et il n’est donc pas toujours facile de disposer tous les éléments souhaités. Et quand on est suffisamment satisfait du design sur papier, on crée une maquette sur ordinateur pour un rendu réaliste qui facilitera l’intégration de la page.
 
 Dans notre cas, on visera le résultat suivant :
 
-<p align="center"><img class="img-sizes" src="./images/F25FC1F576D94B299848D78DBA0AF729.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/F25FC1F576D94B299848D78DBA0AF729.png"></p></figure>
 
 Ici on remarque que les éléments sont disposés de façon assez régulière. On peut facilement imaginer des lignes pour délimiter les espaces et aligner nos éléments les uns par rapport aux autres. C’est un exercice un peu spécial mais tu verras qu’avec le temps, ça deviendra de plus en plus facile:
 
-<p align="center"><img class="img-sizes" src="./images/DC7E5A20A7CA1D0976AD5613BCC16209.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/DC7E5A20A7CA1D0976AD5613BCC16209.png"></p></figure>
 
 Ces lignes te feront peut-être penser à une grille… et si c’est le cas, bien vu ! En effet, on utilisera ici majoritairement le composant [Grid](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/layouts/grid) pour disposer nos éléments sur une grille, littéralement.
 
@@ -112,7 +114,7 @@ Concentrons-nous dans un premier temps sur le contenu du *BottomLayout*. En rega
 
 * de haut en bas, 3 lignes de taille identique,
 * de gauche à droite, 7 colonnes (2 petites, 3 grandes et 2 petites à nouveau)
-<p align="center"><img class="img-sizes" src="./images/15825CA1D0297C02D5C7C653EDA5BEA7.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/15825CA1D0297C02D5C7C653EDA5BEA7.png"></p></figure>
 
 Et pour cela, nous allons définir les lignes et colonnes qui composent notre *Grid*:
 
@@ -141,8 +143,9 @@ Grid BottomLayout => new Grid
 Comme tu vois, le code ci-dessus propose un découpage en 3 lignes de même taille et 7 colonnes.
 
 
-{{< callout emoji="🐒" text="Euh… ouais j’ai bien un total de 100% si j’additionne les tailles de chaque colonne, mais pour ce qui est des lignes y’a un problème non ?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ Euh… ouais j’ai bien un total de 100% si j’additionne les tailles de chaque colonne, mais pour ce qui est des lignes y’a un problème non ?
+{{< /admonition >}}
 
 Très bonne remarque ! En fait si je suis parti au début avec un échelonnement des tailles sur 100%, c’est parce que c’est souvent plus facile à comprendre. En réalité, quand tu écris:
 
@@ -201,13 +204,14 @@ Grid BottomLayout => new Grid
 
 Et si tu lances l’application, tu pourras alors confirmer avec certitude que notre emploi des *Grid* est effectivement correct:
 
-<p align="center"><img class="img-sizes" src="./images/F9032472788C6B235E788E30A9EE9C21.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/F9032472788C6B235E788E30A9EE9C21.png"></p></figure>
 
 Ce n’est toujours pas fonctionnel, mais tu as déjà passé un premier cap !
 
 
-{{< callout emoji="💡" text="Aller plus loin avec les différents types de layout (Grid, StackLayout, Flex, …)" >}}
-
+{{< admonition type=tip title="‎ " open=true >}}
+Aller plus loin avec les différents types de layout (Grid, StackLayout, Flex, …)
+{{< /admonition >}}
 
 
 

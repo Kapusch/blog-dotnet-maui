@@ -1,4 +1,6 @@
 ---
+hiddenFromHomePage: true
+hiddenFromSearch: true
 Topic: "About"
 Title: "About"
 Language: "English"

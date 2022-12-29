@@ -645,7 +645,7 @@ theme = "FixIt"
   # FixIt 0.2.5 | NEW TypeIt config
   [params.typeit]
     # typing speed between each step (measured in milliseconds)
-    speed = 5
+    speed = 15
     # blinking speed of the cursor (measured in milliseconds)
     cursorSpeed = 1000
     # character used for the cursor (HTML format is supported)

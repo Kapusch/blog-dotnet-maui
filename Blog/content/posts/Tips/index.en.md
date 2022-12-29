@@ -1,4 +1,6 @@
 ---
+hiddenFromHomePage: true
+hiddenFromSearch: true
 Title: 'Tips & Tricks'
 PublishDate: '2023-01-01 00:00:00Z'
 draft: false

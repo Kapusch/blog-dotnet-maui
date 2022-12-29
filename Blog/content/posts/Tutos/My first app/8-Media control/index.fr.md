@@ -22,7 +22,7 @@ draft: false
 </style>
 Passons ensuite à la seconde rangée de boutons:
 
-<p align="center"><img class="img-sizes" src="./images/3BA4EBED916B74ED7B3AD4B770FFAC23.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/3BA4EBED916B74ED7B3AD4B770FFAC23.png"></p></figure>
 
 On a ici 5 boutons qui représentent une image cliquable, on fera donc appel au composant [ImageButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/imagebutton). Mais avant de pouvoir les coder, tu vas devoir dans un premier temps importer ces images dans le projet. Commence par télécharger l’ensemble des images:
 
@@ -31,11 +31,12 @@ On a ici 5 boutons qui représentent une image cliquable, on fera donc appel au 
 
 Décompresse le fichier pour obtenir les 6 images suivantes:
 
-<p align="center"><img class="img-sizes" src="./images/2E090B2B8F1350B550776023FA314EB4.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/2E090B2B8F1350B550776023FA314EB4.png"></p></figure>
 
 
-{{< callout emoji="🐒" text="6 images… mais on n’avait pas dit 5 boutons seulement ?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ 6 images… mais on n’avait pas dit 5 boutons seulement ?
+{{< /admonition >}}
 
 Oui en effet, on aura bien 5 boutons pour contrôler le média. De gauche à droite ça donne:
 
@@ -48,25 +49,25 @@ Oui je sais, initialement j’avais pensé à un mode aléatoire de lecture, mai
 
 Maintenant que tu as obtenu les images, tu vas devoir les importer dans le projet afin de les rendre disponibles dans l’app. Pour cela, déplie le dossier *Resources* et fais un clic droit sur le dossier *Images*:
 
-<p align="center"><img class="img-sizes" src="./images/0F64B307F99690E87648DFC47C81F02C.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/0F64B307F99690E87648DFC47C81F02C.png"></p></figure>
 
 Dans le menu contextuel qui s’affiche, sous *Ajouter*, clique pour ajouter des fichiers depuis un dossier:
 
-<p align="center"><img class="img-sizes" src="./images/693BBF570360FA0FD6CD0CFA107F4BC3.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/693BBF570360FA0FD6CD0CFA107F4BC3.png"></p></figure>
 
 Sélectionne alors le dossier décompressé qui contient les 6 images, et valide. Une fenêtre apparaît pour sélectionner les fichiers à inclure dans le projet:
 
-<p align="center"><img class="img-sizes" src="./images/773A0DDCB14EF44FA3318865EF20521A.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/773A0DDCB14EF44FA3318865EF20521A.png"></p></figure>
 
 Dans notre cas, on veut importer toutes les images du dossier. Sélectionne-les toutes et valide.
 
 A ce moment-là, il y a de grandes chances pour que Visual Studio te demande comment il doit les importer dans le dossier *Resources/Images*. Je te conseille de choisir de les copier, ou de les déplacer (pense à cocher la case pour appliquer ton choix à tous les fichiers !):
 
-<p align="center"><img class="img-sizes" src="./images/C4976CEE27F3207173C4D5DB9147591B.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/C4976CEE27F3207173C4D5DB9147591B.png"></p></figure>
 
 Voilà c’est terminé, vérifie que tu as bien tes 6 nouvelles images importées dans le dossier !
 
-<p align="center"><img class="img-sizes" src="./images/BE9B7B0BEE89CB13A55196568E193B1D.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/BE9B7B0BEE89CB13A55196568E193B1D.png"></p></figure>
 
 Allez c’est parti, on passe au code !
 
@@ -126,8 +127,9 @@ ImageButton SkipNextButton => new ImageButton
 Rien de bien différent ici comparé aux deux premiers, si ce n’est que ceux-là sont plus grands, et que les boutons *SkipPrevious* et *SkipNext* n’ont de couleur définie en fond, contrairement au bouton *Jouer*. Ce dernier d’ailleurs a des bords très arrondis… tellement arrondis que le carré devient en fait un cercle parfait !
 
 
-{{< callout emoji="🐒" text="Un cercle parfait ? Comment as-tu fait ?" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ Un cercle parfait ? Comment as-tu fait ?
+{{< /admonition >}}
 
 Il y a une technique très simple: la valeur assignée aux bords arrondis doit être égale à la moitié de la taille du composant. Ainsi, si tu veux un bouton de forme ronde d’une hauteur de 200, il faudra lui donner une valeur de 100 aux bords arrondis.
 
@@ -143,8 +145,9 @@ DownloadButton.Row(1).Column(5)
 
 
 
-{{< callout emoji="🐒" text="Ben oui c’est ce que j’ai fait… et alors fallait pas ? 🙈" >}}
-
+{{< admonition type=comment title="‎ " open=true >}}
+🐒‎ ‎ Ben oui c’est ce que j’ai fait… et alors fallait pas ? 🙈
+{{< /admonition >}}
 
 Si, bien sûr ! Tu as forcément dû vérifier en relançant ton app, et le résultat n’est pas si mal ! C’est juste une question de préférence. Pour ma part, j’ai recréé un *Grid* spécialement pour englober les boutons *Play, SkipPrevious* et *SkipNext*:
 
@@ -177,5 +180,5 @@ DownloadButton.Row(1).Column(5)
 
 Et voilà, ça commence à prendre forme !
 
-<p align="center"><img class="img-sizes" src="./images/5A57E2624C935EF62843C22CC4449E14.png"></p>
+<figure><p align="center"><img class="img-sizes" src="./images/5A57E2624C935EF62843C22CC4449E14.png"></p></figure>
 

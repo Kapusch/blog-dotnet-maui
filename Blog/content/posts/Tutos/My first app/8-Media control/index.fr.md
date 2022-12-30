@@ -3,6 +3,7 @@ Topic: "Media control"
 Title: "Jouer des chansons"
 Category: "Tutos"
 Subcategory: "My first app"
+series: ["My first app"]
 Index: "8"
 PublishDate: "2023-02-05 00:00:08Z"
 Language: "French"
@@ -182,3 +183,6 @@ Et voilà, ça commence à prendre forme !
 
 <figure><p align="center"><img class="img-sizes" src="./images/5A57E2624C935EF62843C22CC4449E14.png"></p></figure>
 
+---
+Plus d'articles dans la même série:
+{{< series "My first app" >}}

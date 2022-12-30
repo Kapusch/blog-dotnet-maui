@@ -3,6 +3,7 @@ Topic: "First run of the project"
 Title: "Première exécution du projet"
 Category: "Tutos"
 Subcategory: "My first app"
+series: ["My first app"]
 Index: "3"
 PublishDate: "2023-01-01 00:00:03Z"
 Language: "French"
@@ -120,3 +121,6 @@ Tout juste ! Et on va voir comment déclencher l’exécution de code en cliquan
 
 
 
+---
+Plus d'articles dans la même série:
+{{< series "My first app" >}}

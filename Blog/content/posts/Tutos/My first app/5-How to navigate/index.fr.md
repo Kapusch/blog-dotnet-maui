@@ -3,6 +3,7 @@ Topic: "How to navigate"
 Title: "D’une page à l’autre"
 Category: "Tutos"
 Subcategory: "My first app"
+series: ["My first app"]
 Index: "5"
 PublishDate: "2023-01-15 00:00:05Z"
 Language: "French"
@@ -89,3 +90,6 @@ Voilà, et si tu relances l’app, c’est quand même plus joli !
 
 Allez il est temps de passer à un nouveau chapitre, l’élaboration de notre page principale !
 
+---
+Plus d'articles dans la même série:
+{{< series "My first app" >}}

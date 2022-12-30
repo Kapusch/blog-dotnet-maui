@@ -3,6 +3,7 @@ Topic: "First run of the project"
 Title: "First run of the project"
 Category: "Tutos"
 Subcategory: "My first app"
+series: ["My first app"]
 Index: "3"
 PublishDate: "2023-01-01 00:00:03Z"
 Language: "English"
@@ -113,3 +114,6 @@ Button EnterButton => new Button
 
 Correct! And we’ll see how to trigger code execution by clicking on this button, but not in any way. Indeed, we will apply this wonderful design pattern called [Model-View-Model](https://docs.microsoft.com/en-us/dotnet/maui/xaml/fundamentals/mvvm) (MVVM).
 
+---
+More articles in the series:
+{{< series "My first app" >}}

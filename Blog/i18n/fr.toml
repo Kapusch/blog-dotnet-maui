@@ -1,0 +1,7 @@
+# Translations for French
+# Traductions pour le français
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# === Series taxonomy ===
+[series]
+other = "Séries"

@@ -19,6 +19,10 @@ theme = "FixIt"
   email = "jeanemmanuel.baillat@gmail.com"
   link = "https://github.com/Kapusch"
 
+[taxonomies]
+  tag = "tags"
+  series = "series"
+
 # -------------------------------------------------------------------------------------
 # Translated menus and sub-menus
 # -------------------------------------------------------------------------------------
@@ -194,7 +198,7 @@ theme = "FixIt"
   # site description
   description = "Learn to build cool apps with .NET MAUI for iOS, Android, macOS, and Windows, even if you just started !"
   # site keywords
-  keywords = [".NET MAUI", "Mobile", "C#", "Xamarin.Forms", "Xamarin"]
+  keywords = [".NET MAUI", "Mobile", "C#", "Xamarin.Forms", "Xamarin", ".NET MAUI French blog", ".NET MAUI Blog français", "MAUI French blog", "MAUI blog français", ".NET MAUI blog", "MAUI blog"]
   # site default theme ["light", "dark", "auto"]
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true

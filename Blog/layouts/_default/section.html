@@ -8,7 +8,6 @@
       {{- /* Title */ -}}
       <h1 class="single-title animate__animated animate__pulse animate__faster">
         {{- .Params.Title | default (T .Section) | default .Section }}
-        <sup>{{- len .Pages -}}</sup>
       </h1>
       {{- /* Total word count */ -}}
       {{- /* See https://github.com/hugo-fixit/FixIt/issues/124 */ -}}
@@ -21,9 +20,6 @@
         {{- if ge $humanizedNum 1000 -}}
           {{- $humanizedNum = printf "%.2fK" (div $humanizedNum 1000.0) -}}
         {{- end -}}
-        <p class="single-subtitle total-word-count" title='{{- T "totalwordCount" . }}'>
-          {{- dict "Class" "fa-regular fa-keyboard fa-fw" | partial "plugin/icon.html" }} {{ T "totalwordCount" (dict "Count" $humanizedNum) -}}
-        </p>
       {{- end -}}
     </div>
 

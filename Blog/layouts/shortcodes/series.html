@@ -1,0 +1,16 @@
+{{ $series_name := .Get 0 | urlize }}
+{{ $currentPageTitle := .Page.LinkTitle }}
+
+{{ range $key, $taxonomy := .Site.Taxonomies.series }}
+    {{ if eq ($key | urlize) $series_name }}
+    <ol>
+        {{ range $taxonomy.Pages.ByDate }}
+          <div {{ if eq $currentPageTitle .LinkTitle }} class="current" {{ end }}>
+            <li hugo-nav="{{ .RelPermalink }}" {{ if eq $currentPageTitle .LinkTitle }} class="nostyle" {{ end }}>
+                <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            </li>
+          </div>
+        {{ end }}
+    </ol>
+    {{ end }}
+{{ end }}

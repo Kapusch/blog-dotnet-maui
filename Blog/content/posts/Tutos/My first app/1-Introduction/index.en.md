@@ -3,6 +3,7 @@ Topic: "Introduction"
 Title: "Introduction"
 Category: "Tutos"
 Subcategory: "My first app"
+series: ["My first app"]
 Index: "1"
 PublishDate: "2023-01-01 00:00:01Z"
 Language: "English"
@@ -101,3 +102,6 @@ You'll probably make a few mistakes, but failing is the best way to learn, so ma
 
 Here we go, see you at <a href="../3-first-run-of-the-project/">next article</a> !
 
+---
+More articles in the series:
+{{< series "My first app" >}}

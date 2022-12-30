@@ -3,6 +3,7 @@ Topic: "Setup the project"
 Title: "Installer le projet"
 Category: "Tutos"
 Subcategory: "My first app"
+series: ["My first app"]
 Index: "2"
 PublishDate: "2023-01-01 00:00:02Z"
 Language: "French"
@@ -94,11 +95,14 @@ En fait, c’est déjà le cas ! Le projet que tu as sous les yeux est tout neuf
 * Enfin, il faudra bien pouvoir afficher quelque chose à l’ouverture de l’app ! Et pour ça, on a le dossier **Views** qui contient pour le moment notre première page, la fameuse page d’accueil…
 
 
-Et voilà c’est tout, et si on <a href="../3-first-run-of-the-project/">lançait cette app</a> ? 🙂
-
 
 {{< admonition type=tip title="‎ " open=true >}}
 Aller plus loin avec la [structure de base des projets Visual Studio](https://learn.microsoft.com/fr-fr/dotnet/maui/fundamentals/single-project?view=net-maui-7.0)
 {{< /admonition >}}
 
+Et voilà c’est tout, et si on <a href="../3-first-run-of-the-project/">lançait cette app</a> ? 🙂
 
+
+---
+Plus d'articles dans la même série:
+{{< series "My first app" >}}

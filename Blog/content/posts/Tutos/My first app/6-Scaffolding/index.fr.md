@@ -3,6 +3,7 @@ Topic: "Scaffolding"
 Title: "Les fondations"
 Category: "Tutos"
 Subcategory: "My first app"
+series: ["My first app"]
 Index: "6"
 PublishDate: "2023-01-22 00:00:06Z"
 Language: "French"
@@ -215,3 +216,6 @@ Aller plus loin avec les différents types de layout (Grid, StackLayout, Flex, �
 
 
 
+---
+Plus d'articles dans la même série:
+{{< series "My first app" >}}

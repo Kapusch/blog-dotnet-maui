@@ -3,6 +3,7 @@ Topic: "Introduction"
 Title: "Introduction"
 Category: "Tutos"
 Subcategory: "My first app"
+series: ["My first app"]
 Index: "1"
 PublishDate: "2023-01-01 00:00:01Z"
 Language: "French"
@@ -101,3 +102,6 @@ Allez c’est parti, rendez-vous au <a href="../2-setup-the-project/">prochain a
 
 
 
+---
+Plus d'articles dans la même série:
+{{< series "My first app" >}}

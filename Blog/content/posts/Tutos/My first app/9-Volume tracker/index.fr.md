@@ -3,6 +3,7 @@ Topic: "Volume tracker"
 Title: "Ajuster le volume"
 Category: "Tutos"
 Subcategory: "My first app"
+series: ["My first app"]
 Index: "9"
 PublishDate: "2023-02-12 00:00:09Z"
 Language: "French"
@@ -295,3 +296,6 @@ Et voilà, vas-y réessaye !
 
 <figure><p align="center"><img class="img-sizes" src="./images/69F6E9FE1F935AB3D276A2E35ED17A31.gif"></p></figure>
 
+---
+Plus d'articles dans la même série:
+{{< series "My first app" >}}

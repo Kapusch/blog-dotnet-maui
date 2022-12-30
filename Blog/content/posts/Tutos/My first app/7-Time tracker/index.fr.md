@@ -3,6 +3,7 @@ Topic: "Time tracker"
 Title: "Le minutage"
 Category: "Tutos"
 Subcategory: "My first app"
+series: ["My first app"]
 Index: "7"
 PublishDate: "2023-01-29 00:00:07Z"
 Language: "French"
@@ -104,3 +105,6 @@ Et voilà on en a fini avec la première ligne de notre grille ! Voyons ce que �
 
 
 
+---
+Plus d'articles dans la même série:
+{{< series "My first app" >}}

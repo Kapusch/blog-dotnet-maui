@@ -3,6 +3,7 @@ Topic: "Setup the project"
 Title: "Setup the project"
 Category: "Tutos"
 Subcategory: "My first app"
+series: ["My first app"]
 Index: "2"
 PublishDate: "2023-01-01 00:00:02Z"
 Language: "English"
@@ -94,13 +95,16 @@ Actually, it already is! The project you just opened is brand new, but it includ
 * Finally, we have to display something when the app opens! And for that, we have the **Views** folder which at the moment contains our first page, the famous home page…
 
 
-And that's it, how about if we <a href="../3-first-run-of-the-project/">launch that app</a> ? 🙂
-
 
 {{< admonition type=tip title="‎ " open=true >}}
 Going further with the [basic structure of a Visual Studio project](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/single-project?view=net-maui-7.0)
 {{< /admonition >}}
 
+And that's it, how about if we <a href="../3-first-run-of-the-project/">launch that app</a> ? 🙂
 
 
 
+
+---
+More articles in the series:
+{{< series "My first app" >}}

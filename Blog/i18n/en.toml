@@ -1,0 +1,6 @@
+# Translations for English
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# === Series taxonomy ===
+[series]
+other = "Series"

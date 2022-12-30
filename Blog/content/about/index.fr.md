@@ -1,7 +1,7 @@
 ---
 hiddenFromHomePage: true
 hiddenFromSearch: true
-noComment: true
+comment: false
 Topic: "About"
 Title: "À propos"
 Language: "French"

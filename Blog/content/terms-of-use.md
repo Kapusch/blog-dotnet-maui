@@ -1,6 +1,7 @@
 ---
 hiddenFromHomePage: true
 hiddenFromSearch: true
+comment: false
 ---
 
 # Terms and Conditions

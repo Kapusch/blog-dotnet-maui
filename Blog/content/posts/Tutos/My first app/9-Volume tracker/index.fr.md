@@ -80,11 +80,11 @@ Prenons le cas le plus simple, celui où l’on détecte un volume sonore à 0:
 ```csharp
 DataTrigger VolumeOffTrigger => new(typeof(ImageButton))
 {
-    Binding = new Binding(nameof(Slider.Value), source: VolumeTracker),
-    Value = 0d,
-    Setters = {
-            new Setter { Property = ImageButton.SourceProperty, Value = "volume_off" }
-        }
+	Binding = new Binding(nameof(Slider.Value), source: VolumeTracker),
+	Value = 0d,
+	Setters = {
+		new Setter { Property = ImageButton.SourceProperty, Value = "volume_off" }
+	}
 };
 ```
 
@@ -139,19 +139,18 @@ Ne reste plus qu’à rajouter ce trigger à notre composant *MuteButton* en uti
 ```csharp
 public MusicPlayerView()
 {
-    ...
-
-    InitMuteButton();
-
-    Content = new Grid
-    {
-			...
-    };
+	...
+	InitMuteButton();
+	
+	Content = new Grid
+	{
+		...
+	};
 }
 
 void InitMuteButton()
 {
-		MuteButton.Triggers.Add(VolumeOffTrigger);
+	MuteButton.Triggers.Add(VolumeOffTrigger);
 }
 ```
 
@@ -177,24 +176,24 @@ Déclarons d’abord nos 3 nouveaux états:
 ```csharp
 MultiTrigger VolumeLowTrigger = new(typeof(ImageButton))
 {
-    Setters = {
-            new Setter { Property = ImageButton.SourceProperty, Value = "volume_low" }
-        }
+	Setters = {
+		new Setter { Property = ImageButton.SourceProperty, Value = "volume_low" }
+	}
 };
 
 MultiTrigger VolumeMediumTrigger = new(typeof(ImageButton))
 {
-    Setters = {
-            new Setter { Property = ImageButton.SourceProperty, Value = "volume_medium" }
-        }
+	Setters = {
+		new Setter { Property = ImageButton.SourceProperty, Value = "volume_medium" }
+	}
 };
 
 MultiTrigger VolumeHighTrigger = new(typeof(ImageButton))
 {
-    Setters = {
-            new Setter { Property = ImageButton.SourceProperty, Value = "volume_high" }
-        }
-};
+	Setters = {
+		new Setter { Property = ImageButton.SourceProperty, Value = "volume_high" }
+	}
+	};
 ```
 
 

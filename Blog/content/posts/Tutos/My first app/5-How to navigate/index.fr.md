@@ -69,17 +69,17 @@ Comme tu l’auras sûrement remarqué, notre page d’accueil est désormais co
 
 <figure><p align="center"><img class="img-sizes" src="./images/82596E59FF4122F0C481FF2E6E218521.png"></p></figure>
 
-Ce n’est pas nécessairement ce que l’on souhaite alors on va vite voir comment supprimer cette en-tête. Rends-toi dans le fichier `HomeView.cs` et fais appel à la méthode* SetHasNavigationBar() *dans le constructeur de la *HomeView* comme ceci:
+Ce n’est pas nécessairement ce que l’on souhaite alors on va vite voir comment supprimer cette en-tête. Rends-toi dans le fichier `HomeView.cs` et fais appel à la méthode *SetHasNavigationBar()* dans le constructeur de la *HomeView* comme ceci:
 
 ```csharp
 public HomeView()
 {
-    ...
-		BindingContext = new HomeViewModel();
-
-    NavigationPage.SetHasNavigationBar(this, false);
-    BackgroundColor = Colors.Black;
-    ...
+	...
+	BindingContext = new HomeViewModel();
+	
+	NavigationPage.SetHasNavigationBar(this, false);
+	BackgroundColor = Colors.Black;
+	...
 }
 ```
 

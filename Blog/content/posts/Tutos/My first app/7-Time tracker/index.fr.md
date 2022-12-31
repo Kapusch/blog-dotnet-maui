@@ -73,7 +73,6 @@ Pour vérifier l’affichage de cette première partie du lecteur musical, je te
 Grid BottomLayout => new Grid
 {
     ...
-
     Children =
     {
         ElapsedTime.Row(0).Column(1),

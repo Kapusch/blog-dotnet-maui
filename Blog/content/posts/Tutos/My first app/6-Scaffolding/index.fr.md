@@ -68,20 +68,19 @@ Ce sont des données utiles pour notre première utilisation de la *Grid*:
 ```csharp
 public MusicPlayerView()
 {
-    ...
-
-    Content = new Grid
-    {
-				RowDefinitions = Rows.Define(
-            Stars(60),
-            Stars(40)),
-        RowSpacing = 0,
-        Children =
-        {
-            TopLayout.Row(0),
-            BottomLayout.Row(1),
-        }
-    };
+	...
+	Content = new Grid
+	{
+		RowDefinitions = Rows.Define(
+			Stars(60),
+			Stars(40)),
+		RowSpacing = 0,
+		Children =
+		{
+			TopLayout.Row(0),
+			BottomLayout.Row(1),
+		}
+	};
 }
 ```
 
@@ -174,7 +173,6 @@ Pour revenir à notre quadrillage de la partie inférieure de l’écran en 3 li
 Grid BottomLayout => new Grid
 {
 		...
-
 		Children =
 		{
 		    new BoxView { Color = Color.FromArgb("#ffffff") }.Row(0).Column(0),

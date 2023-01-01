@@ -169,6 +169,8 @@ Enfin pour gérer tous les différents états du bouton, nous aurons besoin que:
 * l’icône du volume bas s’affiche pour une valeur comprise entre 1 et 15,
 * l’icône du volume modéré s’affiche pour une valeur comprise entre 16 et 50,
 * l’icône du volume élevé s’affiche pour une valeur comprise entre 51 et 100.
+
+
 Pour cela, nous allons utiliser un nouveau déclencheur spécifique, le [MultiTrigger](/5db3d3ad31534fcf93a5022fcd2e381d). Celui-ci reprend le même principe que pour le *VolumeOffTrigger*, à la différence qu’au lieu de ne se référer qu’à une seule valeur cible, on définira des plages de valeur.
 
 Déclarons d’abord nos 3 nouveaux états:

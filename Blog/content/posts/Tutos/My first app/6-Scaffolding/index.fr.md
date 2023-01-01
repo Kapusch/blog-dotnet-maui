@@ -61,6 +61,8 @@ Puis on va diviser la page en deux:
 
 * La partie du haut qui n’affiche rien d’autre pour le moment qu’un fond noir,
 * Et celle du bas qui représente notre lecteur de musique.
+
+
 Si tu as l’oeil, tu remarqueras que la partie supérieure est légèrement plus grande que la partie inférieure. On peut même dire que la partie noire s’étale verticalement sur 60% de la page, ce qui laisse 40% d’espace pour le lecteur.
 
 Ce sont des données utiles pour notre première utilisation de la *Grid*:
@@ -91,6 +93,8 @@ A l’initialisation du *Grid*, on définit deux autres paramètres :
 
 * *RowSpacing* à 0 pour n’avoir aucun espace entre nos deux lignes,
 * *Children* pour contenir les éléments de notre grille sur la première ligne et la deuxième ligne.
+
+
 Et si tu te demandes d’où sortent ces fameux *TopLayout* et *BottomLayout*, ce sont deux nouveaux conteneurs d’éléments que j’ai définis en dehors du constructeur de notre vue. En effet, pour ces deux contrôles, on utilise encore deux *Grid* pour nous aider dans le placement des éléments. L’un est défini avec un fond noir et l’autre avec un fond gris foncé:
 
 ```csharp
@@ -114,6 +118,8 @@ Concentrons-nous dans un premier temps sur le contenu du *BottomLayout*. En rega
 
 * de haut en bas, 3 lignes de taille identique,
 * de gauche à droite, 7 colonnes (2 petites, 3 grandes et 2 petites à nouveau)
+
+
 <figure><p align="center"><img class="img-sizes" src="./images/15825CA1D0297C02D5C7C653EDA5BEA7.png"></p></figure>
 
 Et pour cela, nous allons définir les lignes et colonnes qui composent notre *Grid*:

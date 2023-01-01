@@ -76,7 +76,9 @@ In my case, it took exactly one year from the moment I imagined the application 
 
 First of all, congratulations, it’s a very good decision! So to start your application, you will need to:
 
-
+- [ ] Find an idea,
+- [ ] Design a mock-up,
+- [ ] Know C# language.
 
 
 First point is easy, you usually already have the idea to get this far. 😛

@@ -46,6 +46,8 @@ Oui en effet, on aura bien 5 boutons pour contrôler le média. De gauche à dro
 * Jouer la chanson (play.png) quand elle n’est pas déjà en cours de lecture, ou la mettre en pause (pause.png) quand elle est en train d’être jouée !
 * Passer à la chanson suivante (skip_next.png)
 * Télécharger le morceau (download.png)
+
+
 Oui je sais, initialement j’avais pensé à un mode aléatoire de lecture, mais j’ai changé d’avis ! 😄 Comme quoi, c’est important de concevoir une maquette !
 
 Maintenant que tu as obtenu les images, tu vas devoir les importer dans le projet afin de les rendre disponibles dans l’app. Pour cela, déplie le dossier *Resources* et fais un clic droit sur le dossier *Images*:

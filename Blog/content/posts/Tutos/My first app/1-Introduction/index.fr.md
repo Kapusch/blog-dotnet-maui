@@ -28,7 +28,7 @@ Salut les Dev•e•s ! 🤓
 
 Moi c'est J-E, ou Jean-Emmanuel si tu préfères, et je suis ravi de te savoir en train de me lire ! 😊
 
-En effet, j’ai à cœur de partager ma passion pour le développement d’applications mobiles cross-platforms, et tout particulièrement avec [.NET MAUI](https://learn.microsoft.com/fr-fr/dotnet/maui/what-is-maui?view=net-maui-7.0) (à prononcer "dote-net maoui").
+En effet, j’avais à cœur de partager ma passion pour le développement d’applications mobiles cross-platforms, et tout particulièrement avec [.NET MAUI](https://learn.microsoft.com/fr-fr/dotnet/maui/what-is-maui?view=net-maui-7.0) (à prononcer "dote-net maoui").
 
 Avec ce blog, je veux pouvoir aider tout développeur débutant à se lancer dans son projet d’application mobile au travers de cours très simples. Pas de cours théoriques à rallonge, ici tu vas vite t’amuser et produire des apps sympas ! Et je t’accompagnerai du développement jusqu’à la mise en ligne de ton application sur les stores.
 
@@ -61,6 +61,8 @@ Et donc non, cela ne m’a pas pris très longtemps, mais cela dépendra surtout
 * de tes connaissances en développement,
 * de la complexité de ton application,
 * et du temps que tu peux lui accorder.
+
+
 Dans mon cas, cela m'a pris exactement un an entre le moment où j'ai imaginé l’application et le jour où je l'ai publiée sur les stores.
 
 
@@ -74,7 +76,9 @@ Dans mon cas, cela m'a pris exactement un an entre le moment où j'ai imaginé l
 
 Tout d’abord bravo, tu as raison de te lancer ! Alors pour démarrer ton application, il te faudra :
 
-
+- [ ] Trouver une idée,
+- [ ] Concevoir la maquette,
+- [ ] Comprendre le langage C#.
 
 
 Pour le premier point, c'est facile, tu l'as normalement déjà fait pour arriver jusqu’ici. 😛

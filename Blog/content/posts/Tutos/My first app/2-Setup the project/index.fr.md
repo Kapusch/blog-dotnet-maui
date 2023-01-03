@@ -91,7 +91,7 @@ En fait, c’est déjà le cas ! Le projet que tu as sous les yeux est tout neuf
 * Toutes les librairies nécessaires au bon fonctionnement du projet sont regroupées dans le dossier **Dependencies**,
 * Dans **Platforms**, tu retrouveras tous les fichiers nécessaires à l’exécution de l’application, et ce pour chaque plateforme cible,
 * Quant au dossier **Properties**, on y retrouve généralement des fichiers de configuration (il y en a d’ailleurs une créée par défaut pour Windows),
-* Et puis, tu auras la possibilité pour chaque application de lui configurer une icône et un écran de chargement ! Pour cela, on recoure généralement au dossier **Resources** pour stocker tous nos médias (icônes, images, pistes audio et vidéo, …),
+* Et puis, tu auras la possibilité pour chaque application de lui configurer une icône et un écran de chargement ! Pour cela, on recourt généralement au dossier **Resources** pour stocker tous nos médias (icônes, images, pistes audio et vidéo, …),
 * Enfin, il faudra bien pouvoir afficher quelque chose à l’ouverture de l’app ! Et pour ça, on a le dossier **Views** qui contient pour le moment notre première page, la fameuse page d’accueil…
 
 

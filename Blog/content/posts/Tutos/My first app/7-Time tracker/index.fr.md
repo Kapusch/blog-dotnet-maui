@@ -25,7 +25,11 @@ Maintenant que les fondations de ta page sont prêtes, tu vas pouvoir commencer 
 
 <figure><p align="center"><img class="img-sizes" src="./images/FA80B1E1F42328E22E779783E27C557F.png"></p></figure>
 
+
+
 On utilisera le composant [Label](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/label) pour afficher les minutages correspondant à la position actuelle dans la piste en cours de lecture, ainsi que le temps d’écoute restant:
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
 Label ElapsedTime => new Label
@@ -44,6 +48,8 @@ Label RemainingTime => new Label
 ```
 
 
+
+
 La taille de police définie pour ces deux labels est relativement petite. Cependant, elle s’adaptera automatiquement au niveau d’agrandissement du texte défini par l’utilisateur dans les réglages d’accessibilité de son téléphone.
 
 
@@ -51,7 +57,11 @@ La taille de police définie pour ces deux labels est relativement petite. Cepen
 Aller plus loin avec l’accessibilité
 {{< /admonition >}}
 
+
+
 Et pour ce qui est de la barre de navigation, on utilisera le [Slider](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/slider):
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
 Slider TimeTracker => new Slider
@@ -65,9 +75,13 @@ Slider TimeTracker => new Slider
 ```
 
 
+
+
 Bon évidemment ici encore, les valeurs de configuration sont factices. L’idée est surtout de rapidement se rendre compte du rendu final ! Pour le moment, on demande au *Slider* de considérer toutes les valeurs allant de 0 à 100 et de positionner son curseur à la position n°20.
 
 Pour vérifier l’affichage de cette première partie du lecteur musical, je te propose d’effacer tous les éléments enfants de notre *BottomLayout* et de lui assigner les premiers éléments que l’on vient de définir. Pour cela, tu seras sûrement tenté d’écrire quelque chose comme:
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
 Grid BottomLayout => new Grid
@@ -83,19 +97,29 @@ Grid BottomLayout => new Grid
 ```
 
 
+
+
 C’est un bon début ! Cependant, si tu démarres l’application, tu constateras qu’il y un léger problème d’affichage:
 
 <figure><p align="center"><img class="img-sizes" src="./images/6A71FCFF86082A1FEF1D2C5C1840643B.png"></p></figure>
+
+
 
 Pas de panique ! Si tu te rappelles, on a initialement divisé le *BottomLayout* en 7 colonnes. Or, si notre code positionne bien notre *Slider* à partir de la case n°3 de la première ligne, il ne lui dit pas clairement où s’arrêter ! On pourrait alors simplement dire au *Slider* de s’étaler sur les colonnes suivantes, comme ceci:
 
 <figure><p align="center"><img class="img-sizes" src="./images/EC9010D37B4268DF0FCDE7480DD1156F.png"></p></figure>
 
+
+
 Pour cela, on utilise la commande *ColumnSpan* pour indiquer au *Slider* de s’étendre jusqu’à 3 colonnes à partir de la case n°3 :
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
 TimeTracker.Row(0).Column(2).ColumnSpan(3)
 ```
+
+
 
 
 Et voilà on en a fini avec la première ligne de notre grille ! Voyons ce que ça donne à l’image:

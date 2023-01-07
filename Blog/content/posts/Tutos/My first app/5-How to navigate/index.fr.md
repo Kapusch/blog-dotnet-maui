@@ -30,7 +30,11 @@ Commençons déjà par ajouter notre nouvelle page. Pour cela, clic droit sur le
 
 <figure><p align="center"><img class="img-sizes" src="./images/4C95EF7DF978364F1FBDE99A614BF58D.png"></p></figure>
 
+
+
 Comme tu l’auras remarqué, le template utilisé crée la page avec un contenu par défaut. On n’a donc plus qu’à naviguer vers notre nouvelle page ! Dans le fichier `HomeViewModel.cs`, modifie la méthode *Enter()* de la façon suivante :
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>HomeViewModel.cs</code></p>
 
 ```csharp
 [RelayCommand]
@@ -43,11 +47,17 @@ async Task Enter()
 
 
 
+
+
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Ah! Et c’est tout, je peux tester alors ?
 {{< /admonition >}}
 
+
+
 On y est presque ! En effet, on doit simplement initialiser la navigation dans l’app en lui informant quelle en sera la page racine. Pour cela, on fait appel à une [NavigationPage](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage#create-the-root-page) pour contenir notre *HomeView* en modifiant la méthode *OnStart()* du fichier `App.cs` de cette façon:
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>App.cs</code></p>
 
 ```csharp
 protected override void OnStart()
@@ -61,15 +71,23 @@ protected override void OnStart()
 ```
 
 
+
+
 Voilà c’est bon, relance l’application et clique sur le bouton *Enter* !
 
 <figure><p align="center"><img class="img-sizes" src="./images/0F2CA118C086F82599BC1C6BC4E0D61A.png"></p></figure>
+
+
 
 Comme tu l’auras sûrement remarqué, notre page d’accueil est désormais contenue dans une page configurée pour la navigation, elle contiendra donc une en-tête de navigation :
 
 <figure><p align="center"><img class="img-sizes" src="./images/82596E59FF4122F0C481FF2E6E218521.png"></p></figure>
 
+
+
 Ce n’est pas nécessairement ce que l’on souhaite alors on va vite voir comment supprimer cette en-tête. Rends-toi dans le fichier `HomeView.cs` et fais appel à la méthode *SetHasNavigationBar()* dans le constructeur de la *HomeView* comme ceci:
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>HomeView.cs</code></p>
 
 ```csharp
 public HomeView()
@@ -84,9 +102,13 @@ public HomeView()
 ```
 
 
+
+
 Voilà, et si tu relances l’app, c’est quand même plus joli !
 
 <figure><p align="center"><img class="img-sizes" src="./images/2B7DCB34C546A4051261C0D200380452.png"></p></figure>
+
+
 
 Allez il est temps de passer à un nouveau chapitre, l’élaboration de notre page principale !
 

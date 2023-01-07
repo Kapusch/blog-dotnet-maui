@@ -29,23 +29,35 @@ Pour assurer le bon déroulement de cet article, je t’invite à repartir du pr
 Quand on développe une nouvelle page, le plus important c’est de réfléchir à l’organisation des éléments sur la page, et .NET MAUI nous offre [une palette de possibilités pour structurer notre page](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/layouts/). Tu vas voir, c’est un vrai travail d’architecte !
 
 
+
+
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Mais au fait, à quoi doit ressembler notre page ?
 {{< /admonition >}}
 
+
+
 Très bonne question ! Si tu veux un conseil, commence toujours par élaborer le design de ta page au crayon sur une feuille. En effet, les écrans de téléphone sont petits et il n’est donc pas toujours facile de disposer tous les éléments souhaités. Et quand on est suffisamment satisfait du design sur papier, on crée une maquette sur ordinateur pour un rendu réaliste qui facilitera l’intégration de la page.
+
+
 
 Dans notre cas, on visera le résultat suivant :
 
 <figure><p align="center"><img class="img-sizes" src="./images/F25FC1F576D94B299848D78DBA0AF729.png"></p></figure>
 
+
+
 Ici on remarque que les éléments sont disposés de façon assez régulière. On peut facilement imaginer des lignes pour délimiter les espaces et aligner nos éléments les uns par rapport aux autres. C’est un exercice un peu spécial mais tu verras qu’avec le temps, ça deviendra de plus en plus facile:
 
 <figure><p align="center"><img class="img-sizes" src="./images/DC7E5A20A7CA1D0976AD5613BCC16209.png"></p></figure>
 
+
+
 Ces lignes te feront peut-être penser à une grille… et si c’est le cas, bien vu ! En effet, on utilisera ici majoritairement le composant [Grid](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/layouts/grid) pour disposer nos éléments sur une grille, littéralement.
 
 La première chose à faire ici, c’est de supprimer l’en-tête de navigation pour que notre page remplisse tout l’écran, comme on l’avait fait pour la page d’accueil. Commence par supprimer le contenu généré par défaut et remplace-le par ce qui suit:
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
 public MusicPlayerView()
@@ -57,6 +69,8 @@ public MusicPlayerView()
 ```
 
 
+
+
 Puis on va diviser la page en deux:
 
 * La partie du haut qui n’affiche rien d’autre pour le moment qu’un fond noir,
@@ -66,6 +80,8 @@ Puis on va diviser la page en deux:
 Si tu as l’oeil, tu remarqueras que la partie supérieure est légèrement plus grande que la partie inférieure. On peut même dire que la partie noire s’étale verticalement sur 60% de la page, ce qui laisse 40% d’espace pour le lecteur.
 
 Ce sont des données utiles pour notre première utilisation de la *Grid*:
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
 public MusicPlayerView()
@@ -87,6 +103,8 @@ public MusicPlayerView()
 ```
 
 
+
+
 Ici tu peux voir qu’on définit le contenu de notre page dans le constructeur de *MusicPlayerView*, avec comme base un *Grid*. Et avec le paramètre *RowDefinitions*, on décompose cette grille en 2 lignes, la première pouvant s’étendre jusqu’à 60% de la page verticalement contre 40% pour la deuxième, comme sur notre design !
 
 A l’initialisation du *Grid*, on définit deux autres paramètres :
@@ -96,6 +114,8 @@ A l’initialisation du *Grid*, on définit deux autres paramètres :
 
 
 Et si tu te demandes d’où sortent ces fameux *TopLayout* et *BottomLayout*, ce sont deux nouveaux conteneurs d’éléments que j’ai définis en dehors du constructeur de notre vue. En effet, pour ces deux contrôles, on utilise encore deux *Grid* pour nous aider dans le placement des éléments. L’un est défini avec un fond noir et l’autre avec un fond gris foncé:
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
 #region Controls
@@ -114,6 +134,8 @@ Grid BottomLayout => new Grid
 ```
 
 
+
+
 Concentrons-nous dans un premier temps sur le contenu du *BottomLayout*. En regardant d’un peu plus près le design, on perçoit:
 
 * de haut en bas, 3 lignes de taille identique,
@@ -122,7 +144,11 @@ Concentrons-nous dans un premier temps sur le contenu du *BottomLayout*. En rega
 
 <figure><p align="center"><img class="img-sizes" src="./images/15825CA1D0297C02D5C7C653EDA5BEA7.png"></p></figure>
 
+
+
 Et pour cela, nous allons définir les lignes et colonnes qui composent notre *Grid*:
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
 Grid BottomLayout => new Grid
@@ -146,6 +172,8 @@ Grid BottomLayout => new Grid
 ```
 
 
+
+
 Comme tu vois, le code ci-dessus propose un découpage en 3 lignes de même taille et 7 colonnes.
 
 
@@ -153,7 +181,11 @@ Comme tu vois, le code ci-dessus propose un découpage en 3 lignes de même tail
 🐒‎ ‎ Euh… ouais j’ai bien un total de 100% si j’additionne les tailles de chaque colonne, mais pour ce qui est des lignes y’a un problème non ?
 {{< /admonition >}}
 
+
+
 Très bonne remarque ! En fait si je suis parti au début avec un échelonnement des tailles sur 100%, c’est parce que c’est souvent plus facile à comprendre. En réalité, quand tu écris:
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
 RowDefinitions = Rows.Define(
@@ -162,7 +194,11 @@ RowDefinitions = Rows.Define(
 ```
 
 
+
+
 tu demandes à ton programme d’établir une taille dynamique avec un poids de 60 pour la première ligne, contre un poids de 40 pour la deuxième. Tu peux voir ce poids comme un coefficient multiplicateur. Par exemple, ce même bout de code peut être réécrit de cette façon:
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
 RowDefinitions = Rows.Define(
@@ -171,9 +207,13 @@ RowDefinitions = Rows.Define(
 ```
 
 
+
+
 A toi de choisir ce qui te semble plus cohérent !
 
 Pour revenir à notre quadrillage de la partie inférieure de l’écran en 3 lignes et 7 colonnes, je vais te donner une astuce pour vérifier rapidement que notre découpage est bien celui attendu et voir s’il y a quelque ajustement à faire. Pour cela, définis simplement une *BoxView* dans chaque case du quadrillage avec chacune sa propre couleur:
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
 Grid BottomLayout => new Grid
@@ -207,9 +247,13 @@ Grid BottomLayout => new Grid
 ```
 
 
+
+
 Et si tu lances l’application, tu pourras alors confirmer avec certitude que notre emploi des *Grid* est effectivement correct:
 
 <figure><p align="center"><img class="img-sizes" src="./images/F9032472788C6B235E788E30A9EE9C21.png"></p></figure>
+
+
 
 Ce n’est toujours pas fonctionnel, mais tu as déjà passé un premier cap !
 

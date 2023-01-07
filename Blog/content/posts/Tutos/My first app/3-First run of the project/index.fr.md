@@ -27,7 +27,11 @@ draft: false
 Pour assurer le bon déroulement de cet article, je t’invite à repartir du projet reprenant les différentes étapes appliquées dans les articles précédents. Pour cela, [télécharge le projet](https://github.com/Kapusch/blog-dotnet-maui) si ce n’est pas déjà fait, et ouvre le projet NightClub situé dans le dossier “*0 - Get Started*”.
 {{< /admonition >}}
 
-Pour que notre application puisse fonctionner, il nous reste deux points à aborder : l’initialisation de l’app et surtout, gérer son état d’exécution.
+
+
+Allez, il est temps de faire tourner l’application. On en profitera aussi pour jeter un œil au code source ! 🙂
+
+Mais pour que notre application puisse fonctionner, il nous reste deux points à aborder : l’initialisation de l’app et surtout, gérer son état d’exécution.
 
 ### Initialisation de l’app
 
@@ -43,13 +47,19 @@ Allez, il est temps de faire tourner l’application ! Choisis donc la plateform
 
 <figure><p align="center"><img class="img-sizes" src="./images/CCA585B557D8F8AFA27869ED6F96DC99.png"></p></figure>
 
+
+
 Dans un premier temps, tu verras ton projet être compilé avec la configuration choisie (c’est l’étape du build):
 
 <figure><p align="center"><img class="img-sizes" src="./images/85AFA96A5BBDCA9AA60CF174671E372B.png"></p><figcaption class="image-caption">Sous Visual Studio for Mac, le statut actuel du projet peut facilement être consulté en bas à gauche de la fenêtre.</figcaption></figure>
 
+
+
 Puis tu verras ton application se déployer automatiquement vers la plateforme choisie (ici, une simulation de l’iPhone 13, iOS 15.5).
 
 <figure><p align="center"><img class="img-sizes" src="./images/FB933ED833E5286A9C4DEE2FD6747035.png"></p></figure>
+
+
 
 Et voilà le résultat !
 
@@ -68,7 +78,11 @@ Ce n’est évidemment que le début de notre app, le plus gros reste à faire !
 
 Ce que tu vois pour le moment, c’est la page d’accueil dont le contenu est spécifié dans le fichier `HomeView.cs`. Il s’agit là d’une [ContentPage](https://docs.microsoft.com/fr-fr/dotnet/maui/user-interface/pages/contentpage) (littéralement une page avec du contenu) qui est le type de page le plus courant.
 
+
+
 Et comme tu peux le voir, ce qu’elle définit est très simple:
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>HomeView.cs</code></p>
 
 ```csharp
 public HomeView()
@@ -87,9 +101,20 @@ public HomeView()
 ```
 
 
+
+
+
+{{< admonition type=info title="‎ " open=true >}}
+Comme pour le reste de l’app, la page est codée en C#, on parle alors de “Declarative UI” ou encore de “Fluent UI”.
+{{< /admonition >}}
+
+
+
 C’est une page avec un arrière-plan noir et dont le contenu est défini par une image et un bouton qui sont empilés verticalement dans un [VerticalStackLayout](https://docs.microsoft.com/fr-fr/dotnet/maui/user-interface/layouts/verticalstacklayout).
 
 Et si tu veux savoir comment sont définis ces deux composants, il te suffit de regarder un peu plus bas dans le code de la page :
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>HomeView.cs</code></p>
 
 ```csharp
 #region Controls
@@ -113,13 +138,13 @@ Button EnterButton => new Button
 
 
 
+
+
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ D’accord ! Et il ne faudrait pas lui déclarer une action à ce bouton ?
 {{< /admonition >}}
 
 Tout juste ! Et on va voir comment déclencher l’exécution de code en cliquant sur ce bouton, mais pas n’importe comment. On va en effet appliquer ce merveilleux patron de conception qu’est le [Model-View-ViewModel](https://docs.microsoft.com/fr-fr/dotnet/maui/xaml/fundamentals/mvvm) (MVVM).
-
-
 
 ---
 Plus d'articles dans la même série:

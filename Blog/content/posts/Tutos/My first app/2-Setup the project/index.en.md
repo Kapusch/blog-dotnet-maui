@@ -27,6 +27,12 @@ Hi Devs! 🤓
 
 Today we'll start building our first application! Let’s first set up your working environment, and then you’ll have something concrete soon. Let's get started!
 
+### Which tools for development ?
+
+Let’s first see the tools you will need to develop your app.
+
+
+
 
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ By the way, do I need to be on Windows, MacOS or Linux?
@@ -49,7 +55,7 @@ But you can also develop under Windows or Linux! More concretely:
 For the purposes of this blog, I will only focus on mobile application development using Visual Studio. It is much more intuitive to use and that is what appeals to any true novice.
 {{< /admonition >}}
 
-
+### Install your environment
 
 Let's move on to the installation of the working environment:
 
@@ -67,7 +73,7 @@ Let's move on to the installation of the working environment:
 Before you go further, if you are on MacOS, make sure you have [downloaded the latest version of Xcode](https://developer.apple.com/xcode/) which is required for the iPhone simulator. This is usually long to install, so I suggest you do it while reading.
 {{< /admonition >}}
 
-
+### Opening the project
 
 Once you have unzipped the downloaded file, go to the Samples folder associated with our course (*Samples/NightClub*). The folders under it each correspond to a different part of the course:
 

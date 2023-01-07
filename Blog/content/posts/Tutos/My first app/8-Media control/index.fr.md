@@ -25,9 +25,13 @@ Passons ensuite à la seconde rangée de boutons:
 
 <figure><p align="center"><img class="img-sizes" src="./images/3BA4EBED916B74ED7B3AD4B770FFAC23.png"></p></figure>
 
+
+
 On a ici 5 boutons qui représentent une image cliquable, on fera donc appel au composant [ImageButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/imagebutton). Mais avant de pouvoir les coder, tu vas devoir dans un premier temps importer ces images dans le projet. Commence par télécharger l’ensemble des images:
 
 {{< link href="./files/Media_Control_-_Images.zip" content="Media_Control_-_Images.zip" title="Download Media_Control_-_Images.zip" download="Media_Control_-_Images.zip" card=true >}}
+
+
 
 
 Décompresse le fichier pour obtenir les 6 images suivantes:
@@ -35,9 +39,13 @@ Décompresse le fichier pour obtenir les 6 images suivantes:
 <figure><p align="center"><img class="img-sizes" src="./images/2E090B2B8F1350B550776023FA314EB4.png"></p></figure>
 
 
+
+
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ 6 images… mais on n’avait pas dit 5 boutons seulement ?
 {{< /admonition >}}
+
+
 
 Oui en effet, on aura bien 5 boutons pour contrôler le média. De gauche à droite ça donne:
 
@@ -54,13 +62,19 @@ Maintenant que tu as obtenu les images, tu vas devoir les importer dans le proje
 
 <figure><p align="center"><img class="img-sizes" src="./images/0F64B307F99690E87648DFC47C81F02C.png"></p></figure>
 
+
+
 Dans le menu contextuel qui s’affiche, sous *Ajouter*, clique pour ajouter des fichiers depuis un dossier:
 
 <figure><p align="center"><img class="img-sizes" src="./images/693BBF570360FA0FD6CD0CFA107F4BC3.png"></p></figure>
 
+
+
 Sélectionne alors le dossier décompressé qui contient les 6 images, et valide. Une fenêtre apparaît pour sélectionner les fichiers à inclure dans le projet:
 
 <figure><p align="center"><img class="img-sizes" src="./images/773A0DDCB14EF44FA3318865EF20521A.png"></p></figure>
+
+
 
 Dans notre cas, on veut importer toutes les images du dossier. Sélectionne-les toutes et valide.
 
@@ -68,13 +82,19 @@ A ce moment-là, il y a de grandes chances pour que Visual Studio te demande com
 
 <figure><p align="center"><img class="img-sizes" src="./images/C4976CEE27F3207173C4D5DB9147591B.png"></p></figure>
 
+
+
 Voilà c’est terminé, vérifie que tu as bien tes 6 nouvelles images importées dans le dossier !
 
 <figure><p align="center"><img class="img-sizes" src="./images/BE9B7B0BEE89CB13A55196568E193B1D.png"></p></figure>
 
+
+
 Allez c’est parti, on passe au code !
 
 On définit d’abord les boutons aux extrémité, qui sont les plus simples:
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
 ImageButton RepeatOnceButton => new ImageButton
@@ -97,9 +117,13 @@ ImageButton DownloadButton => new ImageButton
 ```
 
 
+
+
 On y définit la source de l’image par le nom du fichier associé, sans nécessairement préciser l’extension “.png”. Mais aussi, une forme carrée (25 de hauteur sur 25 de largeur) à fond noir et aux bords légèrement arrondis.
 
 Ensuite, il reste à définir les 3 boutons pour contrôler le lecteur :
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
 ImageButton SkipPreviousButton => new ImageButton
@@ -127,16 +151,24 @@ ImageButton SkipNextButton => new ImageButton
 ```
 
 
+
+
 Rien de bien différent ici comparé aux deux premiers, si ce n’est que ceux-là sont plus grands, et que les boutons *SkipPrevious* et *SkipNext* n’ont de couleur définie en fond, contrairement au bouton *Jouer*. Ce dernier d’ailleurs a des bords très arrondis… tellement arrondis que le carré devient en fait un cercle parfait !
+
+
 
 
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Un cercle parfait ? Comment as-tu fait ?
 {{< /admonition >}}
 
+
+
 Il y a une technique très simple: la valeur assignée aux bords arrondis doit être égale à la moitié de la taille du composant. Ainsi, si tu veux un bouton de forme ronde d’une hauteur de 200, il faudra lui donner une valeur de 100 aux bords arrondis.
 
 Allez il est désormais temps pour toi d’assigner ces nouveaux boutons sur la deuxième ligne de notre *BottomLayout* ! Comme on a 5 boutons pour 7 colonnes, ton intuition t’orientera peut-être à écrire le code suivant:
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
 RepeatOnceButton.Row(1).Column(1),
@@ -148,11 +180,17 @@ DownloadButton.Row(1).Column(5)
 
 
 
+
+
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Ben oui c’est ce que j’ai fait… et alors fallait pas ? 🙈
 {{< /admonition >}}
 
+
+
 Si, bien sûr ! Tu as forcément dû vérifier en relançant ton app, et le résultat n’est pas si mal ! C’est juste une question de préférence. Pour ma part, j’ai recréé un *Grid* spécialement pour englober les boutons *Play, SkipPrevious* et *SkipNext*:
+
+<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
 Grid MediaControlLayout => new Grid
@@ -172,6 +210,8 @@ Grid MediaControlLayout => new Grid
 ```
 
 
+
+
 Et de positionner les boutons dans le *BottomLayout* de cette façon:
 
 ```csharp
@@ -179,6 +219,8 @@ RepeatOnceButton.Row(1).Column(1),
 MediaControlLayout.Row(1).Column(2).ColumnSpan(3),
 DownloadButton.Row(1).Column(5)
 ```
+
+
 
 
 Et voilà, ça commence à prendre forme !

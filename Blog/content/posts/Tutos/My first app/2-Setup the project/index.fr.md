@@ -27,6 +27,12 @@ Salut les Dev•e•s ! 🤓
 
 Tu vas bientôt pouvoir créer ta première application mobile ! Juste le temps d'installer ton environnement de travail et on aura rapidement quelque chose de concret. Allez c'est parti !
 
+### Quels outils pour développer ?
+
+Voyons déjà les outils qui te permettront de développer ton appli.
+
+
+
 
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Mais au fait, il faut être sous Windows, MacOS ou Linux ?
@@ -49,7 +55,7 @@ Mais tu peux tout aussi bien développer sous Windows ou Linux ! Plus concrètem
 Dans le cadre de ce blog, je me concentrerais uniquement sur le développement d’application mobile à l’aide de Visual Studio. En effet, son utilisation est bien plus intuitive et c’est justement cela qui plaît à tout vrai néophyte.
 {{< /admonition >}}
 
-
+### Installation de l’environnement
 
 Passons maintenant à l’installation de l’environnement de travail:
 
@@ -67,11 +73,13 @@ Passons maintenant à l’installation de l’environnement de travail:
 Avant d’aller plus loin, si tu es sous MacOS, il te faudra t’assurer d’avoir [téléchargé la dernière version d’Xcode](https://developer.apple.com/xcode) qui est requise pour le simulateur d’iPhone. Son installation peut être très longue, aussi, je te conseille de le faire en parallèle de ta lecture.
 {{< /admonition >}}
 
-
+### Description du projet
 
 Une fois le fichier téléchargé décompressé, rends-toi dans le dossier des exemples associés à notre cours (*Samples/NightClub*). Les dossiers qui y sont entreposés correspondent chacun à une partie différente du cours:
 
 <figure><p align="center"><img class="img-sizes" src="./images/AB6D4CEADA0C31BD182CB28EA1C158C1.png"></p></figure>
+
+
 
 Pour le moment, ouvre le premier dossier (*0 - Get Started)* et double-clique sur `NightClub.sln` pour ouvrir le projet NightClub dans Visual Studio.
 
@@ -91,7 +99,7 @@ En fait, c’est déjà le cas ! Le projet que tu as sous les yeux est tout neuf
 * Toutes les librairies nécessaires au bon fonctionnement du projet sont regroupées dans le dossier **Dependencies**,
 * Dans **Platforms**, tu retrouveras tous les fichiers nécessaires à l’exécution de l’application, et ce pour chaque plateforme cible,
 * Quant au dossier **Properties**, on y retrouve généralement des fichiers de configuration (il y en a d’ailleurs une créée par défaut pour Windows),
-* Et puis, tu auras la possibilité pour chaque application de lui configurer une icône et un écran de chargement ! Pour cela, on recoure généralement au dossier **Resources** pour stocker tous nos médias (icônes, images, pistes audio et vidéo, …),
+* Et puis, tu auras la possibilité pour chaque application de lui configurer une icône et un écran de chargement ! Pour cela, on recourt généralement au dossier **Resources** pour stocker tous nos médias (icônes, images, pistes audio et vidéo, …),
 * Enfin, il faudra bien pouvoir afficher quelque chose à l’ouverture de l’app ! Et pour ça, on a le dossier **Views** qui contient pour le moment notre première page, la fameuse page d’accueil…
 
 

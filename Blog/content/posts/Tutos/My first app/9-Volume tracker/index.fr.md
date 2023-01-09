@@ -5,7 +5,7 @@ Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]
 Index: "9"
-PublishDate: "2023-02-12 00:00:09Z"
+PublishDate: "2023-02-13 00:00:09Z"
 Language: "French"
 Description: "Allez c’est bientôt la fin du premier gros de notre page principale. On passe désormais au contrôle du volume !"
 Tags: ["Image","ImageButton","DataTrigger","Slider","MultiTrigger",".NET Community Toolkit","C# markup"]

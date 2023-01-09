@@ -5,7 +5,7 @@ Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]
 Index: "3"
-PublishDate: "2023-01-01 00:00:03Z"
+PublishDate: "2023-01-02 00:00:03Z"
 Language: "English"
 Description: "It's now time to get the app running.
 We'll also take the opportunity to look at the source code 🙂"
@@ -103,13 +103,6 @@ public HomeView()
 
 
 
-
-{{< admonition type=info title="‎ " open=true >}}
-As for the rest of the app, this page is coded in C#. This is usually referred as "Declarative UI" or "Fluent UI".
-{{< /admonition >}}
-
-
-
 It’s a black background page whose content is defined by an image and a button that are stacked vertically in a [VerticalStackLayout](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/layouts/verticalstacklayout).
 
 And if you want to know how these two components are defined, just look a little further down in the code on the page:
@@ -139,6 +132,22 @@ Button EnterButton => new Button
 
 
 
+Nothing very complex at this stage:
+
+* We set the image of the component `NightClubImage` with the “Source” property,
+* And for the button, we set several base properties such as the text, the color, … but you might have noticed that we also apply some functions to the component `EnterButton`:
+    * *Bold()* to set the text of the button in bold,
+    * *Paddings()* to add a bit of space all around this text, especially to the left and to the right of the text,
+    * And then, *CenterHorizontal()* to align the text at the center of the button.
+
+
+
+{{< admonition type=info title="‎ " open=true >}}
+These methods follow a particular programmation technique named "Declarative UI" or "Fluent UI". Finally, this page is coded in C#, as for the rest of the app!
+{{< /admonition >}}
+
+___
+
 
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Alright! And shouldn’t we declare an action to this button?
@@ -146,7 +155,7 @@ Button EnterButton => new Button
 
 
 
-Correct! And we’ll see how to trigger code execution by clicking on this button, but not in any way. Indeed, we will apply this wonderful design pattern called [Model-View-Model](https://docs.microsoft.com/en-us/dotnet/maui/xaml/fundamentals/mvvm) (MVVM).
+Correct! And we’ll see how to trigger code execution by clicking on this button, but not in any way. Indeed, we will apply this wonderful design pattern called <a href="../4-mvvm-is-the-key-to-succeed/">Model-View-ViewModel (MVVM)</a>.
 
 ---
 More articles in the series:

@@ -5,7 +5,7 @@ Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]
 Index: "2"
-PublishDate: "2023-01-01 00:00:02Z"
+PublishDate: "2023-01-02 00:00:02Z"
 Language: "English"
 Description: "Today we'll start building our first application! Let’s first set up your working environment, and then you’ll have something concrete soon. Let's get started!"
 Tags: ["Visual Studio","Setup","New Project"]

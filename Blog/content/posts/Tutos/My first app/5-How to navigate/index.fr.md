@@ -5,7 +5,7 @@ Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]
 Index: "5"
-PublishDate: "2023-01-15 00:00:05Z"
+PublishDate: "2023-01-16 00:00:05Z"
 Language: "French"
 Description: "On attaque désormais la création de la page principale de l’application. Mais qui dit nouvelle page dit aussi: permettre à l’utilisateur de se rendre sur cette page ! Voyons donc comment implémenter la navigation d’une page à une autre."
 Tags: ["Navigation"]

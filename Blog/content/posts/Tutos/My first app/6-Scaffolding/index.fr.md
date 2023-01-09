@@ -5,7 +5,7 @@ Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]
 Index: "6"
-PublishDate: "2023-01-22 00:00:06Z"
+PublishDate: "2023-01-23 00:00:06Z"
 Language: "French"
 Description: "Quand on développe une nouvelle page, le plus important c’est de réfléchir à l’organisation des éléments sur la page. Comme tu vas le voir, c’est un vrai travail d’architecte !"
 Tags: ["C# markup","Grid"]

@@ -5,7 +5,7 @@ Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]
 Index: "8"
-PublishDate: "2023-02-05 00:00:08Z"
+PublishDate: "2023-02-06 00:00:08Z"
 Language: "French"
 Description: "Dans ce chapitre, nous allons nous attaquer à la seconde rangée de boutons, et permettre à l’utilisateur de contrôler le média !"
 Tags: ["Image","ImageButton","Visual Studio","Round Button","ColumnSpan"]

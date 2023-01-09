@@ -5,7 +5,7 @@ Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]
 Index: "2"
-PublishDate: "2023-01-01 00:00:02Z"
+PublishDate: "2023-01-02 00:00:02Z"
 Language: "French"
 Description: "Aujourd'hui on attaque la création de notre première application ! Juste le temps d'installer ton environnement de travail et on aura rapidement quelque chose de concret. Allez c'est parti !"
 Tags: ["Visual Studio","Setup","New Project"]

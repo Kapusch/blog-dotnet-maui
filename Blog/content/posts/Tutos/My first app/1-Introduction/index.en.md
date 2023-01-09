@@ -5,7 +5,7 @@ Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]
 Index: "1"
-PublishDate: "2023-01-01 00:00:01Z"
+PublishDate: "2023-01-02 00:00:01Z"
 Language: "English"
 Description: "Hi Dev-s! 🤓
 I'm J-E and my goal with this blog is to help any beginner developer willing to get started with his mobile application through very simple lessons. No long theoretical courses, here you will quickly have fun and produce cool apps! And I'll guide you from the development stage until your application is available on the stores."
@@ -87,7 +87,7 @@ The second one is just to have a better idea of what the application will look l
 
 Finally, you will need to know C# language to program your application, and for that I suggest you to take [the learning path developed by Microsoft](https://learn.microsoft.com/en-us/training/paths/csharp-first-steps/). That being said, you can start right away if you have a bit of experience in coding, even without knowing C#! You will learn very quickly as you develop your application.
 
-
+___
 
 For this first lesson, I propose you develop an application to play music in a "nightclub" atmosphere. 💃🏾🕺🏻🪩
 

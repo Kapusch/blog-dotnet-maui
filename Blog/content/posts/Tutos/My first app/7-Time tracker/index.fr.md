@@ -5,7 +5,7 @@ Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]
 Index: "7"
-PublishDate: "2023-01-29 00:00:07Z"
+PublishDate: "2023-01-30 00:00:07Z"
 Language: "French"
 Description: "Maintenant que les fondations de la page principale sont prêtes, on va pouvoir commencer à disposer tous les éléments de contrôle. Commençons avec le minutage !"
 Tags: ["Accessibility","Slider","Label","ColumnSpan"]

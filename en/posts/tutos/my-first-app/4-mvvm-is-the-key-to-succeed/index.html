@@ -84,9 +84,9 @@
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=k>public</span> <span class=n>HomeView</span><span class=p>()</span>
 </span></span><span class=line><span class=cl><span class=p>{</span>
 </span></span><span class=line><span class=cl>	<span class=n>BindingContext</span> <span class=p>=</span> <span class=k>new</span> <span class=n>HomeViewModel</span><span class=p>();</span>
-</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	
 </span></span><span class=line><span class=cl>	<span class=n>BackgroundColor</span> <span class=p>=</span> <span class=n>Colors</span><span class=p>.</span><span class=n>Black</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	
 </span></span><span class=line><span class=cl>	<span class=n>Content</span> <span class=p>=</span> <span class=p>...</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></td></tr></table></div></div><p>Then define the action for <code>EnterButton</code> with <strong>BindCommand</strong> to trigger the <em>Enter()</em> command that is specified in the <code>HomeViewModel</code>:</p><p align=center style=margin-bottom:-10px><strong>Filename:</strong><code>HomeView.cs</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1

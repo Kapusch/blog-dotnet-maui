@@ -83,7 +83,6 @@ Indeed, that's almost it! It takes place in two steps:
 1. Then we define the behaviour of each element of the **View** into the **ViewModel**, using the principle of [Data Binding](https://docs.microsoft.com/en-us/dotnet/maui/xaml/fundamentals/data-binding-basics).
 
 
-
 Data Binding is a technique for linking two objects so that when one is changed, the other is also changed. It may sound a bit vague, but you'll understand its role better in the next section. For now, let’s move on!
 
 ### Apply MVVM
@@ -237,9 +236,9 @@ Let's first link the `HomeView` to its `HomeViewModel` via the view's **BindingC
 public HomeView()
 {
 	BindingContext = new HomeViewModel();
-
+	
 	BackgroundColor = Colors.Black;
-
+	
 	Content = ...
 }
 ```

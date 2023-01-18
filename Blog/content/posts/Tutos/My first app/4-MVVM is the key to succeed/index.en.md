@@ -5,7 +5,7 @@ Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]
 Index: "4"
-PublishDate: "2023-01-10 00:00:04Z"
+PublishDate: "2023-01-12 00:00:04Z"
 Language: "English"
 Description: "In this chapter, we will discover a major design pattern for mobile application development, the Model-View-ViewModel (MVVM)!"
 Tags: ["MVVM","Data Binding",".NET Community Toolkit"]
@@ -228,7 +228,7 @@ Going further with [MVVM source code generators](https://learn.microsoft.com/en-
 
 Almost there! Only remaining is to activate the *Enter()* command when the "ENTER" button is clicked.
 
-Let's first link the `HomeView` to its `HomeViewModel` via the view's **BindingContext**:
+Let's first reopen the file `HomeView.cs` to link the view to the `HomeViewModel` via the **BindingContext**:
 
 <p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>HomeView.cs</code></p>
 

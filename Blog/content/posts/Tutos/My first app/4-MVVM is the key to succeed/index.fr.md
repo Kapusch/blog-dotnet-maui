@@ -5,7 +5,7 @@ Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]
 Index: "4"
-PublishDate: "2023-01-10 00:00:04Z"
+PublishDate: "2023-01-12 00:00:04Z"
 Language: "French"
 Description: "Dans ce chapitre, nous découvrirons un patron de conception majeur pour le développement d’application mobile, le Model-View-ViewModel (MVVM) !"
 Tags: ["MVVM","Data Binding",".NET Community Toolkit"]
@@ -229,7 +229,7 @@ Aller plus loin avec les [générateurs de code source MVVM](https://learn.micro
 
 On y est presque ! Il ne reste plus qu’à actionner la commande *Enter()* au clic du bouton “ENTER”.
 
-Tout d’abord, lions la `HomeView` à son `HomeViewModel` via le **BindingContext** de la vue:
+Tout d’abord, retourne dans le fichier `HomeView.cs` pour lier la vue au `HomeViewModel` via le **BindingContext **:
 
 <p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>HomeView.cs</code></p>
 

@@ -267,7 +267,7 @@ Button EnterButton => new Button
 
 Et voilà le travail !
 
-<figure><p align="center"><img class="img-sizes" src="./images/4CBEDC011641DCE44317A88E33124644.gif"></p></figure>
+<figure><p align="center"><img class="img-sizes" src="./images/123B031ED40F624DEF6F6D825DE3ED32.gif"></p></figure>
 
 
 
@@ -282,7 +282,7 @@ Et voilà le travail !
 
 Eh bien oui en théorie ! Mais il manque tout de même plusieurs fonctionnalités clés d’une application : un système d’authentification, une base de données, etc…
 
-Tiens par exemple, une fois qu’on aura créé la page principale de l’application, il faudra bien pouvoir s’y rendre depuis la page d’accueil ! C’est ce qu’on verra dans le prochain chapitre.
+Tiens par exemple, une fois qu’on aura créé la page principale de l’application, il faudra bien pouvoir s’y rendre depuis la page d’accueil ! C’est ce qu’on verra dans <a href="../5-how-to-navigate/">le prochain chapitre</a>.
 
 ---
 Plus d'articles dans la même série:

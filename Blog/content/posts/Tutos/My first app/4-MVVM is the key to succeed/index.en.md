@@ -266,7 +266,7 @@ Button EnterButton => new Button
 
 And there you have it!
 
-<figure><p align="center"><img class="img-sizes" src="./images/4CBEDC011641DCE44317A88E33124644.gif"></p></figure>
+<figure><p align="center"><img class="img-sizes" src="./images/04746A14C2AB991DFB0AE21D6D813403.gif"></p></figure>
 
 
 
@@ -281,7 +281,9 @@ And there you have it!
 
 Well, yes in theory! But our app still lacks several key features: an authentication system, a database, etc…
 
-For example, once we will have created the main page of the application, we’ll need to configure its access from the home page! And this is what we will see in the next chapter.
+For example, once we will have created the main page of the application, we’ll need to configure its access from the home page! And this is what we will see in <a href="../5-how-to-navigate/">the next chapter</a>.
+
+
 
 ---
 More articles in the series:

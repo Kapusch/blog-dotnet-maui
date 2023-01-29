@@ -198,7 +198,7 @@ theme = "FixIt"
   # site description
   description = "Learn to build cool apps with .NET MAUI for iOS, Android, macOS, and Windows, even if you just started !"
   # site keywords
-  keywords = [".NET MAUI", "Mobile", "C#", "Xamarin.Forms", "Xamarin", ".NET MAUI French blog", ".NET MAUI Blog français", "MAUI French blog", "MAUI blog français", ".NET MAUI blog", "MAUI blog"]
+  keywords = [".NET MAUI", ".NET MAUI blog", "MAUI blog", ".NET MAUI débutant", "MAUI débutant", ".NET MAUI beginner", "MAUI beginner", ".NET MAUI French blog", ".NET MAUI Blog français", "MAUI French blog", "MAUI blog français", ".NET MAUI French", ".NET MAUI français", "MAUI French", "MAUI français", "C# Mobile App", "C# Mobile Application", "C# Mobile", "Xamarin.Forms", "Xamarin"]
   # site default theme ["light", "dark", "auto"]
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true

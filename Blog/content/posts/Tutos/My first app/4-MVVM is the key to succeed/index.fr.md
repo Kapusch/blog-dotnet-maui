@@ -104,7 +104,7 @@ Ce sera une nouvelle classe vide appelée `HomeViewModel.cs` :
 
 Ensuite, remplace son contenu par le suivant:
 
-<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>HomeViewModel.cs</code></p>
+<p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>HomeViewModel.cs</code></p>
 
 ```csharp
 using System;
@@ -170,7 +170,7 @@ Voyons désormais comment préparer notre classe `HomeViewModel` pour être un v
 
 Tu devrais avoir la configuration suivante:
 
-<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>HomeViewModel.cs</code></p>
+<p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>HomeViewModel.cs</code></p>
 
 ```csharp
 using System;
@@ -198,7 +198,7 @@ Ces deux étapes sont nécessaires pour permettre au *MVVM Toolkit* de générer
 
 Par exemple ici, on va définir notre méthode *Enter()* comme étant une commande en lui rajoutant un simple attribut `[RelayCommand]` , voilà comment :
 
-<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>HomeViewModel.cs</code></p>
+<p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>HomeViewModel.cs</code></p>
 
 ```csharp
 [RelayCommand]
@@ -231,7 +231,7 @@ On y est presque ! Il ne reste plus qu’à actionner la commande *Enter()* au c
 
 Tout d’abord, retourne dans le fichier `HomeView.cs` pour lier la vue au `HomeViewModel` via le **BindingContext **:
 
-<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>HomeView.cs</code></p>
+<p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>HomeView.cs</code></p>
 
 ```csharp
 public HomeView()
@@ -249,7 +249,7 @@ public HomeView()
 
 Puis définissons l’action du bouton `EnterButton` avec **BindCommand** pour déclencher la commande *Enter()* spécifiée dans le `HomeViewModel`:
 
-<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>HomeView.cs</code></p>
+<p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>HomeView.cs</code></p>
 
 ```csharp
 Button EnterButton => new Button

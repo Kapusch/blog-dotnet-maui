@@ -82,7 +82,7 @@ Ce que tu vois pour le moment, c’est la page d’accueil dont le contenu est s
 
 Et comme tu peux le voir, ce qu’elle définit est très simple:
 
-<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>HomeView.cs</code></p>
+<p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>HomeView.cs</code></p>
 
 ```csharp
 public HomeView()
@@ -107,7 +107,7 @@ C’est une page avec un arrière-plan noir et dont le contenu est défini par u
 
 Et si tu veux savoir comment sont définis ces deux composants, il te suffit de regarder un peu plus bas dans le code de la page :
 
-<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>HomeView.cs</code></p>
+<p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>HomeView.cs</code></p>
 
 ```csharp
 #region Controls

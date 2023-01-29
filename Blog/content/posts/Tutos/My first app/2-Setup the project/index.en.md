@@ -21,10 +21,6 @@ draft: false
 <style>
 .img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
 </style>
-Hi Devs! 🤓
-
-
-
 Today we'll start building our first application! Let’s first set up your working environment, and then you’ll have something concrete soon. Let's get started!
 
 ### Which tools for development ?

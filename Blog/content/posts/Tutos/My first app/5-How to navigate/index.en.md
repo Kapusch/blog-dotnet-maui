@@ -152,7 +152,7 @@ And now restarting the app, it’s a lot nicer!
 
 
 
-The application is slowly coming alive, and even more so with the next chapter! See you soon for the construction of our main page.
+The application is slowly coming alive, and even more so with <a href="../6-scaffolding/">the next chapter</a>! See you soon for the construction of our main page.
 
 ---
 More articles in the series:

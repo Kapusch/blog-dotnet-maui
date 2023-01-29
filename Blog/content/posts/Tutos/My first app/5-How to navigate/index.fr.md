@@ -50,7 +50,7 @@ Pour cela, rends-toi dans le fichier `HomeViewModel.cs` et modifie la méthode *
 
 
 
-<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>HomeViewModel.cs</code></p>
+<p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>HomeViewModel.cs</code></p>
 
 ```csharp
 using NightClub.Views; // Rappel: sans cette ligne, ça ne compilerait pas !
@@ -91,7 +91,7 @@ Si tu retournes dans le fichier `App.cs`, il y a justement une méthode *OnStart
 
 
 
-<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>App.cs</code></p>
+<p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>App.cs</code></p>
 
 ```csharp
 protected override void OnStart()
@@ -129,7 +129,7 @@ D’un point de vue design, ce n’est pas nécessairement ce que l’on souhait
 
 
 
-<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>HomeView.cs</code></p>
+<p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>HomeView.cs</code></p>
 
 ```csharp
 public HomeView()
@@ -152,7 +152,7 @@ Et maintenant, si tu relances l’app, c’est quand même plus joli !
 
 
 
-L’application commence à prendre forme tout doucement, et d’autant plus avec le prochain chapitre ! On se revoit très bientôt pour l’élaboration de notre page principale.
+L’application commence à prendre forme tout doucement, et d’autant plus avec <a href="../6-scaffolding/">le prochain chapitre</a> ! On se revoit très bientôt pour l’élaboration de notre page principale.
 
 ---
 Plus d'articles dans la même série:

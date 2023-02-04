@@ -59,7 +59,7 @@ Passons maintenant à l’installation de l’environnement de travail:
 1. Puis vient le moment d’installer Visual Studio et son environnement de développement .NET MAUI. Pour améliorer la lecture de ce blog, je te propose de directement suivre les étapes d’installation sur le site officiel:
     1. [suivre les étapes d’installation sous Windows](https://learn.microsoft.com/fr-fr/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin#installation-1)
     1. [suivre les étapes d’installation sous MacOS](https://learn.microsoft.com/fr-fr/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vsmac#installation-2)
-1. Enfin, télécharge le projet depuis GitHub. Pour cela, rends-toi sur [le dépôt de code du blog](https://github.com/Kapusch/blog-dotnet-maui), clique sur le bouton “Code” et télécharge le tout au format .ZIP
+1. Enfin, télécharge mon cours depuis GitHub. Pour cela, rends-toi sur [le dépôt de code du blog](https://github.com/Kapusch/blog-dotnet-maui), clique sur le bouton “Code” et télécharge le tout au format .ZIP
 <figure><p align="center"><img class="img-sizes" src="./images/7B86AE88DAB3362A9B47A4007B949027.png"></p></figure>
 
 

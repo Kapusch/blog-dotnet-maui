@@ -23,7 +23,7 @@ draft: false
 </style>
 
 {{< admonition type=info title="‎ " open=true >}}
-Pour assurer le bon déroulement de cet article, je t’invite à repartir du projet reprenant les différentes étapes appliquées dans les articles précédents. Pour cela, [télécharge le projet](https://github.com/Kapusch/blog-dotnet-maui) si ce n’est pas déjà fait, et ouvre le projet NightClub situé dans le dossier “*2 - Navigation*”.
+Pour assurer le bon déroulement de cet article, je t’invite à repartir du projet reprenant les différentes étapes appliquées dans les articles précédents. Pour cela, [télécharge mon cours depuis GitHub](https://github.com/Kapusch/blog-dotnet-maui) si ce n’est pas déjà fait, et ouvre le projet NightClub situé dans le dossier “*2 - Navigation*”.
 {{< /admonition >}}
 
 Avec ce nouveau chapitre, on entame une série d’articles axés autour du visuel de l’app, et il y a de bonnes chances que cela te plaise ! En effet, développer une interface visuelle nécessite de nombreux tests du rendu à l’écran, et il n’y a rien de mieux pour apprendre. Et c’est par la pratique régulière que tu vas naturellement comprendre et retenir tout un tas de choses 🙂
@@ -81,7 +81,7 @@ Pour respecter la maquette, la première chose à faire est de diviser la page e
 
 Tu remarqueras que la partie supérieure est légèrement plus grande que la partie inférieure. On pourrait même dire que la partie noire s’étale verticalement sur 60% de la page, ce qui laisse 40% d’espace pour le reste.
 
-Ce sont des données très utiles ! Mettons-les en application pour définir le contenu de notre page *MusicPlayerView *avec un *Grid* :
+Ce sont des données très utiles ! Mettons-les en application pour définir le contenu de notre page *MusicPlayerView* avec un *Grid* :
 
 <p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>MusicPlayerView.cs</code></p>
 
@@ -283,6 +283,8 @@ Et si tu lances l’application, tu pourras alors confirmer avec certitude que n
 Bon, il n’y a rien de fonctionnel pour l’utilisateur, mais maintenant que nos fondations sont prêtes, ça va grandement nous simplifier la vie !
 
 On va enfin pouvoir s’amuser à disposer tous les éléments de contrôle dès le prochain chapitre, en commençant par la gestion du minutage.
+
+
 
 ---
 Plus d'articles dans la même série:

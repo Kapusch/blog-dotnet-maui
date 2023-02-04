@@ -23,7 +23,7 @@ draft: false
 </style>
 
 {{< admonition type=info title="‎ " open=true >}}
-To ease your read, please start from the project containing all the different steps applied in the previous articles. To do so, please [download the project](https://github.com/Kapusch/blog-dotnet-maui) if not already done, and open the NightClub project located in the folder named “*2 - Navigation*”.
+To ease your read, please start from the project containing all the different steps applied in the previous articles. To do so, please [download my class from GitHub](https://github.com/Kapusch/blog-dotnet-maui) if not already done, and open the NightClub project located in the folder named “*2 - Navigation*”.
 {{< /admonition >}}
 
 With this new chapter, we begin a series of articles focused on the visual aspect of the app, and there is a good chance that you will like it! Indeed, developing a visual interface requires numerous tests of the rendering on the screen, and there is nothing better for learning. And it's through regular practice that you'll naturally understand and retain a lot of things 🙂

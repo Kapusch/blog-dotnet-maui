@@ -23,7 +23,7 @@ draft: false
 </style>
 
 {{< admonition type=info title="‎ " open=true >}}
-To ease your read, please start from the project containing all the different steps applied in the previous articles. To do so, please [download the project](https://github.com/Kapusch/blog-dotnet-maui) if not already done, and open the NightClub project located in the folder named "0 - Get Started".
+To ease your read, please start from the project containing all the different steps applied in the previous articles. To do so, please [download my class from GitHub](https://github.com/Kapusch/blog-dotnet-maui) if not already done, and open the NightClub project located in the folder named "0 - Get Started".
 {{< /admonition >}}
 
 

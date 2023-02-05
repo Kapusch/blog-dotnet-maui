@@ -23,7 +23,7 @@ draft: false
 </style>
 
 {{< admonition type=info title="‎ " open=true >}}
-To ease your read, please start from the project containing all the different steps applied in the previous articles. To do so, please [download my class from GitHub](https://github.com/Kapusch/blog-dotnet-maui) if not already done, and open the NightClub project located in the folder named "0 - Get Started".
+To ease your read, please start from the project containing all the different steps applied in the previous articles. To do so, [download my class from GitHub](https://github.com/Kapusch/blog-dotnet-maui) if not already done, and open the NightClub project located in the folder named *"0 - Get Started"*.
 {{< /admonition >}}
 
 
@@ -140,7 +140,9 @@ Well, there's nothing special here. It's just a C# object class with an *Enter()
 
 
 
-And you’re right, but as it is, it remains unusable! Fortunately, there is a library provided by Microsoft that will greatly simplify our lives: the [MVVM Toolkit](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/).
+And you’re right, but as it is, it remains unusable! Remember, there’s absolutely no link between the `HomeView` and the `HomeViewModel`.
+
+Fortunately, there is a library provided by Microsoft that will greatly simplify our lives: the [MVVM Toolkit](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/).
 
 This library has already been added to the project and you can easily verify this by opening the NuGet packages management window. Just right click on the project's dependencies:
 

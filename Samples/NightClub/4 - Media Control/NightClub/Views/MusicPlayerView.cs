@@ -59,7 +59,7 @@ public class MusicPlayerView : ContentPage
         {
             ElapsedTime.Row(0).Column(1),
             TimeTracker.Row(0).Column(2).ColumnSpan(3),
-            RemainingTime.Row(0).Column(5),
+            TotalTime.Row(0).Column(5),
 
             RepeatOnceButton.Row(1).Column(1),
             MediaControlLayout.Row(1).Column(2).ColumnSpan(3),
@@ -105,7 +105,7 @@ public class MusicPlayerView : ContentPage
         Value = 20
     };
 
-    Label RemainingTime => new Label
+    Label TotalTime => new Label
     {
         FontSize = 14,
         Text = "2:57",

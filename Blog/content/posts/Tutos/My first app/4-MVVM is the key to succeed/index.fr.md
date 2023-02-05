@@ -23,7 +23,7 @@ draft: false
 </style>
 
 {{< admonition type=info title="‎ " open=true >}}
-Pour assurer le bon déroulement de cet article, je t’invite à repartir du projet reprenant les différentes étapes appliquées dans les articles précédents. Pour cela, [télécharge mon cours depuis GitHub](https://github.com/Kapusch/blog-dotnet-maui) si ce n’est pas déjà fait, et ouvre le projet NightClub situé dans le dossier “*0 - Get Started*”.
+Pour assurer le bon déroulement de cet article, je t’invite à repartir du projet reprenant les différentes étapes appliquées dans les articles précédents. Pour cela, [télécharge mon cours depuis GitHub](https://github.com/Kapusch/blog-dotnet-maui) si ce n’est pas déjà fait, et ouvre le projet NightClub situé dans le dossier *“0 - Get Started”*.
 {{< /admonition >}}
 
 
@@ -141,7 +141,9 @@ Bon, il n’y a vraiment rien de spécial ici. C’est juste une classe d’obje
 
 
 
-Eh oui tu as raison, mais en l’état, il reste inutilisable ! Heureusement, il existe une librairie mise à disposition par Microsoft qui va grandement nous simplifier la vie: le [MVVM Toolkit](https://learn.microsoft.com/fr-fr/dotnet/communitytoolkit/mvvm/).
+Eh oui tu as raison, mais en l’état, il reste inutilisable ! Souviens-toi, il n’y a toujours aucun lien entre la `HomeView` et le `HomeViewModel`.
+
+Heureusement, il existe une librairie mise à disposition par Microsoft qui va grandement nous simplifier la vie: le [MVVM Toolkit](https://learn.microsoft.com/fr-fr/dotnet/communitytoolkit/mvvm/).
 
 Cette librairie a déjà été ajoutée au projet et tu peux le vérifier facilement en ouvrant la gestion des paquets NuGet. Fais donc un clic droit sur les dépendances du projet:
 

@@ -166,7 +166,7 @@ Et voilà on en a vraiment fini ! Relançons l’application pour voir ce que ç
 
 Bon, c’est vrai, c’est beau mais ça ne fait pas grand chose ! Mais on va d’abord finir la partie visuelle avant de basculer vers la partie plus fonctionnelle de l’application.
 
-D’ailleurs, on a encore plein de boutons à mettre en place ! Notre objectif pour le prochain chapitre : contrôler la lecture du média.
+D’ailleurs, on a encore plein de boutons à mettre en place ! Notre objectif pour <a href="../8-media-control/">le prochain chapitre</a> : contrôler la lecture du média.
 
 ---
 Plus d'articles dans la même série:

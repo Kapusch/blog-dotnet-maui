@@ -5,7 +5,7 @@ Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]
 Index: "8"
-PublishDate: "2023-02-20 00:00:08Z"
+PublishDate: "2023-02-27 00:00:08Z"
 Language: "French"
 Description: "Des boutons, toujours plus de boutons ! Dans ce chapitre, on va intégrer les contrôles pour manipuler le média."
 Tags: ["Image","ImageButton","Visual Studio","Round Button","ColumnSpan"]

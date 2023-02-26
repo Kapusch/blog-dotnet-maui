@@ -166,7 +166,7 @@ Now we're really done! Let's run the application again to see what it looks like
 
 Well, that's true, it's nice but it doesn't do much! But we'll finish the visual part first before moving on to a more functional part of the application.
 
-Besides, we still have a lot of buttons to put in place! Our goal for the next chapter is to control the playback of the media.
+Besides, we still have a lot of buttons to put in place! Our goal for <a href="../8-media-control/">the next chapter</a> is to control the playback of the media.
 
 ---
 More articles in the series:

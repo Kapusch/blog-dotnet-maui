@@ -169,7 +169,7 @@ public class MusicPlayerView : ContentPage
 
     #region Mute Button Visual States
 
-    DataTrigger VolumeOffTrigger => new(typeof(ImageButton))
+    DataTrigger VolumeOffTrigger => new DataTrigger(typeof(ImageButton))
     {
         Binding = new Binding(nameof(Slider.Value), source: VolumeTracker),
         Value = 0d,
@@ -178,21 +178,21 @@ public class MusicPlayerView : ContentPage
             }
     };
 
-    MultiTrigger VolumeLowTrigger = new(typeof(ImageButton))
+    MultiTrigger VolumeLowTrigger = new MultiTrigger(typeof(ImageButton))
     {
         Setters = {
                 new Setter { Property = ImageButton.SourceProperty, Value = "volume_low" }
             }
     };
 
-    MultiTrigger VolumeMediumTrigger = new(typeof(ImageButton))
+    MultiTrigger VolumeMediumTrigger = new MultiTrigger(typeof(ImageButton))
     {
         Setters = {
                 new Setter { Property = ImageButton.SourceProperty, Value = "volume_medium" }
             }
     };
 
-    MultiTrigger VolumeHighTrigger = new(typeof(ImageButton))
+    MultiTrigger VolumeHighTrigger = new MultiTrigger(typeof(ImageButton))
     {
         Setters = {
                 new Setter { Property = ImageButton.SourceProperty, Value = "volume_high" }

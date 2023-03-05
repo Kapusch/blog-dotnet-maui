@@ -1,6 +1,6 @@
 ---
 Topic: "Time tracker"
-Title: "Timing"
+Title: "Timing display"
 Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]

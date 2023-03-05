@@ -1,6 +1,6 @@
 ---
 Topic: "Media control"
-Title: "Media control"
+Title: "Media playback controls"
 Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]

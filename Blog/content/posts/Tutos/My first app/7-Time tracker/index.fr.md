@@ -1,6 +1,6 @@
 ---
 Topic: "Time tracker"
-Title: "Le minutage"
+Title: "Le temps d’écoute"
 Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]

@@ -1,6 +1,6 @@
 ---
 Topic: "Media control"
-Title: "Jouer des chansons"
+Title: "Les contrôles de lecture du média"
 Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]

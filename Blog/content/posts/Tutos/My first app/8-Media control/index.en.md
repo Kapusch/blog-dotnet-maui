@@ -274,7 +274,7 @@ And here we go, this is really starting to take shape! 🤩
 
 
 
-You did really well, keep it up! By the way, we still have the music volume control to reproduce in the app, and that's the topic of the next chapter!
+You did really well, keep it up! By the way, we still have the music volume control to reproduce in the app, and that's the topic of <a href="../9-volume-tracker/">the next chapter</a>!
 
 ---
 More articles in the series:

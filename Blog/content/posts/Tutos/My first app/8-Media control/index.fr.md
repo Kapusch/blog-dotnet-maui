@@ -274,7 +274,7 @@ Et hop, ça y est, ça commence vraiment à prendre forme ! 🤩
 
 
 
-Tu t’en es vraiment bien sorti, continue comme ça ! D’ailleurs, il nous reste encore la gestion du volume de la musique à reproduire dans l’app, et c’est justement l’objet du prochain chapitre !
+Tu t’en es vraiment bien sorti, continue comme ça ! D’ailleurs, il nous reste encore la gestion du volume de la musique à reproduire dans l’app, et c’est justement l’objet du <a href="../9-volume-tracker/">prochain chapitre</a> !
 
 ---
 Plus d'articles dans la même série:

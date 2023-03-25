@@ -243,7 +243,8 @@ Mais j’ai une astuce pour tester rapidement si le découpage est bien celui at
 ```csharp
 Grid BottomLayout => new Grid
 {
-		...
+		[...]
+    ColumnSpacing = 0,
 		Children =
 		{
 		    new BoxView { Color = Color.FromArgb("#ffffff") }.Row(0).Column(0),

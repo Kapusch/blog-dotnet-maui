@@ -123,7 +123,7 @@ Grid BottomLayout => new Grid
     {
         ElapsedTime.Row(0).Column(1),
         TimeTracker.Row(0).Column(2),
-        RemainingTime.Row(0).Column(5)
+        TotalTime.Row(0).Column(5)
     }
 };
 ```

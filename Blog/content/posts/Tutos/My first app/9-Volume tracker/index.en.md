@@ -82,7 +82,7 @@ ImageButton MuteButton = new ImageButton
 {
     HeightRequest = 25,
     WidthRequest = 25,
-    Source = "volume_medium"
+    Source = "volume_medium.png"
 };
 
 Slider VolumeTracker = new Slider
@@ -138,7 +138,7 @@ DataTrigger VolumeOffTrigger => new DataTrigger(typeof(ImageButton))
 	Binding = new Binding(nameof(Slider.Value), source: VolumeTracker),
 	Value = 0d,
 	Setters = {
-		new Setter { Property = ImageButton.SourceProperty, Value = "volume_off" }
+		new Setter { Property = ImageButton.SourceProperty, Value = "volume_off.png" }
 	}
 };
 ```
@@ -162,7 +162,7 @@ Then, with the help of a *Setter*, we ask the `VolumeOffTrigger` to change the i
 <p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
-new Setter { Property = ImageButton.SourceProperty, Value = "volume_off" }
+new Setter { Property = ImageButton.SourceProperty, Value = "volume_off.png" }
 ```
 
 
@@ -273,21 +273,21 @@ For now, let's declare our three new possible states:
 MultiTrigger VolumeLowTrigger = new MultiTrigger(typeof(ImageButton))
 {
 	Setters = {
-		new Setter { Property = ImageButton.SourceProperty, Value = "volume_low" }
+		new Setter { Property = ImageButton.SourceProperty, Value = "volume_low.png" }
 	}
 };
 
 MultiTrigger VolumeMediumTrigger = new MultiTrigger(typeof(ImageButton))
 {
 	Setters = {
-		new Setter { Property = ImageButton.SourceProperty, Value = "volume_medium" }
+		new Setter { Property = ImageButton.SourceProperty, Value = "volume_medium.png" }
 	}
 };
 
 MultiTrigger VolumeHighTrigger = new MultiTrigger(typeof(ImageButton))
 {
 	Setters = {
-		new Setter { Property = ImageButton.SourceProperty, Value = "volume_high" }
+		new Setter { Property = ImageButton.SourceProperty, Value = "volume_high.png" }
 	}
 	};
 ```

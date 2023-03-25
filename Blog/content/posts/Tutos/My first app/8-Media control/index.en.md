@@ -128,7 +128,7 @@ ImageButton RepeatOnceButton => new ImageButton
     CornerRadius = 5,
     HeightRequest = 25,
     WidthRequest = 25,
-    Source = "repeat_once",
+    Source = "repeat_once.png",
     BackgroundColor = Colors.Black
 };
 
@@ -137,7 +137,7 @@ ImageButton DownloadButton => new ImageButton
     CornerRadius = 5,
     HeightRequest = 25,
     WidthRequest = 25,
-    Source = "download",
+    Source = "download.png",
     BackgroundColor = Colors.Black
 };
 ```
@@ -151,7 +151,7 @@ As you can see, they were given a small square size (25 high by 25 wide), with a
 
 
 {{< admonition type=info title="‎ " open=true >}}
-It is not mandatory to specify the *".png"* extension in the file name.
+If you don’t plan to target Windows platform, then it is not mandatory to specify the *".png"* extension in the filename.
 {{< /admonition >}}
 
 
@@ -165,7 +165,7 @@ ImageButton SkipPreviousButton => new ImageButton
 {
     HeightRequest = 75,
     WidthRequest = 75,
-    Source = "skip_previous"
+    Source = "skip_previous.png"
 };
 
 ImageButton PlayButton => new ImageButton
@@ -173,7 +173,7 @@ ImageButton PlayButton => new ImageButton
     CornerRadius = 50,
     HeightRequest = 100,
     WidthRequest = 100,
-    Source = "play",
+    Source = "play.png",
     BackgroundColor = Colors.Black
 };
 
@@ -181,7 +181,7 @@ ImageButton SkipNextButton => new ImageButton
 {
     HeightRequest = 75,
     WidthRequest = 75,
-    Source = "skip_next"
+    Source = "skip_next.png"
 };
 ```
 

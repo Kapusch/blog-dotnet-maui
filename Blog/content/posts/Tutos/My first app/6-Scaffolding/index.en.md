@@ -243,7 +243,8 @@ But I have a trick to quickly test if the slicing is what you expected or if som
 ```csharp
 Grid BottomLayout => new Grid
 {
-		...
+		[...]
+    ColumnSpacing = 0,
 		Children =
 		{
 		    new BoxView { Color = Color.FromArgb("#ffffff") }.Row(0).Column(0),

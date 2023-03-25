@@ -128,7 +128,7 @@ ImageButton RepeatOnceButton => new ImageButton
     CornerRadius = 5,
     HeightRequest = 25,
     WidthRequest = 25,
-    Source = "repeat_once",
+    Source = "repeat_once.png",
     BackgroundColor = Colors.Black
 };
 
@@ -137,7 +137,7 @@ ImageButton DownloadButton => new ImageButton
     CornerRadius = 5,
     HeightRequest = 25,
     WidthRequest = 25,
-    Source = "download",
+    Source = "download.png",
     BackgroundColor = Colors.Black
 };
 ```
@@ -151,7 +151,7 @@ Comme tu peux le constater, on leur a défini une petite taille de forme carrée
 
 
 {{< admonition type=info title="‎ " open=true >}}
-Il n’est pas nécessaire de préciser l’extension *”.png”* dans le nom du fichier.
+Si tu ne prévois pas de cibler la plateforme Windows, alors il n’est pas nécessaire de préciser l’extension *”.png”* dans le nom du fichier.
 {{< /admonition >}}
 
 
@@ -165,7 +165,7 @@ ImageButton SkipPreviousButton => new ImageButton
 {
     HeightRequest = 75,
     WidthRequest = 75,
-    Source = "skip_previous"
+    Source = "skip_previous.png"
 };
 
 ImageButton PlayButton => new ImageButton
@@ -173,7 +173,7 @@ ImageButton PlayButton => new ImageButton
     CornerRadius = 50,
     HeightRequest = 100,
     WidthRequest = 100,
-    Source = "play",
+    Source = "play.png",
     BackgroundColor = Colors.Black
 };
 
@@ -181,7 +181,7 @@ ImageButton SkipNextButton => new ImageButton
 {
     HeightRequest = 75,
     WidthRequest = 75,
-    Source = "skip_next"
+    Source = "skip_next.png"
 };
 ```
 

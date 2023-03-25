@@ -121,7 +121,7 @@ public class MusicPlayerView : ContentPage
         CornerRadius = 5,
         HeightRequest = 25,
         WidthRequest = 25,
-        Source = "repeat_once",
+        Source = "repeat_once.png",
         BackgroundColor = Colors.Black
     };
 
@@ -129,7 +129,7 @@ public class MusicPlayerView : ContentPage
     {
         HeightRequest = 75,
         WidthRequest = 75,
-        Source = "skip_previous"
+        Source = "skip_previous.png"
     };
 
     ImageButton PlayButton => new ImageButton
@@ -137,7 +137,7 @@ public class MusicPlayerView : ContentPage
         CornerRadius = 50,
         HeightRequest = 100,
         WidthRequest = 100,
-        Source = "play",
+        Source = "play.png",
         BackgroundColor = Colors.Black
     };
 
@@ -145,7 +145,7 @@ public class MusicPlayerView : ContentPage
     {
         HeightRequest = 75,
         WidthRequest = 75,
-        Source = "skip_next"
+        Source = "skip_next.png"
     };
 
     ImageButton DownloadButton => new ImageButton
@@ -153,7 +153,7 @@ public class MusicPlayerView : ContentPage
         CornerRadius = 5,
         HeightRequest = 25,
         WidthRequest = 25,
-        Source = "download",
+        Source = "download.png",
         BackgroundColor = Colors.Black
     };
 
@@ -174,28 +174,28 @@ public class MusicPlayerView : ContentPage
         Binding = new Binding(nameof(Slider.Value), source: VolumeTracker),
         Value = 0d,
         Setters = {
-                new Setter { Property = ImageButton.SourceProperty, Value = "volume_off" }
+                new Setter { Property = ImageButton.SourceProperty, Value = "volume_off.png" }
             }
     };
 
     MultiTrigger VolumeLowTrigger = new MultiTrigger(typeof(ImageButton))
     {
         Setters = {
-                new Setter { Property = ImageButton.SourceProperty, Value = "volume_low" }
+                new Setter { Property = ImageButton.SourceProperty, Value = "volume_low.png" }
             }
     };
 
     MultiTrigger VolumeMediumTrigger = new MultiTrigger(typeof(ImageButton))
     {
         Setters = {
-                new Setter { Property = ImageButton.SourceProperty, Value = "volume_medium" }
+                new Setter { Property = ImageButton.SourceProperty, Value = "volume_medium.png" }
             }
     };
 
     MultiTrigger VolumeHighTrigger = new MultiTrigger(typeof(ImageButton))
     {
         Setters = {
-                new Setter { Property = ImageButton.SourceProperty, Value = "volume_high" }
+                new Setter { Property = ImageButton.SourceProperty, Value = "volume_high.png" }
             }
     };
 

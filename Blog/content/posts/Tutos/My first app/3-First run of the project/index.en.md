@@ -19,9 +19,6 @@ draft: false
 
 <!--more-->
 
-<style>
-.img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
-</style>
 
 {{< admonition type=note title="‎ " open=true >}}
 To ease your read, please start from the project containing all the different steps applied in the previous articles. To do so, [download my class from GitHub](https://github.com/Kapusch/blog-dotnet-maui) if not already done, and open the NightClub project located in the folder named *"0 - Get Started"*.
@@ -45,25 +42,29 @@ But we also need something to define the current state of our application (which
 
 Come on, it's time to get the application running! So choose the platform you want to target, then click on the red boxed button to start the project:
 
-<figure><p align="center"><img class="img-sizes" src="./images/CCA585B557D8F8AFA27869ED6F96DC99.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/CCA585B557D8F8AFA27869ED6F96DC99.png" /></p>
+<figure></figure>
 
 
 
 First, you will see your project compiling with the chosen configuration (this is the build stage):
 
-<figure><p align="center"><img class="img-sizes" src="./images/85AFA96A5BBDCA9AA60CF174671E372B.png"></p><figcaption class="image-caption">The current status of the project can easily be viewed at the bottom left of Visual Studio for Mac.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/85AFA96A5BBDCA9AA60CF174671E372B.png" /></p>
+<figure><figcaption class="image-caption">The current status of the project can easily be viewed at the bottom left of Visual Studio for Mac.</figcaption></figure>
 
 
 
 Then your application will automatically be deployed to the chosen platform (here, a simulated iPhone 13, iOS 15.5).
 
-<figure><p align="center"><img class="img-sizes" src="./images/FB933ED833E5286A9C4DEE2FD6747035.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/FB933ED833E5286A9C4DEE2FD6747035.png" /></p>
+<figure></figure>
 
 
 
 And here's the result!
 
-<figure><p align="center"><img class="img-sizes" src="./images/041628D6E57C50A8C4C89BD5FDE6A23C.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/041628D6E57C50A8C4C89BD5FDE6A23C.png" /></p>
+<figure></figure>
 
 
 

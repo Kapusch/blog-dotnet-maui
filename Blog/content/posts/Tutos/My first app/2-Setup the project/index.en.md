@@ -18,9 +18,6 @@ draft: false
 
 <!--more-->
 
-<style>
-.img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
-</style>
 Today we'll start building our first application! Let’s first set up your working environment, and then you’ll have something concrete soon. Let's get started!
 
 # Which tools for development ?
@@ -60,7 +57,8 @@ Let's move on to the installation of the working environment:
     1. [follow the installation steps for Windows](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin#installation-1),
     1. [follow the installation steps for MacOS](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vsmac#installation-2),
 1. Finally, download my class from GitHub. To do this, go to the [blog's code repository](https://github.com/Kapusch/blog-dotnet-maui), click on the "Code" button and download the ZIP version.
-<figure><p align="center"><img class="img-sizes" src="./images/7B86AE88DAB3362A9B47A4007B949027.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/7B86AE88DAB3362A9B47A4007B949027.png" /></p>
+<figure></figure>
 
 
 
@@ -73,11 +71,13 @@ Before you go further, if you are on MacOS, make sure you have [downloaded the l
 
 Once you have unzipped the downloaded file, go to the Samples folder associated with our course (*Samples/NightClub*). The folders under it each correspond to a different part of the course:
 
-<figure><p align="center"><img class="img-sizes" src="./images/AB6D4CEADA0C31BD182CB28EA1C158C1.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/AB6D4CEADA0C31BD182CB28EA1C158C1.png" /></p>
+<figure></figure>
 
 For now, open the first folder (*0 - Get Started)* and double click on `NightClub.sln` to open the NightClub project in Visual Studio.
 
-<figure><p align="center"><img class="img-sizes" src="./images/1D187B2CC26417B658FD450BB0D7B3B3.png"></p><figcaption class="image-caption">The NightClub project structure from Visual Studio.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/1D187B2CC26417B658FD450BB0D7B3B3.png" /></p>
+<figure><figcaption class="image-caption">The NightClub project structure from Visual Studio.</figcaption></figure>
 
 
 

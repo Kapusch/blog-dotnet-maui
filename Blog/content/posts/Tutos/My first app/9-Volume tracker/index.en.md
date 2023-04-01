@@ -18,9 +18,6 @@ draft: false
 
 <!--more-->
 
-<style>
-.img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
-</style>
 
 {{< admonition type=info title="‎ " open=true >}}
 To ease your read, please start <a href="../7-time-tracker/">from this chapter</a> where we started setting up the music player controls.
@@ -34,7 +31,8 @@ Today we're going to further develop our user interface with the integration of 
 
 Let's go back to the mock-up, here is what we will have to reproduce in the app:
 
-<figure><p align="center"><img class="img-sizes" src="./images/DF050A3B8CBC66BE41161183706F5D44.png"></p><figcaption class="image-caption">It should be quick this time, there are only two controls!</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/DF050A3B8CBC66BE41161183706F5D44.png" /></p>
+<figure><figcaption class="image-caption">It should be quick this time, there are only two controls!</figcaption></figure>
 
 
 
@@ -47,7 +45,8 @@ As you can see, it's nothing more than a mute button and a volume control bar. I
 
 After you unzipped this file, you will see 4 new images:
 
-<figure><p align="center"><img class="img-sizes" src="./images/D513BCCE090CD9A8DB1344EB11150F81.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/D513BCCE090CD9A8DB1344EB11150F81.png" /></p>
+<figure></figure>
 
 
 
@@ -116,7 +115,8 @@ So, did you remember to apply a *ColumnSpan*? 😛 We need it to display the vol
 
 Come on, it's time to relaunch the app! Let's see what it looks like:
 
-<figure><p align="center"><img class="img-sizes" src="./images/B6353871FE88CE680890EE873B635A4D.png"></p><figcaption class="image-caption">The way it looks now, it almost seems like the mobile app is complete…</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/B6353871FE88CE680890EE873B635A4D.png" /></p>
+<figure><figcaption class="image-caption">The way it looks now, it almost seems like the mobile app is complete…</figcaption></figure>
 
 # Switching images when the sound is muted
 
@@ -207,7 +207,8 @@ In fact, the [Slider documentation](https://learn.microsoft.com/en-us/dotnet/mau
 
 However, if you remove the “d” and move your mouse over the “0”, you will see that it is no longer considered a double, but an [int](https://learn.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)!
 
-<figure><p align="center"><img class="img-sizes" src="./images/647B2233C389ED14831E420996C84B23.png"></p><figcaption class="image-caption">Visual Studio is very clear on this question, “0” is an integer!</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/647B2233C389ED14831E420996C84B23.png" /></p>
+<figure><figcaption class="image-caption">Visual Studio is very clear on this question, “0” is an integer!</figcaption></figure>
 
 
 
@@ -215,7 +216,8 @@ And as the *Value* property of our trigger is of type *object*, it potentially a
 
 So the “d” must be added just after:
 
-<figure><p align="center"><img class="img-sizes" src="./images/6563EBE2B8F0FD2DCE8BF8C037A56960.png"></p><figcaption class="image-caption">Now “0” is a double! Visual Studio did not notice a thing.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/6563EBE2B8F0FD2DCE8BF8C037A56960.png" /></p>
+<figure><figcaption class="image-caption">Now “0” is a double! Visual Studio did not notice a thing.</figcaption></figure>
 
 
 
@@ -246,7 +248,8 @@ void InitMuteButton()
 
 That's it! Now try dragging the value of the *Slider* to the far left:
 
-<figure><p align="center"><img class="img-sizes" src="./images/86F584C6E28CF548239A7662F004E645.gif"></p><figcaption class="image-caption">The muted icon appears as soon as the cursor is moved to the far left.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/86F584C6E28CF548239A7662F004E645.gif" /></p>
+<figure><figcaption class="image-caption">The muted icon appears as soon as the cursor is moved to the far left.</figcaption></figure>
 
 
 
@@ -465,7 +468,8 @@ MuteButton.Triggers.Add(VolumeHighTrigger);
 
 That's it! Go ahead and try the app again!
 
-<figure><p align="center"><img class="img-sizes" src="./images/349ADF33416FB9302753C8D26C368B30.gif"></p><figcaption class="image-caption">It’s magic! The image of the button live changes according to the position of the cursor.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/349ADF33416FB9302753C8D26C368B30.gif" /></p>
+<figure><figcaption class="image-caption">It’s magic! The image of the button live changes according to the position of the cursor.</figcaption></figure>
 
 
 

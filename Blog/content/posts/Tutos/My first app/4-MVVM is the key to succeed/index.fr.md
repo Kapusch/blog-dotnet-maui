@@ -18,9 +18,6 @@ draft: false
 
 <!--more-->
 
-<style>
-.img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
-</style>
 
 {{< admonition type=info title="‎ " open=true >}}
 Pour assurer le bon déroulement de cet article, je t’invite à repartir du projet reprenant les différentes étapes appliquées dans les articles précédents. Pour cela, [télécharge mon cours depuis GitHub](https://github.com/Kapusch/blog-dotnet-maui) si ce n’est pas déjà fait, et ouvre le projet NightClub situé dans le dossier *“0 - Get Started”*.
@@ -92,13 +89,15 @@ Maintenant que tu connais les bases du MVVM, je vais pouvoir t’apprendre à l�
 
 Commençons par créer un fichier qui servira de **ViewModel** pour notre `HomeView`. Pour cela, crée d’abord un nouveau dossier *ViewModels* dans le projet, puis ajoutes-y un nouveau fichier.
 
-<figure><p align="center"><img class="img-sizes" src="./images/311CDE6B6AAC4019297529C08E30580A.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/311CDE6B6AAC4019297529C08E30580A.png" /></p>
+<figure></figure>
 
 
 
 Ce sera une nouvelle classe vide appelée `HomeViewModel.cs` :
 
-<figure><p align="center"><img class="img-sizes" src="./images/F63FA1D84892E76873200E90A9652B93.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/F63FA1D84892E76873200E90A9652B93.png" /></p>
+<figure></figure>
 
 
 
@@ -147,13 +146,15 @@ Heureusement, il existe une librairie mise à disposition par Microsoft qui va g
 
 Cette librairie a déjà été ajoutée au projet et tu peux le vérifier facilement en ouvrant la gestion des paquets NuGet. Fais donc un clic droit sur les dépendances du projet:
 
-<figure><p align="center"><img class="img-sizes" src="./images/086DC9994972563B17661D7DF419BEF1.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/086DC9994972563B17661D7DF419BEF1.png" /></p>
+<figure></figure>
 
 
 
 Et voilà la librairie en question ! Elle s’appelle *CommunityToolkit.Mvvm* :
 
-<figure><p align="center"><img class="img-sizes" src="./images/8CFB42EAA5DA20D1D00C52327AD9C943.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/8CFB42EAA5DA20D1D00C52327AD9C943.png" /></p>
+<figure></figure>
 
 
 
@@ -269,7 +270,8 @@ Button EnterButton => new Button
 
 Et voilà le travail !
 
-<figure><p align="center"><img class="img-sizes" src="./images/123B031ED40F624DEF6F6D825DE3ED32.gif"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/123B031ED40F624DEF6F6D825DE3ED32.gif" /></p>
+<figure></figure>
 
 
 

@@ -19,9 +19,6 @@ draft: false
 
 <!--more-->
 
-<style>
-.img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
-</style>
 Hi Devs ! 🤓
 
 

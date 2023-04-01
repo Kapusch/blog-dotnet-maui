@@ -18,9 +18,6 @@ draft: false
 
 <!--more-->
 
-<style>
-.img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
-</style>
 
 {{< admonition type=info title="‎ " open=true >}}
 To ease your read, please start from the project containing all the different steps applied in the previous articles. To do so, [download my class from GitHub](https://github.com/Kapusch/blog-dotnet-maui) if not already done, and open the NightClub project located in the folder named *"0 - Get Started"*.
@@ -91,13 +88,15 @@ Now that you know the basics of MVVM, I can show you how to apply it concretely 
 
 Let's start by creating a file to be the **ViewModel** for our `HomeView`. To do this, first create a new folder called *ViewModels* in the project, then add a new file to it.
 
-<figure><p align="center"><img class="img-sizes" src="./images/311CDE6B6AAC4019297529C08E30580A.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/311CDE6B6AAC4019297529C08E30580A.png" /></p>
+<figure></figure>
 
 
 
 This will be an empty class named `HomeViewModel.cs` :
 
-<figure><p align="center"><img class="img-sizes" src="./images/F63FA1D84892E76873200E90A9652B93.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/F63FA1D84892E76873200E90A9652B93.png" /></p>
+<figure></figure>
 
 
 
@@ -146,13 +145,15 @@ Fortunately, there is a library provided by Microsoft that will greatly simplify
 
 This library has already been added to the project and you can easily verify this by opening the NuGet packages management window. Just right click on the project's dependencies:
 
-<figure><p align="center"><img class="img-sizes" src="./images/086DC9994972563B17661D7DF419BEF1.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/086DC9994972563B17661D7DF419BEF1.png" /></p>
+<figure></figure>
 
 
 
 And here is the library! It is called *CommunityToolkit.Mvvm*:
 
-<figure><p align="center"><img class="img-sizes" src="./images/8CFB42EAA5DA20D1D00C52327AD9C943.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/8CFB42EAA5DA20D1D00C52327AD9C943.png" /></p>
+<figure></figure>
 
 
 
@@ -268,7 +269,8 @@ Button EnterButton => new Button
 
 And there you have it!
 
-<figure><p align="center"><img class="img-sizes" src="./images/04746A14C2AB991DFB0AE21D6D813403.gif"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/04746A14C2AB991DFB0AE21D6D813403.gif" /></p>
+<figure></figure>
 
 
 

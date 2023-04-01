@@ -18,9 +18,6 @@ draft: false
 
 <!--more-->
 
-<style>
-.img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
-</style>
 
 {{< admonition type=info title="‎ " open=true >}}
 To ease your read, please start from the project containing all the different steps applied in the previous articles. To do so, [download my class from GitHub](https://github.com/Kapusch/blog-dotnet-maui) if not already done, and open the NightClub project located in the folder named *“2 - Navigation”*.
@@ -51,7 +48,8 @@ This is a very good question! In general, when imagining a new page for our appl
 
 For our course, the main page should look like the following layout:
 
-<figure><p align="center"><img class="img-sizes" src="./images/F25FC1F576D94B299848D78DBA0AF729.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/F25FC1F576D94B299848D78DBA0AF729.png" /></p>
+<figure></figure>
 
 
 
@@ -59,7 +57,8 @@ For our course, the main page should look like the following layout:
 
 On this model, you can see the elements are arranged in a fairly regular way. One could even imagine lines to relatively align the elements on each other:
 
-<figure><p align="center"><img class="img-sizes" src="./images/DC7E5A20A7CA1D0976AD5613BCC16209.png"></p><figcaption class="image-caption">Arranging the elements along imaginary lines is a bit special at first, but it becomes a habit over time.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/DC7E5A20A7CA1D0976AD5613BCC16209.png" /></p>
+<figure><figcaption class="image-caption">Arranging the elements along imaginary lines is a bit special at first, but it becomes a habit over time.</figcaption></figure>
 
 
 
@@ -75,7 +74,8 @@ To comply with the layout, the first thing to do is dividing the page in two:
 * and the bottom part to control our music player.
 
 
-<figure><p align="center"><img class="img-sizes" src="./images/30112C7E18AA1244A8CA875B39665560.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/30112C7E18AA1244A8CA875B39665560.png" /></p>
+<figure></figure>
 
 
 
@@ -155,7 +155,8 @@ More exactly:
 * and there are 7 columns from left to right (2 small, 3 large and then 2 small again).
 
 
-<figure><p align="center"><img class="img-sizes" src="./images/15825CA1D0297C02D5C7C653EDA5BEA7.png"></p><figcaption class="image-caption">By squaring the lower area of the page, you can see that each visual element has its own cell.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/15825CA1D0297C02D5C7C653EDA5BEA7.png" /></p>
+<figure><figcaption class="image-caption">By squaring the lower area of the page, you can see that each visual element has its own cell.</figcaption></figure>
 
 
 
@@ -277,7 +278,8 @@ Grid BottomLayout => new Grid
 
 And if you run the app, you will see that our use of the *Grid* is indeed correct:
 
-<figure><p align="center"><img class="img-sizes" src="./images/F9032472788C6B235E788E30A9EE9C21.png"></p><figcaption class="image-caption">It's a bit similar to the old colour televisions.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/F9032472788C6B235E788E30A9EE9C21.png" /></p>
+<figure><figcaption class="image-caption">It's a bit similar to the old colour televisions.</figcaption></figure>
 
 
 

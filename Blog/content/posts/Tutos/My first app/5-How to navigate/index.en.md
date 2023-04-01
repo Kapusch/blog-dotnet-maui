@@ -18,9 +18,6 @@ draft: false
 
 <!--more-->
 
-<style>
-.img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
-</style>
 
 {{< admonition type=info title="‎ " open=true >}}
 To ease your read, please start from the project containing all the different steps applied in the previous articles. To do so, [download my class from GitHub](https://github.com/Kapusch/blog-dotnet-maui) if not already done, and open the NightClub project located in the folder named *“1 - MVVM”*.
@@ -40,7 +37,8 @@ Let's start by adding our new page. To do this, right click on the *Views* folde
 
 
 
-<figure><p align="center"><img class="img-sizes" src="./images/4C95EF7DF978364F1FBDE99A614BF58D.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/4C95EF7DF978364F1FBDE99A614BF58D.png" /></p>
+<figure></figure>
 
 
 
@@ -74,7 +72,8 @@ Actually, when the method *PushAsync()* is called, the page *MusicPlayerView* is
 
 
 
-<figure><p align="center"><img class="img-sizes" src="./images/E2D879FA8EDC7C6E3677857BCA73F038.png"></p><figcaption class="image-caption">As with a deck of playing cards, only the top one is visible.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/E2D879FA8EDC7C6E3677857BCA73F038.png" /></p>
+<figure><figcaption class="image-caption">As with a deck of playing cards, only the top one is visible.</figcaption></figure>
 
 
 
@@ -111,7 +110,8 @@ That's it, restart the application and click on the *Enter* button!
 
 
 
-<figure><p align="center"><img class="img-sizes" src="./images/C7AE64E0B2C23119FC68BE61FF22BBB2.gif"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/C7AE64E0B2C23119FC68BE61FF22BBB2.gif" /></p>
+<figure></figure>
 
 
 
@@ -121,7 +121,8 @@ As you will surely have understood, our home page is now contained in a page spe
 
 
 
-<figure><p align="center"><img class="img-sizes" src="./images/82596E59FF4122F0C481FF2E6E218521.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/82596E59FF4122F0C481FF2E6E218521.png" /></p>
+<figure></figure>
 
 
 
@@ -148,7 +149,8 @@ public HomeView()
 
 And now restarting the app, it’s a lot nicer!
 
-<figure><p align="center"><img class="img-sizes" src="./images/81F75B6282F352517B99D11F2F3F6D31.gif"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/81F75B6282F352517B99D11F2F3F6D31.gif" /></p>
+<figure></figure>
 
 
 

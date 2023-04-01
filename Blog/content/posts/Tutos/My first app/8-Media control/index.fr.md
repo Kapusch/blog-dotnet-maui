@@ -18,9 +18,6 @@ draft: false
 
 <!--more-->
 
-<style>
-.img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
-</style>
 
 {{< admonition type=info title="‎ " open=true >}}
 Afin d’assurer le bon déroulement de cet article, je t’invite à repartir <a href="../7-time-tracker/">depuis ce chapitre</a> où l’on a démarré la mise en place des contrôles du lecteur musical.
@@ -36,7 +33,8 @@ Aujourd’hui, on va continuer sur notre belle lancée et reproduire toute une s
 
 Pour écouter de la musique, notre utilisateur a besoin de fonctions clés comme : jouer un morceau, passer à la piste suivante, etc. Si tu te souviens de la maquette, on avait une rangée principale de 5 boutons :
 
-<figure><p align="center"><img class="img-sizes" src="./images/3BA4EBED916B74ED7B3AD4B770FFAC23.png"></p><figcaption class="image-caption">5 boutons bien alignés sur la même rangée, mais ils n’ont pas tous la même taille.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/3BA4EBED916B74ED7B3AD4B770FFAC23.png" /></p>
+<figure><figcaption class="image-caption">5 boutons bien alignés sur la même rangée, mais ils n’ont pas tous la même taille.</figcaption></figure>
 
 
 
@@ -51,7 +49,8 @@ Mais tout d’abord, il faudra ajouter ces fameuses images au projet. Commence d
 
 Puis décompresse le fichier obtenu. Tu devrais avoir les 6 images suivantes :
 
-<figure><p align="center"><img class="img-sizes" src="./images/2E090B2B8F1350B550776023FA314EB4.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/2E090B2B8F1350B550776023FA314EB4.png" /></p>
+<figure></figure>
 
 
 
@@ -83,13 +82,15 @@ Comme quoi, c’est important de concevoir une maquette aussi fiable que possibl
 
 Maintenant que tu as téléchargé toutes les images, tu dois les importer dans le projet pour qu’elles deviennent utilisables par l’application. Pour cela, ouvre le projet dans Visual Studio et fais un clic droit sur le dossier *Images* :
 
-<figure><p align="center"><img class="img-sizes" src="./images/0F64B307F99690E87648DFC47C81F02C.png"></p><figcaption class="image-caption">Rappelle-toi, c’est dans le dossier Resources qu’on stocke tous les médias (icônes, images, pistes audio et vidéo, …)</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/0F64B307F99690E87648DFC47C81F02C.png" /></p>
+<figure><figcaption class="image-caption">Rappelle-toi, c’est dans le dossier Resources qu’on stocke tous les médias (icônes, images, pistes audio et vidéo, …)</figcaption></figure>
 
 
 
 Dans le menu contextuel qui s’affiche, dans la section *Ajouter*, clique sur l’option pour ajouter des fichiers depuis un dossier :
 
-<figure><p align="center"><img class="img-sizes" src="./images/693BBF570360FA0FD6CD0CFA107F4BC3.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/693BBF570360FA0FD6CD0CFA107F4BC3.png" /></p>
+<figure></figure>
 
 
 
@@ -97,7 +98,8 @@ Puis, sélectionne le dossier où tu as décompressé les 6 images et valide ton
 
 Dans notre cas, on veut importer toutes les images du dossier. Sélectionne donc tous les fichiers disponibles et clique sur OK :
 
-<figure><p align="center"><img class="img-sizes" src="./images/773A0DDCB14EF44FA3318865EF20521A.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/773A0DDCB14EF44FA3318865EF20521A.png" /></p>
+<figure></figure>
 
 
 
@@ -110,7 +112,8 @@ Il y a de grandes chances pour que Visual Studio te demande quelle stratégie ap
 
 Voilà c’est terminé, vérifie que tu as bien les 6 nouvelles images importées dans le dossier !
 
-<figure><p align="center"><img class="img-sizes" src="./images/BE9B7B0BEE89CB13A55196568E193B1D.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/BE9B7B0BEE89CB13A55196568E193B1D.png" /></p>
+<figure></figure>
 
 
 
@@ -270,7 +273,8 @@ DownloadButton.Row(1).Column(5)
 
 Et hop, ça y est, ça commence vraiment à prendre forme ! 🤩
 
-<figure><p align="center"><img class="img-sizes" src="./images/5A57E2624C935EF62843C22CC4449E14.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/5A57E2624C935EF62843C22CC4449E14.png" /></p>
+<figure></figure>
 
 
 

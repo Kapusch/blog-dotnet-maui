@@ -18,9 +18,6 @@ draft: false
 
 <!--more-->
 
-<style>
-.img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
-</style>
 
 {{< admonition type=info title="‎ " open=true >}}
 To ease your read, please start <a href="../7-time-tracker/">from this chapter</a> where we started setting up the music player controls.
@@ -36,7 +33,8 @@ Today, we're going to continue our good work and reproduce a whole series of but
 
 To listen to music, our user needs key functions like: play a song, skip to the next track, etc. If you remember about the mock-up, we had a main row of 5 buttons:
 
-<figure><p align="center"><img class="img-sizes" src="./images/3BA4EBED916B74ED7B3AD4B770FFAC23.png"></p><figcaption class="image-caption">5 buttons well aligned in the same row, but they are not all the same size.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/3BA4EBED916B74ED7B3AD4B770FFAC23.png" /></p>
+<figure><figcaption class="image-caption">5 buttons well aligned in the same row, but they are not all the same size.</figcaption></figure>
 
 
 
@@ -51,7 +49,8 @@ But first, you will need to add these images to the project. So start by downloa
 
 Then unzip the downloaded file. You should have the following 6 images:
 
-<figure><p align="center"><img class="img-sizes" src="./images/2E090B2B8F1350B550776023FA314EB4.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/2E090B2B8F1350B550776023FA314EB4.png" /></p>
+<figure></figure>
 
 
 
@@ -83,13 +82,15 @@ So it's important to make the mock-up as reliable as possible!
 
 Now that you have downloaded all the images, you need to import them into the project so that they can be used by the application. To do this, open the project in Visual Studio and right click on the *Images* folder:
 
-<figure><p align="center"><img class="img-sizes" src="./images/0F64B307F99690E87648DFC47C81F02C.png"></p><figcaption class="image-caption">Remember, the Resources folder is where we store all the media (icons, images, audio and video tracks, ...)</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/0F64B307F99690E87648DFC47C81F02C.png" /></p>
+<figure><figcaption class="image-caption">Remember, the Resources folder is where we store all the media (icons, images, audio and video tracks, ...)</figcaption></figure>
 
 
 
 In the pop-up menu that appears, in the *Add* section, click on the option to add files from a folder:
 
-<figure><p align="center"><img class="img-sizes" src="./images/693BBF570360FA0FD6CD0CFA107F4BC3.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/693BBF570360FA0FD6CD0CFA107F4BC3.png" /></p>
+<figure></figure>
 
 
 
@@ -97,7 +98,8 @@ Then, select the folder where you have unzipped the 6 images and validate your c
 
 In our case, we want to import all the images in the folder. So select all the available files and click on OK :
 
-<figure><p align="center"><img class="img-sizes" src="./images/773A0DDCB14EF44FA3318865EF20521A.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/773A0DDCB14EF44FA3318865EF20521A.png" /></p>
+<figure></figure>
 
 
 
@@ -110,7 +112,8 @@ Visual Studio may ask you which strategy to use to import the files into the *Re
 
 That's it, make sure that you have the 6 new images imported into the folder!
 
-<figure><p align="center"><img class="img-sizes" src="./images/BE9B7B0BEE89CB13A55196568E193B1D.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/BE9B7B0BEE89CB13A55196568E193B1D.png" /></p>
+<figure></figure>
 
 
 
@@ -270,7 +273,8 @@ DownloadButton.Row(1).Column(5)
 
 And here we go, this is really starting to take shape! 🤩
 
-<figure><p align="center"><img class="img-sizes" src="./images/5A57E2624C935EF62843C22CC4449E14.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/5A57E2624C935EF62843C22CC4449E14.png" /></p>
+<figure></figure>
 
 
 

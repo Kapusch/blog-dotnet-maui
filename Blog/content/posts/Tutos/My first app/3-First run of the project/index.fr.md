@@ -19,9 +19,6 @@ draft: false
 
 <!--more-->
 
-<style>
-.img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
-</style>
 
 {{< admonition type=note title="‎ " open=true >}}
 Pour assurer le bon déroulement de cet article, je t’invite à repartir du projet reprenant les différentes étapes appliquées dans les articles précédents. Pour cela, [télécharge mon cours depuis GitHub](https://github.com/Kapusch/blog-dotnet-maui) si ce n’est pas déjà fait, et ouvre le projet NightClub situé dans le dossier *“0 - Get Started”*.
@@ -45,25 +42,29 @@ Mais on aura aussi besoin de quoi définir l’état actuel de notre application
 
 Allez, il est temps de faire tourner l’application ! Choisis donc la plateforme que tu souhaites cibler, puis clique sur le bouton encadré en rouge pour démarrer le projet:
 
-<figure><p align="center"><img class="img-sizes" src="./images/CCA585B557D8F8AFA27869ED6F96DC99.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/CCA585B557D8F8AFA27869ED6F96DC99.png" /></p>
+<figure></figure>
 
 
 
 Dans un premier temps, tu verras ton projet être compilé avec la configuration choisie (c’est l’étape du build):
 
-<figure><p align="center"><img class="img-sizes" src="./images/85AFA96A5BBDCA9AA60CF174671E372B.png"></p><figcaption class="image-caption">Sous Visual Studio for Mac, le statut actuel du projet peut facilement être consulté en bas à gauche de la fenêtre.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/85AFA96A5BBDCA9AA60CF174671E372B.png" /></p>
+<figure><figcaption class="image-caption">Sous Visual Studio for Mac, le statut actuel du projet peut facilement être consulté en bas à gauche de la fenêtre.</figcaption></figure>
 
 
 
 Puis tu verras ton application se déployer automatiquement vers la plateforme choisie (ici, une simulation de l’iPhone 13, iOS 15.5).
 
-<figure><p align="center"><img class="img-sizes" src="./images/FB933ED833E5286A9C4DEE2FD6747035.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/FB933ED833E5286A9C4DEE2FD6747035.png" /></p>
+<figure></figure>
 
 
 
 Et voilà le résultat !
 
-<figure><p align="center"><img class="img-sizes" src="./images/041628D6E57C50A8C4C89BD5FDE6A23C.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/041628D6E57C50A8C4C89BD5FDE6A23C.png" /></p>
+<figure></figure>
 
 
 

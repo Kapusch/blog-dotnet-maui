@@ -18,9 +18,6 @@ draft: false
 
 <!--more-->
 
-<style>
-.img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
-</style>
 
 {{< admonition type=info title="‎ " open=true >}}
 Afin d’assurer le bon déroulement de cet article, je t’invite à repartir <a href="../7-time-tracker/">depuis ce chapitre</a> où l’on a démarré la mise en place des contrôles du lecteur musical.
@@ -34,7 +31,8 @@ Aujourd’hui, on va encore développer notre interface utilisateur avec l’int
 
 Allez, reprenons donc la maquette, voici ce que l’on devra reproduire dans l’app :
 
-<figure><p align="center"><img class="img-sizes" src="./images/DF050A3B8CBC66BE41161183706F5D44.png"></p><figcaption class="image-caption">Cette fois-ci, il n’y a que deux contrôles, ça devrait être rapide !</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/DF050A3B8CBC66BE41161183706F5D44.png" /></p>
+<figure><figcaption class="image-caption">Cette fois-ci, il n’y a que deux contrôles, ça devrait être rapide !</figcaption></figure>
 
 
 
@@ -47,7 +45,8 @@ Comme tu peux le constater, ce n’est rien d’autre qu’un bouton pour couper
 
 En décompressant ce fichier, tu verras 4 nouvelles images:
 
-<figure><p align="center"><img class="img-sizes" src="./images/D513BCCE090CD9A8DB1344EB11150F81.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/D513BCCE090CD9A8DB1344EB11150F81.png" /></p>
+<figure></figure>
 
 
 
@@ -116,7 +115,8 @@ Alors, tu avais bien pensé à appliquer un *ColumnSpan* ? 😛 On en a en effe
 
 Allez, il est temps de relancer l’appli ! Voyons ce que ça donne :
 
-<figure><p align="center"><img class="img-sizes" src="./images/B6353871FE88CE680890EE873B635A4D.png"></p><figcaption class="image-caption">Vu comme ça, on dirait presque que l’application est terminée…</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/B6353871FE88CE680890EE873B635A4D.png" /></p>
+<figure><figcaption class="image-caption">Vu comme ça, on dirait presque que l’application est terminée…</figcaption></figure>
 
 # Changer d’image quand le son est coupé 
 
@@ -207,7 +207,8 @@ En fait, la [documentation du Slider](https://learn.microsoft.com/fr-fr/dotnet/m
 
 Or, si tu supprimes le “d” et que tu passes ta souris au-dessus du “0”, tu constateras que ce n’est plus considéré comme un double, mais un [int](https://learn.microsoft.com/fr-fr/dotnet/api/system.int32?view=net-6.0) !
 
-<figure><p align="center"><img class="img-sizes" src="./images/647B2233C389ED14831E420996C84B23.png"></p><figcaption class="image-caption">Visual Studio est clair sur ce point, “0” est bien un entier !</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/647B2233C389ED14831E420996C84B23.png" /></p>
+<figure><figcaption class="image-caption">Visual Studio est clair sur ce point, “0” est bien un entier !</figcaption></figure>
 
 
 
@@ -215,7 +216,8 @@ Et comme la propriété *Value* de notre déclencheur est de type *object*, elle
 
 On doit rajouter le “d” juste après :
 
-<figure><p align="center"><img class="img-sizes" src="./images/6563EBE2B8F0FD2DCE8BF8C037A56960.png"></p><figcaption class="image-caption">À présent, “0” est bien un double ! Visual Studio n’y a vu que du feu. </figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/6563EBE2B8F0FD2DCE8BF8C037A56960.png" /></p>
+<figure><figcaption class="image-caption">À présent, “0” est bien un double ! Visual Studio n’y a vu que du feu. </figcaption></figure>
 
 
 
@@ -246,7 +248,8 @@ void InitMuteButton()
 
 Et voilà ! Essaye maintenant de glisser la valeur du *Slider* tout à gauche :
 
-<figure><p align="center"><img class="img-sizes" src="./images/86F584C6E28CF548239A7662F004E645.gif"></p><figcaption class="image-caption">L’icône du son coupé apparaît aussitôt que le curseur est déplacé tout à gauche.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/86F584C6E28CF548239A7662F004E645.gif" /></p>
+<figure><figcaption class="image-caption">L’icône du son coupé apparaît aussitôt que le curseur est déplacé tout à gauche.</figcaption></figure>
 
 
 
@@ -465,7 +468,8 @@ MuteButton.Triggers.Add(VolumeHighTrigger);
 
 Voilà, c’est terminé ! Vas-y réessaye de lancer l’appli !
 
-<figure><p align="center"><img class="img-sizes" src="./images/349ADF33416FB9302753C8D26C368B30.gif"></p><figcaption class="image-caption">Magie, magie ! L’image du bouton change en fonction de la position du curseur.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/349ADF33416FB9302753C8D26C368B30.gif" /></p>
+<figure><figcaption class="image-caption">Magie, magie ! L’image du bouton change en fonction de la position du curseur.</figcaption></figure>
 
 
 

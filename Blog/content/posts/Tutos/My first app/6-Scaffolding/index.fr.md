@@ -18,9 +18,6 @@ draft: false
 
 <!--more-->
 
-<style>
-.img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
-</style>
 
 {{< admonition type=info title="‎ " open=true >}}
 Pour assurer le bon déroulement de cet article, je t’invite à repartir du projet reprenant les différentes étapes appliquées dans les articles précédents. Pour cela, [télécharge mon cours depuis GitHub](https://github.com/Kapusch/blog-dotnet-maui) si ce n’est pas déjà fait, et ouvre le projet NightClub situé dans le dossier *“2 - Navigation”*.
@@ -51,7 +48,8 @@ C’est une très bonne question ! En général, quand imagine une nouvelle page
 
 Dans le cadre de notre cours, la page principale devra ressembler à la maquette suivante :
 
-<figure><p align="center"><img class="img-sizes" src="./images/F25FC1F576D94B299848D78DBA0AF729.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/F25FC1F576D94B299848D78DBA0AF729.png" /></p>
+<figure></figure>
 
 
 
@@ -59,7 +57,8 @@ Dans le cadre de notre cours, la page principale devra ressembler à la maquette
 
 Sur cette maquette, on remarque que les éléments sont disposés de façon assez régulière. On pourrait même imaginer des lignes pour aligner les éléments les uns par rapport aux autres :
 
-<figure><p align="center"><img class="img-sizes" src="./images/DC7E5A20A7CA1D0976AD5613BCC16209.png"></p><figcaption class="image-caption">Disposer les éléments suivant des lignes imaginaires est un exercice un peu spécial au début, mais cela devient une habitude avec le temps.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/DC7E5A20A7CA1D0976AD5613BCC16209.png" /></p>
+<figure><figcaption class="image-caption">Disposer les éléments suivant des lignes imaginaires est un exercice un peu spécial au début, mais cela devient une habitude avec le temps.</figcaption></figure>
 
 
 
@@ -75,7 +74,8 @@ Pour respecter la maquette, la première chose à faire est de diviser la page e
 * Et celle du bas pour contrôler notre lecteur de musique.
 
 
-<figure><p align="center"><img class="img-sizes" src="./images/30112C7E18AA1244A8CA875B39665560.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/30112C7E18AA1244A8CA875B39665560.png" /></p>
+<figure></figure>
 
 
 
@@ -155,7 +155,8 @@ Plus exactement :
 * et il y a 7 colonnes de gauche à droite (2 petites, 3 grandes et 2 petites à nouveau).
 
 
-<figure><p align="center"><img class="img-sizes" src="./images/15825CA1D0297C02D5C7C653EDA5BEA7.png"></p><figcaption class="image-caption">En quadrillant la zone inférieure de la page, on remarque que chaque élément visuel a bien sa case attitrée.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/15825CA1D0297C02D5C7C653EDA5BEA7.png" /></p>
+<figure><figcaption class="image-caption">En quadrillant la zone inférieure de la page, on remarque que chaque élément visuel a bien sa case attitrée.</figcaption></figure>
 
 
 
@@ -277,7 +278,8 @@ Grid BottomLayout => new Grid
 
 Et si tu lances l’application, tu pourras alors confirmer avec certitude que notre emploi des *Grid* est effectivement correct :
 
-<figure><p align="center"><img class="img-sizes" src="./images/F9032472788C6B235E788E30A9EE9C21.png"></p><figcaption class="image-caption">Ça fait un peu penser aux vieilles télévisions en couleur.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/F9032472788C6B235E788E30A9EE9C21.png" /></p>
+<figure><figcaption class="image-caption">Ça fait un peu penser aux vieilles télévisions en couleur.</figcaption></figure>
 
 
 

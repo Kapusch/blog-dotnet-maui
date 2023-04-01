@@ -18,9 +18,6 @@ draft: false
 
 <!--more-->
 
-<style>
-.img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
-</style>
 
 {{< admonition type=info title="‎ " open=true >}}
 To ease your read, please start from the project containing all the different steps applied in the previous articles. To do so, [download my class from GitHub](https://github.com/Kapusch/blog-dotnet-maui) if not already done, and open the NightClub project located in the folder named *“3 - Page Scaffolding”*.
@@ -32,7 +29,8 @@ In the previous article, we set up a matrix to display all the controls of our m
 
 Let's start with the part dedicated to the timing of the song. According to the mock-up, we will have a text on the left for the current listening time, and on the right, for the total duration of the track:
 
-<figure><p align="center"><img class="img-sizes" src="./images/FA80B1E1F42328E22E779783E27C557F.png"></p><figcaption class="image-caption">The application shows that the song has been playing for 36 seconds and is 2 minutes and 57 seconds long.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/FA80B1E1F42328E22E779783E27C557F.png" /></p>
+<figure><figcaption class="image-caption">The application shows that the song has been playing for 36 seconds and is 2 minutes and 57 seconds long.</figcaption></figure>
 
 
 
@@ -94,7 +92,8 @@ Slider TimeTracker => new Slider
 
 A *Slider* is a control with a cursor that allows the user to select a specific value from a range of possible values. In our case, it's like having a ruler which is graduated from 0 to 100 with a cursor positioned on 20.
 
-<figure><p align="center"><img class="img-sizes" src="./images/42375B164D301F432E78BF870C997012.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/42375B164D301F432E78BF870C997012.png" /></p>
+<figure></figure>
 
 
 
@@ -133,7 +132,8 @@ Grid BottomLayout => new Grid
 
 At first glance, it looks pretty good! However, if you start the application, you will notice that there is a slight problem with the display:
 
-<figure><p align="center"><img class="img-sizes" src="./images/6A71FCFF86082A1FEF1D2C5C1840643B.png"></p><figcaption class="image-caption">Positioned this way, the Slider does not look good.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/6A71FCFF86082A1FEF1D2C5C1840643B.png" /></p>
+<figure><figcaption class="image-caption">Positioned this way, the Slider does not look good.</figcaption></figure>
 
 
 
@@ -143,7 +143,8 @@ Don't panic! We will see right away how to readjust it.
 
 If you remember, we initially divided the *BottomLayout* into 7 columns. However, even if our *Slider* is well positioned from box n°3 of the first row, it does not clearly say where to stop! We could then simply tell the *Slider* to spread out over the next columns, like this:
 
-<figure><p align="center"><img class="img-sizes" src="./images/EC9010D37B4268DF0FCDE7480DD1156F.png"></p><figcaption class="image-caption">The Slider overlaps with boxes n°3, n°4 and n°5.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/EC9010D37B4268DF0FCDE7480DD1156F.png" /></p>
+<figure><figcaption class="image-caption">The Slider overlaps with boxes n°3, n°4 and n°5.</figcaption></figure>
 
 
 
@@ -160,7 +161,8 @@ TimeTracker.Row(0).Column(2).ColumnSpan(3)
 
 Now we're really done! Let's run the application again to see what it looks like:
 
-<figure><p align="center"><img class="img-sizes" src="./images/F625F9944D83A64D3BE00195F96757B2.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/F625F9944D83A64D3BE00195F96757B2.png" /></p>
+<figure></figure>
 
 
 

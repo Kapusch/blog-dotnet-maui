@@ -18,9 +18,6 @@ draft: false
 
 <!--more-->
 
-<style>
-.img-sizes{min-height:50px;max-height:600px;min-width:50px;max-width:600px;height:auto;width:auto}
-</style>
 Tu vas bientôt pouvoir créer ta première application mobile ! Juste le temps d'installer ton environnement de travail et on aura rapidement quelque chose de concret. Allez c'est parti !
 
 # Quels outils pour développer ?
@@ -60,7 +57,8 @@ Passons maintenant à l’installation de l’environnement de travail:
     1. [suivre les étapes d’installation sous Windows](https://learn.microsoft.com/fr-fr/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin#installation-1)
     1. [suivre les étapes d’installation sous MacOS](https://learn.microsoft.com/fr-fr/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vsmac#installation-2)
 1. Enfin, télécharge mon cours depuis GitHub. Pour cela, rends-toi sur [le dépôt de code du blog](https://github.com/Kapusch/blog-dotnet-maui), clique sur le bouton “Code” et télécharge le tout au format .ZIP
-<figure><p align="center"><img class="img-sizes" src="./images/7B86AE88DAB3362A9B47A4007B949027.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/7B86AE88DAB3362A9B47A4007B949027.png" /></p>
+<figure></figure>
 
 
 
@@ -73,13 +71,15 @@ Avant d’aller plus loin, si tu es sous MacOS, il te faudra t’assurer d’avo
 
 Une fois le fichier téléchargé décompressé, rends-toi dans le dossier des exemples associés à notre cours (*Samples/NightClub*). Les dossiers qui y sont entreposés correspondent chacun à une partie différente du cours:
 
-<figure><p align="center"><img class="img-sizes" src="./images/AB6D4CEADA0C31BD182CB28EA1C158C1.png"></p></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/AB6D4CEADA0C31BD182CB28EA1C158C1.png" /></p>
+<figure></figure>
 
 
 
 Pour le moment, ouvre le premier dossier (*0 - Get Started)* et double-clique sur `NightClub.sln` pour ouvrir le projet NightClub dans Visual Studio.
 
-<figure><p align="center"><img class="img-sizes" src="./images/1D187B2CC26417B658FD450BB0D7B3B3.png"></p><figcaption class="image-caption">La structure du projet NightClub après ouverture dans Visual Studio.</figcaption></figure>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/1D187B2CC26417B658FD450BB0D7B3B3.png" /></p>
+<figure><figcaption class="image-caption">La structure du projet NightClub après ouverture dans Visual Studio.</figcaption></figure>
 
 
 

@@ -15,6 +15,6 @@ draft: false
 
 # En cours de construction
 
-Ce blog est en construction, mais mes premiers articles seront publiés bientôt !
+Cette partie du blog est en construction, mais mes premiers articles seront publiés bientôt !
 
 <p align="center"><img class="img-sizes" src="./images/WIP.jpg"></p>

@@ -33,15 +33,15 @@ It's now time to get the app running. We'll also take the opportunity to look at
 
 But for our application to work, we still have two points to address: the app initialization and above all, managing its execution state.
 
-### App initialization
+# App initialization
 
 For each targeted platform (iOS, Android, ...), a .NET MAUI application is initialized from a single entry point via the method `CreateMauiApp()` which is located in the file [MauiProgram.cs](https://github.com/Kapusch/blog-dotnet-maui/blob/main/Samples/NightClub/0%20-%20Get%20Started/NightClub/MauiProgram.cs). This is where you configure everything the app needs to work the way you want it to: web services, external dependencies, or specific fonts.
 
-### App state management
+# App state management
 
 But we also need something to define the current state of our application (which page to display, what if the application stops, ...). And for that, we have an `Application` class declared in the file [App.cs](https://github.com/Kapusch/blog-dotnet-maui/blob/main/Samples/NightClub/0%20-%20Get%20Started/NightClub/App.cs).
 
-### Executing the app
+# Executing the app
 
 Come on, it's time to get the application running! So choose the platform you want to target, then click on the red boxed button to start the project:
 
@@ -74,7 +74,7 @@ And here's the result!
 
 This is just the beginning of our app, the biggest part is ahead !
 
-### The home page
+# The home page
 
 The screen you just saw is the home page for which the content is specified in the file `HomeView.cs`. It’s a [ContentPage](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/pages/contentpage) (basically a page with content) which is the most common type of page.
 

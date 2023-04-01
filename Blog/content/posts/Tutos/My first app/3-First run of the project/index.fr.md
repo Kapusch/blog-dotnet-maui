@@ -33,15 +33,15 @@ Allez, il est temps de faire tourner l’application. On en profitera aussi pour
 
 Mais pour que notre application puisse fonctionner, il nous reste deux points à aborder : l’initialisation de l’app et surtout, gérer son état d’exécution.
 
-### Initialisation de l’app
+# Initialisation de l’app
 
 Pour chaque plateforme ciblée (iOS, Android, …), chaque application .NET MAUI sera initialisée depuis un seul point d’entrée via la méthode `CreateMauiApp()` située dans le fichier [MauiProgram.cs](https://github.com/Kapusch/blog-dotnet-maui/blob/main/Samples/NightClub/0%20-%20Get%20Started/NightClub/MauiProgram.cs). C’est ici que l’on configurera tout ce dont a besoin l’app pour fonctionner comme on le souhaite : les services Web, les dépendances externes, ou bien encore les polices de caractères spécifiques.
 
-### Gestion de l’état de l’app
+# Gestion de l’état de l’app
 
 Mais on aura aussi besoin de quoi définir l’état actuel de notre application (quelle page afficher, que faire si l’application est arrêtée, …). Et pour ça on a justement une classe `Application` déclarée dans le fichier [App.cs](https://github.com/Kapusch/blog-dotnet-maui/blob/main/Samples/NightClub/0%20-%20Get%20Started/NightClub/App.cs).
 
-### Lancement de l’app
+# Lancement de l’app
 
 Allez, il est temps de faire tourner l’application ! Choisis donc la plateforme que tu souhaites cibler, puis clique sur le bouton encadré en rouge pour démarrer le projet:
 
@@ -74,7 +74,7 @@ Et voilà le résultat !
 
 Ce n’est évidemment que le début de notre app, le plus gros reste à faire !
 
-### La page d’accueil
+# La page d’accueil
 
 Ce que tu vois pour le moment, c’est la page d’accueil dont le contenu est spécifié dans le fichier `HomeView.cs`. Il s’agit là d’une [ContentPage](https://docs.microsoft.com/fr-fr/dotnet/maui/user-interface/pages/contentpage) (littéralement une page avec du contenu) qui est le type de page le plus courant.
 

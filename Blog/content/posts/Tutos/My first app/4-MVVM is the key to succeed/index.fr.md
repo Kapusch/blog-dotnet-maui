@@ -30,7 +30,7 @@ Pour assurer le bon déroulement de cet article, je t’invite à repartir du pr
 
 Dans ce chapitre, nous découvrirons un patron de conception majeur pour le développement d’application mobile, le [Model-View-ViewModel](https://docs.microsoft.com/fr-fr/dotnet/maui/xaml/fundamentals/mvvm) ! (plus couramment appelé “le MVVM”)
 
-### Le Model-View-ViewModel
+# Le Model-View-ViewModel
 
 Le MVVM est un patron de conception qui propose au développeur une séparation logique de son code en 3 couches :
 
@@ -65,7 +65,7 @@ En suivant ce principe, le découpage de ton code est clair et tu limites le nom
 
 Bonne remarque ! En effet, certaines pages sont tellement simples qu’elles ne nécessitent pas de Model. Dans ces cas-là, seuls les View et ViewModel seront donc requis.
 
-### Le Data Binding
+# Le Data Binding
 
 On sait désormais bien découper notre code en plusieurs couches. Par exemple, définir un bouton dans une **View** et déclarer son action dans un **ViewModel**. Mais est-ce que tu saurais dire comment elles vont fonctionner ensemble ?
 
@@ -86,7 +86,7 @@ En effet, c’est quasiment ça ! Cela se déroule en deux temps :
 
 Le Data Binding est une technique permettant de lier deux objets de sorte que, lorsque l’un des deux est modifié, l’autre le sera également. Ça peut paraître un peu flou comme ça, mais tu comprendras mieux son rôle dans la section d’après. Pour le moment, on continue !
 
-### Appliquer le MVVM
+# Appliquer le MVVM
 
 Maintenant que tu connais les bases du MVVM, je vais pouvoir t’apprendre à l’appliquer concrètement dans l’application.
 
@@ -227,7 +227,7 @@ Aller plus loin avec les [générateurs de code source MVVM](https://learn.micro
 
 
 
-### Bientôt la démo !
+# Bientôt la démo !
 
 On y est presque ! Il ne reste plus qu’à actionner la commande *Enter()* au clic du bouton “ENTER”.
 

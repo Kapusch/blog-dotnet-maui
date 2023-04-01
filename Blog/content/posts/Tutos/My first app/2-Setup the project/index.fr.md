@@ -23,7 +23,7 @@ draft: false
 </style>
 Tu vas bientôt pouvoir créer ta première application mobile ! Juste le temps d'installer ton environnement de travail et on aura rapidement quelque chose de concret. Allez c'est parti !
 
-### Quels outils pour développer ?
+# Quels outils pour développer ?
 
 Voyons déjà les outils qui te permettront de développer ton appli.
 
@@ -51,7 +51,7 @@ Mais tu peux tout aussi bien développer sous Windows ou Linux ! Plus concrètem
 Dans le cadre de ce blog, je me concentrerais uniquement sur le développement d’application mobile à l’aide de Visual Studio. En effet, son utilisation est bien plus intuitive et c’est justement cela qui plaît à tout vrai néophyte.
 {{< /admonition >}}
 
-### Installation de l’environnement
+# Installation de l’environnement
 
 Passons maintenant à l’installation de l’environnement de travail:
 
@@ -69,7 +69,7 @@ Passons maintenant à l’installation de l’environnement de travail:
 Avant d’aller plus loin, si tu es sous MacOS, il te faudra t’assurer d’avoir [téléchargé la dernière version d’Xcode](https://developer.apple.com/xcode) qui est requise pour le simulateur d’iPhone. Son installation peut être très longue, aussi, je te conseille de le faire en parallèle de ta lecture.
 {{< /admonition >}}
 
-### Description du projet
+# Description du projet
 
 Une fois le fichier téléchargé décompressé, rends-toi dans le dossier des exemples associés à notre cours (*Samples/NightClub*). Les dossiers qui y sont entreposés correspondent chacun à une partie différente du cours:
 

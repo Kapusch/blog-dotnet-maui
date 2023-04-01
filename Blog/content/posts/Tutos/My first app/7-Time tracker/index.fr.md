@@ -28,7 +28,7 @@ Pour assurer le bon déroulement de cet article, je t’invite à repartir du pr
 
 Dans l’article précédent, on a mis en place un quadrillage pour y disposer tous les contrôles de notre lecteur musical. On va donc pouvoir ajouter des éléments concrets pour l’utilisateur !
 
-### Afficher le minutage
+# Afficher le minutage
 
 Commençons déjà avec la partie dédiée au minutage du titre musical. D’après la maquette, on aura un texte à gauche pour le temps d’écoute en cours, et à droite, pour la durée totale de la piste :
 
@@ -70,7 +70,7 @@ Aller plus loin avec [l’accessibilité pour les applications mobiles](https://
 
 
 
-### Ajuster la tête de lecture
+# Ajuster la tête de lecture
 
 Quant à l’élément du milieu, il remplit deux fonctions à la fois : afficher et contrôler la position de lecture dans le morceau. En effet, l’utilisateur s’en sert pour avancer ou reculer dans le morceau en faisant glisser son doigt horizontalement. De plus, ce composant possède une partie en rose qui représente le temps écoulé, et une autre en noir pour le temps restant.
 
@@ -139,7 +139,7 @@ Grid BottomLayout => new Grid
 
 Pas de panique ! On va voir tout de suite comment réajuster cela.
 
-### Bien utiliser les Grid
+# Bien utiliser les Grid
 
 Si tu te rappelles, on a initialement divisé le *BottomLayout* en 7 colonnes. Or, si notre code positionne bien notre *Slider* à partir de la case n°3 de la première ligne, il ne lui dit pas clairement où s’arrêter ! On pourrait alors simplement dire au *Slider* de s’étaler sur les colonnes suivantes, comme ceci :
 

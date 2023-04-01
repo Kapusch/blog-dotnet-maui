@@ -402,8 +402,8 @@ theme = "FixIt"
   unsafe = true
   # Table Of Contents settings
   [markup.tableOfContents]
-  startLevel = 2
-  endLevel = 6
+  startLevel = 1
+  endLevel = 3
 
   # FixIt 0.2.16 | CHANGED Social config about the author
   [params.social]

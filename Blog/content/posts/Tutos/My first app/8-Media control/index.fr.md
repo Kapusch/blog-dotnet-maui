@@ -32,7 +32,7 @@ Aujourd’hui, on va continuer sur notre belle lancée et reproduire toute une s
 
 
 
-### La guerre des boutons
+# La guerre des boutons
 
 Pour écouter de la musique, notre utilisateur a besoin de fonctions clés comme : jouer un morceau, passer à la piste suivante, etc. Si tu te souviens de la maquette, on avait une rangée principale de 5 boutons :
 
@@ -79,7 +79,7 @@ Oui je sais, cette dernière fonction “télécharger” n’était pas prévue
 
 Comme quoi, c’est important de concevoir une maquette aussi fiable que possible !
 
-### Ajouter les images au projet
+# Ajouter les images au projet
 
 Maintenant que tu as téléchargé toutes les images, tu dois les importer dans le projet pour qu’elles deviennent utilisables par l’application. Pour cela, ouvre le projet dans Visual Studio et fais un clic droit sur le dossier *Images* :
 
@@ -114,7 +114,7 @@ Voilà c’est terminé, vérifie que tu as bien les 6 nouvelles images importé
 
 
 
-### Découverte des ImageButton
+# Découverte des ImageButton
 
 Maintenant que les images sont prêtes à l’emploi, on passe au code !
 
@@ -203,7 +203,7 @@ Au contraire, le bouton *Jouer*, lui, est doté d’un arrière-plan noir et a l
 
 La technique est très simple : les valeurs de `HeightRequest` et `WidthRequest` doivent être identiques, tandis que celle du `CornerRadius` doit leur être deux fois inférieure. Ainsi, si tu veux un bouton de forme ronde avec une hauteur de 200, son arrondissement devra avoir une valeur de 100.
 
-### Préparation pour la démo
+# Préparation pour la démo
 
 Allez, il est désormais temps pour toi de répartir ces nouveaux contrôles sur la deuxième ligne du *BottomLayout* ! Étant donné qu’on a 5 boutons pour 7 colonnes, tu auras peut-être opté pour la disposition suivante :
 

@@ -28,7 +28,7 @@ To ease your read, please start from the project containing all the different st
 
 In the previous article, we set up a matrix to display all the controls of our music player. So we can now add concrete elements for the user!
 
-### Timing display
+# Timing display
 
 Let's start with the part dedicated to the timing of the song. According to the mock-up, we will have a text on the left for the current listening time, and on the right, for the total duration of the track:
 
@@ -70,7 +70,7 @@ Going further with [accessibility for mobile applications](https://learn.microso
 
 
 
-### Adjusting the playback head
+# Adjusting the playback head
 
 The middle element has two functions: displaying and controlling the playback position in the song. Indeed, the user can move forward or backward in the song by sliding his finger horizontally. In addition, this component has a pink part that represents the elapsed time, and a black part for the remaining time.
 
@@ -139,7 +139,7 @@ At first glance, it looks pretty good! However, if you start the application, yo
 
 Don't panic! We will see right away how to readjust it.
 
-### Better use of the Grid
+# Better use of the Grid
 
 If you remember, we initially divided the *BottomLayout* into 7 columns. However, even if our *Slider* is well positioned from box n°3 of the first row, it does not clearly say where to stop! We could then simply tell the *Slider* to spread out over the next columns, like this:
 

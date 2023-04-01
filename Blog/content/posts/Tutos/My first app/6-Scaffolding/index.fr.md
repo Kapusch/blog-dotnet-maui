@@ -32,7 +32,7 @@ Allez, on est partis pour mettre en place les fondations de la page principale !
 
 
 
-### Le design
+# Le design
 
 Mais avant tout développement graphique, il vaut mieux réfléchir à la disposition des différents éléments que l’on souhaite afficher. Justement, .NET MAUI fournit pour cela [plusieurs solutions simples pour structurer nos pages](https://learn.microsoft.com/fr-fr/dotnet/maui/user-interface/layouts/). Et tu vas voir, c’est un vrai travail d’architecte !
 
@@ -55,7 +55,7 @@ Dans le cadre de notre cours, la page principale devra ressembler à la maquette
 
 
 
-### Structuration de la page
+# Structuration de la page
 
 Sur cette maquette, on remarque que les éléments sont disposés de façon assez régulière. On pourrait même imaginer des lignes pour aligner les éléments les uns par rapport aux autres :
 
@@ -67,7 +67,7 @@ Ces lignes te feront peut-être penser à une grille… et si c’est le cas, bi
 
 
 
-### Initiation au Grid
+# Initiation au Grid
 
 Pour respecter la maquette, la première chose à faire est de diviser la page en deux :
 
@@ -145,7 +145,7 @@ Grid BottomLayout => new Grid
 
 
 
-### Les fondations principales
+# Les fondations principales
 
 Concentrons-nous dans un premier temps sur le contenu du *BottomLayout*. En regardant d’un peu plus près le design, on remarque de nouvelles lignes, mais également des colonnes.
 
@@ -232,7 +232,7 @@ A toi de choisir ce qui te semble plus cohérent !
 
 
 
-### Vérification du rendu à l’écran
+# Vérification du rendu à l’écran
 
 Maintenant que notre quadrillage de la partie inférieure est en place, vérifions si les paramètres sont corrects. Avec une *Grid* configurée sur 3 lignes et 7 colonnes, ça fait beaucoup de cases à valider !
 

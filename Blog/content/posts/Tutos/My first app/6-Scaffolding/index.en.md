@@ -32,7 +32,7 @@ Now it’s time to set up the foundations of the main page!
 
 
 
-### The design
+# The design
 
 But before any visual development, it is best to think about the layout of the various elements that we want to display. Precisely, .NET MAUI provides [several simple solutions for structuring our pages](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/layouts/). And you'll see, it's a real architect's job!
 
@@ -55,7 +55,7 @@ For our course, the main page should look like the following layout:
 
 
 
-### Structuring the page
+# Structuring the page
 
 On this model, you can see the elements are arranged in a fairly regular way. One could even imagine lines to relatively align the elements on each other:
 
@@ -67,7 +67,7 @@ These lines might make you think of a grid... and if so, good for you! This is t
 
 
 
-### Introduction to the Grid
+# Introduction to the Grid
 
 To comply with the layout, the first thing to do is dividing the page in two:
 
@@ -145,7 +145,7 @@ Grid BottomLayout => new Grid
 
 
 
-### The main foundations
+# The main foundations
 
 Let's focus first on the content of the *BottomLayout*. If we take a closer look at the design, we can see new rows, but also columns.
 
@@ -232,7 +232,7 @@ Choose what makes more sense to you!
 
 
 
-### Validating the rendering on screen
+# Validating the rendering on screen
 
 Now that our bottom grid is in place, let's check the settings are correct. With a *Grid* of 3 rows and 7 columns, that's a lot of cells to validate!
 

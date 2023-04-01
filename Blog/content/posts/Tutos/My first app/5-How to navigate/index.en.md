@@ -34,7 +34,7 @@ Today it will be much simpler, we start the creation of the application main pag
 
 
 
-### Navigate to a new page
+# Navigate to a new page
 
 Let's start by adding our new page. To do this, right click on the *Views* folder to add a new file, then choose the template ".NET MAUI ContentPage (C#)" as below. We'll name this file: `MusicPlayerView.cs`.
 
@@ -115,7 +115,7 @@ That's it, restart the application and click on the *Enter* button!
 
 
 
-### Remove the navigation bar
+# Remove the navigation bar
 
 As you will surely have understood, our home page is now contained in a page specially configured for navigation. It therefore contains a navigation bar by default:
 

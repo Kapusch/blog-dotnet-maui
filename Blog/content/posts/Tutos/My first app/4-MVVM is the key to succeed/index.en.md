@@ -30,7 +30,7 @@ To ease your read, please start from the project containing all the different st
 
 In this chapter, we will discover a major design pattern for mobile application development, the [Model-View-ViewModel](https://docs.microsoft.com/en-us/dotnet/maui/xaml/fundamentals/mvvm)! (usually referred as “MVVM”)
 
-### Model-View-ViewModel
+# Model-View-ViewModel
 
 MVVM is a design pattern which provides the developer with a logical separation of the code into 3 layers:
 
@@ -64,7 +64,7 @@ By following this principle, the breakdown of your code is clear and you reduce 
 
 Good catch! Indeed, some pages are so simple that they do not require a Model. In such cases, only the View and ViewModel are required.
 
-### Data Binding
+# Data Binding
 
 We now understand how to split our code into several layers. For example, defining a button in a **View** and declaring its action in a **ViewModel**. But can you tell how they will work together?
 
@@ -85,7 +85,7 @@ Indeed, that's almost it! It takes place in two steps:
 
 Data Binding is a technique for linking two objects so that when one is changed, the other is also changed. It may sound a bit vague, but you'll understand its role better in the next section. For now, let’s move on!
 
-### Apply MVVM
+# Apply MVVM
 
 Now that you know the basics of MVVM, I can show you how to apply it concretely in the application.
 
@@ -226,7 +226,7 @@ Going further with [MVVM source code generators](https://learn.microsoft.com/en-
 
 
 
-### Demo is coming soon!
+# Demo is coming soon!
 
 Almost there! Only remaining is to activate the *Enter()* command when the "ENTER" button is clicked.
 

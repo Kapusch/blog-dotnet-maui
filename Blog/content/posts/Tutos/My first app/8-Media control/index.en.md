@@ -32,7 +32,7 @@ Today, we're going to continue our good work and reproduce a whole series of but
 
 
 
-### War of the Buttons
+# War of the Buttons
 
 To listen to music, our user needs key functions like: play a song, skip to the next track, etc. If you remember about the mock-up, we had a main row of 5 buttons:
 
@@ -79,7 +79,7 @@ Yes I know, this last function "download" was not planned in the program! It was
 
 So it's important to make the mock-up as reliable as possible!
 
-### Add images to the project
+# Add images to the project
 
 Now that you have downloaded all the images, you need to import them into the project so that they can be used by the application. To do this, open the project in Visual Studio and right click on the *Images* folder:
 
@@ -114,7 +114,7 @@ That's it, make sure that you have the 6 new images imported into the folder!
 
 
 
-### Discovering ImageButton
+# Discovering ImageButton
 
 Now that the images are ready to use, let's get to the code!
 
@@ -203,7 +203,7 @@ On the other hand, the *Play* button has a black background and very rounded cor
 
 The technique is very simple: the `HeightRequest` and `WidthRequest` values must be the same, while the `CornerRadius` value must be twice as small. So, if you want a round button with a height of 200, its rounding should have a value of 100.
 
-### Preparing for the demo
+# Preparing for the demo
 
 Now it's time for you to arrange these new controls in the second row of the *BottomLayout*! Since we have 5 buttons for 7 columns, you may have opted for the following layout:
 

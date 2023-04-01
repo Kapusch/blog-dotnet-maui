@@ -34,7 +34,7 @@ Aujourd’hui ce sera bien plus simple, on attaque la création de la page princ
 
 
 
-### Naviguer vers une nouvelle page
+# Naviguer vers une nouvelle page
 
 Commençons déjà par ajouter notre nouvelle page. Pour cela, fais un clic droit sur le dossier *Views* pour ajouter un nouveau fichier, puis choisis le template “.NET MAUI ContentPage (C#)” comme ci-dessous. On va nommer ce fichier : `MusicPlayerView.cs`.
 
@@ -115,7 +115,7 @@ Voilà c’est bon, relance l’application et clique sur le bouton *Enter* !
 
 
 
-### Supprimer l’en-tête de navigation
+# Supprimer l’en-tête de navigation
 
 Comme tu l’auras sûrement compris, notre page d’accueil est désormais contenue dans une page spécialement configurée pour la navigation. Elle contient donc par défaut une en-tête de navigation :
 

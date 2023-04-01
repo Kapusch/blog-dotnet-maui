@@ -336,6 +336,18 @@ theme = "FixIt"
     # amount of RSS pages
     rss = 10
 
+  # TagCloud config for tags page
+  [params.tagcloud]
+    enable = true
+    # Minimum font size in px
+    min = 14
+    # Maximum font size in px
+    max = 32
+    # Maximum count of posts per tag
+    peakCount = 10
+    # Order of tags, optional values: ["name", "count"]
+    orderby = "name"
+
   # Home page config
   [params.home]
     # FixIt 0.2.0 | NEW amount of RSS pages

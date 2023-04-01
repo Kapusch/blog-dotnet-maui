@@ -1,4 +1,4 @@
 ---
-Title: 'All tutos'
+Title: 'Tutos'
 draft: false
 ---

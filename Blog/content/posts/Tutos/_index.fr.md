@@ -1,4 +1,4 @@
 ---
-Title: 'Tous les cours'
+Title: 'Cours'
 draft: false
 ---

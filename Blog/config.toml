@@ -288,6 +288,12 @@ theme = "FixIt"
       # whether to use typeit animation for subtitle name
       typeit = false
 
+  # FixIt 0.2.18 | NEW Breadcrumb config
+  [params.breadcrumb]
+    enable = true
+    sticky = true
+    showHome = false
+
   # Footer config
   [params.footer]
     enable = true

@@ -20,11 +20,9 @@ draft: false
 <!--more-->
 
 
-{{< admonition type=note title="‎ " open=true >}}
-Pour assurer le bon déroulement de cet article, je t’invite à repartir du projet reprenant les différentes étapes appliquées dans les articles précédents. Pour cela, [télécharge mon cours depuis GitHub](https://github.com/Kapusch/blog-dotnet-maui) si ce n’est pas déjà fait, et ouvre le projet NightClub situé dans le dossier *“0 - Get Started”*.
+{{< admonition type=info title="‎ " open=true >}}
+Pour assurer le bon déroulement de cet article, je t’invite à récupérer le projet reprenant toutes les étapes appliquées jusqu’ici dans ce cours. Pour cela, réfère-toi au <a href="../2-setup-the-project/">guide d’installation du projet</a> et repars de l’exemple situé dans le dossier *“0 - Get Started”*.
 {{< /admonition >}}
-
-
 
 Allez, il est temps de faire tourner l’application. On en profitera aussi pour jeter un œil au code source ! 🙂
 

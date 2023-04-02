@@ -20,7 +20,7 @@ draft: false
 
 
 {{< admonition type=info title="‎ " open=true >}}
-To ease your read, please start <a href="../7-time-tracker/">from this chapter</a> where we started setting up the music player controls.
+To ease your read, please resume <a href="../7-time-tracker/">from this chapter</a> where we started setting up the music player controls.
 {{< /admonition >}}
 
 In the last chapter, we worked on setting up the first visual elements of the music player. Two components were discovered: the [Label](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/label) and the [Slider](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/slider).

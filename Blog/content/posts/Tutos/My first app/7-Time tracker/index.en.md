@@ -20,7 +20,7 @@ draft: false
 
 
 {{< admonition type=info title="‎ " open=true >}}
-To ease your read, please start from the project containing all the different steps applied in the previous articles. To do so, [download my class from GitHub](https://github.com/Kapusch/blog-dotnet-maui) if not already done, and open the NightClub project located in the folder named *“3 - Page Scaffolding”*.
+To ease your read, please start from the project containing all the different steps applied so far in this tutorial. To do so, refer to the <a href="../2-setup-the-project/">project setup guide</a> and resume from the sample located in the folder *"3 - Page Scaffolding"*.
 {{< /admonition >}}
 
 In the previous article, we set up a matrix to display all the controls of our music player. So we can now add concrete elements for the user!

@@ -1,4 +1,4 @@
 ---
-Title: 'Tous les articles'
+Title: 'Publications'
 draft: false
 ---

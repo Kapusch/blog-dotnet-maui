@@ -1,4 +1,4 @@
 ---
-Title: 'All posts'
+Title: 'Posts'
 draft: false
 ---

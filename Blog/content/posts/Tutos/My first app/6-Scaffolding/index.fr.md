@@ -20,7 +20,7 @@ draft: false
 
 
 {{< admonition type=info title="‎ " open=true >}}
-Pour assurer le bon déroulement de cet article, je t’invite à repartir du projet reprenant les différentes étapes appliquées dans les articles précédents. Pour cela, [télécharge mon cours depuis GitHub](https://github.com/Kapusch/blog-dotnet-maui) si ce n’est pas déjà fait, et ouvre le projet NightClub situé dans le dossier *“2 - Navigation”*.
+Pour assurer le bon déroulement de cet article, je t’invite à récupérer le projet reprenant toutes les étapes appliquées jusqu’ici dans ce cours. Pour cela, réfère-toi au <a href="../2-setup-the-project/">guide d’installation du projet</a> et repars de l’exemple situé dans le dossier *“2 - Navigation”*.
 {{< /admonition >}}
 
 Avec ce nouveau chapitre, on entame une série d’articles axés autour du visuel de l’app, et il y a de bonnes chances que cela te plaise ! En effet, développer une interface visuelle nécessite de nombreux tests du rendu à l’écran, et il n’y a rien de mieux pour apprendre. Et c’est par la pratique régulière que tu vas naturellement comprendre et retenir tout un tas de choses 🙂

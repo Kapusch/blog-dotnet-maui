@@ -20,7 +20,7 @@ draft: false
 
 
 {{< admonition type=info title="‎ " open=true >}}
-To ease your read, please start from the project containing all the different steps applied in the previous articles. To do so, [download my class from GitHub](https://github.com/Kapusch/blog-dotnet-maui) if not already done, and open the NightClub project located in the folder named *"0 - Get Started"*.
+To ease your read, please start from the project containing all the different steps applied so far in this tutorial. To do so, refer to the <a href="../2-setup-the-project/">project setup guide</a> and resume from the sample located in the folder *"0 - Get Started"*.
 {{< /admonition >}}
 
 

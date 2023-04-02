@@ -473,11 +473,11 @@ Voilà, c’est terminé ! Vas-y réessaye de lancer l’appli !
 
 
 
-L’application commence sérieusement à prendre forme, j’espère que tu es fier de toi !
+L’application commence sérieusement à prendre forme, j’espère que tu es fier•ère de toi !
 
 Seulement… tout ce qu’on a pour le moment n’est que visuel. Rien ne se passe vraiment quand on manipule tous les boutons !
 
-Rassure-toi, tu es maintenant prêt pour développer les fonctionnalités clés de l’appli, dès le prochain chapitre !
+Rassure-toi, tu es maintenant prêt•e pour développer les fonctionnalités clés de l’appli, dès le prochain chapitre !
 
 ---
 Plus d'articles dans la même série:

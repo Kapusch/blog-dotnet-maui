@@ -107,7 +107,6 @@ A *Slider* is a control with a cursor that allows the user to select a specific 
 That's it! Well, actually here, all the configuration values are static, but the final idea is allowing the user to advance or rewind the track to the nearest second.
 
 ___
-
 Now, we're done with the first row of elements of the music player. To check that the display is correct, I would like you delete all the child elements of the *BottomLayout* before assigning all the components that we have defined in this chapter.
 
 To do this, you may be tempted to write something like :

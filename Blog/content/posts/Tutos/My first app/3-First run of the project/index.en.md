@@ -149,7 +149,6 @@ These methods follow a particular programmation technique named "Declarative UI"
 
 ___
 
-
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Alright! And shouldn’t we declare an action to this button?
 {{< /admonition >}}

@@ -107,7 +107,6 @@ Un *Slider* est un contrôle doté d’un curseur permettant à l’utilisateur 
 Oui, c’est ça ! Bon évidemment ici, toutes les valeurs de configuration sont statiques, mais l’idée finale est de permettre à l’utilisateur d’avancer ou de reculer l’écoute de la piste à la seconde près.
 
 ___
-
 Voilà, on en a terminé avec la première rangée d’éléments du lecteur musical. Pour vérifier que l’affichage est correct, j’aimerais que tu effaces tous les éléments enfants du *BottomLayout* pour lui assigner tous les composants définis dans ce chapitre.
 
 Pour cela, tu seras sûrement tenté d’écrire quelque chose comme :

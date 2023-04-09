@@ -85,7 +85,6 @@ The second one is just to have a better idea of what the application will look l
 Finally, you will need to know C# language to program your application, and for that I suggest you to take [the learning path developed by Microsoft](https://learn.microsoft.com/en-us/training/paths/csharp-first-steps/). That being said, you can start right away if you have a bit of experience in coding, even without knowing C#! You will learn very quickly as you develop your application.
 
 ___
-
 For this first lesson, I propose you develop an application to play music in a "nightclub" atmosphere. 💃🏾🕺🏻🪩
 
 You'll probably make a few mistakes, but failing is the best way to learn, so make sure you follow through with your idea!

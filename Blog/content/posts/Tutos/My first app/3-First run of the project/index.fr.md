@@ -147,7 +147,6 @@ Ces méthodes sont fournies par un type de programmation particulière appelée 
 
 ___
 
-
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ D’accord ! Et il ne faudrait pas lui déclarer une action à ce bouton ?
 {{< /admonition >}}

@@ -7,7 +7,7 @@ series: ["My first app"]
 Index: "1"
 PublishDate: "2023-01-02 00:00:01Z"
 Language: "French"
-Description: "Salut les Dev•e•s ! 🤓
+Description: "Salut les Dev·e·s ! 🤓
 Moi c'est J-E et mon but avec ce blog est d’aider tout développeur débutant à se lancer dans son projet d’application mobile au travers de cours très simples. Pas de cours théoriques à rallonge, ici tu vas vite t’amuser et produire des apps sympas ! Et je t’accompagnerai du développement jusqu’à la mise en ligne de ton application sur les stores."
 Tags: ["New Project"]
 featuredImagePreview: 'featured-image-preview-fr'
@@ -19,7 +19,7 @@ draft: false
 
 <!--more-->
 
-Salut les Dev•e•s ! 🤓
+Salut les Dev·e·s ! 🤓
 
 
 
@@ -85,7 +85,6 @@ Le deuxième, c'est simplement pour avoir une idée précise de ce à quoi ton a
 Enfin pour finir, il te faudra connaître le langage C# pour programmer ton application, et pour cela je te propose [le parcours d'apprentissage élaboré par Microsoft](https://docs.microsoft.com/fr-fr/learn/paths/csharp-first-steps/). Cela dit, si tu as déjà codé dans ta vie, alors tu peux te lancer même sans connaître le C# ! Tu apprendras très vite en voulant développer ton application.
 
 ___
-
 Pour ce premier cours, je te propose de développer une application pour lire des titres musicaux dans une ambiance “boîte de nuit”. 💃🏾🕺🏻🪩
 
 Tu feras sûrement quelques erreurs, mais se tromper est justement la meilleure façon d'apprendre, alors surtout: va jusqu’au bout de ton idée !

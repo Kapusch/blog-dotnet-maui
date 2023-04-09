@@ -164,7 +164,6 @@ Aller plus loin avec [les paquets NuGet](https://learn.microsoft.com/fr-fr/nuget
 {{< /admonition >}}
 
 ___
-
 Voyons désormais comment préparer notre classe `HomeViewModel` pour être un véritable **ViewModel** :
 
 1. Premièrement, fais-le hériter de la classe `ObservableObject`,

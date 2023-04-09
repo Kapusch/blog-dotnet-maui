@@ -163,7 +163,6 @@ Going further with [NuGet packages](https://learn.microsoft.com/en-us/nuget/)
 {{< /admonition >}}
 
 ___
-
 Now let's see how to prepare our class `HomeViewModel` to act as a real **ViewModel**:
 
 1. First, make it inherit from the class `ObservableObject`,

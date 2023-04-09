@@ -24,11 +24,9 @@ Pour assurer le bon déroulement de cet article, je t’invite à récupérer le
 {{< /admonition >}}
 
 
-
 Dans ce chapitre, nous découvrirons un patron de conception majeur pour le développement d’application mobile, le [Model-View-ViewModel](https://docs.microsoft.com/fr-fr/dotnet/maui/xaml/fundamentals/mvvm) ! (plus couramment appelé “le MVVM”)
 
 # Le Model-View-ViewModel
-
 Le MVVM est un patron de conception qui propose au développeur une séparation logique de son code en 3 couches :
 
 * La **View**, qui correspond à l’interface utilisateur, c’est-à-dire tout ce que l’on va afficher à l’écran (e.g. la page `HomeView`),
@@ -40,7 +38,6 @@ Le MVVM est un patron de conception qui propose au développeur une séparation 
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Je vois bien la séparation en effet, mais pourquoi est-ce recommandé ?
 {{< /admonition >}}
-
 
 
 L’un des principaux avantages du MVVM est de pouvoir isoler la vue (i.e. l’interface utilisateur) de la logique “métier”. Dans le cadre de notre première page, on obtient finalement deux fichiers :
@@ -59,11 +56,9 @@ En suivant ce principe, le découpage de ton code est clair et tu limites le nom
 {{< /admonition >}}
 
 
-
 Bonne remarque ! En effet, certaines pages sont tellement simples qu’elles ne nécessitent pas de Model. Dans ces cas-là, seuls les View et ViewModel seront donc requis.
 
 # Le Data Binding
-
 On sait désormais bien découper notre code en plusieurs couches. Par exemple, définir un bouton dans une **View** et déclarer son action dans un **ViewModel**. Mais est-ce que tu saurais dire comment elles vont fonctionner ensemble ?
 
 
@@ -72,7 +67,6 @@ On sait désormais bien découper notre code en plusieurs couches. Par exemple, 
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Hmm… peut-être dire au bouton de cette View d’agir selon ce qui a été déclaré dans ce ViewModel ?
 {{< /admonition >}}
-
 
 
 En effet, c’est quasiment ça ! Cela se déroule en deux temps :
@@ -84,7 +78,6 @@ En effet, c’est quasiment ça ! Cela se déroule en deux temps :
 Le Data Binding est une technique permettant de lier deux objets de sorte que, lorsque l’un des deux est modifié, l’autre le sera également. Ça peut paraître un peu flou comme ça, mais tu comprendras mieux son rôle dans la section d’après. Pour le moment, on continue !
 
 # Appliquer le MVVM
-
 Maintenant que tu connais les bases du MVVM, je vais pouvoir t’apprendre à l’appliquer concrètement dans l’application.
 
 Commençons par créer un fichier qui servira de **ViewModel** pour notre `HomeView`. Pour cela, crée d’abord un nouveau dossier *ViewModels* dans le projet, puis ajoutes-y un nouveau fichier.
@@ -93,12 +86,10 @@ Commençons par créer un fichier qui servira de **ViewModel** pour notre `HomeV
 <figure></figure>
 
 
-
 Ce sera une nouvelle classe vide appelée `HomeViewModel.cs` :
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/F63FA1D84892E76873200E90A9652B93.png" /></p>
 <figure></figure>
-
 
 
 Ensuite, remplace son contenu par le suivant:
@@ -127,8 +118,6 @@ public class HomeViewModel
 ```
 
 
-
-
 Bon, il n’y a vraiment rien de spécial ici. C’est juste une classe d’objet C# avec une méthode *Enter()* qui affiche du texte à l’écran après un clic de l’utilisateur sur le bouton “ENTER”.
 
 
@@ -137,7 +126,6 @@ Bon, il n’y a vraiment rien de spécial ici. C’est juste une classe d’obje
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Ah ben quand même, on vient de définir l’action du bouton de la page d’accueil !
 {{< /admonition >}}
-
 
 
 Eh oui tu as raison, mais en l’état, il reste inutilisable ! Souviens-toi, il n’y a toujours aucun lien entre la `HomeView` et le `HomeViewModel`.
@@ -150,7 +138,6 @@ Cette librairie a déjà été ajoutée au projet et tu peux le vérifier facile
 <figure></figure>
 
 
-
 Et voilà la librairie en question ! Elle s’appelle *CommunityToolkit.Mvvm* :
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/8CFB42EAA5DA20D1D00C52327AD9C943.png" /></p>
@@ -158,11 +145,9 @@ Et voilà la librairie en question ! Elle s’appelle *CommunityToolkit.Mvvm* :
 
 
 
-
 {{< admonition type=tip title="‎ " open=true >}}
 Aller plus loin avec [les paquets NuGet](https://learn.microsoft.com/fr-fr/nuget/)
 {{< /admonition >}}
-
 ___
 Voyons désormais comment préparer notre classe `HomeViewModel` pour être un véritable **ViewModel** :
 
@@ -186,12 +171,9 @@ public partial class HomeViewModel : ObservableObject
 
 
 
-
-
 {{< admonition type=info title="‎ " open=true >}}
 En faisant hériter HomeViewModel de la classe **ObservableObject**, Visual Studio rajoute automatiquement les `using` nécessaires à la compilation. En effet, une référence à *CommunityToolkit.Mvvm.ComponentModel* est requise pour que **ObservableObject** devienne réellement compréhensible par l’application.
 {{< /admonition >}}
-
 
 
 Ces deux étapes sont nécessaires pour permettre au *MVVM Toolkit* de générer du code source à la simple mention de mots-clés spécifiques. Concrètement, on écrit un seul mot et hop, ça génère tout seul des dizaines de lignes de code, c’est génial, non ?! 🤘
@@ -214,8 +196,6 @@ async Task Enter()
 ```
 
 
-
-
 Avec seulement un mot, on a désormais une commande *Enter()* qui supporte la technique du Data Binding ! Et ce uniquement grâce à la librairie *MVVM Toolkit* qui s’occupe de générer tout le code source nécessaire.
 
 
@@ -226,9 +206,7 @@ Aller plus loin avec les [générateurs de code source MVVM](https://learn.micro
 {{< /admonition >}}
 
 
-
 # Bientôt la démo !
-
 On y est presque ! Il ne reste plus qu’à actionner la commande *Enter()* au clic du bouton “ENTER”.
 
 Tout d’abord, retourne dans le fichier `HomeView.cs` pour lier la vue au `HomeViewModel` via le **BindingContext **:
@@ -247,8 +225,6 @@ public HomeView()
 ```
 
 
-
-
 Puis définissons l’action du bouton `EnterButton` avec **BindCommand** pour déclencher la commande *Enter()* spécifiée dans le `HomeViewModel`:
 
 <p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>HomeView.cs</code></p>
@@ -265,13 +241,10 @@ Button EnterButton => new Button
 ```
 
 
-
-
 Et voilà le travail !
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/123B031ED40F624DEF6F6D825DE3ED32.gif" /></p>
 <figure></figure>
-
 
 
 
@@ -282,11 +255,10 @@ Et voilà le travail !
 {{< /admonition >}}
 
 
-
 Eh bien oui en théorie ! Mais il manque tout de même plusieurs fonctionnalités clés d’une application : un système d’authentification, une base de données, etc…
 
 Tiens par exemple, une fois qu’on aura créé la page principale de l’application, il faudra bien pouvoir s’y rendre depuis la page d’accueil ! C’est ce qu’on verra dans <a href="../5-how-to-navigate/">le prochain chapitre</a>.
 
----
+___
 Plus d'articles dans la même série:
 {{< series "My first app" >}}

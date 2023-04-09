@@ -21,7 +21,6 @@ draft: false
 Tu vas bientôt pouvoir créer ta première application mobile ! Juste le temps d'installer ton environnement de travail et on aura rapidement quelque chose de concret. Allez c'est parti !
 
 # Quels outils pour développer ?
-
 Voyons déjà les outils qui te permettront de développer ton appli.
 
 
@@ -30,7 +29,6 @@ Voyons déjà les outils qui te permettront de développer ton appli.
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Mais au fait, il faut être sous Windows, MacOS ou Linux ?
 {{< /admonition >}}
-
 
 
 En fait, il n’y a pas de pré-requis particulier pour développer une app avec .NET MAUI, à moins que tu ne traînes un ordinateur de l’avant-guerre et que tu ne mettes rien à jour… 🤔 Sinon, c’est surtout une question de préférence ! Personnellement, je développe sous MacOS car c’est un système que j’affectionne, et le simulateur d’iPhone qui y est intégré est très performant et me permet d’avoir rapidement un rendu de ce que je programme.
@@ -47,9 +45,7 @@ Mais tu peux tout aussi bien développer sous Windows ou Linux ! Plus concrètem
 {{< admonition type=info title="‎ " open=true >}}
 Dans le cadre de ce blog, je me concentrerais uniquement sur le développement d’application mobile à l’aide de Visual Studio. En effet, son utilisation est bien plus intuitive et c’est justement cela qui plaît à tout vrai néophyte.
 {{< /admonition >}}
-
 # Installation de l’environnement
-
 Passons maintenant à l’installation de l’environnement de travail:
 
 1. Dans un premier temps, télécharge Visual Studio depuis le site officiel de Microsoft, en choisissant la version appropriée à ton système ([Windows](https://visualstudio.microsoft.com/vs/) ou [MacOS](https://visualstudio.microsoft.com/vs/mac/)),
@@ -62,18 +58,14 @@ Passons maintenant à l’installation de l’environnement de travail:
 
 
 
-
 {{< admonition type=info title="‎ " open=true >}}
 Avant d’aller plus loin, si tu es sous MacOS, il te faudra t’assurer d’avoir [téléchargé la dernière version d’Xcode](https://developer.apple.com/xcode) qui est requise pour le simulateur d’iPhone. Son installation peut être très longue, aussi, je te conseille de le faire en parallèle de ta lecture.
 {{< /admonition >}}
-
 # Description du projet
-
 Une fois le fichier téléchargé décompressé, rends-toi dans le dossier des exemples associés à notre cours (*Samples/NightClub*). Les dossiers qui y sont entreposés correspondent chacun à une partie différente du cours:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/AB6D4CEADA0C31BD182CB28EA1C158C1.png" /></p>
 <figure></figure>
-
 
 
 Pour le moment, ouvre le premier dossier (*0 - Get Started)* et double-clique sur `NightClub.sln` pour ouvrir le projet NightClub dans Visual Studio.
@@ -83,11 +75,9 @@ Pour le moment, ouvre le premier dossier (*0 - Get Started)* et double-clique su
 
 
 
-
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Ok ! J’ouvre le projet, ça charge… Mais il y a déjà plein de choses dans ce projet, on ne peut pas partir de zéro ?
 {{< /admonition >}}
-
 
 
 En fait, c’est déjà le cas ! Le projet que tu as sous les yeux est tout neuf, mais il embarque plusieurs fichiers de base nécessaires au bon fonctionnement d’une application .NET MAUI:
@@ -103,10 +93,9 @@ En fait, c’est déjà le cas ! Le projet que tu as sous les yeux est tout neuf
 {{< admonition type=tip title="‎ " open=true >}}
 Aller plus loin avec la [structure de base des projets Visual Studio](https://learn.microsoft.com/fr-fr/dotnet/maui/fundamentals/single-project?view=net-maui-7.0)
 {{< /admonition >}}
-
 Et voilà c’est tout, et si on <a href="../3-first-run-of-the-project/">lançait cette app</a> ? 🙂
 
 
----
+___
 Plus d'articles dans la même série:
 {{< series "My first app" >}}

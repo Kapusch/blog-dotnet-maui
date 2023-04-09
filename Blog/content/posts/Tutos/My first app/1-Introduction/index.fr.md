@@ -37,7 +37,6 @@ Avec ce blog, je veux pouvoir aider tout développeur débutant à se lancer dan
 {{< /admonition >}}
 
 
-
 Il s'agit du framework maintenu par Microsoft pour développer des applications mobiles, mais pas que ! En fait, MAUI signifie : “Multi-platform App User Interface”, ce qui veut littéralement dire “application dotée d’une interface utilisateur et qui peut s’exécuter sur plusieurs plateformes”.
 
 .NET MAUI a été officiellement publié courant 2022 et se base sur l’excellent framework [Xamarin.Forms](https://learn.microsoft.com/fr-fr/xamarin/) qui couvre iOS et Android uniquement. Et si tu n’en avais jamais entendu parler, pas de panique ! Moi-même j’en ai appris l’existence seulement fin 2019, et c'est grâce à lui que j'ai déployé ma toute première application sur les stores: [MyVanity](https://www.myvanity-app.com/).
@@ -48,7 +47,6 @@ Il s'agit du framework maintenu par Microsoft pour développer des applications 
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Et comment as-tu fait pour publier ta première application ? Ça t'a pris longtemps ?
 {{< /admonition >}}
-
 
 
 Et c’est là toute la magie de .NET MAUI, tu n’as qu’à coder un seul programme pour qu’il fonctionne sur Android, iOS, macOS et Windows ! Et tout ça bien-sûr avec un seul langage de programmation.
@@ -68,7 +66,6 @@ Dans mon cas, cela m'a pris exactement un an entre le moment où j'ai imaginé l
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ D'accord, alors qu'est-ce que je dois savoir avant de débuter mon application ?
 {{< /admonition >}}
-
 
 
 Tout d’abord bravo, tu as raison de te lancer ! Alors pour démarrer ton application, il te faudra :
@@ -97,11 +94,10 @@ Tu feras sûrement quelques erreurs, mais se tromper est justement la meilleure 
 {{< /admonition >}}
 
 
-
 Allez c’est parti, rendez-vous au <a href="../2-setup-the-project/">prochain article</a> !
 
 
 
----
+___
 Plus d'articles dans la même série:
 {{< series "My first app" >}}

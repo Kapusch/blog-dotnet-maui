@@ -22,7 +22,6 @@ draft: false
 {{< admonition type=info title="‎ " open=true >}}
 To ease your read, please resume <a href="../7-time-tracker/">from this chapter</a> where we started setting up the music player controls.
 {{< /admonition >}}
-
 In the last chapter, we worked on setting up the first visual elements of the music player. Two components were discovered: the [Label](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/label) and the [Slider](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/slider).
 
 Today, we're going to continue our good work and reproduce a whole series of buttons to control the media.
@@ -30,12 +29,10 @@ Today, we're going to continue our good work and reproduce a whole series of but
 
 
 # War of the Buttons
-
 To listen to music, our user needs key functions like: play a song, skip to the next track, etc. If you remember about the mock-up, we had a main row of 5 buttons:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/3BA4EBED916B74ED7B3AD4B770FFAC23.png" /></p>
 <figure><figcaption class="image-caption">5 buttons well aligned in the same row, but they are not all the same size.</figcaption></figure>
-
 
 
 The difference with the "ENTER" button on the home page is that here, our 5 buttons represent a clickable image. To reproduce them in the app, we will use the [ImageButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/imagebutton) component.
@@ -45,8 +42,6 @@ But first, you will need to add these images to the project. So start by downloa
 {{< link href="./files/Media_Control_-_Images.zip" content="Media_Control_-_Images.zip" title="Download Media_Control_-_Images.zip" download="Media_Control_-_Images.zip" card=true >}}
 
 
-
-
 Then unzip the downloaded file. You should have the following 6 images:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/2E090B2B8F1350B550776023FA314EB4.png" /></p>
@@ -54,11 +49,9 @@ Then unzip the downloaded file. You should have the following 6 images:
 
 
 
-
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ 6 images... but didn't we say 5 buttons?
 {{< /admonition >}}
-
 
 
 Indeed, there will be 5 buttons on this row. But nothing prevents us from replacing the image of the button by another one!
@@ -79,19 +72,16 @@ Yes I know, this last function "download" was not planned in the program! It was
 So it's important to make the mock-up as reliable as possible!
 
 # Add images to the project
-
 Now that you have downloaded all the images, you need to import them into the project so that they can be used by the application. To do this, open the project in Visual Studio and right click on the *Images* folder:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/0F64B307F99690E87648DFC47C81F02C.png" /></p>
 <figure><figcaption class="image-caption">Remember, the Resources folder is where we store all the media (icons, images, audio and video tracks, ...)</figcaption></figure>
 
 
-
 In the pop-up menu that appears, in the *Add* section, click on the option to add files from a folder:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/693BBF570360FA0FD6CD0CFA107F4BC3.png" /></p>
 <figure></figure>
-
 
 
 Then, select the folder where you have unzipped the 6 images and validate your choice. A window will appear for you to choose the files to be included in the project.
@@ -103,11 +93,9 @@ In our case, we want to import all the images in the folder. So select all the a
 
 
 
-
 {{< admonition type=info title="‎ " open=true >}}
 Visual Studio may ask you which strategy to use to import the files into the *Resources/Images* folder. I suggest you choose to copy them, or move them.
 {{< /admonition >}}
-
 
 
 That's it, make sure that you have the 6 new images imported into the folder!
@@ -116,9 +104,7 @@ That's it, make sure that you have the 6 new images imported into the folder!
 <figure></figure>
 
 
-
 # Discovering ImageButton
-
 Now that the images are ready to use, let's get to the code!
 
 Let's first define the two smallest buttons (those at the ends):
@@ -146,8 +132,6 @@ ImageButton DownloadButton => new ImageButton
 ```
 
 
-
-
 As you can see, they were given a small square size (25 high by 25 wide), with a black background and slightly rounded corners (via the `CornerRadius` property). Then they each had their own image assigned via the `Source` property, with the corresponding file name.
 
 
@@ -156,7 +140,6 @@ As you can see, they were given a small square size (25 high by 25 wide), with a
 {{< admonition type=info title="‎ " open=true >}}
 If you don’t plan to target Windows platform, then it is not mandatory to specify the *".png"* extension in the filename.
 {{< /admonition >}}
-
 
 
 All that remains is defining the 3 buttons to control the playback of the song, always using the *ImageButton* :
@@ -189,8 +172,6 @@ ImageButton SkipNextButton => new ImageButton
 ```
 
 
-
-
 In the end, it's not that different! However, you will notice that these controls are larger, and more importantly, the *SkipPrevious* and *SkipNext* buttons do not have a background colour.
 
 On the other hand, the *Play* button has a black background and very rounded corners... so rounded that the shape is no longer square, but round!
@@ -203,11 +184,9 @@ On the other hand, the *Play* button has a black background and very rounded cor
 {{< /admonition >}}
 
 
-
 The technique is very simple: the `HeightRequest` and `WidthRequest` values must be the same, while the `CornerRadius` value must be twice as small. So, if you want a round button with a height of 200, its rounding should have a value of 100.
 
 # Preparing for the demo
-
 Now it's time for you to arrange these new controls in the second row of the *BottomLayout*! Since we have 5 buttons for 7 columns, you may have opted for the following layout:
 
 <p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
@@ -222,12 +201,9 @@ DownloadButton.Row(1).Column(5)
 
 
 
-
-
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Well yes, I did... why not? 🙈
 {{< /admonition >}}
-
 
 
 Nothing, that’s perfectly fine! You must have relaunched your app to check, and it doesn't look bad.
@@ -254,8 +230,6 @@ Grid MediaControlLayout => new Grid
 ```
 
 
-
-
 It is a simple grid divided into three columns, each with a specific size. So the *Play* button will take up a bit more space than the other two. But hey, this is all getting easy for you, you start mastering it now! 😎
 
 
@@ -269,17 +243,14 @@ DownloadButton.Row(1).Column(5)
 ```
 
 
-
-
 And here we go, this is really starting to take shape! 🤩
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/5A57E2624C935EF62843C22CC4449E14.png" /></p>
 <figure></figure>
 
 
-
 You did really well, keep it up! By the way, we still have the music volume control to reproduce in the app, and that's the topic of <a href="../9-volume-tracker/">the next chapter</a>!
 
----
+___
 More articles in the series:
 {{< series "My first app" >}}

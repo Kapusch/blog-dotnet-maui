@@ -21,7 +21,6 @@ draft: false
 Today we'll start building our first application! Let’s first set up your working environment, and then you’ll have something concrete soon. Let's get started!
 
 # Which tools for development ?
-
 Let’s first see the tools you will need to develop your app.
 
 
@@ -30,7 +29,6 @@ Let’s first see the tools you will need to develop your app.
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ By the way, do I need to be on Windows, MacOS or Linux?
 {{< /admonition >}}
-
 
 
 Actually, there is no particular pre-requisite to develop an app with .NET MAUI, unless you own a very old fashion computer and you never did update anything… 🤔 Otherwise, it's mostly a matter of preference! Personally, I develop on macOS because it's an operating system I like, and the built in iPhone simulator is very powerful and quickly gives me a realistic render of what I'm programming.
@@ -47,9 +45,7 @@ But you can also develop under Windows or Linux! More concretely:
 {{< admonition type=info title="‎ " open=true >}}
 For the purposes of this blog, I will only focus on mobile application development using Visual Studio. It is much more intuitive to use and that is what appeals to any true novice.
 {{< /admonition >}}
-
 # Install your environment
-
 Let's move on to the installation of the working environment:
 
 1. First, download Visual Studio from the official Microsoft website, choosing the appropriate version for your operating system ([Windows](https://visualstudio.microsoft.com/vs/) or [MacOS](https://visualstudio.microsoft.com/vs/mac/)),
@@ -62,18 +58,14 @@ Let's move on to the installation of the working environment:
 
 
 
-
 {{< admonition type=info title="‎ " open=true >}}
 Before you go further, if you are on MacOS, make sure you have [downloaded the latest version of Xcode](https://developer.apple.com/xcode/) which is required for the iPhone simulator. This is usually long to install, so I suggest you do it while reading.
 {{< /admonition >}}
-
 # Opening the project
-
 Once you have unzipped the downloaded file, go to the Samples folder associated with our course (*Samples/NightClub*). The folders under it each correspond to a different part of the course:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/AB6D4CEADA0C31BD182CB28EA1C158C1.png" /></p>
 <figure></figure>
-
 For now, open the first folder (*0 - Get Started)* and double click on `NightClub.sln` to open the NightClub project in Visual Studio.
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/1D187B2CC26417B658FD450BB0D7B3B3.png" /></p>
@@ -81,11 +73,9 @@ For now, open the first folder (*0 - Get Started)* and double click on `NightClu
 
 
 
-
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Ok! Opening the project… loading... But there are already many things in this project, can't we start from scratch?
 {{< /admonition >}}
-
 
 
 Actually, it already is! The project you just opened is brand new, but it includes several base files that are necessary for the proper functioning of a .NET MAUI application:
@@ -101,12 +91,11 @@ Actually, it already is! The project you just opened is brand new, but it includ
 {{< admonition type=tip title="‎ " open=true >}}
 Going further with the [basic structure of a Visual Studio project](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/single-project?view=net-maui-7.0)
 {{< /admonition >}}
-
 And that's it, how about if we <a href="../3-first-run-of-the-project/">launch that app</a> ? 🙂
 
 
 
 
----
+___
 More articles in the series:
 {{< series "My first app" >}}

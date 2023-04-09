@@ -24,7 +24,6 @@ To ease your read, please start from the project containing all the different st
 {{< /admonition >}}
 
 
-
 Hey, you’re back! We're now done with MVVM and believe me, you did take a big step forward!
 
 Today it will be much simpler, we start the creation of the application main page. But new page also means, enable the user going to that page! So let's see how to implement the navigation from one page to another.
@@ -32,14 +31,12 @@ Today it will be much simpler, we start the creation of the application main pag
 
 
 # Navigate to a new page
-
 Let's start by adding our new page. To do this, right click on the *Views* folder to add a new file, then choose the template ".NET MAUI ContentPage (C#)" as below. We'll name this file: `MusicPlayerView.cs`.
 
 
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/4C95EF7DF978364F1FBDE99A614BF58D.png" /></p>
 <figure></figure>
-
 
 
 As you will have noticed, the template used to create the page provides us with a default content. So all we have to do now is navigating to this new page!
@@ -64,8 +61,6 @@ async Task Enter()
 ```
 
 
-
-
 All that is done here is accessing the navigation service provided by the application in order to display a new page *MusicPlayerView*.
 
 Actually, when the method *PushAsync()* is called, the page *MusicPlayerView* is then added to the very top of the stack of existing pages, exactly as shown in the diagram below:
@@ -77,11 +72,9 @@ Actually, when the method *PushAsync()* is called, the page *MusicPlayerView* is
 
 
 
-
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Ha! That's it, can I test it then?
 {{< /admonition >}}
-
 
 
 We're almost there! For the navigation to work, we need the first page displayed at startup to be included in a [NavigationPage](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage#create-the-root-page).
@@ -104,8 +97,6 @@ protected override void OnStart()
 ```
 
 
-
-
 That's it, restart the application and click on the *Enter* button!
 
 
@@ -114,16 +105,13 @@ That's it, restart the application and click on the *Enter* button!
 <figure></figure>
 
 
-
 # Remove the navigation bar
-
 As you will surely have understood, our home page is now contained in a page specially configured for navigation. It therefore contains a navigation bar by default:
 
 
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/82596E59FF4122F0C481FF2E6E218521.png" /></p>
 <figure></figure>
-
 
 
 From a design point of view, this is not necessarily what you want. So let's take a quick look at how to remove this header for the home page. Go to the file `HomeView.cs` and invoke the method *SetHasNavigationBar()* in the page constructor, like this:
@@ -145,17 +133,14 @@ public HomeView()
 ```
 
 
-
-
 And now restarting the app, it’s a lot nicer!
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/81F75B6282F352517B99D11F2F3F6D31.gif" /></p>
 <figure></figure>
 
 
-
 The application is slowly coming alive, and even more so with <a href="../6-scaffolding/">the next chapter</a>! See you soon for the construction of our main page.
 
----
+___
 More articles in the series:
 {{< series "My first app" >}}

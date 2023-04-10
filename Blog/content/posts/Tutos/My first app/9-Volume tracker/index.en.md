@@ -12,7 +12,7 @@ Tags: ["Image","ImageButton","DataTrigger","Slider","MultiTrigger",".NET Communi
 featuredImagePreview: 'featured-image-preview-en'
 resources:
 - name: 'featured-image-preview-en'
-  src: 'featured-image-preview-en.jpeg'
+  src: 'featured-image-preview-en.png'
 draft: false
 ---
 

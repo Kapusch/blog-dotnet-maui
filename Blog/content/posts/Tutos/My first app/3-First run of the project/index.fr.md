@@ -13,7 +13,7 @@ Tags: ["Visual Studio","C# markup"]
 featuredImagePreview: 'featured-image-preview-fr'
 resources:
 - name: 'featured-image-preview-fr'
-  src: 'featured-image-preview-fr.jpeg'
+  src: 'featured-image-preview-fr.png'
 draft: false
 ---
 

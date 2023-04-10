@@ -12,7 +12,7 @@ Tags: ["Accessibility","Slider","Label","ColumnSpan"]
 featuredImagePreview: 'featured-image-preview-en'
 resources:
 - name: 'featured-image-preview-en'
-  src: 'featured-image-preview-en.jpeg'
+  src: 'featured-image-preview-en.png'
 draft: false
 ---
 

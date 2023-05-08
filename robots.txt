@@ -1,12 +1,29 @@
 User-agent: *
 
-Disallow: /images/
 Disallow: /js/
 Disallow: /css/
+Disallow: /lib/
+Disallow: /svg/
 
 Disallow: /*offline/
 Disallow: /*404.html$
 Disallow: /*.md$
+
+Disallow: /*/?ref=*
+
+Disallow: /images/
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.png$
+Disallow: /*.gif$
+Disallow: /*.xml$
+Disallow: /*.svg$
+Disallow: /*.json$
+Disallow: /*.ico$
+Disallow: /*.webmanifest$
+
+User-agent: Googlebot-Image
+Disallow: /
 
 User-agent: MJ12bot
 Disallow: /

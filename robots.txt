@@ -21,7 +21,7 @@ Disallow: /*.json$
 Disallow: /*.ico$
 Disallow: /*.webmanifest$
 
-Allow: /sitemap.xml
+Allow: /*sitemap.xml
 Disallow: /*.xml$
 
 User-agent: Googlebot-Image

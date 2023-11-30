@@ -36,9 +36,13 @@ Actually, there is no particular pre-requisite to develop an app with .NET MAUI,
 But you can also develop under Windows or Linux! More concretely:
 
 * for Windows or MacOS, it's easy, Microsoft offers a very powerful integrated development environment:
+
     * [Visual Studio](https://visualstudio.microsoft.com/vs/) for Windows,
+
     * and [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/) for… well for MacOS 😄
-* and if you're on Linux, you'll have to be a bit more resourceful (and that's why you're on Linux, isn't it? 😛). In that case, I suggest you use the excellent source code editor [Visual Studio Code](https://code.visualstudio.com).
+
+* and if you're on Linux, you'll have to be a bit more resourceful (and that's why you're on Linux, isn't it? 😛). In that case, I suggest you use the excellent source code editor [Visual Studio Code](https://code.visualstudio.com/).
+
 
 
 
@@ -49,11 +53,16 @@ For the purposes of this blog, I will only focus on mobile application developme
 Let's move on to the installation of the working environment:
 
 1. First, download Visual Studio from the official Microsoft website, choosing the appropriate version for your operating system ([Windows](https://visualstudio.microsoft.com/vs/) or [MacOS](https://visualstudio.microsoft.com/vs/mac/)),
+
 1. Then comes the time to install Visual Studio and its development environment for .NET MAUI. In order to improve the reading of this blog, I suggest you directly follow the installation steps on the official website:
+
     1. [follow the installation steps for Windows](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin#installation-1),
+
     1. [follow the installation steps for MacOS](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vsmac#installation-2),
+
 1. Finally, download my class from GitHub. To do this, go to the [blog's code repository](https://github.com/Kapusch/blog-dotnet-maui), click on the "Code" button and download the ZIP version.
-<p align="center"><img max-width="100%" max-height="100%" src="./images/7B86AE88DAB3362A9B47A4007B949027.png" /></p>
+
+<p align="center"><img max-width="100%" max-height="100%" src="./images/52D99A38E16814B6261CC1610BCE2A9F.png" /></p>
 <figure></figure>
 
 
@@ -64,11 +73,11 @@ Before you go further, if you are on MacOS, make sure you have [downloaded the l
 # Opening the project
 Once you have unzipped the downloaded file, go to the Samples folder associated with our course (*Samples/NightClub*). The folders under it each correspond to a different part of the course:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/AB6D4CEADA0C31BD182CB28EA1C158C1.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/B33D3B1E775ECE6D8A9EC8F8A6E1F4B5.png" /></p>
 <figure></figure>
 For now, open the first folder (*0 - Get Started)* and double click on `NightClub.sln` to open the NightClub project in Visual Studio.
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/1D187B2CC26417B658FD450BB0D7B3B3.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/D9933119C293F4DC96A394EB54E5C5C9.png" /></p>
 <figure><figcaption class="image-caption">The NightClub project structure from Visual Studio.</figcaption></figure>
 
 
@@ -81,10 +90,15 @@ For now, open the first folder (*0 - Get Started)* and double click on `NightClu
 Actually, it already is! The project you just opened is brand new, but it includes several base files that are necessary for the proper functioning of a .NET MAUI application:
 
 * All the libraries that are required for the proper functioning of the project are grouped in the **Dependencies** folder,
+
 * In **Platforms**, you will find all the files needed to run the application, for each target platform,
+
 * As for the **Properties** folder, it generally contains configuration files (and besides, there is one created by default for Windows),
+
 * And then, you will be able to configure an icon and a loading screen for each application! For this, we usually use the **Resources** folder to store all our media (icons, images, audio and video tracks, ...),
+
 * Finally, we have to display something when the app opens! And for that, we have the **Views** folder which at the moment contains our first page, the famous home page…
+
 
 
 

@@ -30,8 +30,11 @@ Dans ce chapitre, nous découvrirons un patron de conception majeur pour le dév
 Le MVVM est un patron de conception qui propose au développeur une séparation logique de son code en 3 couches :
 
 * La **View**, qui correspond à l’interface utilisateur, c’est-à-dire tout ce que l’on va afficher à l’écran (e.g. la page `HomeView`),
+
 * Le **Model**, qui fait référence au type de données affichées dans cette View, 
+
 * Et enfin le **ViewModel**, qui fait le lien entre la View et le Model. Par exemple, pour récupérer des données depuis le Cloud ou répondre aux interactions de l’utilisateur.
+
 
 
 
@@ -43,7 +46,9 @@ Le MVVM est un patron de conception qui propose au développeur une séparation 
 L’un des principaux avantages du MVVM est de pouvoir isoler la vue (i.e. l’interface utilisateur) de la logique “métier”. Dans le cadre de notre première page, on obtient finalement deux fichiers :
 
 1. `HomeView.cs` qui définit précisément comment notre page s’affichera (i.e. une couleur de fond, une image en haut, un bouton en bas),
+
 1. Et `HomeViewModel.cs` qui regroupe toute la logique pour faire fonctionner notre page (ici, le comportement du bouton quand l’utilisateur appuie dessus).
+
 
 
 En suivant ce principe, le découpage de ton code est clair et tu limites le nombre de lignes de code par fichier. Tu ne voudrais pas d’un fichier de plus de 10 000 lignes ! 😄 En plus, il n’y a aucun risque d’affecter la logique de ton app en changeant seulement la couleur d’un bouton.
@@ -72,7 +77,9 @@ On sait désormais bien découper notre code en plusieurs couches. Par exemple, 
 En effet, c’est quasiment ça ! Cela se déroule en deux temps :
 
 1. On associe d’abord un **ViewModel** à sa **View** (généralement via le `BindingContext` de la View),
+
 1. Puis on définit le comportement de chaque élément de la View dans le ViewModel, en recourant au principe du [Data Binding](https://docs.microsoft.com/fr-fr/dotnet/maui/xaml/fundamentals/data-binding-basics).
+
 
 
 Le Data Binding est une technique permettant de lier deux objets de sorte que, lorsque l’un des deux est modifié, l’autre le sera également. Ça peut paraître un peu flou comme ça, mais tu comprendras mieux son rôle dans la section d’après. Pour le moment, on continue !
@@ -82,13 +89,13 @@ Maintenant que tu connais les bases du MVVM, je vais pouvoir t’apprendre à l�
 
 Commençons par créer un fichier qui servira de **ViewModel** pour notre `HomeView`. Pour cela, crée d’abord un nouveau dossier *ViewModels* dans le projet, puis ajoutes-y un nouveau fichier.
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/311CDE6B6AAC4019297529C08E30580A.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/13D069507FD06EEE1219B994B5EF400D.png" /></p>
 <figure></figure>
 
 
 Ce sera une nouvelle classe vide appelée `HomeViewModel.cs` :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/F63FA1D84892E76873200E90A9652B93.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/882B0A5F6566F3663600300CD7ADCD68.png" /></p>
 <figure></figure>
 
 
@@ -134,13 +141,13 @@ Heureusement, il existe une librairie mise à disposition par Microsoft qui va g
 
 Cette librairie a déjà été ajoutée au projet et tu peux le vérifier facilement en ouvrant la gestion des paquets NuGet. Fais donc un clic droit sur les dépendances du projet:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/086DC9994972563B17661D7DF419BEF1.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/2E26F5F62ECCA8C4F1A9DD30EF1A71E6.png" /></p>
 <figure></figure>
 
 
 Et voilà la librairie en question ! Elle s’appelle *CommunityToolkit.Mvvm* :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/8CFB42EAA5DA20D1D00C52327AD9C943.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/1B8394B94F3463AE709C4009855A5924.png" /></p>
 <figure></figure>
 
 
@@ -152,7 +159,9 @@ ___
 Voyons désormais comment préparer notre classe `HomeViewModel` pour être un véritable **ViewModel** :
 
 1. Premièrement, fais-le hériter de la classe `ObservableObject`,
+
 1. puis, définis-le comme une classe partielle avec le mot-clé **partial**.
+
 
 
 Tu devrais avoir la configuration suivante:
@@ -243,7 +252,7 @@ Button EnterButton => new Button
 
 Et voilà le travail !
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/123B031ED40F624DEF6F6D825DE3ED32.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/9CC6994A747DC1C4EB08533A14CF2067.gif" /></p>
 <figure></figure>
 
 

@@ -27,7 +27,7 @@ Dans l’article précédent, on a mis en place un quadrillage pour y disposer t
 # Afficher le minutage
 Commençons déjà avec la partie dédiée au minutage du titre musical. D’après la maquette, on aura un texte à gauche pour le temps d’écoute en cours, et à droite, pour la durée totale de la piste :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/FA80B1E1F42328E22E779783E27C557F.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/A83271A3987417E4A849D31C30191E32.png" /></p>
 <figure><figcaption class="image-caption">L’application indique que le morceau est joué depuis 36 secondes et qu’il dure 2 minutes et 57 secondes. </figcaption></figure>
 
 
@@ -83,7 +83,7 @@ Slider TimeTracker => new Slider
 
 Un *Slider* est un contrôle doté d’un curseur permettant à l’utilisateur de sélectionner une valeur précise parmi toute une plage de valeurs possibles. Dans notre cas, c’est comme si l’on avait une règle graduée de 0 à 100 avec un curseur positionné sur le 20.
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/42375B164D301F432E78BF870C997012.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/121C071E9377094E14C9B07AF2D49C8F.png" /></p>
 <figure></figure>
 
 
@@ -118,7 +118,7 @@ Grid BottomLayout => new Grid
 
 À première vue, ça semble pas mal ! Cependant, si tu démarres l’application, tu constateras qu’il y a un léger problème d’affichage :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/6A71FCFF86082A1FEF1D2C5C1840643B.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/F4B63C493DFDA670F2EE8A4F45A93D87.png" /></p>
 <figure><figcaption class="image-caption">Disposé comme ça, le Slider n’a pas bonne mine.</figcaption></figure>
 
 
@@ -127,7 +127,7 @@ Pas de panique ! On va voir tout de suite comment réajuster cela.
 # Bien utiliser les Grid
 Si tu te rappelles, on a initialement divisé le *BottomLayout* en 7 colonnes. Or, si notre code positionne bien notre *Slider* à partir de la case n°3 de la première ligne, il ne lui dit pas clairement où s’arrêter ! On pourrait alors simplement dire au *Slider* de s’étaler sur les colonnes suivantes, comme ceci :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/EC9010D37B4268DF0FCDE7480DD1156F.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/2822BA46A84A307DD610D66916169DF5.png" /></p>
 <figure><figcaption class="image-caption">Le Slider est à cheval sur les cases n°3, n°4 et n°5.</figcaption></figure>
 
 
@@ -142,7 +142,7 @@ TimeTracker.Row(0).Column(2).ColumnSpan(3)
 
 Et voilà on en a vraiment fini ! Relançons l’application pour voir ce que ça donne :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/F625F9944D83A64D3BE00195F96757B2.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/2907217A274375D0ED0A93A0EEB41D9F.png" /></p>
 <figure></figure>
 
 

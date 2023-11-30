@@ -38,25 +38,25 @@ But we also need something to define the current state of our application (which
 # Executing the app
 Come on, it's time to get the application running! So choose the platform you want to target, then click on the red boxed button to start the project:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/CCA585B557D8F8AFA27869ED6F96DC99.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/5BCE13CE6AA3C962B851589A1333882C.png" /></p>
 <figure></figure>
 
 
 First, you will see your project compiling with the chosen configuration (this is the build stage):
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/85AFA96A5BBDCA9AA60CF174671E372B.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/C02BA696FE457042E46B611AC7B6653C.png" /></p>
 <figure><figcaption class="image-caption">The current status of the project can easily be viewed at the bottom left of Visual Studio for Mac.</figcaption></figure>
 
 
 Then your application will automatically be deployed to the chosen platform (here, a simulated iPhone 13, iOS 15.5).
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/FB933ED833E5286A9C4DEE2FD6747035.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/145B5C24E2EF3848C0ECF5417F91416D.png" /></p>
 <figure></figure>
 
 
 And here's the result!
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/041628D6E57C50A8C4C89BD5FDE6A23C.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/4DFB7678FB4CCC0E102C886277A46E7B.png" /></p>
 <figure></figure>
 
 
@@ -122,10 +122,15 @@ Button EnterButton => new Button
 Nothing very complex at this stage:
 
 * We set the image of the component `NightClubImage` with the “Source” property,
+
 * And for the button, we set several base properties such as the text, the color, … but you might have noticed that we also apply some functions to the component `EnterButton`:
+
     * *Bold()* to set the text of the button in bold,
+
     * *Paddings()* to add a bit of space all around this text, especially to the left and to the right of the text,
+
     * And then, *CenterHorizontal()* to align the text at the center of the button.
+
 
 
 

@@ -1,5 +1,5 @@
 ---
-Topic: "maui app with no shell"
+Topic: "Maui app with no shell"
 Title: "Create a .NET MAUI App without Shell"
 Category: "Tips"
 Subcategory: ""
@@ -22,7 +22,7 @@ Since the official release of .NET MAUI, it is not possible to create a new proj
 ### Shell or not Shell? It's up to you!
 When creating a new app in .NET MAUI, Visual Studio does not offer many configuration options:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/EEE5F22BD47F24C36D346122E60A649D.jpg" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/8DE963CF3E788C1B2A7E310158115638.jpg" /></p>
 <figure><figcaption class="image-caption">Of course, there is .NET MAUI Blazor, but it is a completely different framework.</figcaption></figure>
 
 
@@ -41,13 +41,13 @@ Finally, the use of Shell in a .NET MAUI project remains a personal choice and s
 ### Go without Shell
 First of all, you need a .NET MAUI project. You can create a new one with Visual Studio, or reuse an existing project. Once your project is open in Visual Studio, delete the `AppShell` class by deleting the two files *AppShell.xaml* and *AppShell.xaml.cs*.
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/9272EF890FF372509F387ECC85805BFC.jpg" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/AF02CF0EE2C102C58AFE378D49B8F735.jpg" /></p>
 <figure><figcaption class="image-caption">Select both files at once, then right click and delete them.</figcaption></figure>
 
 
 Visual Studio will probably ask you for a confirmation. Check that the selected files are the right ones and confirm the deletion:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/4F18A5A1700AE970E27107622C6AB977.jpg" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/93F145BEEAD8A3CC6667ACC0918CC53C.jpg" /></p>
 <figure><figcaption class="image-caption">Never safe from mishandling!</figcaption></figure>
 
 

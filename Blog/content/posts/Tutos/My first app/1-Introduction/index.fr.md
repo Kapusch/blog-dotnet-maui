@@ -54,8 +54,11 @@ Et c’est là toute la magie de .NET MAUI, tu n’as qu’à coder un seul prog
 Et donc non, cela ne m’a pas pris très longtemps, mais cela dépendra surtout:
 
 * de tes connaissances en développement,
+
 * de la complexité de ton application,
+
 * et du temps que tu peux lui accorder.
+
 
 
 Dans mon cas, cela m'a pris exactement un an entre le moment où j'ai imaginé l’application et le jour où je l'ai publiée sur les stores.
@@ -71,8 +74,11 @@ Dans mon cas, cela m'a pris exactement un an entre le moment où j'ai imaginé l
 Tout d’abord bravo, tu as raison de te lancer ! Alors pour démarrer ton application, il te faudra :
 
 - [ ] Trouver une idée,
+
 - [ ] Concevoir la maquette,
+
 - [ ] Comprendre le langage C#.
+
 
 
 Pour le premier point, c'est facile, tu l'as normalement déjà fait pour arriver jusqu’ici. 😛

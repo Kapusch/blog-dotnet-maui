@@ -31,7 +31,7 @@ Aujourd’hui, on va continuer sur notre belle lancée et reproduire toute une s
 # La guerre des boutons
 Pour écouter de la musique, notre utilisateur a besoin de fonctions clés comme : jouer un morceau, passer à la piste suivante, etc. Si tu te souviens de la maquette, on avait une rangée principale de 5 boutons :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/3BA4EBED916B74ED7B3AD4B770FFAC23.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/2C278A80DBAC438D87E94CD9ECD5639D.png" /></p>
 <figure><figcaption class="image-caption">5 boutons bien alignés sur la même rangée, mais ils n’ont pas tous la même taille.</figcaption></figure>
 
 
@@ -44,7 +44,7 @@ Mais tout d’abord, il faudra ajouter ces fameuses images au projet. Commence d
 
 Puis décompresse le fichier obtenu. Tu devrais avoir les 6 images suivantes :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/2E090B2B8F1350B550776023FA314EB4.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/34E985B3484AD166942964B5C5C0F297.png" /></p>
 <figure></figure>
 
 
@@ -59,12 +59,19 @@ En effet, il y aura bien 5 boutons sur cette rangée. Mais rien ne nous empêche
 Si tu reprends la maquette, il y aura de gauche à droite :
 
 * un bouton pour rejouer la piste musicale (une seule fois) ⇒ c’est l’image *repeat_once.png*
+
 * un autre pour revenir à la chanson précédente ⇒ *skip_previous.png*
+
 * on aura aussi un gros bouton central pour jouer ou mettre en pause la musique. C’est l’image de ce bouton qui changera automatiquement selon les cas suivants :
+
     * soit la piste n’est pas en cours de lecture ⇒ ce sera l’image *play.png*
+
     * ou bien elle est déjà en train d’être jouée ⇒ on affichera alors *pause.png*
+
 * puis on aura un bouton pour passer à la chanson suivante ⇒ *skip_next.png*
+
 * et un dernier pour télécharger le morceau ⇒ *download.png*
+
 
 
 Oui je sais, cette dernière fonction “télécharger” n’était pas prévue au programme ! Çà devait initialement être pour lire les titres en mode aléatoire, mais j’ai changé d’avis. 😄
@@ -74,13 +81,13 @@ Comme quoi, c’est important de concevoir une maquette aussi fiable que possibl
 # Ajouter les images au projet
 Maintenant que tu as téléchargé toutes les images, tu dois les importer dans le projet pour qu’elles deviennent utilisables par l’application. Pour cela, ouvre le projet dans Visual Studio et fais un clic droit sur le dossier *Images* :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/0F64B307F99690E87648DFC47C81F02C.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/EB785FEDDABE1462C030D948AEB889AD.png" /></p>
 <figure><figcaption class="image-caption">Rappelle-toi, c’est dans le dossier Resources qu’on stocke tous les médias (icônes, images, pistes audio et vidéo, …)</figcaption></figure>
 
 
 Dans le menu contextuel qui s’affiche, dans la section *Ajouter*, clique sur l’option pour ajouter des fichiers depuis un dossier :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/693BBF570360FA0FD6CD0CFA107F4BC3.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/88DC6EAA532E8C05110B8EDD865FD93B.png" /></p>
 <figure></figure>
 
 
@@ -88,7 +95,7 @@ Puis, sélectionne le dossier où tu as décompressé les 6 images et valide ton
 
 Dans notre cas, on veut importer toutes les images du dossier. Sélectionne donc tous les fichiers disponibles et clique sur OK :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/773A0DDCB14EF44FA3318865EF20521A.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/E0301006BA573EDB4426297DF9F0804B.png" /></p>
 <figure></figure>
 
 
@@ -100,7 +107,7 @@ Il y a de grandes chances pour que Visual Studio te demande quelle stratégie ap
 
 Voilà c’est terminé, vérifie que tu as bien les 6 nouvelles images importées dans le dossier !
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/BE9B7B0BEE89CB13A55196568E193B1D.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/E8E95C41E3BC21794611E83AFCEE3014.png" /></p>
 <figure></figure>
 
 
@@ -245,7 +252,7 @@ DownloadButton.Row(1).Column(5)
 
 Et hop, ça y est, ça commence vraiment à prendre forme ! 🤩
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/5A57E2624C935EF62843C22CC4449E14.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/CF07C830D7416B7D77D17AE92D6B6191.png" /></p>
 <figure></figure>
 
 

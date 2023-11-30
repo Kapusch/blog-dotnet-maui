@@ -39,7 +39,7 @@ With this blog, I wish I could help any beginner developer willing to get starte
 
 It’s a framework maintained by Microsoft for developing mobile applications, but not only! In fact, MAUI stands for "Multi-platform App User Interface".
 
-.NET MAUI was officially released during 2022 and is based on the excellent [Xamarin.Forms](https://learn.microsoft.com/en-us/xamarin/) framework which covers iOS and Android only. And if you had never heard of it, don't panic! Even I only learned about it at the end of 2019, and then I deployed my very first app on the stores: [MyVanity](https://en.myvanity-app.com).
+.NET MAUI was officially released during 2022 and is based on the excellent [Xamarin.Forms](https://learn.microsoft.com/en-us/xamarin/) framework which covers iOS and Android only. And if you had never heard of it, don't panic! Even I only learned about it at the end of 2019, and then I deployed my very first app on the stores: [MyVanity](https://en.myvanity-app.com/).
 
 
 
@@ -54,8 +54,11 @@ And that's the magic of .NET MAUI, you only have to code one program and it will
 And so no, it didn't take that long, but mostly it will depend:
 
 * your development experience,
+
 * the complexity of your application,
+
 * and how much time you can dedicate to it.
+
 
 
 In my case, it took exactly one year from the moment I imagined the application to the day I published it on the stores.
@@ -71,8 +74,11 @@ In my case, it took exactly one year from the moment I imagined the application 
 First of all, congratulations, it’s a very good decision! So to start your application, you will need to:
 
 - [ ] Find an idea,
+
 - [ ] Design a mock-up,
+
 - [ ] Know C# language.
+
 
 
 First point is easy, you usually already have the idea to get this far. 😛

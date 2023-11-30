@@ -29,7 +29,7 @@ Aujourd’hui, on va encore développer notre interface utilisateur avec l’int
 # Tout l’art de reproduire
 Allez, reprenons donc la maquette, voici ce que l’on devra reproduire dans l’app :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/DF050A3B8CBC66BE41161183706F5D44.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/A18B6FCE0E9DC4E6B1B2DCE55733D166.png" /></p>
 <figure><figcaption class="image-caption">Cette fois-ci, il n’y a que deux contrôles, ça devrait être rapide !</figcaption></figure>
 
 
@@ -40,7 +40,7 @@ Comme tu peux le constater, ce n’est rien d’autre qu’un bouton pour couper
 
 En décompressant ce fichier, tu verras 4 nouvelles images:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/D513BCCE090CD9A8DB1344EB11150F81.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/DFCBF9B9A8ED6AF38BAF88D44173DDC5.png" /></p>
 <figure></figure>
 
 
@@ -102,7 +102,7 @@ Alors, tu avais bien pensé à appliquer un *ColumnSpan* ? 😛 On en a en effe
 
 Allez, il est temps de relancer l’appli ! Voyons ce que ça donne :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/B6353871FE88CE680890EE873B635A4D.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/95ED07324970D4FEC2A5D31123235A0E.png" /></p>
 <figure><figcaption class="image-caption">Vu comme ça, on dirait presque que l’application est terminée…</figcaption></figure>
 # Changer d’image quand le son est coupé 
 Ça devient plus facile avec tout cet entraînement, tu commences à prendre le coup de main ? 🙂
@@ -181,7 +181,7 @@ En fait, la [documentation du Slider](https://learn.microsoft.com/fr-fr/dotnet/m
 
 Or, si tu supprimes le “d” et que tu passes ta souris au-dessus du “0”, tu constateras que ce n’est plus considéré comme un double, mais un [int](https://learn.microsoft.com/fr-fr/dotnet/api/system.int32?view=net-6.0) !
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/647B2233C389ED14831E420996C84B23.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/5A47840E7B4D2991A57391AE4971774A.png" /></p>
 <figure><figcaption class="image-caption">Visual Studio est clair sur ce point, “0” est bien un entier !</figcaption></figure>
 
 
@@ -189,7 +189,7 @@ Et comme la propriété *Value* de notre déclencheur est de type *object*, elle
 
 On doit rajouter le “d” juste après :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/6563EBE2B8F0FD2DCE8BF8C037A56960.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/0FF24A82013D712E9802FD0EC7B36459.png" /></p>
 <figure><figcaption class="image-caption">À présent, “0” est bien un double ! Visual Studio n’y a vu que du feu. </figcaption></figure>
 
 
@@ -218,7 +218,7 @@ void InitMuteButton()
 
 Et voilà ! Essaye maintenant de glisser la valeur du *Slider* tout à gauche :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/86F584C6E28CF548239A7662F004E645.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/BCB67B0FEC9CA2F48F279C8D4F3D7833.gif" /></p>
 <figure><figcaption class="image-caption">L’icône du son coupé apparaît aussitôt que le curseur est déplacé tout à gauche.</figcaption></figure>
 
 
@@ -228,8 +228,11 @@ Maintenant que tu sais comment fonctionnent les déclencheurs, on va en créer d
 Fonctionnellement, voici ce que l’on aimerait mettre en place :
 
 * l’icône du volume bas apparaîtra pour toutes les valeurs comprises entre 1 et 15,
+
 * entre 16 et 50, on affichera l’icône du volume modéré,
+
 * et pour l’icône du volume élevé, ce sera entre 51 et 100.
+
 
 
 Pour tous ces cas-là, le déclencheur ne dépend plus d’une seule valeur bien précise, mais plutôt de toute une plage de valeurs. On va donc faire appel à un nouveau déclencheur spécifique, le [MultiTrigger](https://learn.microsoft.com/fr-fr/dotnet/maui/fundamentals/triggers?view=net-maui-7.0#multi-triggers). C’est le même principe que pour le *DataTrigger*, à la différence que le *MultiTrigger* dépendra du résultat de plusieurs conditions. Je vais t’expliquer juste après.
@@ -418,7 +421,7 @@ MuteButton.Triggers.Add(VolumeHighTrigger);
 
 Voilà, c’est terminé ! Vas-y réessaye de lancer l’appli !
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/349ADF33416FB9302753C8D26C368B30.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/3F5214F1B4F8993413197495B7280FF7.gif" /></p>
 <figure><figcaption class="image-caption">Magie, magie ! L’image du bouton change en fonction de la position du curseur.</figcaption></figure>
 
 
@@ -426,7 +429,7 @@ L’application commence sérieusement à prendre forme, j’espère que tu es f
 
 Seulement… tout ce qu’on a pour le moment n’est que visuel. Rien ne se passe vraiment quand on manipule tous les boutons !
 
-Rassure-toi, tu es maintenant prêt·e pour développer les fonctionnalités clés de l’appli, dès le prochain chapitre !
+Rassure-toi, tu es maintenant prêt·e pour développer les fonctionnalités clés de l’appli, dès le <a href="../10-play-music/">prochain chapitre</a> !
 
 ___
 Plus d'articles dans la même série:

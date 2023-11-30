@@ -35,7 +35,7 @@ Commençons déjà par ajouter notre nouvelle page. Pour cela, fais un clic droi
 
 
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/4C95EF7DF978364F1FBDE99A614BF58D.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/44C201DDE5BD404E4B4E609FE68D1513.png" /></p>
 <figure></figure>
 
 
@@ -67,7 +67,7 @@ En fait, lorsqu’on fait appel à la méthode *PushAsync()*, on ajoute la page 
 
 
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/E2D879FA8EDC7C6E3677857BCA73F038.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/A38FD30931BAD3B0951CD06DB00B76AF.png" /></p>
 <figure><figcaption class="image-caption">Comme avec un paquet de cartes à jouer, il n’y a que celle du dessus qui est visible.</figcaption></figure>
 
 
@@ -101,7 +101,7 @@ Voilà c’est bon, relance l’application et clique sur le bouton *Enter* !
 
 
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/C7AE64E0B2C23119FC68BE61FF22BBB2.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/F8385336F93EEDE53D691DCFC7BF0256.gif" /></p>
 <figure></figure>
 
 
@@ -110,7 +110,7 @@ Comme tu l’auras sûrement compris, notre page d’accueil est désormais cont
 
 
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/82596E59FF4122F0C481FF2E6E218521.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/7CE7D982576D6C816B7FB8B2FEA3E3DE.png" /></p>
 <figure></figure>
 
 
@@ -135,7 +135,7 @@ public HomeView()
 
 Et maintenant, si tu relances l’app, c’est quand même plus joli !
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/81F75B6282F352517B99D11F2F3F6D31.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/A96C6D782228A9E3BE3C98765E553224.gif" /></p>
 <figure></figure>
 
 

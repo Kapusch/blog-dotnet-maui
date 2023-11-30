@@ -36,25 +36,25 @@ Mais on aura aussi besoin de quoi définir l’état actuel de notre application
 # Lancement de l’app
 Allez, il est temps de faire tourner l’application ! Choisis donc la plateforme que tu souhaites cibler, puis clique sur le bouton encadré en rouge pour démarrer le projet:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/CCA585B557D8F8AFA27869ED6F96DC99.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/5BCE13CE6AA3C962B851589A1333882C.png" /></p>
 <figure></figure>
 
 
 Dans un premier temps, tu verras ton projet être compilé avec la configuration choisie (c’est l’étape du build):
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/85AFA96A5BBDCA9AA60CF174671E372B.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/C02BA696FE457042E46B611AC7B6653C.png" /></p>
 <figure><figcaption class="image-caption">Sous Visual Studio for Mac, le statut actuel du projet peut facilement être consulté en bas à gauche de la fenêtre.</figcaption></figure>
 
 
 Puis tu verras ton application se déployer automatiquement vers la plateforme choisie (ici, une simulation de l’iPhone 13, iOS 15.5).
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/FB933ED833E5286A9C4DEE2FD6747035.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/145B5C24E2EF3848C0ECF5417F91416D.png" /></p>
 <figure></figure>
 
 
 Et voilà le résultat !
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/041628D6E57C50A8C4C89BD5FDE6A23C.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/4DFB7678FB4CCC0E102C886277A46E7B.png" /></p>
 <figure></figure>
 
 
@@ -120,10 +120,15 @@ Button EnterButton => new Button
 Rien de très complexe à ce stade:
 
 * On définit l’image du composant `NightClubImage` via la propriété “Source”,
+
 * Et pour le bouton, on définit quelques propriétés de base comme le texte, la couleur, … mais tu aurais peut-être remarqué qu’on applique des fonctions au composant `EnterButton` :
+
     * *Bold()* pour mettre en gras le texte du bouton,
+
     * *Paddings()* pour rajouter un peu d’espace autour du texte, notamment à gauche et à droite du texte,
+
     * Et enfin, *CenterHorizontal()* pour positionner le texte au centre du bouton.
+
 
 
 

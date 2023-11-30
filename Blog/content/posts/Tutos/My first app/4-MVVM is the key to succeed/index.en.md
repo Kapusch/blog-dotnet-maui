@@ -30,8 +30,11 @@ In this chapter, we will discover a major design pattern for mobile application 
 MVVM is a design pattern which provides the developer with a logical separation of the code into 3 layers:
 
 * The **View**, which refers to the user interface, i.e. everything that will be displayed on the screen (e.g. the `HomeView` page),
+
 * The **Model**, which refers to the kind of data to be displayed in this View,
+
 * And finally, the **ViewModel** which is the link between the View and the Model. For example, to retrieve data from the Cloud or react to user interactions.
+
 
 
 
@@ -43,7 +46,9 @@ MVVM is a design pattern which provides the developer with a logical separation 
 One of the main advantages of MVVM is isolating the view (i.e. the user interface) from the business logic. In the context of our first page, we finally obtain two files:
 
 1. `HomeView.cs` which defines exactly how our page will be displayed (i.e. a background colour, an image at the top, a bottom button),
+
 1. And `HomeViewModel.cs` which contains all the logic to run our page (in this case, the behaviour of the button when the user presses it).
+
 
 
 By following this principle, the breakdown of your code is clear and you reduce the number of lines of code per file. You wouldn't want a file with more than 10,000 lines! 😄 Besides, there is no risk of affecting the logic of your app if you only change the colour of a button.
@@ -71,7 +76,9 @@ We now understand how to split our code into several layers. For example, defini
 Indeed, that's almost it! It takes place in two steps:
 
 1. First, a **ViewModel** is associated to its **View** (usually with the View’s `BindingContext`),
+
 1. Then we define the behaviour of each element of the **View** into the **ViewModel**, using the principle of [Data Binding](https://docs.microsoft.com/en-us/dotnet/maui/xaml/fundamentals/data-binding-basics).
+
 
 
 Data Binding is a technique for linking two objects so that when one is changed, the other is also changed. It may sound a bit vague, but you'll understand its role better in the next section. For now, let’s move on!
@@ -81,13 +88,13 @@ Now that you know the basics of MVVM, I can show you how to apply it concretely 
 
 Let's start by creating a file to be the **ViewModel** for our `HomeView`. To do this, first create a new folder called *ViewModels* in the project, then add a new file to it.
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/311CDE6B6AAC4019297529C08E30580A.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/13D069507FD06EEE1219B994B5EF400D.png" /></p>
 <figure></figure>
 
 
 This will be an empty class named `HomeViewModel.cs` :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/F63FA1D84892E76873200E90A9652B93.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/882B0A5F6566F3663600300CD7ADCD68.png" /></p>
 <figure></figure>
 
 
@@ -133,13 +140,13 @@ Fortunately, there is a library provided by Microsoft that will greatly simplify
 
 This library has already been added to the project and you can easily verify this by opening the NuGet packages management window. Just right click on the project's dependencies:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/086DC9994972563B17661D7DF419BEF1.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/2E26F5F62ECCA8C4F1A9DD30EF1A71E6.png" /></p>
 <figure></figure>
 
 
 And here is the library! It is called *CommunityToolkit.Mvvm*:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/8CFB42EAA5DA20D1D00C52327AD9C943.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/1B8394B94F3463AE709C4009855A5924.png" /></p>
 <figure></figure>
 
 
@@ -151,7 +158,9 @@ ___
 Now let's see how to prepare our class `HomeViewModel` to act as a real **ViewModel**:
 
 1. First, make it inherit from the class `ObservableObject`,
+
 1. then, define it as a **partial** class.
+
 
 
 You should have the following:
@@ -242,7 +251,7 @@ Button EnterButton => new Button
 
 And there you have it!
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/04746A14C2AB991DFB0AE21D6D813403.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/82F21A70DF6030916D89661BBA735042.gif" /></p>
 <figure></figure>
 
 

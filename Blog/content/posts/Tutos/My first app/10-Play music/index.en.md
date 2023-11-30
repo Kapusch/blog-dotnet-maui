@@ -38,7 +38,7 @@ According to the [documentation](https://learn.microsoft.com/en-us/dotnet/commun
 
 Once you found it, add it to the project and accept all associated licenses:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/E51BD0B6860EF736D013602B304C90F4.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/E99C2364767ABBFA91D00D88D3EEAEEE.png" /></p>
 <figure></figure>
 
 
@@ -264,7 +264,9 @@ First, we want the icon associated with our central button to change its appeara
 Here is the logic used to modify the value automatically:
 
 * We monitor the value changes of the *CurrentState* property that is attached to the `MusicPlayer` object,
+
 * And we modify the `PlayButton` image according to whether the *CurrentState* value is equivalent to the play or pause state.
+
 
 
 
@@ -286,7 +288,7 @@ public class MusicPlayerView : ContentPage
 
 	protected override void OnDisappearing()...
 
-	private void PlayButton_Clicked(object sender, EventArgs e)
+	void PlayButton_Clicked(object sender, EventArgs e)
 	{
 		if (MusicPlayer.CurrentState != MediaElementState.Playing)
 		{
@@ -307,13 +309,13 @@ As you can see, this event is pretty straightforward. It detects at each click t
 ___
 That's all for this chapter. Rebuild the project and turn off the music with the pause button!
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/74470EEE7B7C3F6A4405C7A9D3AC4090.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/96DBF61EF00CCED6F97B6937F1B5B0F5.gif" /></p>
 <figure><figcaption class="image-caption">Music plays as soon as the music player page appears, and then you can turn the music off with the pause button.</figcaption></figure>
 
 
 Isn't it great to be able to interact with our app? Personally, that's my favorite part of mobile app development!
 
-It becomes real and this is just the beginning. Next time, we'll see how to implement volume and the management of playback head.
+It becomes real and this is just the beginning. <a href="../11-binding-playhead-control/">Next time</a>, we'll see how to implement volume and the management of playback head.
 
 ___
 More articles in the series:

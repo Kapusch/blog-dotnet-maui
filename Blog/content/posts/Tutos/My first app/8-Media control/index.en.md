@@ -31,7 +31,7 @@ Today, we're going to continue our good work and reproduce a whole series of but
 # War of the Buttons
 To listen to music, our user needs key functions like: play a song, skip to the next track, etc. If you remember about the mock-up, we had a main row of 5 buttons:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/3BA4EBED916B74ED7B3AD4B770FFAC23.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/2C278A80DBAC438D87E94CD9ECD5639D.png" /></p>
 <figure><figcaption class="image-caption">5 buttons well aligned in the same row, but they are not all the same size.</figcaption></figure>
 
 
@@ -44,7 +44,7 @@ But first, you will need to add these images to the project. So start by downloa
 
 Then unzip the downloaded file. You should have the following 6 images:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/2E090B2B8F1350B550776023FA314EB4.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/34E985B3484AD166942964B5C5C0F297.png" /></p>
 <figure></figure>
 
 
@@ -59,12 +59,19 @@ Indeed, there will be 5 buttons on this row. But nothing prevents us from replac
 Going back to the mock-up, there will be from left to right :
 
 * a button to replay the track (only once) ⇒ it’s the image *repeat_once.png*
+
 * another to return to the previous song ⇒ *skip_previous.png*
+
 * there will also be a big central button to play or pause the music. The image of this button will automatically change accordingly to the following cases:
+
     * either the track is not playing ⇒ it will be the image *play.png*
+
     * or it is already being played ⇒ then *pause.png* will be displayed
+
 * then we will have a button to go to the next song ⇒ *skip_next.png*
+
 * and a last one to download the song ⇒ *download.png*
+
 
 
 Yes I know, this last function "download" was not planned in the program! It was originally supposed to be for shuffle playback, but I changed my mind. 😄
@@ -74,13 +81,13 @@ So it's important to make the mock-up as reliable as possible!
 # Add images to the project
 Now that you have downloaded all the images, you need to import them into the project so that they can be used by the application. To do this, open the project in Visual Studio and right click on the *Images* folder:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/0F64B307F99690E87648DFC47C81F02C.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/EB785FEDDABE1462C030D948AEB889AD.png" /></p>
 <figure><figcaption class="image-caption">Remember, the Resources folder is where we store all the media (icons, images, audio and video tracks, ...)</figcaption></figure>
 
 
 In the pop-up menu that appears, in the *Add* section, click on the option to add files from a folder:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/693BBF570360FA0FD6CD0CFA107F4BC3.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/88DC6EAA532E8C05110B8EDD865FD93B.png" /></p>
 <figure></figure>
 
 
@@ -88,7 +95,7 @@ Then, select the folder where you have unzipped the 6 images and validate your c
 
 In our case, we want to import all the images in the folder. So select all the available files and click on OK :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/773A0DDCB14EF44FA3318865EF20521A.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/E0301006BA573EDB4426297DF9F0804B.png" /></p>
 <figure></figure>
 
 
@@ -100,7 +107,7 @@ Visual Studio may ask you which strategy to use to import the files into the *Re
 
 That's it, make sure that you have the 6 new images imported into the folder!
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/BE9B7B0BEE89CB13A55196568E193B1D.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/E8E95C41E3BC21794611E83AFCEE3014.png" /></p>
 <figure></figure>
 
 
@@ -245,7 +252,7 @@ DownloadButton.Row(1).Column(5)
 
 And here we go, this is really starting to take shape! 🤩
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/5A57E2624C935EF62843C22CC4449E14.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/CF07C830D7416B7D77D17AE92D6B6191.png" /></p>
 <figure></figure>
 
 

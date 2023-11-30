@@ -1,5 +1,5 @@
 ---
-Topic: "maui app with no shell"
+Topic: "Maui app with no shell"
 Title: "Créer une app .NET MAUI sans Shell"
 Category: "Tips"
 Subcategory: ""
@@ -22,7 +22,7 @@ Depuis la sortie officielle de .NET MAUI, il n’est pas possible de créer de n
 ### Avec ou sans Shell ? À toi de voir !
 Quand il s’agit de créer une nouvelle application en .NET MAUI, Visual Studio ne propose pas beaucoup d’options de configuration :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/EEE5F22BD47F24C36D346122E60A649D.jpg" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/8DE963CF3E788C1B2A7E310158115638.jpg" /></p>
 <figure><figcaption class="image-caption">Il y a bien sûr le choix de .NET MAUI Blazor, mais c’est un tout autre framework.</figcaption></figure>
 
 
@@ -41,13 +41,13 @@ Finalement, recourir au Shell dans un projet .NET MAUI reste un choix personnel 
 ### Se passer du Shell
 Dans un premier temps, il te faut un projet .NET MAUI. Tu peux en créer un nouveau avec Visual Studio, ou bien réutiliser un projet existant. Une fois ton projet ouvert dans Visual Studio, supprime la classe `AppShell` en effaçant les deux fichiers *AppShell.xaml* et *AppShell.xaml.cs*.
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/9272EF890FF372509F387ECC85805BFC.jpg" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/AF02CF0EE2C102C58AFE378D49B8F735.jpg" /></p>
 <figure><figcaption class="image-caption">Sélectionne les deux fichiers à la fois, puis fais un clic droit et supprime-les.</figcaption></figure>
 
 
 Visual Studio te demandera probablement une confirmation. Vérifie que les fichiers sélectionnés sont les bons et confirme la suppression :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/4F18A5A1700AE970E27107622C6AB977.jpg" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/93F145BEEAD8A3CC6667ACC0918CC53C.jpg" /></p>
 <figure><figcaption class="image-caption">On n’est jamais à l’abri d’une fausse manip !</figcaption></figure>
 
 

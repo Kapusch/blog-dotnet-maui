@@ -45,14 +45,14 @@ C’est une très bonne question ! En général, quand imagine une nouvelle page
 
 Dans le cadre de notre cours, la page principale devra ressembler à la maquette suivante :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/F25FC1F576D94B299848D78DBA0AF729.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/091DE5E1FE3AB2C7F4F7688ACA326327.png" /></p>
 <figure></figure>
 
 
 # Structuration de la page
 Sur cette maquette, on remarque que les éléments sont disposés de façon assez régulière. On pourrait même imaginer des lignes pour aligner les éléments les uns par rapport aux autres :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/DC7E5A20A7CA1D0976AD5613BCC16209.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/1E2E271F0715CC8F88F9B68BB6D1377E.png" /></p>
 <figure><figcaption class="image-caption">Disposer les éléments suivant des lignes imaginaires est un exercice un peu spécial au début, mais cela devient une habitude avec le temps.</figcaption></figure>
 
 
@@ -64,10 +64,12 @@ Ces lignes te feront peut-être penser à une grille… et si c’est le cas, bi
 Pour respecter la maquette, la première chose à faire est de diviser la page en deux :
 
 * La partie du haut qui n’affiche rien d’autre qu’un fond noir,
+
 * Et celle du bas pour contrôler notre lecteur de musique.
 
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/30112C7E18AA1244A8CA875B39665560.png" /></p>
+
+<p align="center"><img max-width="100%" max-height="100%" src="./images/3357EDC81FBD19562B12D32BAEB06E01.png" /></p>
 <figure></figure>
 
 
@@ -107,7 +109,9 @@ Avec le paramètre *RowDefinitions*, on configure une grille de 2 lignes : la pr
 A l’initialisation du *Grid*, on définit également deux autres paramètres :
 
 * le *RowSpacing* défini à 0 pour ne laisser aucun espace entre les lignes de notre grille,
+
 * et *Children* qui contiendra tous les éléments de notre grille, à répartir sur deux lignes.
+
 
 
 Et si tu te demandes d’où sortent ces fameux *TopLayout* et *BottomLayout*, il s’agit de deux conteneurs d’éléments à définir en dehors du constructeur de la page. En effet, on utilise à nouveau un *Grid* pour chacun de ces deux contrôles pour nous aider dans le placement des éléments restants. Le premier *Grid* (le *TopLayout*) correspond à la partie supérieure de notre page et a donc un fond noir. Quant à l’autre *Grid* (le *BottomLayout*), on lui définit un fond gris foncé pour représenter la partie inférieure.
@@ -139,10 +143,12 @@ Concentrons-nous dans un premier temps sur le contenu du *BottomLayout*. En rega
 Plus exactement :
 
 * on remarque 3 lignes de haut en bas, à taille identique,
+
 * et il y a 7 colonnes de gauche à droite (2 petites, 3 grandes et 2 petites à nouveau).
 
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/15825CA1D0297C02D5C7C653EDA5BEA7.png" /></p>
+
+<p align="center"><img max-width="100%" max-height="100%" src="./images/1CF7711467751AC78E160D00CF4DC2FE.png" /></p>
 <figure><figcaption class="image-caption">En quadrillant la zone inférieure de la page, on remarque que chaque élément visuel a bien sa case attitrée.</figcaption></figure>
 
 
@@ -254,7 +260,7 @@ Grid BottomLayout => new Grid
 
 Et si tu lances l’application, tu pourras alors confirmer avec certitude que notre emploi des *Grid* est effectivement correct :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/F9032472788C6B235E788E30A9EE9C21.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/4A805DC64E4B6C30A7C0D2FB7634A00A.png" /></p>
 <figure><figcaption class="image-caption">Ça fait un peu penser aux vieilles télévisions en couleur.</figcaption></figure>
 
 

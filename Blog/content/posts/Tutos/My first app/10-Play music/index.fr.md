@@ -38,7 +38,7 @@ D’après la [documentation](https://learn.microsoft.com/fr-fr/dotnet/community
 
 Une fois trouvée, ajoute-la au projet en acceptant toutes les licences associées:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/E51BD0B6860EF736D013602B304C90F4.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/E99C2364767ABBFA91D00D88D3EEAEEE.png" /></p>
 <figure></figure>
 
 
@@ -264,12 +264,14 @@ Dans un premier temps, on souhaite que l’icône associée à notre bouton cent
 Voici donc la logique mise en place pour en modifier la valeur automatiquement :
 
 * On surveille les changements de valeur de la propriété *CurrentState* rattachée à l’objet `MusicPlayer`,
+
 * Et on modifie l’image du `PlayButton` selon si la valeur du *CurrentState* équivaut à l’état de lecture ou l’état de pause.
 
 
 
+
 {{< admonition type=info title="‎ " open=true >}}
-Attention à bien remplacer le signe “=>” par “=” à la la déclaration du `PlayButton`. En effet, on ne veut créer qu’une seule instance d’`ImageButton` et la modifier dans la méthode *InitMediaControlPanel()*.
+Attention à bien remplacer le signe “=>” par “=” à la déclaration du `PlayButton`. En effet, on ne veut créer qu’une seule instance d’`ImageButton` et la modifier dans la méthode *InitMediaControlPanel()*.
 {{< /admonition >}}
 
 
@@ -286,7 +288,7 @@ public class MusicPlayerView : ContentPage
 
 	protected override void OnDisappearing()...
 
-	private void PlayButton_Clicked(object sender, EventArgs e)
+	void PlayButton_Clicked(object sender, EventArgs e)
 	{
 		if (MusicPlayer.CurrentState != MediaElementState.Playing)
 		{
@@ -307,13 +309,13 @@ Comme tu peux le voir, cet événement est plutôt simple. À chaque clic, on d�
 ___
 Voilà, c’est tout pour ce chapitre. Recompile le projet et mets en pause la musique !
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/74470EEE7B7C3F6A4405C7A9D3AC4090.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/96DBF61EF00CCED6F97B6937F1B5B0F5.gif" /></p>
 <figure><figcaption class="image-caption">Le morceau est joué dès que la page du lecteur de musique apparaît, puis on peut stopper la lecture avec le bouton pause.</figcaption></figure>
 
 
 Quel plaisir de pouvoir interagir avec notre app, n’est-ce pas ? Personnellement, c’est la partie que je préfère dans le développement d’une application !
 
-Ça se concrétise et ce n’est que le début. La prochaine fois, on verra comment implémenter la gestion du volume et de la tête de lecture.
+Ça se concrétise et ce n’est que le début. <a href="../11-binding-playhead-control/">La prochaine fois</a>, on verra comment implémenter la gestion du volume et de la tête de lecture.
 
 
 

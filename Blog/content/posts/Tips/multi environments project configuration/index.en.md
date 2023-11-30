@@ -61,7 +61,7 @@ Start by opening the project configuration file in Visual Studio.
 
 {{< admonition type=tip title="How to access the project configuration file?" open=false >}}
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/B735E0084C43426F685F6A5946BE7000.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/F5637211F71237FA177471A8209D7F13.png" /></p>
 <figure><figcaption class="image-caption">You can access the configuration file by right-clicking on the project in Visual Studio.</figcaption></figure>
 The project configuration file ends with the extension .csproj and can be edited by any text editor (e.g. Visual Studio Code). It can be found via the file explorer at the root of the project.
 
@@ -139,7 +139,7 @@ That's it, we're done with the *.csproj* file!
 
 But after saving the file, Visual Studio may display a small red icon. Fortunately, this is perfectly normal!
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/DDC53ADBD178B2ECF8ACDFA29C763587.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/E3A90E1F24AD45DD78FEF83B70198C83.png" /></p>
 <figure><figcaption class="image-caption">Visual Studio is rarely pleased when you tinker with project settings without using its graphical interface.</figcaption></figure>
 
 
@@ -151,7 +151,7 @@ You'll soon understand. Start by opening the solution parameters in Visual Studi
 
 {{< admonition type=tip title="How to access the solution parameters?" open=false >}}
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/6A9E6DE543D25D292182188D9DBFBB20.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/C04EA33FE99F55F699CDE3D9C286E75B.png" /></p>
 <figure><figcaption class="image-caption">You can also access solution parameters by double-clicking on the first of the items listed by Visual Studio.</figcaption></figure>
 {{< /admonition >}}
 
@@ -159,7 +159,7 @@ When the solution settings window pops up, go to the compiler configurations sec
 
 Then add a new configuration for "DEV", "TEST" and finally "PROD" as shown below:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/EF92D0ABC03FD8A16F097CD8EAAC5310.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/A1E4F4B3484FD80B826D6BE92BEB4DFC.gif" /></p>
 <figure><figcaption class="image-caption">By default, Visual Studio defines two basic configurations: Debug and Release.</figcaption></figure>
 
 
@@ -177,13 +177,13 @@ It couldn't be easier!
 
 To do this, still from the solution parameters window, scroll down to display the configuration association section. Then select the configuration at solution level and associate it with the correct project configuration:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/B2800A27E74376F99CB02CA29DE2402F.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/7D5309B8104C7CFACC42A2FA9D04AD81.gif" /></p>
 <figure></figure>
 
 
 Finally, you can also delete the *Debug* and *Release* configurations created by default by Visual Studio:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/FA295D76F0B0CB2D08C23577F761F441.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/707244862BC00151DFFE42B636C82AFF.gif" /></p>
 <figure></figure>
 
 
@@ -191,7 +191,7 @@ Once you've followed all these steps, close the window by clicking on OK and che
 
 No more errors? Congratulations! You can now easily run your application in any environment!
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/41548D29C314A62E5633F5A5D4E95A93.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/8887E8D052F0BE283A224D217A2F5BD4.gif" /></p>
 <figure><figcaption class="image-caption">Visual Studio can now compile the project with these configurations.</figcaption></figure>
 
 
@@ -267,7 +267,7 @@ In addition to naming the app according to the targeted environment, we'll see h
 
 To do so, you first need to design an icon for each environment. Once you've done that, add them to the project in a suitable folder.
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/245F3DA8314905E811BD461326F3C1A6.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/C0F703B61D47AF2974E4435B0A7CA0BB.png" /></p>
 <figure><figcaption class="image-caption">By default, every .NET MAUI project includes an AppIcon folder.</figcaption></figure>
 
 
@@ -311,7 +311,7 @@ First, we need to associate each of these files with a different configuration. 
 
 Starting with iOS, go to the *Platforms/iOS* folder and create two copies of the original *Info.plist* file. Then rename them *Info.dev.plist* and *Info.test.plist*.
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/55C14B4B3667E40789E2599946E7D78F.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/C1E4A7B243E5B52598C32ED534ACBBFF.gif" /></p>
 <figure></figure>
 
 
@@ -351,7 +351,7 @@ Finally, the same goes for Android. Go to the *Platforms/Android* folder and cre
 
 However, here we need to rename the original *AndroidManifest.xml* to *AndroidManifest.prod.xml*. Otherwise, you'll have trouble compiling the app.
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/1513061CE38579812AB18375494170C3.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/76585DF6F34A571F1D6981360FEF336C.gif" /></p>
 <figure></figure>
 
 
@@ -390,7 +390,7 @@ Now it's time to check that all this setup is working. You can now deploy the ap
 
 For configurations that don't allow debugging, you need to start the app without debugging for it to deploy on the simulator.
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/35B1B096226DA369C0C7116E434C83F9.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/483B192E323AC9A1A9DA813E512F60E9.png" /></p>
 <figure><figcaption class="image-caption">This option must be used for "TEST" and "PROD" configurations.</figcaption></figure>
 {{< /admonition >}}
 
@@ -402,13 +402,13 @@ For configurations that don't allow debugging, you need to start the app without
 
 <td>
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/057714498935BB630D97070485D3EB1B.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/50E055FDD173019CDD49ADA6A021A2FE.png" /></p>
 <figure><figcaption class="image-caption">There are 3 apps installed on my iOS simulator, each with a different name and icon.</figcaption></figure>
 </td>
 
 <td>
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/E96FBE59D3C81E61A57F260ECA547C33.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/BA21E0201E202C037DB9D79A6C5ED8CD.png" /></p>
 <figure><figcaption class="image-caption">There are 3 apps installed on my Android simulator, each with a different name and icon.</figcaption></figure>
 </td>
 

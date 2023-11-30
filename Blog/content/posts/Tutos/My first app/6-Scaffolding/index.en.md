@@ -45,14 +45,14 @@ This is a very good question! In general, when imagining a new page for our appl
 
 For our course, the main page should look like the following layout:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/F25FC1F576D94B299848D78DBA0AF729.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/091DE5E1FE3AB2C7F4F7688ACA326327.png" /></p>
 <figure></figure>
 
 
 # Structuring the page
 On this model, you can see the elements are arranged in a fairly regular way. One could even imagine lines to relatively align the elements on each other:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/DC7E5A20A7CA1D0976AD5613BCC16209.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/1E2E271F0715CC8F88F9B68BB6D1377E.png" /></p>
 <figure><figcaption class="image-caption">Arranging the elements along imaginary lines is a bit special at first, but it becomes a habit over time.</figcaption></figure>
 
 
@@ -64,10 +64,12 @@ These lines might make you think of a grid... and if so, good for you! This is t
 To comply with the layout, the first thing to do is dividing the page in two:
 
 * The top part which displays nothing but a black background,
+
 * and the bottom part to control our music player.
 
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/30112C7E18AA1244A8CA875B39665560.png" /></p>
+
+<p align="center"><img max-width="100%" max-height="100%" src="./images/3357EDC81FBD19562B12D32BAEB06E01.png" /></p>
 <figure></figure>
 
 
@@ -107,7 +109,9 @@ With the *RowDefinitions* parameter, we configure a grid of 2 lines: the first o
 When initializing the *Grid*, we also define two other parameters:
 
 * the *RowSpacing* set to 0 for having no space between the lines of our grid,
+
 * and *Children* which will contain all the elements of our grid, to be distributed over two lines.
+
 
 
 And if you wonder where these *TopLayout* and *BottomLayout* come from, they're actually two element containers to define outside the page constructor. Indeed, we again use a *Grid* for each of these two controls to help us with positioning the remaining elements. The first *Grid* (the *TopLayout*) corresponds to the top part of our page and therefore has a black background. As for the other *Grid* (the *BottomLayout*), we define a dark grey background to represent the lower part.
@@ -139,10 +143,12 @@ Let's focus first on the content of the *BottomLayout*. If we take a closer look
 More exactly:
 
 * there are 3 rows from top to bottom, all the same size,
+
 * and there are 7 columns from left to right (2 small, 3 large and then 2 small again).
 
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/15825CA1D0297C02D5C7C653EDA5BEA7.png" /></p>
+
+<p align="center"><img max-width="100%" max-height="100%" src="./images/1CF7711467751AC78E160D00CF4DC2FE.png" /></p>
 <figure><figcaption class="image-caption">By squaring the lower area of the page, you can see that each visual element has its own cell.</figcaption></figure>
 
 
@@ -254,7 +260,7 @@ Grid BottomLayout => new Grid
 
 And if you run the app, you will see that our use of the *Grid* is indeed correct:
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/F9032472788C6B235E788E30A9EE9C21.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/4A805DC64E4B6C30A7C0D2FB7634A00A.png" /></p>
 <figure><figcaption class="image-caption">It's a bit similar to the old colour televisions.</figcaption></figure>
 
 

@@ -61,7 +61,7 @@ Commence par ouvrir le fichier de configuration du projet dans Visual Studio.
 
 {{< admonition type=tip title="Comment accéder au fichier de configuration du projet ?" open=false >}}
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/B735E0084C43426F685F6A5946BE7000.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/F5637211F71237FA177471A8209D7F13.png" /></p>
 <figure><figcaption class="image-caption">Il est possible d’accéder au fichier de configuration à l’aide d’un clic droit sur le projet dans Visual Studio.</figcaption></figure>
 Le fichier de configuration d’un projet se termine par l’extension .csproj et peut être édité par n’importe quel éditeur de texte (e.g. Visual Studio Code). On le retrouve généralement via l’explorateur de fichiers à la racine du projet.
 
@@ -139,7 +139,7 @@ Voilà, on en a fini avec le fichier *.csproj* !
 
 Mais après avoir sauvegardé ce fichier, il est fort possible que Visual Studio affiche une petite icône rouge. Heureusement, c’est tout à fait normal !
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/DDC53ADBD178B2ECF8ACDFA29C763587.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/E3A90E1F24AD45DD78FEF83B70198C83.png" /></p>
 <figure><figcaption class="image-caption">Visual Studio est rarement content qu’on bidouille les réglages du projet sans passer par son interface graphique.</figcaption></figure>
 
 
@@ -151,7 +151,7 @@ Tu vas vite comprendre. Commence par ouvrir les paramètres de la solution dans 
 
 {{< admonition type=tip title="Comment accéder aux paramètres de la solution ?" open=false >}}
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/6A9E6DE543D25D292182188D9DBFBB20.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/C04EA33FE99F55F699CDE3D9C286E75B.png" /></p>
 <figure><figcaption class="image-caption">On peut également accéder aux paramètres de la solution à l’aide d’un double-clic sur le premier des items listés par Visual Studio.</figcaption></figure>
 {{< /admonition >}}
 
@@ -159,7 +159,7 @@ Lorsque la fenêtre des paramètres de la solution s’affiche à l’écran, re
 
 Puis, ajoute une nouvelle configuration pour “DEV”, “TEST” et enfin “PROD” comme ci-dessous :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/EF92D0ABC03FD8A16F097CD8EAAC5310.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/A1E4F4B3484FD80B826D6BE92BEB4DFC.gif" /></p>
 <figure><figcaption class="image-caption">Par défaut, Visual Studio définit deux configurations de base : Debug and Release.</figcaption></figure>
 
 
@@ -177,13 +177,13 @@ Rien de plus facile !
 
 Pour cela, toujours dans la fenêtre des paramètres de la solution, défile vers le bas pour afficher la section d’association des configurations. Puis, sélectionne la configuration au niveau de la solution avant de l’associer à la bonne configuration du projet :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/B2800A27E74376F99CB02CA29DE2402F.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/7D5309B8104C7CFACC42A2FA9D04AD81.gif" /></p>
 <figure></figure>
 
 
 Finalement, tu peux aussi supprimer les configurations *Debug* et *Release* qui ont été créées par défaut par Visual Studio :
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/FA295D76F0B0CB2D08C23577F761F441.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/707244862BC00151DFFE42B636C82AFF.gif" /></p>
 <figure></figure>
 
 
@@ -191,7 +191,7 @@ Une fois que tu as suivi toutes ces étapes, ferme la fenêtre en cliquant sur O
 
 Plus d’erreur ? Bravo ! Tu peux maintenant facilement exécuter ton application dans n’importe quel environnement !
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/41548D29C314A62E5633F5A5D4E95A93.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/8887E8D052F0BE283A224D217A2F5BD4.gif" /></p>
 <figure><figcaption class="image-caption">Visual Studio peut maintenant compiler le projet avec les configurations que l’on vient de créer.</figcaption></figure>
 
 
@@ -267,7 +267,7 @@ En plus de nommer l’application selon l’environnement ciblé, nous allons vo
 
 Pour cela, il te faut d’abord concevoir une icône pour chaque environnement. Une fois que c’est fait, ajoute-les au projet dans un dossier adapté.
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/245F3DA8314905E811BD461326F3C1A6.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/C0F703B61D47AF2974E4435B0A7CA0BB.png" /></p>
 <figure><figcaption class="image-caption">Par défaut, tout projet .NET MAUI comporte un dossier AppIcon.</figcaption></figure>
 
 
@@ -311,7 +311,7 @@ Tout d’abord, nous devons associer chacun de ces fichiers à une configuration
 
 Commençons par iOS, rends-toi dans le dossier *Platforms/iOS* et crée deux copies du fichier *Info.plist* d’origine. Puis, renomme-les en *Info.dev.plist* et *Info.test.plist*.
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/55C14B4B3667E40789E2599946E7D78F.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/C1E4A7B243E5B52598C32ED534ACBBFF.gif" /></p>
 <figure></figure>
 
 
@@ -353,7 +353,7 @@ Enfin, même chose pour Android. Rends-toi dans le dossier *Platforms/Android* e
 
 Cependant, ici nous devons renommer le *AndroidManifest.xml* d’origine en *AndroidManifest.prod.xml*. Sans quoi, tu aurais des soucis à la compilation de l’app. 
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/1513061CE38579812AB18375494170C3.gif" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/76585DF6F34A571F1D6981360FEF336C.gif" /></p>
 <figure></figure>
 
 
@@ -392,7 +392,7 @@ Il est grand temps de vérifier que toute cette mise en place fonctionne. Tu peu
 
 Pour les configurations n’autorisant pas le déboggage, tu dois démarrer l’application sans déboggage pour qu’elle se déploie sur le simulateur.
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/35B1B096226DA369C0C7116E434C83F9.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/483B192E323AC9A1A9DA813E512F60E9.png" /></p>
 <figure><figcaption class="image-caption">On doit passer par cette option pour les configurations “TEST” et “PROD”.</figcaption></figure>
 {{< /admonition >}}
 
@@ -404,13 +404,13 @@ Pour les configurations n’autorisant pas le déboggage, tu dois démarrer l’
 
 <td>
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/057714498935BB630D97070485D3EB1B.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/50E055FDD173019CDD49ADA6A021A2FE.png" /></p>
 <figure><figcaption class="image-caption">Il y a bien 3 applications installées sur mon simulateur iOS avec chacune un nom et une icône différents.</figcaption></figure>
 </td>
 
 <td>
 
-<p align="center"><img max-width="100%" max-height="100%" src="./images/E96FBE59D3C81E61A57F260ECA547C33.png" /></p>
+<p align="center"><img max-width="100%" max-height="100%" src="./images/BA21E0201E202C037DB9D79A6C5ED8CD.png" /></p>
 <figure><figcaption class="image-caption">Il y a bien 3 applications installées sur mon émulateur Android avec chacune un nom et une icône différents.</figcaption></figure>
 </td>
 

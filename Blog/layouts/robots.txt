@@ -17,12 +17,14 @@ Disallow: /*.jpeg$
 Disallow: /*.png$
 Disallow: /*.gif$
 Disallow: /*.svg$
-Disallow: /*.json$
 Disallow: /*.ico$
 Disallow: /*.webmanifest$
 
 Allow: /*sitemap.xml
 Disallow: /*.xml$
+
+Allow: /index.json
+Disallow: /*.json$
 
 User-agent: Googlebot-Image
 Disallow: /

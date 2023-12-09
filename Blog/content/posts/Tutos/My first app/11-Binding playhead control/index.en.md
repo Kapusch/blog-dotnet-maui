@@ -26,64 +26,6 @@ In the previous article, we discovered the *[MediaElement](https://learn.microso
 
 So today, we are going to implement the playhead control, to allow the user to move to a specific frame in the track.
 
-# Adding a new ViewModel
-First of all, we need to set up a new **ViewModel** for the *MusicPlayerView*. To do this, add a new class named *MusicPlayerViewModel* to the *ViewModels* folder, and define it with the following code:
-
-<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerViewModel.cs</code></p>
-
-```csharp
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-
-namespace NightClub.ViewModels;
-
-public partial class MusicPlayerViewModel : ObservableObject
-{
-    #region Properties
-    #endregion
-
-    public MusicPlayerViewModel()
-    {
-    }
-
-    #region Commands
-    #endregion
-}
-```
-
-{{< admonition type=tip title="‎ " open=true >}}
-If figuring out this bit of code is difficult for you, then don't get discouraged and take some time to read again the <a href="../4-mvvm-is-the-key-to-succeed/">chapter on MVVM</a>.
-{{< /admonition >}}
-Of course, this **ViewModel** doesn't do anything at the moment, but it's ready to be associated with its **View**. So open the file `MusicPlayerView.cs` and modify it as follows:
-
-<p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
-
-```csharp
-...
-// This using is mandatory to resolve the definition of MusicPlayerViewModel
-using NightClub.ViewModels;
-
-namespace NightClub.Views;
-public class MusicPlayerView : ContentPage
-{
-    public MusicPlayerView()
-    {
-        Console.WriteLine("[NightClub] MusicPlayerView - Constructor");
-
-        // Here is where the association is happening
-        BindingContext = new MusicPlayerViewModel();
-
-        NavigationPage.SetHasNavigationBar(this, false);
-        BackgroundColor = Colors.DimGray;
-        ...
-    }
-    ...
-}
-```
-As with the *HomeViewModel* associated with the *HomeView*, here we have modified the *MusicPlayerView*'s `BindingContext` to associate it with the new *MusicPlayerViewModel*.
-
-Well, that was quick. Now let's see how to actually move the pickup!
-
 # Binding our components
 If you remember, in the <a href="../7-time-tracker/">chapter on timing display</a>, we introduced 3 components:
 

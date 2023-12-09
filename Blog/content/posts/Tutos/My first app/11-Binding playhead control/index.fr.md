@@ -26,64 +26,6 @@ Dans l’article précédent, on avait découvert le *[MediaElement](https://lea
 
 Alors aujourd’hui, nous allons commencer par implémenter le contrôle de la tête de lecture, pour permettre à l’utilisateur de se déplacer à un endroit précis du morceau.
 
-# Création d’un nouveau ViewModel
-Avant tout, nous devons mettre en place un nouveau **ViewModel** pour la vue *MusicPlayerView*. Pour cela, ajoute une nouvelle classe nommée *MusicPlayerViewModel* dans le dossier *ViewModels*, et définis-la avec le code suivant :
-
-<p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>MusicPlayerViewModel.cs</code></p>
-
-```csharp
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-
-namespace NightClub.ViewModels;
-
-public partial class MusicPlayerViewModel : ObservableObject
-{
-    #region Properties
-    #endregion
-
-    public MusicPlayerViewModel()
-    {
-    }
-
-    #region Commands
-    #endregion
-}
-```
-
-{{< admonition type=tip title="‎ " open=true >}}
-Si déchiffrer ce bout de code est difficile pour toi, alors ne te décourage pas et prends le temps de relire le <a href="../4-mvvm-is-the-key-to-succeed/">chapitre sur le MVVM</a>.
-{{< /admonition >}}
-Évidemment, ce **ViewModel** ne fait rien pour le moment, mais il est prêt à être associé à sa **View**. Ouvre donc le fichier `MusicPlayerView.cs` et modifie-le comme suit :
-
-<p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>MusicPlayerView.cs</code></p>
-
-```csharp
-...
-// Ce using est obligatoire pour retrouver la définition du MusicPlayerViewModel
-using NightClub.ViewModels;
-
-namespace NightClub.Views;
-public class MusicPlayerView : ContentPage
-{
-    public MusicPlayerView()
-    {
-        Console.WriteLine("[NightClub] MusicPlayerView - Constructor");
-
-        // C'est ici que l'association s'opère !
-        BindingContext = new MusicPlayerViewModel();
-
-        NavigationPage.SetHasNavigationBar(this, false);
-        BackgroundColor = Colors.DimGray;
-        ...
-    }
-    ...
-}
-```
-Comme pour le *HomeViewModel* que l’on avait associé avec la *HomeView*, on a modifié ici le `BindingContext` de la *MusicPlayerView* pour lui associer le nouveau *MusicPlayerViewModel*.
-
-Bon, c’était rapide. Voyons maintenant comment déplacer concrètement la tête de lecture !
-
 # Binding des composants
 Si tu te rappelles bien, dans le <a href="../7-time-tracker/">chapitre sur l’affichage du temps d’écoute</a>, nous avions introduit 3 composants :
 

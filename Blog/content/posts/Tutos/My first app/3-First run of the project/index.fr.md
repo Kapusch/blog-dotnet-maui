@@ -40,10 +40,12 @@ Allez, il est temps de faire tourner l’application ! Choisis donc la plateform
 <figure></figure>
 
 
+
 Dans un premier temps, tu verras ton projet être compilé avec la configuration choisie (c’est l’étape du build):
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/C02BA696FE457042E46B611AC7B6653C.png" /></p>
 <figure><figcaption class="image-caption">Sous Visual Studio for Mac, le statut actuel du projet peut facilement être consulté en bas à gauche de la fenêtre.</figcaption></figure>
+
 
 
 Puis tu verras ton application se déployer automatiquement vers la plateforme choisie (ici, une simulation de l’iPhone 13, iOS 15.5).
@@ -52,10 +54,12 @@ Puis tu verras ton application se déployer automatiquement vers la plateforme c
 <figure></figure>
 
 
+
 Et voilà le résultat !
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/4DFB7678FB4CCC0E102C886277A46E7B.png" /></p>
 <figure></figure>
+
 
 
 

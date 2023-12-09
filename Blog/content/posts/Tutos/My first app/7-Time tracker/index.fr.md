@@ -31,6 +31,7 @@ Commençons déjà avec la partie dédiée au minutage du titre musical. D’apr
 <figure><figcaption class="image-caption">L’application indique que le morceau est joué depuis 36 secondes et qu’il dure 2 minutes et 57 secondes. </figcaption></figure>
 
 
+
 Pour reproduire cela dans l’application, on utilisera le composant [Label](https://learn.microsoft.com/fr-fr/dotnet/maui/user-interface/controls/label) qui permet d’afficher du texte à l’écran :
 
 <p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>MusicPlayerView.cs</code></p>
@@ -88,6 +89,7 @@ Un *Slider* est un contrôle doté d’un curseur permettant à l’utilisateur 
 
 
 
+
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Ah oui je vois, on se situe en fait à 20% du morceau ! On aura donc une barre rose de 0 jusqu’à 20, et une barre noire de 20 jusqu’à 100.
 {{< /admonition >}}
@@ -122,6 +124,7 @@ Grid BottomLayout => new Grid
 <figure><figcaption class="image-caption">Disposé comme ça, le Slider n’a pas bonne mine.</figcaption></figure>
 
 
+
 Pas de panique ! On va voir tout de suite comment réajuster cela.
 
 # Bien utiliser les Grid
@@ -129,6 +132,7 @@ Si tu te rappelles, on a initialement divisé le *BottomLayout* en 7 colonnes. O
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/2822BA46A84A307DD610D66916169DF5.png" /></p>
 <figure><figcaption class="image-caption">Le Slider est à cheval sur les cases n°3, n°4 et n°5.</figcaption></figure>
+
 
 
 Pour cela, on utilise la méthode *ColumnSpan()* pour demander au *Slider* de s’étendre jusqu’à 3 colonnes à partir de la case n°3 :
@@ -144,6 +148,7 @@ Et voilà on en a vraiment fini ! Relançons l’application pour voir ce que ç
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/2907217A274375D0ED0A93A0EEB41D9F.png" /></p>
 <figure></figure>
+
 
 
 Bon, c’est vrai, c’est beau mais ça ne fait pas grand chose ! Mais on va d’abord finir la partie visuelle avant de basculer vers la partie plus fonctionnelle de l’application.

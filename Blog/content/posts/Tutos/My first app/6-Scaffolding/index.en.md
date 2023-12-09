@@ -49,11 +49,13 @@ For our course, the main page should look like the following layout:
 <figure></figure>
 
 
+
 # Structuring the page
 On this model, you can see the elements are arranged in a fairly regular way. One could even imagine lines to relatively align the elements on each other:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/1E2E271F0715CC8F88F9B68BB6D1377E.png" /></p>
 <figure><figcaption class="image-caption">Arranging the elements along imaginary lines is a bit special at first, but it becomes a habit over time.</figcaption></figure>
+
 
 
 These lines might make you think of a grid... and if so, good for you! This is the whole principle of the [Grid](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/layouts/grid) component, which as its name indicates, allows you to arrange elements on a grid. We will use it several times for this page.
@@ -71,6 +73,7 @@ To comply with the layout, the first thing to do is dividing the page in two:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/3357EDC81FBD19562B12D32BAEB06E01.png" /></p>
 <figure></figure>
+
 
 
 You will notice that the top part is slightly larger than the bottom part. You could even say that the black part spreads vertically over 60% of the page, leaving 40% of the page for the rest.
@@ -150,6 +153,7 @@ More exactly:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/1CF7711467751AC78E160D00CF4DC2FE.png" /></p>
 <figure><figcaption class="image-caption">By squaring the lower area of the page, you can see that each visual element has its own cell.</figcaption></figure>
+
 
 
 Now let's define the rows and columns composing our *BottomLayout* to comply with the alignment of the visual elements, as on the mock-up:
@@ -262,6 +266,7 @@ And if you run the app, you will see that our use of the *Grid* is indeed correc
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/4A805DC64E4B6C30A7C0D2FB7634A00A.png" /></p>
 <figure><figcaption class="image-caption">It's a bit similar to the old colour televisions.</figcaption></figure>
+
 
 
 Well, there is nothing functional for the user, but now that our foundations are ready, it will greatly simplify our lives!

@@ -49,11 +49,13 @@ Dans le cadre de notre cours, la page principale devra ressembler à la maquette
 <figure></figure>
 
 
+
 # Structuration de la page
 Sur cette maquette, on remarque que les éléments sont disposés de façon assez régulière. On pourrait même imaginer des lignes pour aligner les éléments les uns par rapport aux autres :
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/1E2E271F0715CC8F88F9B68BB6D1377E.png" /></p>
 <figure><figcaption class="image-caption">Disposer les éléments suivant des lignes imaginaires est un exercice un peu spécial au début, mais cela devient une habitude avec le temps.</figcaption></figure>
+
 
 
 Ces lignes te feront peut-être penser à une grille… et si c’est le cas, bien vu ! C’est tout le principe du composant [Grid](https://learn.microsoft.com/fr-fr/dotnet/maui/user-interface/layouts/grid), qui comme son nom l’indique, permet de disposer des éléments sur une grille. On va l’utiliser plusieurs fois pour cette page.
@@ -71,6 +73,7 @@ Pour respecter la maquette, la première chose à faire est de diviser la page e
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/3357EDC81FBD19562B12D32BAEB06E01.png" /></p>
 <figure></figure>
+
 
 
 Tu remarqueras que la partie supérieure est légèrement plus grande que la partie inférieure. On pourrait même dire que la partie noire s’étale verticalement sur 60% de la page, ce qui laisse 40% d’espace pour le reste.
@@ -150,6 +153,7 @@ Plus exactement :
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/1CF7711467751AC78E160D00CF4DC2FE.png" /></p>
 <figure><figcaption class="image-caption">En quadrillant la zone inférieure de la page, on remarque que chaque élément visuel a bien sa case attitrée.</figcaption></figure>
+
 
 
 Définissons maintenant les lignes et colonnes qui composent notre *BottomLayout* de sorte à respecter l’alignement des éléments visuels, comme sur la maquette :
@@ -262,6 +266,7 @@ Et si tu lances l’application, tu pourras alors confirmer avec certitude que n
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/4A805DC64E4B6C30A7C0D2FB7634A00A.png" /></p>
 <figure><figcaption class="image-caption">Ça fait un peu penser aux vieilles télévisions en couleur.</figcaption></figure>
+
 
 
 Bon, il n’y a rien de fonctionnel pour l’utilisateur, mais maintenant que nos fondations sont prêtes, ça va grandement nous simplifier la vie !

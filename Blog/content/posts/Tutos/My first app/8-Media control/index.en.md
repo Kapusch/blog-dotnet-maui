@@ -35,6 +35,7 @@ To listen to music, our user needs key functions like: play a song, skip to the 
 <figure><figcaption class="image-caption">5 buttons well aligned in the same row, but they are not all the same size.</figcaption></figure>
 
 
+
 The difference with the "ENTER" button on the home page is that here, our 5 buttons represent a clickable image. To reproduce them in the app, we will use the [ImageButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/imagebutton) component.
 
 But first, you will need to add these images to the project. So start by downloading them to your computer:
@@ -46,6 +47,7 @@ Then unzip the downloaded file. You should have the following 6 images:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/34E985B3484AD166942964B5C5C0F297.png" /></p>
 <figure></figure>
+
 
 
 
@@ -85,10 +87,12 @@ Now that you have downloaded all the images, you need to import them into the pr
 <figure><figcaption class="image-caption">Remember, the Resources folder is where we store all the media (icons, images, audio and video tracks, ...)</figcaption></figure>
 
 
+
 In the pop-up menu that appears, in the *Add* section, click on the option to add files from a folder:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/88DC6EAA532E8C05110B8EDD865FD93B.png" /></p>
 <figure></figure>
+
 
 
 Then, select the folder where you have unzipped the 6 images and validate your choice. A window will appear for you to choose the files to be included in the project.
@@ -97,6 +101,7 @@ In our case, we want to import all the images in the folder. So select all the a
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/E0301006BA573EDB4426297DF9F0804B.png" /></p>
 <figure></figure>
+
 
 
 
@@ -109,6 +114,7 @@ That's it, make sure that you have the 6 new images imported into the folder!
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/E8E95C41E3BC21794611E83AFCEE3014.png" /></p>
 <figure></figure>
+
 
 
 # Discovering ImageButton
@@ -254,6 +260,7 @@ And here we go, this is really starting to take shape! 🤩
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/CF07C830D7416B7D77D17AE92D6B6191.png" /></p>
 <figure></figure>
+
 
 
 You did really well, keep it up! By the way, we still have the music volume control to reproduce in the app, and that's the topic of <a href="../9-volume-tracker/">the next chapter</a>!

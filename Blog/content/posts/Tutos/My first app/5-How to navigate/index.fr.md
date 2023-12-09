@@ -39,6 +39,7 @@ Commençons déjà par ajouter notre nouvelle page. Pour cela, fais un clic droi
 <figure></figure>
 
 
+
 Comme tu l’auras remarqué, le template utilisé pour créer la page nous fournit un contenu par défaut. Il n’y a donc plus qu’à naviguer vers cette nouvelle page !
 
 Pour cela, rends-toi dans le fichier `HomeViewModel.cs` et modifie la méthode *Enter()* de la façon suivante :
@@ -69,6 +70,7 @@ En fait, lorsqu’on fait appel à la méthode *PushAsync()*, on ajoute la page 
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/A38FD30931BAD3B0951CD06DB00B76AF.png" /></p>
 <figure><figcaption class="image-caption">Comme avec un paquet de cartes à jouer, il n’y a que celle du dessus qui est visible.</figcaption></figure>
+
 
 
 
@@ -105,6 +107,7 @@ Voilà c’est bon, relance l’application et clique sur le bouton *Enter* !
 <figure></figure>
 
 
+
 # Supprimer l’en-tête de navigation
 Comme tu l’auras sûrement compris, notre page d’accueil est désormais contenue dans une page spécialement configurée pour la navigation. Elle contient donc par défaut une en-tête de navigation :
 
@@ -112,6 +115,7 @@ Comme tu l’auras sûrement compris, notre page d’accueil est désormais cont
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/7CE7D982576D6C816B7FB8B2FEA3E3DE.png" /></p>
 <figure></figure>
+
 
 
 D’un point de vue design, ce n’est pas nécessairement ce que l’on souhaite. Voyons donc rapidement comment supprimer cette en-tête pour la page d’accueil. Rends-toi dans le fichier `HomeView.cs` et invoque la méthode *SetHasNavigationBar()* dans le constructeur de la page, comme ceci:
@@ -137,6 +141,7 @@ Et maintenant, si tu relances l’app, c’est quand même plus joli !
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/A96C6D782228A9E3BE3C98765E553224.gif" /></p>
 <figure></figure>
+
 
 
 L’application commence à prendre forme tout doucement, et d’autant plus avec <a href="../6-scaffolding/">le prochain chapitre</a> ! On se revoit très bientôt pour l’élaboration de notre page principale.

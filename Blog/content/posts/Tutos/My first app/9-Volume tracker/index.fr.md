@@ -33,6 +33,7 @@ Allez, reprenons donc la maquette, voici ce que l’on devra reproduire dans l�
 <figure><figcaption class="image-caption">Cette fois-ci, il n’y a que deux contrôles, ça devrait être rapide !</figcaption></figure>
 
 
+
 Comme tu peux le constater, ce n’est rien d’autre qu’un bouton pour couper le son et une barre de contrôle du volume sonore. Ça ne devrait pas être très long, commence par télécharger les différentes images utilisées pour afficher l’état du volume.
 
 {{< link href="./files/Volume_Tracker_-_Images.zip" content="Volume_Tracker_-_Images.zip" title="Download Volume_Tracker_-_Images.zip" download="Volume_Tracker_-_Images.zip" card=true >}}
@@ -42,6 +43,7 @@ En décompressant ce fichier, tu verras 4 nouvelles images:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/DFCBF9B9A8ED6AF38BAF88D44173DDC5.png" /></p>
 <figure></figure>
+
 
 
 Ici, on a donc une image pour chaque niveau de volume : quand il est très fort, moyen ou très bas. D’ailleurs, il y en a même une pour quand le son sera coupé.
@@ -104,6 +106,7 @@ Allez, il est temps de relancer l’appli ! Voyons ce que ça donne :
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/95ED07324970D4FEC2A5D31123235A0E.png" /></p>
 <figure><figcaption class="image-caption">Vu comme ça, on dirait presque que l’application est terminée…</figcaption></figure>
+
 # Changer d’image quand le son est coupé 
 Ça devient plus facile avec tout cet entraînement, tu commences à prendre le coup de main ? 🙂
 
@@ -185,12 +188,14 @@ Or, si tu supprimes le “d” et que tu passes ta souris au-dessus du “0”, 
 <figure><figcaption class="image-caption">Visual Studio est clair sur ce point, “0” est bien un entier !</figcaption></figure>
 
 
+
 Et comme la propriété *Value* de notre déclencheur est de type *object*, elle accepte potentiellement n’importe quel type de valeur. On doit donc explicitement lui indiquer comment considérer ce “0” : comme un double !
 
 On doit rajouter le “d” juste après :
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/0FF24A82013D712E9802FD0EC7B36459.png" /></p>
 <figure><figcaption class="image-caption">À présent, “0” est bien un double ! Visual Studio n’y a vu que du feu. </figcaption></figure>
+
 
 
 Il ne reste alors plus qu’à rattacher ce déclencheur à notre composant `MuteButton`. D’ailleurs, comme il sera sujet à des configurations supplémentaires, on va isoler son initialisation dans une méthode `InitMuteButton()`. Cela permettra de garder notre code clair :
@@ -220,6 +225,7 @@ Et voilà ! Essaye maintenant de glisser la valeur du *Slider* tout à gauche :
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/BCB67B0FEC9CA2F48F279C8D4F3D7833.gif" /></p>
 <figure><figcaption class="image-caption">L’icône du son coupé apparaît aussitôt que le curseur est déplacé tout à gauche.</figcaption></figure>
+
 
 
 # Un bouton dans tous ses états !
@@ -423,6 +429,7 @@ Voilà, c’est terminé ! Vas-y réessaye de lancer l’appli !
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/3F5214F1B4F8993413197495B7280FF7.gif" /></p>
 <figure><figcaption class="image-caption">Magie, magie ! L’image du bouton change en fonction de la position du curseur.</figcaption></figure>
+
 
 
 L’application commence sérieusement à prendre forme, j’espère que tu es fier·ère de toi !

@@ -93,10 +93,12 @@ Commençons par créer un fichier qui servira de **ViewModel** pour notre `HomeV
 <figure></figure>
 
 
+
 Ce sera une nouvelle classe vide appelée `HomeViewModel.cs` :
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/882B0A5F6566F3663600300CD7ADCD68.png" /></p>
 <figure></figure>
+
 
 
 Ensuite, remplace son contenu par le suivant:
@@ -145,10 +147,12 @@ Cette librairie a déjà été ajoutée au projet et tu peux le vérifier facile
 <figure></figure>
 
 
+
 Et voilà la librairie en question ! Elle s’appelle *CommunityToolkit.Mvvm* :
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/1B8394B94F3463AE709C4009855A5924.png" /></p>
 <figure></figure>
+
 
 
 
@@ -254,6 +258,7 @@ Et voilà le travail !
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/9CC6994A747DC1C4EB08533A14CF2067.gif" /></p>
 <figure></figure>
+
 
 
 

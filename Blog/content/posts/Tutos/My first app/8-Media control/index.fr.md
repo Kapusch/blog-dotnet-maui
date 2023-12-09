@@ -35,6 +35,7 @@ Pour écouter de la musique, notre utilisateur a besoin de fonctions clés comme
 <figure><figcaption class="image-caption">5 boutons bien alignés sur la même rangée, mais ils n’ont pas tous la même taille.</figcaption></figure>
 
 
+
 La différence avec le bouton “ENTER” de la page d’accueil, c’est qu’ici, nos 5 boutons représentent une image cliquable. Pour les reproduire dans l’app, on fera donc appel au composant [ImageButton](https://learn.microsoft.com/fr-fr/dotnet/maui/user-interface/controls/imagebutton).
 
 Mais tout d’abord, il faudra ajouter ces fameuses images au projet. Commence donc par les télécharger sur ton ordinateur :
@@ -46,6 +47,7 @@ Puis décompresse le fichier obtenu. Tu devrais avoir les 6 images suivantes :
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/34E985B3484AD166942964B5C5C0F297.png" /></p>
 <figure></figure>
+
 
 
 
@@ -85,10 +87,12 @@ Maintenant que tu as téléchargé toutes les images, tu dois les importer dans 
 <figure><figcaption class="image-caption">Rappelle-toi, c’est dans le dossier Resources qu’on stocke tous les médias (icônes, images, pistes audio et vidéo, …)</figcaption></figure>
 
 
+
 Dans le menu contextuel qui s’affiche, dans la section *Ajouter*, clique sur l’option pour ajouter des fichiers depuis un dossier :
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/88DC6EAA532E8C05110B8EDD865FD93B.png" /></p>
 <figure></figure>
+
 
 
 Puis, sélectionne le dossier où tu as décompressé les 6 images et valide ton choix. Une fenêtre apparaît alors pour choisir les fichiers à inclure dans le projet.
@@ -97,6 +101,7 @@ Dans notre cas, on veut importer toutes les images du dossier. Sélectionne donc
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/E0301006BA573EDB4426297DF9F0804B.png" /></p>
 <figure></figure>
+
 
 
 
@@ -109,6 +114,7 @@ Voilà c’est terminé, vérifie que tu as bien les 6 nouvelles images importé
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/E8E95C41E3BC21794611E83AFCEE3014.png" /></p>
 <figure></figure>
+
 
 
 # Découverte des ImageButton
@@ -254,6 +260,7 @@ Et hop, ça y est, ça commence vraiment à prendre forme ! 🤩
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/CF07C830D7416B7D77D17AE92D6B6191.png" /></p>
 <figure></figure>
+
 
 
 Tu t’en es vraiment bien sorti, continue comme ça ! D’ailleurs, il nous reste encore la gestion du volume de la musique à reproduire dans l’app, et c’est justement l’objet du <a href="../9-volume-tracker/">prochain chapitre</a> !

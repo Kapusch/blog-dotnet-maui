@@ -36,10 +36,12 @@ D’après la [documentation](https://learn.microsoft.com/fr-fr/dotnet/community
 <figure></figure>
 
 
+
 Une fois trouvée, ajoute-la au projet en acceptant toutes les licences associées:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/E99C2364767ABBFA91D00D88D3EEAEEE.png" /></p>
 <figure></figure>
+
 
 
 
@@ -232,7 +234,8 @@ public class MusicPlayerView : ContentPage
 	}
 	...
 	#region Media Control Panel
-	...
+	... 
+	// Le signe “=>” a été remplacé par “=”
 	ImageButton PlayButton = new ImageButton
 	{
 		CornerRadius = 50,
@@ -311,6 +314,7 @@ Voilà, c’est tout pour ce chapitre. Recompile le projet et mets en pause la m
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/96DBF61EF00CCED6F97B6937F1B5B0F5.gif" /></p>
 <figure><figcaption class="image-caption">Le morceau est joué dès que la page du lecteur de musique apparaît, puis on peut stopper la lecture avec le bouton pause.</figcaption></figure>
+
 
 
 Quel plaisir de pouvoir interagir avec notre app, n’est-ce pas ? Personnellement, c’est la partie que je préfère dans le développement d’une application !

@@ -229,10 +229,12 @@ Well, it's true, the display is a bit jumpy!
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/22C49091C491C43AE81103F1197859CE.gif" /></p>
 <figure></figure>
+
 We can play around with coloring the *Labels* background to get a better idea of the situation:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/F4D5A7231779E8E2EE06E4736EF91D43.gif" /></p>
 <figure><figcaption class="image-caption">By playing with the colors, you can see that the Label changes size each time its text is updated.</figcaption></figure>
+
 As the song progresses, the text is updated every second and a new value replaces the old one. But it looks like some values require more space than others! 😄
 
 
@@ -309,6 +311,7 @@ And here is the outcome:
 <p align="center"><img max-width="100%" max-height="100%" src="./images/F5988C68A92AF7AC7F41464B2AF8BB08.gif" /></p>
 <figure><figcaption class="image-caption">The original design has been respected, and the jerkiness has disappeared!</figcaption></figure>
 
+
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Perfect! But I can't move forward or backward in the song... another bug with the *Slider*?
 {{< /admonition >}}
@@ -353,6 +356,7 @@ We could have used as well the commands provided by the *Slider* and worked from
 {{< /admonition >}}
 <p align="center"><img max-width="100%" max-height="100%" src="./images/734ED6F369BC98755C04A81669DBC22A.png" /></p>
 <figure></figure>
+
 Now define these new events in their dedicated region with the following code:
 
 <p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
@@ -419,9 +423,10 @@ Relaunch the project and make sure you can move forward or backward in the piece
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/B3744B2F4976B3ADEB7CF5C498642C70.gif" /></p>
 <figure><figcaption class="image-caption">Hop, I just moved to the start of the track!</figcaption></figure>
+
 You have just finished implementing a great feature for the user, well done!
 
-Next time, we will see how to implement the volume management. See you soon!
+<a href="../12-binding-volume-control/">Next time</a>, we will see how to implement the volume management. See you soon!
 
 ___
 More articles in the series:

@@ -39,6 +39,7 @@ Let's start by adding our new page. To do this, right click on the *Views* folde
 <figure></figure>
 
 
+
 As you will have noticed, the template used to create the page provides us with a default content. So all we have to do now is navigating to this new page!
 
 To do so, go to the file `HomeViewModel.cs` and modify the method *Enter()* as follows:
@@ -69,6 +70,7 @@ Actually, when the method *PushAsync()* is called, the page *MusicPlayerView* is
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/A38FD30931BAD3B0951CD06DB00B76AF.png" /></p>
 <figure><figcaption class="image-caption">As with a deck of playing cards, only the top one is visible.</figcaption></figure>
+
 
 
 
@@ -105,6 +107,7 @@ That's it, restart the application and click on the *Enter* button!
 <figure></figure>
 
 
+
 # Remove the navigation bar
 As you will surely have understood, our home page is now contained in a page specially configured for navigation. It therefore contains a navigation bar by default:
 
@@ -112,6 +115,7 @@ As you will surely have understood, our home page is now contained in a page spe
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/7CE7D982576D6C816B7FB8B2FEA3E3DE.png" /></p>
 <figure></figure>
+
 
 
 From a design point of view, this is not necessarily what you want. So let's take a quick look at how to remove this header for the home page. Go to the file `HomeView.cs` and invoke the method *SetHasNavigationBar()* in the page constructor, like this:
@@ -137,6 +141,7 @@ And now restarting the app, it’s a lot nicer!
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/A96C6D782228A9E3BE3C98765E553224.gif" /></p>
 <figure></figure>
+
 
 
 The application is slowly coming alive, and even more so with <a href="../6-scaffolding/">the next chapter</a>! See you soon for the construction of our main page.

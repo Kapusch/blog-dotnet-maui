@@ -42,10 +42,12 @@ Come on, it's time to get the application running! So choose the platform you wa
 <figure></figure>
 
 
+
 First, you will see your project compiling with the chosen configuration (this is the build stage):
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/C02BA696FE457042E46B611AC7B6653C.png" /></p>
 <figure><figcaption class="image-caption">The current status of the project can easily be viewed at the bottom left of Visual Studio for Mac.</figcaption></figure>
+
 
 
 Then your application will automatically be deployed to the chosen platform (here, a simulated iPhone 13, iOS 15.5).
@@ -54,10 +56,12 @@ Then your application will automatically be deployed to the chosen platform (her
 <figure></figure>
 
 
+
 And here's the result!
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/4DFB7678FB4CCC0E102C886277A46E7B.png" /></p>
 <figure></figure>
+
 
 
 

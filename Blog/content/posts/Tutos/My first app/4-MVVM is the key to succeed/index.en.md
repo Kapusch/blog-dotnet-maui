@@ -92,10 +92,12 @@ Let's start by creating a file to be the **ViewModel** for our `HomeView`. To do
 <figure></figure>
 
 
+
 This will be an empty class named `HomeViewModel.cs` :
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/882B0A5F6566F3663600300CD7ADCD68.png" /></p>
 <figure></figure>
+
 
 
 Then, replace its content with the following one:
@@ -144,10 +146,12 @@ This library has already been added to the project and you can easily verify thi
 <figure></figure>
 
 
+
 And here is the library! It is called *CommunityToolkit.Mvvm*:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/1B8394B94F3463AE709C4009855A5924.png" /></p>
 <figure></figure>
+
 
 
 
@@ -253,6 +257,7 @@ And there you have it!
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/82F21A70DF6030916D89661BBA735042.gif" /></p>
 <figure></figure>
+
 
 
 

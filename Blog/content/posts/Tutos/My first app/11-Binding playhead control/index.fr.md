@@ -20,7 +20,7 @@ draft: false
 
 
 {{< admonition type=info title="‎ " open=true >}}
-Afin d’assurer le bon déroulement de cet article, je t’invite à repartir <a href="../10-play-music/">depuis ce chapitre</a> où l’on a configuré le *MediaElement*.
+Afin d’assurer le bon déroulement de cet article, je t’invite à repartir depuis <a href="../10-play-music/">ce chapitre</a> où l’on a configuré le *MediaElement*.
 {{< /admonition >}}
 Dans l’article précédent, on avait découvert le *[MediaElement](https://learn.microsoft.com/fr-fr/dotnet/communitytoolkit/maui/views/mediaelement)* pour lire des fichiers audio, mais avec l’aide de nos propres contrôles. Tu te rappelles des *Sliders* qu’on avait mis en place ? Ils sont cools mais ils ne servent à rien ! 😄
 
@@ -54,7 +54,7 @@ public partial class MusicPlayerViewModel : ObservableObject
 {{< admonition type=tip title="‎ " open=true >}}
 Si déchiffrer ce bout de code est difficile pour toi, alors ne te décourage pas et prends le temps de relire le <a href="../4-mvvm-is-the-key-to-succeed/">chapitre sur le MVVM</a>.
 {{< /admonition >}}
-Évidemment, ce **ViewModel** ne fait rien pour le moment, mais il est prêt à être associé à sa **View**. Ouvre donc le fichier `MusicPlayerView.cs` et modifie-le comme suit:
+Évidemment, ce **ViewModel** ne fait rien pour le moment, mais il est prêt à être associé à sa **View**. Ouvre donc le fichier `MusicPlayerView.cs` et modifie-le comme suit :
 
 <p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>MusicPlayerView.cs</code></p>
 
@@ -85,7 +85,7 @@ Comme pour le *HomeViewModel* que l’on avait associé avec la *HomeView*, on a
 Bon, c’était rapide. Voyons maintenant comment déplacer concrètement la tête de lecture !
 
 # Binding des composants
-Si tu te rappelles bien, dans le <a href="../7-time-tracker/">chapitre sur le temps d’écoute</a>, nous avions introduit 3 composants :
+Si tu te rappelles bien, dans le <a href="../7-time-tracker/">chapitre sur l’affichage du temps d’écoute</a>, nous avions introduit 3 composants :
 
 * `ElapsedTime` qui est un *Label* pour afficher le temps écoulé de lecture,
 
@@ -201,7 +201,7 @@ Label TotalTime = new Label // Le signe “=>” a été remplacé par “=”
 }.TextCenter();
 #endregion
 ```
-Enfin, la méthode d’initialisation de ces composants devra être appelée depuis le constructeur de la page:
+Enfin, la méthode d’initialisation de ces composants devra être appelée depuis le constructeur de la page :
 
 <p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>MusicPlayerView.cs</code></p>
 
@@ -231,10 +231,12 @@ Bon, c’est vrai, l’affichage est un peu saccadé !
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/22C49091C491C43AE81103F1197859CE.gif" /></p>
 <figure></figure>
+
 On peut s’amuser à colorer l’arrière-plan de nos *Labels* pour mieux se rendre compte de ce qu’il se passe :
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/F4D5A7231779E8E2EE06E4736EF91D43.gif" /></p>
 <figure><figcaption class="image-caption">En jouant avec les couleurs, on voit bien que le Label change de taille à chaque mise à jour de son texte.</figcaption></figure>
+
 Quand la lecture de la chanson progresse, le texte est actualisé à chaque seconde et une nouvelle valeur remplace l’ancienne. Seulement, on dirait que certaines valeurs nécessitent plus d’espace que d’autres ! 😄
 
 
@@ -311,6 +313,7 @@ Et voilà le travail :
 <p align="center"><img max-width="100%" max-height="100%" src="./images/F5988C68A92AF7AC7F41464B2AF8BB08.gif" /></p>
 <figure><figcaption class="image-caption">Le design initial est respecté, et les saccades ont disparu !</figcaption></figure>
 
+
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Parfait ! Mais je n’arrive pas à avancer, ni à reculer dans le morceau… là aussi, c’est un bug avec le *Slider* ?
 {{< /admonition >}}
@@ -355,6 +358,7 @@ On aurait pu tout aussi bien utiliser les commandes fournies par le *Slider* et 
 {{< /admonition >}}
 <p align="center"><img max-width="100%" max-height="100%" src="./images/734ED6F369BC98755C04A81669DBC22A.png" /></p>
 <figure></figure>
+
 Maintenant, définis ces nouveaux évènements dans la région des *Events* avec le code suivant :
 
 <p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>MusicPlayerView.cs</code></p>
@@ -423,9 +427,10 @@ Relance le projet et vérifie que tu peux avancer ou reculer dans le morceau !
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/B3744B2F4976B3ADEB7CF5C498642C70.gif" /></p>
 <figure><figcaption class="image-caption">Et hop, je reviens au tout début du morceau !</figcaption></figure>
+
 Tu viens de terminer l’implémentation d’une belle fonctionnalité pour l’utilisateur, bravo !
 
-La prochaine fois, nous verrons comment implémenter la gestion du volume. À très vite !
+<a href="../12-binding-volume-control/">La prochaine fois</a>, nous verrons comment implémenter la gestion du volume. À très vite !
 
 ___
 Plus d'articles dans la même série:

@@ -31,6 +31,7 @@ Let's start with the part dedicated to the timing of the song. According to the 
 <figure><figcaption class="image-caption">The application shows that the song has been playing for 36 seconds and is 2 minutes and 57 seconds long.</figcaption></figure>
 
 
+
 To reproduce it in the application, we will use the [Label](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/label) component which allows to display some text on the screen:
 
 <p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
@@ -88,6 +89,7 @@ A *Slider* is a control with a cursor that allows the user to select a specific 
 
 
 
+
 {{< admonition type=comment title="‎ " open=true >}}
 🐒‎ ‎ Oh yes, I see, we are actually at 20% of the song! So we will have a pink bar from 0 to 20, and a black bar from 20 to 100.
 {{< /admonition >}}
@@ -122,6 +124,7 @@ At first glance, it looks pretty good! However, if you start the application, yo
 <figure><figcaption class="image-caption">Positioned this way, the Slider does not look good.</figcaption></figure>
 
 
+
 Don't panic! We will see right away how to readjust it.
 
 # Better use of the Grid
@@ -129,6 +132,7 @@ If you remember, we initially divided the *BottomLayout* into 7 columns. However
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/2822BA46A84A307DD610D66916169DF5.png" /></p>
 <figure><figcaption class="image-caption">The Slider overlaps with boxes n°3, n°4 and n°5.</figcaption></figure>
+
 
 
 To do this, we use the *ColumnSpan()* method to ask the *Slider* to expand up to 3 columns from the cell n°3:
@@ -144,6 +148,7 @@ Now we're really done! Let's run the application again to see what it looks like
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/2907217A274375D0ED0A93A0EEB41D9F.png" /></p>
 <figure></figure>
+
 
 
 Well, that's true, it's nice but it doesn't do much! But we'll finish the visual part first before moving on to a more functional part of the application.

@@ -67,6 +67,7 @@ Let's move on to the installation of the working environment:
 
 
 
+
 {{< admonition type=info title="‎ " open=true >}}
 Before you go further, if you are on MacOS, make sure you have [downloaded the latest version of Xcode](https://developer.apple.com/xcode/) which is required for the iPhone simulator. This is usually long to install, so I suggest you do it while reading.
 {{< /admonition >}}
@@ -75,10 +76,12 @@ Once you have unzipped the downloaded file, go to the Samples folder associated 
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/B33D3B1E775ECE6D8A9EC8F8A6E1F4B5.png" /></p>
 <figure></figure>
+
 For now, open the first folder (*0 - Get Started)* and double click on `NightClub.sln` to open the NightClub project in Visual Studio.
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/D9933119C293F4DC96A394EB54E5C5C9.png" /></p>
 <figure><figcaption class="image-caption">The NightClub project structure from Visual Studio.</figcaption></figure>
+
 
 
 

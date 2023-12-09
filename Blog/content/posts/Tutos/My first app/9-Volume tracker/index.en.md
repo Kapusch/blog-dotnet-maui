@@ -33,6 +33,7 @@ Let's go back to the mock-up, here is what we will have to reproduce in the app:
 <figure><figcaption class="image-caption">It should be quick this time, there are only two controls!</figcaption></figure>
 
 
+
 As you can see, it's nothing more than a mute button and a volume control bar. It shouldn't take long, just start by downloading the different images used to display the volume status.
 
 {{< link href="./files/Volume_Tracker_-_Images.zip" content="Volume_Tracker_-_Images.zip" title="Download Volume_Tracker_-_Images.zip" download="Volume_Tracker_-_Images.zip" card=true >}}
@@ -42,6 +43,7 @@ After you unzipped this file, you will see 4 new images:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/DFCBF9B9A8ED6AF38BAF88D44173DDC5.png" /></p>
 <figure></figure>
+
 
 
 Here, we have an image for each volume level: when it is very loud, medium or very low. Moreover, there is even one for when the sound will be muted.
@@ -104,6 +106,7 @@ Come on, it's time to relaunch the app! Let's see what it looks like:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/95ED07324970D4FEC2A5D31123235A0E.png" /></p>
 <figure><figcaption class="image-caption">The way it looks now, it almost seems like the mobile app is complete…</figcaption></figure>
+
 # Switching images when the sound is muted
 It's getting easier with all this training, are you starting to get the hang of it? 🙂
 
@@ -185,12 +188,14 @@ However, if you remove the “d” and move your mouse over the “0”, you wil
 <figure><figcaption class="image-caption">Visual Studio is very clear on this question, “0” is an integer!</figcaption></figure>
 
 
+
 And as the *Value* property of our trigger is of type *object*, it potentially accepts any type of value. We must therefore explicitly tell it how to consider this “0”: as a double!
 
 So the “d” must be added just after:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/0FF24A82013D712E9802FD0EC7B36459.png" /></p>
 <figure><figcaption class="image-caption">Now “0” is a double! Visual Studio did not notice a thing.</figcaption></figure>
+
 
 
 All that remains is attaching this trigger to our `MuteButton` component. Moreover, as it will be subject to additional configurations, we will isolate its initialization in an `InitMuteButton()` method. This will keep our code clear:
@@ -220,6 +225,7 @@ That's it! Now try dragging the value of the *Slider* to the far left:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/BCB67B0FEC9CA2F48F279C8D4F3D7833.gif" /></p>
 <figure><figcaption class="image-caption">The muted icon appears as soon as the cursor is moved to the far left.</figcaption></figure>
+
 
 
 # A button in all its forms!
@@ -423,6 +429,7 @@ That's it! Go ahead and try the app again!
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/3F5214F1B4F8993413197495B7280FF7.gif" /></p>
 <figure><figcaption class="image-caption">It’s magic! The image of the button live changes according to the position of the cursor.</figcaption></figure>
+
 
 
 The mobile app is seriously starting to take shape, be proud of yourself!

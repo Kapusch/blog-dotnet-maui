@@ -36,10 +36,12 @@ According to the [documentation](https://learn.microsoft.com/en-us/dotnet/commun
 <figure></figure>
 
 
+
 Once you found it, add it to the project and accept all associated licenses:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/E99C2364767ABBFA91D00D88D3EEAEEE.png" /></p>
 <figure></figure>
+
 
 
 
@@ -233,6 +235,7 @@ public class MusicPlayerView : ContentPage
 	...
 	#region Media Control Panel
 	...
+	// The “=>” sign has been replaced with “=”
 	ImageButton PlayButton = new ImageButton
 	{
 		CornerRadius = 50,
@@ -311,6 +314,7 @@ That's all for this chapter. Rebuild the project and turn off the music with the
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/96DBF61EF00CCED6F97B6937F1B5B0F5.gif" /></p>
 <figure><figcaption class="image-caption">Music plays as soon as the music player page appears, and then you can turn the music off with the pause button.</figcaption></figure>
+
 
 
 Isn't it great to be able to interact with our app? Personally, that's my favorite part of mobile app development!

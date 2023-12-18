@@ -241,7 +241,7 @@ Fonctionnellement, voici ce que l’on aimerait mettre en place :
 
 
 
-Pour tous ces cas-là, le déclencheur ne dépend plus d’une seule valeur bien précise, mais plutôt de toute une plage de valeurs. On va donc faire appel à un nouveau déclencheur spécifique, le [MultiTrigger](https://learn.microsoft.com/fr-fr/dotnet/maui/fundamentals/triggers?view=net-maui-7.0#multi-triggers). C’est le même principe que pour le *DataTrigger*, à la différence que le *MultiTrigger* dépendra du résultat de plusieurs conditions. Je vais t’expliquer juste après.
+Pour tous ces cas-là, le déclencheur ne dépend plus d’une seule valeur bien précise, mais plutôt de toute une plage de valeurs. On va donc faire appel à un nouveau déclencheur spécifique, le [MultiTrigger](https://learn.microsoft.com/fr-fr/dotnet/maui/fundamentals/triggers#multi-triggers). C’est le même principe que pour le *DataTrigger*, à la différence que le *MultiTrigger* dépendra du résultat de plusieurs conditions. Je vais t’expliquer juste après.
 
 
 

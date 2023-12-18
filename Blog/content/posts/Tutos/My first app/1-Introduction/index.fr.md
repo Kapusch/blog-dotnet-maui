@@ -25,7 +25,7 @@ Salut les Dev·e·s ! 🤓
 
 Moi c'est J-E, ou Jean-Emmanuel si tu préfères, et je suis ravi de te savoir en train de me lire ! 😊
 
-En effet, j’avais à cœur de partager ma passion pour le développement d’applications mobiles cross-platforms, et tout particulièrement avec [.NET MAUI](https://learn.microsoft.com/fr-fr/dotnet/maui/what-is-maui?view=net-maui-7.0) (à prononcer "dote-net maoui").
+En effet, j’avais à cœur de partager ma passion pour le développement d’applications mobiles cross-platforms, et tout particulièrement avec [.NET MAUI](https://learn.microsoft.com/fr-fr/dotnet/maui/what-is-maui) (à prononcer "dote-net maoui").
 
 Avec ce blog, je veux pouvoir aider tout développeur débutant à se lancer dans son projet d’application mobile au travers de cours très simples. Pas de cours théoriques à rallonge, ici tu vas vite t’amuser et produire des apps sympas ! Et je t’accompagnerai du développement jusqu’à la mise en ligne de ton application sur les stores.
 

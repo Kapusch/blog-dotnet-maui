@@ -56,9 +56,9 @@ Let's move on to the installation of the working environment:
 
 1. Then comes the time to install Visual Studio and its development environment for .NET MAUI. In order to improve the reading of this blog, I suggest you directly follow the installation steps on the official website:
 
-    1. [follow the installation steps for Windows](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin#installation-1),
+    1. [follow the installation steps for Windows](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=vswin#installation-1)
 
-    1. [follow the installation steps for MacOS](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vsmac#installation-2),
+    1. [follow the installation steps for MacOS](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=vsmac#installation-2) (since release of .NET 8 SDK, there might be one more step detailed [here](https://developercommunity.visualstudio.com/t/Net-8-not-working-on-VS-for-mac/10516623#T-N10517725))
 
 1. Finally, download my class from GitHub. To do this, go to the [blog's code repository](https://github.com/Kapusch/blog-dotnet-maui), click on the "Code" button and download the ZIP version.
 
@@ -106,7 +106,7 @@ Actually, it already is! The project you just opened is brand new, but it includ
 
 
 {{< admonition type=tip title="‎ " open=true >}}
-Going further with the [basic structure of a Visual Studio project](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/single-project?view=net-maui-7.0)
+Going further with the [basic structure of a Visual Studio project](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/single-project)
 {{< /admonition >}}
 And that's it, how about if we <a href="../3-first-run-of-the-project/">launch that app</a> ? 🙂
 

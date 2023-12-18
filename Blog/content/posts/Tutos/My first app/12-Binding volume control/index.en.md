@@ -258,28 +258,28 @@ And that is only possible when the cursor is moved over the *Slider*... So let�
 
 ```csharp
 #region Events
-		...
-		void VolumeTracker_DragCompleted(object sender, EventArgs e)
+	...
+	void VolumeTracker_DragCompleted(object sender, EventArgs e)
+	{
+	// WARN: always update the control that is source of the event
+	// through the sender object to not introduce any conflict updates
+		if (sender is Slider volumeTrackerControl)
 		{
-        // WARN: always update the control that is source of the event
-        // through the sender object to not introduce any conflict updates
-		    if (sender is Slider volumeTrackerControl)
-		    {
-		        if (volumeTrackerControl.Value == 0)
-		        {
-		            // To improve the user experience, we must always turn
-		            // back the volume to a positive level when he unmutes
-		            savedVolumeBeforeGoingMute = 0.2;
-		            MusicPlayer.ShouldMute = true;
-		        }
-		        else if(MusicPlayer.ShouldMute)
-		        {
-		            // User can unmute after having moved the cursor
-		            // to a positive value
-		            MusicPlayer.ShouldMute = false;
-		        }
-		    }
+			if (volumeTrackerControl.Value == 0)
+			{
+				// To improve the user experience, we must always turn
+				// back the volume to a positive level when he unmutes
+				savedVolumeBeforeGoingMute = 0.2;
+				MusicPlayer.ShouldMute = true;
+			}
+			else if(MusicPlayer.ShouldMute)
+			{
+				// User can unmute after having moved the cursor
+				// to a positive value
+				MusicPlayer.ShouldMute = false;
+			}
 		}
+	}
 #endregion
 ```
 And of course, don't forget to initialize this event from the right method …
@@ -288,12 +288,12 @@ And of course, don't forget to initialize this event from the right method …
 
 ```csharp
 #region Volume Tracker
+	...
+	void InitVolumeTracker()
+	{
+		VolumeTracker.DragCompleted += VolumeTracker_DragCompleted;
 		...
-		void InitVolumeTracker()
-		{
-		    VolumeTracker.DragCompleted += VolumeTracker_DragCompleted;
-			...
-		}
+	}
 #endregion
 ```
 Relaunch the project, check that everything is working, and above all, enjoy the results of your efforts!

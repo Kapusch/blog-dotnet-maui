@@ -37,7 +37,7 @@ D’après la [documentation](https://learn.microsoft.com/fr-fr/dotnet/community
 
 
 
-Une fois trouvée, ajoute-la au projet en acceptant toutes les licences associées:
+Une fois trouvée, ajoute la version la plus récente au projet et accepte toutes les licences associées :
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/E99C2364767ABBFA91D00D88D3EEAEEE.png" /></p>
 <figure></figure>

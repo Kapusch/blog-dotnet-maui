@@ -258,28 +258,28 @@ Et ça, ce n’est possible qu’avec le déplacement du curseur sur le *Slider*
 
 ```csharp
 #region Events
-		...
-		void VolumeTracker_DragCompleted(object sender, EventArgs e)
+	...
+	void VolumeTracker_DragCompleted(object sender, EventArgs e)
+	{
+	// Il est recommandé de toujours se référer à l'objet qui est
+	// la source de l'évènement à travers le paramètre "sender"
+		if (sender is Slider volumeTrackerControl)
 		{
-        // Il est recommandé de toujours se référer à l'objet qui est
-        // la source de l'évènement à travers le paramètre "sender"
-		    if (sender is Slider volumeTrackerControl)
-		    {
-		        if (volumeTrackerControl.Value == 0)
-		        {
-		            // Le volume sonore doit toujours être suffisamment
-		            // élevé quand le son est réactivé
-		            savedVolumeBeforeGoingMute = 0.2;
-		            MusicPlayer.ShouldMute = true;
-		        }
-		        else if(MusicPlayer.ShouldMute)
-		        {
-		            // On doit réactiver le son quand le curseur
-		            // définit une valeur strictement positive
-		            MusicPlayer.ShouldMute = false;
-		        }
-		    }
+			if (volumeTrackerControl.Value == 0)
+			{
+				// Le volume sonore doit toujours être suffisamment
+				// élevé quand le son est réactivé
+				savedVolumeBeforeGoingMute = 0.2;
+				MusicPlayer.ShouldMute = true;
+			}
+			else if(MusicPlayer.ShouldMute)
+			{
+				// On doit réactiver le son quand le curseur
+				// définit une valeur strictement positive
+				MusicPlayer.ShouldMute = false;
+			}
 		}
+	}
 #endregion
 ```
 Et bien sûr, on n’oublie pas d’initialiser cet évènement depuis la bonne méthode…
@@ -288,12 +288,12 @@ Et bien sûr, on n’oublie pas d’initialiser cet évènement depuis la bonne 
 
 ```csharp
 #region Volume Tracker
+	...
+	void InitVolumeTracker()
+	{
+		VolumeTracker.DragCompleted += VolumeTracker_DragCompleted;
 		...
-		void InitVolumeTracker()
-		{
-		    VolumeTracker.DragCompleted += VolumeTracker_DragCompleted;
-			...
-		}
+	}
 #endregion
 ```
 Relance le projet, vérifie que tout fonctionne, et surtout, profite du résultat de tes efforts !

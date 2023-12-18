@@ -37,7 +37,7 @@ According to the [documentation](https://learn.microsoft.com/en-us/dotnet/commun
 
 
 
-Once you found it, add it to the project and accept all associated licenses:
+Once you found it, add the latest version to the project and accept all associated licenses:
 
 <p align="center"><img max-width="100%" max-height="100%" src="./images/E99C2364767ABBFA91D00D88D3EEAEEE.png" /></p>
 <figure></figure>

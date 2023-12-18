@@ -241,7 +241,7 @@ Functionally, here is what we would like to put in place:
 
 
 
-For all these cases, the trigger no longer depends on a single specific value, but rather on a whole range of values. We will therefore call upon a new specific trigger, the [MultiTrigger](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/triggers?view=net-maui-7.0#multi-triggers). It’s the same principle as for the *DataTrigger*, with the difference that the *MultiTrigger* will instead depend on the result of several conditions. I'll explain it right after.
+For all these cases, the trigger no longer depends on a single specific value, but rather on a whole range of values. We will therefore call upon a new specific trigger, the [MultiTrigger](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/triggers#multi-triggers). It’s the same principle as for the *DataTrigger*, with the difference that the *MultiTrigger* will instead depend on the result of several conditions. I'll explain it right after.
 
 
 

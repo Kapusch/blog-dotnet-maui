@@ -209,7 +209,7 @@ async Task Enter()
 ```
 
 
-Avec seulement un mot, on a désormais une commande *Enter()* qui supporte la technique du Data Binding ! Et ce uniquement grâce à la librairie *MVVM Toolkit* qui s’occupe de générer tout le code source nécessaire.
+Avec seulement un mot, on a désormais une commande *Enter()* qui supporte la technique du **Data Binding** ! Et ce uniquement grâce à la librairie *MVVM Toolkit* qui s’occupe de générer tout le code source nécessaire.
 
 
 

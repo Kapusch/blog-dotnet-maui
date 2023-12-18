@@ -300,7 +300,7 @@ Relaunch the project, check that everything is working, and above all, enjoy the
 
 I hope you have learned a lot of new things today. In general, take inspiration from what you observe to experiment with new things. And as you go a little further each time, you will get more and more comfortable!
 
-See you soon for a new chapter! 🙂
+See you soon for <a href="../13-download-music/">a new chapter</a>! 🙂
 
 ___
 More articles in the series:

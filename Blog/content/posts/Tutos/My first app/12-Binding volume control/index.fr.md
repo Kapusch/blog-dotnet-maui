@@ -300,7 +300,7 @@ Relance le projet, vérifie que tout fonctionne, et surtout, profite du résulta
 
 J’espère que tu auras appris plein de nouvelles choses aujourd’hui. De manière générale, inspire-toi de ce que tu observes pour expérimenter de nouvelles choses. Et en allant un peu plus loin à chaque fois, tu deviendras de plus en plus à l’aise !
 
-Allez, on se revoit très vite pour un nouveau chapitre ! 🙂
+Allez, on se revoit très vite pour <a href="../13-download-music/">un nouveau chapitre</a> ! 🙂
 
 ___
 Plus d'articles dans la même série:

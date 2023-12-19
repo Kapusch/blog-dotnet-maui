@@ -185,6 +185,10 @@ As the song progresses, the text is updated every second and a new value replace
 {{< /admonition >}}
 You are definitely right! It may be a bug, but I haven't found any good reason for why it happens. But .NET MAUI has only been around for a year, it may hide a few little flaws! We just need patience for Microsoft engineers to fix them (or even open-source contributors!).
 
+
+{{< admonition type=tip title="‎ " open=true >}}
+After having upgraded the app to .NET 8, I couldn’t reproduce the bug.
+{{< /admonition >}}
 No panic, we will woraround this in no time! It's all part of a developer's life. 🤓
 
 If you remember the <a href="../6-scaffolding/">scaffolding chapter</a>, we defined there a *Grid* component named `BottomLayout`, which we divided into 7 columns of different sizes:

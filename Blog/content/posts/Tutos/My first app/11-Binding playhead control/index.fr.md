@@ -187,6 +187,10 @@ Quand la lecture de la chanson progresse, le texte est actualisé à chaque seco
 {{< /admonition >}}
 Eh si, tu as raison ! Il est possible qu’il s’agisse d’un bug, je n’ai pas trouvé de bonnes raisons qui expliqueraient ce comportement. Mais .NET MAUI n’existe que depuis l’an dernier, alors il lui fallait bien quelques petits défauts à ce framework ! Juste le temps que les ingénieurs de Microsoft les corrigent (ou même des contributeurs open-source !).
 
+
+{{< admonition type=tip title="‎ " open=true >}}
+Après une mise à jour vers .NET 8, je n’ai plus reproduit ce bug.
+{{< /admonition >}}
 Pas de panique, nous allons vite contourner ce problème ! Ça fait parti des aléas de la vie du développeur 🤓
 
 Si tu te rappelles le <a href="../6-scaffolding/">chapitre sur les fondations</a>, on y avait défini un composant *Grid* nommé `BottomLayout`, que l’on a divisé en 7 colonnes de tailles différentes :

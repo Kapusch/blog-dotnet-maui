@@ -285,14 +285,14 @@ public class MusicPlayerView : ContentPage
             Value = true
         };
 
-        BindingCondition CreateMinRangeCondition(double value) => CreateRangeCondition(OperatorType.GreaterOrEqual, value);
+        BindingCondition CreateMinRangeCondition(double value) => CreateRangeCondition(OperatorType.Greater, value);
         BindingCondition CreateMaxRangeCondition(double value) => CreateRangeCondition(OperatorType.SmallerOrEqual, value);
 
-        VolumeLowTrigger.Conditions.Add(CreateMinRangeCondition(1d));
+        VolumeLowTrigger.Conditions.Add(CreateMinRangeCondition(0d));
         VolumeLowTrigger.Conditions.Add(CreateMaxRangeCondition(15d));
-        VolumeMediumTrigger.Conditions.Add(CreateMinRangeCondition(16d));
+        VolumeMediumTrigger.Conditions.Add(CreateMinRangeCondition(15d));
         VolumeMediumTrigger.Conditions.Add(CreateMaxRangeCondition(50d));
-        VolumeHighTrigger.Conditions.Add(CreateMinRangeCondition(51d));
+        VolumeHighTrigger.Conditions.Add(CreateMinRangeCondition(50d));
         VolumeHighTrigger.Conditions.Add(CreateMaxRangeCondition(100d));
 
         MuteButton.Triggers.Add(VolumeOffTrigger);

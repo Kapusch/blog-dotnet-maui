@@ -233,11 +233,11 @@ Maintenant que tu sais comment fonctionnent les déclencheurs, on va en créer d
 
 Fonctionnellement, voici ce que l’on aimerait mettre en place :
 
-* l’icône du volume bas apparaîtra pour toutes les valeurs comprises entre 1 et 15,
+* l’icône du volume bas apparaîtra pour toutes les valeurs supérieures à 0 et jusqu’à 15,
 
-* entre 16 et 50, on affichera l’icône du volume modéré,
+* pour les valeurs supérieures à 15 et jusqu’à 50, on affichera l’icône du volume modéré,
 
-* et pour l’icône du volume élevé, ce sera entre 51 et 100.
+* et pour l’icône du volume élevé, ce sera pour toutes valeurs supérieures à 50 et jusqu’à 100.
 
 
 
@@ -295,14 +295,14 @@ void InitMuteButton()
         Value = true
     };
 
-    BindingCondition CreateMinRangeCondition(double value) => CreateRangeCondition(OperatorType.GreaterOrEqual, value);
+    BindingCondition CreateMinRangeCondition(double value) => CreateRangeCondition(OperatorType.Greater, value);
     BindingCondition CreateMaxRangeCondition(double value) => CreateRangeCondition(OperatorType.SmallerOrEqual, value);
 
-    VolumeLowTrigger.Conditions.Add(CreateMinRangeCondition(1d));
+    VolumeLowTrigger.Conditions.Add(CreateMinRangeCondition(0d));
     VolumeLowTrigger.Conditions.Add(CreateMaxRangeCondition(15d));
-    VolumeMediumTrigger.Conditions.Add(CreateMinRangeCondition(16d));
+    VolumeMediumTrigger.Conditions.Add(CreateMinRangeCondition(15d));
     VolumeMediumTrigger.Conditions.Add(CreateMaxRangeCondition(50d));
-    VolumeHighTrigger.Conditions.Add(CreateMinRangeCondition(51d));
+    VolumeHighTrigger.Conditions.Add(CreateMinRangeCondition(50d));
     VolumeHighTrigger.Conditions.Add(CreateMaxRangeCondition(100d));
 
     MuteButton.Triggers.Add(VolumeOffTrigger);
@@ -342,22 +342,22 @@ Il est maintenant temps de passer aux explications. Décortiquons un peu cette m
 <p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
-VolumeLowTrigger.Conditions.Add(CreateMinRangeCondition(1d));
+VolumeLowTrigger.Conditions.Add(CreateMinRangeCondition(0d));
 VolumeLowTrigger.Conditions.Add(CreateMaxRangeCondition(15d));
-VolumeMediumTrigger.Conditions.Add(CreateMinRangeCondition(16d));
+VolumeMediumTrigger.Conditions.Add(CreateMinRangeCondition(15d));
 VolumeMediumTrigger.Conditions.Add(CreateMaxRangeCondition(50d));
-VolumeHighTrigger.Conditions.Add(CreateMinRangeCondition(51d));
+VolumeHighTrigger.Conditions.Add(CreateMinRangeCondition(50d));
 VolumeHighTrigger.Conditions.Add(CreateMaxRangeCondition(100d));
 ```
 
 
 Ça paraît déjà plus simple comme ça, non ? Tout ce qu’on fait ici, c’est ajouter à chacun des déclencheurs deux conditions nécessaires au changement d’icône du `MuteButton`.
 
-Par exemple, si tu regardes pour le `VolumeLowTrigger`, tu verras que la première condition de déclenchement est liée à une valeur minimale de 1, tandis que l’autre condition dépend d’une valeur maximale de 15. Ça te rappelle quelque chose maintenant ?
+Par exemple, si tu regardes pour le `VolumeLowTrigger`, tu verras que la première condition de déclenchement est liée à une valeur minimale de 0 (”**> 0**”), tandis que l’autre condition dépend d’une valeur maximale de 15 (”**≤ 15**”). Ça te rappelle quelque chose maintenant ?
 
 
 {{< admonition type=comment title="‎ " open=true >}}
-🐒‎ ‎ Mais oui ! C’est pour que l’icône correspondant au volume bas apparaisse dès que le volume est compris entre 1 et 15 !
+🐒‎ ‎ Mais oui ! C’est pour que l’icône correspondant au volume bas apparaisse dès que le volume est supérieur à 0, et ce jusqu’à 15 !
 {{< /admonition >}}
 
 
@@ -368,12 +368,12 @@ Bon, mais ça n’est pas magique non plus ! La création de ces conditions s’
 <p align="center" style="margin-bottom:-10px"><strong>Nom du fichier :</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
-BindingCondition CreateMinRangeCondition(double value) => CreateRangeCondition(OperatorType.GreaterOrEqual, value);
+BindingCondition CreateMinRangeCondition(double value) => CreateRangeCondition(OperatorType.Greater, value);
 BindingCondition CreateMaxRangeCondition(double value) => CreateRangeCondition(OperatorType.SmallerOrEqual, value);
 ```
 
 
-La première méthode représente la valeur minimale de déclenchement du nouvel état, et la seconde la valeur maximale. Pour créer ces conditions, il faut donc une valeur cible, et un type d’opérateur : `GreaterOrEqual` ou `SmallerOrEqual`.
+La première méthode représente la valeur minimale de déclenchement du nouvel état, et la seconde la valeur maximale. Pour créer ces conditions, il faut donc une valeur cible, et un type d’opérateur : respectivement `Greater` ou `SmallerOrEqual`.
 
 Ces paramètres sont justement pris en compte par une méthode de base définie tout au début du `InitMuteButton()`. Elle reprend le même principe que pour le *DataTrigger* qui est utilisé pour le déclencheur `VolumeOffTrigger` :
 
@@ -395,7 +395,7 @@ BindingCondition CreateRangeCondition(OperatorType comparison, double value) => 
 ```
 
 
-La seule nouveauté ici, c’est qu’on ne cherche plus à atteindre une valeur cible numérique (comme auparavant avec le “0”). En effet, on se base plutôt sur le résultat d’une comparaison.
+La seule nouveauté ici, c’est qu’on ne cherche plus à atteindre une valeur cible numérique bien précise (comme auparavant avec le “0”). En effet, on se base plutôt sur le résultat d’une comparaison.
 
 Le but de la méthode `CreateRangeCondition(OperatorType comparison, double value)` est de créer une condition de déclenchement en fonction d’une valeur étalon et d’un type de comparaison. Et en y regardant de plus près, tu verras qu’elle définit un *Binding* sur la valeur du `VolumeTracker` tout en lui appliquant un [CompareConverter](https://learn.microsoft.com/fr-fr/dotnet/communitytoolkit/maui/converters/compare-converter).
 

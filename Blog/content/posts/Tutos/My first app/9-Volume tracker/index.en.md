@@ -233,11 +233,11 @@ Now that you know how triggers work, let's create some more to handle all the di
 
 Functionally, here is what we would like to put in place:
 
-* the low volume icon will appear for all values between 1 and 15,
+* the low volume icon will appear for all values greater than 0 and up to 15,
 
-* between 16 and 50, the moderate volume icon will be displayed,
+* for values greater than 15 and up to 50, the moderate volume icon will be displayed,
 
-* and for the high volume icon it will be between 51 and 100.
+* and for the high volume icon it will be for all values greater than 50 and up to 100.
 
 
 
@@ -295,14 +295,14 @@ void InitMuteButton()
         Value = true
     };
 
-    BindingCondition CreateMinRangeCondition(double value) => CreateRangeCondition(OperatorType.GreaterOrEqual, value);
+    BindingCondition CreateMinRangeCondition(double value) => CreateRangeCondition(OperatorType.Greater, value);
     BindingCondition CreateMaxRangeCondition(double value) => CreateRangeCondition(OperatorType.SmallerOrEqual, value);
 
-    VolumeLowTrigger.Conditions.Add(CreateMinRangeCondition(1d));
+    VolumeLowTrigger.Conditions.Add(CreateMinRangeCondition(0d));
     VolumeLowTrigger.Conditions.Add(CreateMaxRangeCondition(15d));
-    VolumeMediumTrigger.Conditions.Add(CreateMinRangeCondition(16d));
+    VolumeMediumTrigger.Conditions.Add(CreateMinRangeCondition(15d));
     VolumeMediumTrigger.Conditions.Add(CreateMaxRangeCondition(50d));
-    VolumeHighTrigger.Conditions.Add(CreateMinRangeCondition(51d));
+    VolumeHighTrigger.Conditions.Add(CreateMinRangeCondition(50d));
     VolumeHighTrigger.Conditions.Add(CreateMaxRangeCondition(100d));
 
     MuteButton.Triggers.Add(VolumeOffTrigger);
@@ -342,22 +342,22 @@ Now it's time for an explanation. Let's break down a bit this `InitMuteButton()`
 <p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
-VolumeLowTrigger.Conditions.Add(CreateMinRangeCondition(1d));
+VolumeLowTrigger.Conditions.Add(CreateMinRangeCondition(0d));
 VolumeLowTrigger.Conditions.Add(CreateMaxRangeCondition(15d));
-VolumeMediumTrigger.Conditions.Add(CreateMinRangeCondition(16d));
+VolumeMediumTrigger.Conditions.Add(CreateMinRangeCondition(15d));
 VolumeMediumTrigger.Conditions.Add(CreateMaxRangeCondition(50d));
-VolumeHighTrigger.Conditions.Add(CreateMinRangeCondition(51d));
+VolumeHighTrigger.Conditions.Add(CreateMinRangeCondition(50d));
 VolumeHighTrigger.Conditions.Add(CreateMaxRangeCondition(100d));
 ```
 
 
 It seems simpler that way, right? All we are doing here is to add two conditions for each of the triggers that are necessary to change the `MuteButton` icon.
 
-For example, if you look at the `VolumeLowTrigger`, you'll see that the first trigger condition is tied to a minimum value of 1, while the other condition depends on a maximum value of 15. Does this sound familiar now?
+For example, if you look at the `VolumeLowTrigger`, you'll see that the first trigger condition is tied to a minimum value of 0 (”**> 0**”), while the other condition depends on a maximum value of 15 (”**≤ 15**”). Does this sound familiar now?
 
 
 {{< admonition type=comment title="‎ " open=true >}}
-🐒‎ ‎ For sure, yes! It's so that the low volume icon appears as soon as the volume is between 1 and 15!
+🐒‎ ‎ For sure, yes! It's so that the low volume icon appears as soon as the volume is greater than 0 and up to 15!
 {{< /admonition >}}
 
 
@@ -368,12 +368,12 @@ Okay, but that's not magic either! The creation of these conditions is based on 
 <p align="center" style="margin-bottom:-10px"><strong>Filename:</strong><code>MusicPlayerView.cs</code></p>
 
 ```csharp
-BindingCondition CreateMinRangeCondition(double value) => CreateRangeCondition(OperatorType.GreaterOrEqual, value);
+BindingCondition CreateMinRangeCondition(double value) => CreateRangeCondition(OperatorType.Greater, value);
 BindingCondition CreateMaxRangeCondition(double value) => CreateRangeCondition(OperatorType.SmallerOrEqual, value);
 ```
 
 
-The first method represents the minimum value for triggering the new condition, and the second the maximum value. To create these conditions, we need a target value, and a type of operator: `GreaterOrEqual` or `SmallerOrEqual`.
+The first method represents the minimum value for triggering the new condition, and the second the maximum value. To create these conditions, we need a target value, and a type of operator: respectively `Greater` or `SmallerOrEqual`.
 
 These parameters are taken into account by a basic method defined at the beginning of the `InitMuteButton()`. It follows the same principle as for the *DataTrigger* which is used for the `VolumeOffTrigger`:
 
@@ -395,7 +395,7 @@ BindingCondition CreateRangeCondition(OperatorType comparison, double value) => 
 ```
 
 
-The only change here is that a numerical target value is no longer desired (as we did for “0”). Instead, it is based on the result of a comparison.
+The only thing new here is that we are no longer trying to reach a precise numerical target value (as we used to do with "0"). Instead, it is based on the result of a comparison.
 
 The purpose of the `CreateRangeCondition(OperatorType comparison, double value)` method is to create a trigger condition based on a standard value and a comparison type. And if you look closely, you'll see that it defines a *Binding* on the VolumeTracker value while applying a [CompareConverter](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/converters/compare-converter) to it.
 

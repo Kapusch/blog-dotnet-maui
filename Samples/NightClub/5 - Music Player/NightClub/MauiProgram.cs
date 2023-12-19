@@ -11,6 +11,7 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder()
             .UseMauiCommunityToolkit()
             .UseMauiCommunityToolkitMarkup()
+            .UseMauiCommunityToolkitMediaElement()
             .UseMauiApp<App>();
 
         return builder.Build();

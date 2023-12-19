@@ -48,10 +48,12 @@
 		<PackageReference Include="CommunityToolkit.Maui.Markup" Version="4.0.0" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+		<PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="3.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <None Remove="Resources\**" />
+	  <None Remove="Models\" />
 	</ItemGroup>
 
 	<!-- Resources -->
@@ -65,4 +67,7 @@
 		<!-- Medias -->
 		<MauiImage Include="Resources\Images\**" />
     </ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Models\" />
+	</ItemGroup>
 </Project>

@@ -116,6 +116,8 @@ public class MusicPlayerView : ContentPage
             nameof(MusicPlayerViewModel.CurrentTrack),
             convert: (MusicTrack musicTrack) => MediaSource.FromUri(musicTrack.AudioURL)
             );
+
+        MusicPlayer.MediaEnded += MusicPlayer_MediaEnded;
     }
 
     #endregion
@@ -128,7 +130,7 @@ public class MusicPlayerView : ContentPage
         TextColor = Colors.White
     } .TextCenter();
 
-    Slider TimeTracker = new Slider
+    static Slider TimeTracker = new Slider
     {
         Minimum = 0,
         MinimumTrackColor = Colors.LightSalmon,
@@ -175,21 +177,24 @@ public class MusicPlayerView : ContentPage
 
     #region Media Control Panel
 
-    ImageButton RepeatOnceButton => new ImageButton
+    ImageButton RepeatOnceButton = new ImageButton
     {
         CornerRadius = 5,
         HeightRequest = 25,
         WidthRequest = 25,
         Source = "repeat_once.png",
-        BackgroundColor = Colors.Black
-    };
+        BackgroundColor = Colors.Black,
+        BorderColor = Colors.GreenYellow
+    } .BindCommand("ToggleRepeatOnceCommand");
 
-    ImageButton SkipPreviousButton => new ImageButton
+    ImageButton SkipPreviousButton = new ImageButton
     {
         HeightRequest = 75,
         WidthRequest = 75,
         Source = "skip_previous.png"
-    };
+    } .BindCommand("GoToPreviousTrackCommand",
+        parameterPath: nameof(TimeTracker.Value),
+        parameterSource: TimeTracker);
 
     ImageButton PlayButton = new ImageButton
     {
@@ -210,14 +215,19 @@ public class MusicPlayerView : ContentPage
                 => currentState != MediaElementState.Playing ? "play.png" : "pause.png");
 
         PlayButton.Clicked += PlayButton_Clicked;
+
+        RepeatOnceButton.Bind(
+            targetProperty: ImageButton.BorderWidthProperty,
+            path: nameof(MusicPlayerViewModel.MustRepeatCurrentTrackOnce),
+            convert: (bool isEnabled) => isEnabled ? 2 : 0);
     }
 
-    ImageButton SkipNextButton => new ImageButton
+    ImageButton SkipNextButton = new ImageButton
     {
         HeightRequest = 75,
         WidthRequest = 75,
         Source = "skip_next.png"
-    };
+    } .BindCommand("GoToNextTrackCommand");
 
     ImageButton DownloadButton = new ImageButton
     {
@@ -426,6 +436,11 @@ public class MusicPlayerView : ContentPage
                 MusicPlayer.ShouldMute = false;
             }
         }
+    }
+
+    void MusicPlayer_MediaEnded(object sender, EventArgs e)
+    {
+        (BindingContext as MusicPlayerViewModel).AssessRepeatOrSkip();
     }
 
     #endregion

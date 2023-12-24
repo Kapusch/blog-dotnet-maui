@@ -107,7 +107,7 @@ public partial class MusicPlayerViewModel : ObservableObject
     /// </summary>
     /// <param name="elapsedTimeForCurrentTrack">The current elapsed time of the current track being played</param>
     [RelayCommand]
-    void GoToPreviousTrack(double elapsedTimeForCurrentTrack = 0)
+    void GoToPreviousTrack(double elapsedTimeForCurrentTrack)
     {
         if (elapsedTimeForCurrentTrack < 2)
         {

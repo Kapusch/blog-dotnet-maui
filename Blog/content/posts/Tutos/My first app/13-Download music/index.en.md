@@ -8,7 +8,7 @@ Index: "13"
 PublishDate: "2023-12-19 00:00:13Z"
 Language: "English"
 Description: "Today, we will have a look at how to enable the user to download the music that is currently playing. We have been listening to the same song over and over, I'm sure you have been dreaming of being able to download it from the app! 😄"
-Tags: ["Data Binding","MediaElement","MVVM"]
+Tags: ["Data Binding","MediaElement","MVVM",".NET Community Toolkit"]
 featuredImagePreview: 'featured-image-preview-en'
 resources:
 - name: 'featured-image-preview-en'
@@ -367,7 +367,7 @@ And that's it. Give it a try!
 <p align="center"><img max-width="100%" max-height="100%" src="./images/721B5FB3853965E63793DB681030F88A.gif" /></p>
 <figure><figcaption class="image-caption">This time, the download is real!</figcaption></figure>
 
-Congratulations on all your hard work! One last effort and manipulation of media will hold no secrets for you. See you in the next chapter to manage the music playlist!
+Congratulations on all your hard work! One last effort and manipulation of media will hold no secrets for you. See you in the <a href="../14-change-music-track/">next chapter</a> to manage the music playlist!
 
 ___
 More articles in the series:

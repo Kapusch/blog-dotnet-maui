@@ -8,7 +8,7 @@ Index: "13"
 PublishDate: "2023-12-19 00:00:13Z"
 Language: "French"
 Description: "Aujourd’hui, nous allons voir comment permettre à l’utilisateur de télécharger la musique qui est en cours de lecture. Depuis le temps qu’on écoute la même chanson en boucle, je suis sûr que tu rêvais de pouvoir la télécharger depuis l’application ! 😄"
-Tags: ["Data Binding","MediaElement","MVVM"]
+Tags: ["Data Binding","MediaElement","MVVM",".NET Community Toolkit"]
 featuredImagePreview: 'featured-image-preview-fr'
 resources:
 - name: 'featured-image-preview-fr'
@@ -367,7 +367,7 @@ Et voilà, c’est terminé. Fais vite un essai !
 <p align="center"><img max-width="100%" max-height="100%" src="./images/721B5FB3853965E63793DB681030F88A.gif" /></p>
 <figure><figcaption class="image-caption">Cette fois-ci, le téléchargement est bien réel !</figcaption></figure>
 
-Je te félicite pour tout ce travail ! Encore un dernier effort et la manipulation des médias n’aura plus aucun secret pour toi. Rendez-vous au prochain chapitre pour gérer la playlist musicale !
+Je te félicite pour tout ce travail ! Encore un dernier effort et la manipulation des médias n’aura plus aucun secret pour toi. Rendez-vous au <a href="../14-change-music-track/">prochain chapitre</a> pour gérer la playlist musicale !
 
 ___
 Plus d'articles dans la même série:

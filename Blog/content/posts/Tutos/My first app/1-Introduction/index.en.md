@@ -1,6 +1,6 @@
 ---
-Topic: "Introduction"
-Title: "Introduction"
+Topic: "introduction"
+Title: "My very first app with .NET MAUI"
 Category: "Tutos"
 Subcategory: "My first app"
 series: ["My first app"]

@@ -66,7 +66,8 @@ public class MusicPlayerView : ContentPage
 
     Grid BottomLayout => new Grid
     {
-        BackgroundColor = Colors.DimGray,
+        // It's DimGray with 40% transparency
+        BackgroundColor = Color.FromArgb("#66696969"),
         RowDefinitions = Rows.Define(
                 Stars(1),
                 Stars(1),

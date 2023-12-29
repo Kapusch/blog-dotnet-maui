@@ -4,6 +4,7 @@ using CommunityToolkit.Maui.Markup;
 using CommunityToolkit.Maui.Views;
 using NightClub.Models;
 using NightClub.ViewModels;
+using NightClub.Views.Components;
 using static CommunityToolkit.Maui.Converters.CompareConverter<object>;
 using static CommunityToolkit.Maui.Markup.GridRowsColumns;
 
@@ -51,9 +52,16 @@ public class MusicPlayerView : ContentPage
 
     #region Main Layouts
 
-    Grid TopLayout => new Grid
+    AbsoluteLayout TopLayout => new AbsoluteLayout
     {
-        BackgroundColor = Colors.Black
+        BackgroundColor = Colors.Black,
+        Children =
+        {
+            new Spotlight(Colors.Blue, 200, 0, 0),
+            new Spotlight(Colors.Orange, 150, 0.8, 0.9),
+            new Spotlight(Colors.Pink, 100, 0.9, 0.2),
+            new Spotlight(Colors.Yellow, 120, 0.3, 0.6)
+        }
     };
 
     Grid BottomLayout => new Grid

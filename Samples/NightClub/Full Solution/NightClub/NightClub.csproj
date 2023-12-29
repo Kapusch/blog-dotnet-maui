@@ -54,6 +54,7 @@
 	<ItemGroup>
 	  <None Remove="Resources\**" />
 	  <None Remove="Models\" />
+	  <None Remove="Views\Components\" />
 	</ItemGroup>
 
 	<!-- Resources -->
@@ -69,5 +70,6 @@
     </ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Models\" />
+	  <Folder Include="Views\Components\" />
 	</ItemGroup>
 </Project>

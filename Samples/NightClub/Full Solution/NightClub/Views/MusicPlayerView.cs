@@ -57,10 +57,10 @@ public class MusicPlayerView : ContentPage
         BackgroundColor = Colors.Black,
         Children =
         {
-            new Spotlight(Colors.Blue, 200, 0, 0),
-            new Spotlight(Colors.Orange, 150, 0.8, 0.9),
-            new Spotlight(Colors.Pink, 100, 0.9, 0.2),
-            new Spotlight(Colors.Yellow, 120, 0.3, 0.6)
+            new Spotlight(Colors.Blue, 200, 0, 0, 2000, 0.1),
+            new Spotlight(Colors.Orange, 150, 0.8, 0.9, 1000, 0.2),
+            new Spotlight(Colors.Pink, 100, 0.9, 0.2, 500, 0.3),
+            new Spotlight(Colors.Yellow, 120, 0.3, 0.6, 1500, 0.4)
         }
     };
 

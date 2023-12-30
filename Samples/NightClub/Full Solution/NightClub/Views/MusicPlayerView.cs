@@ -32,6 +32,7 @@ public class MusicPlayerView : ContentPage
         InitMediaControlPanel();
         InitMuteButton();
         InitVolumeTracker();
+        InitDanceFloor();
 
         Content = new Grid
         {
@@ -110,35 +111,37 @@ public class MusicPlayerView : ContentPage
     void InitDanceFloor()
     {
         AbsoluteLayout spotlights = new AbsoluteLayout();
-        Color[] spotlightColors = new Color[] { Colors.Pink, Colors.Yellow, Colors.Orange, Colors.Blue };
+        Random randomGenerator = new Random();
 
-        for (int i = 1; i <= 4; i++)
+        for (double x = 0; x < 1; x += 0.3)
         {
-            Spotlight spotlight = new Spotlight(
-                color: spotlightColors[i - 1],
-                size: 50 * i,
-                positionX: i * 0.25,
-                positionY: i * 0.25,
-                animationLength: (uint)(500 * i));
+            for (double y = 0; y < 1; y += 0.3)
+            {
+                Color randomColor = Color.FromRgb(
+                    red: randomGenerator.Next(0, 255),
+                    green: randomGenerator.Next(0, 255),
+                    blue: randomGenerator.Next(0, 255));
 
-            spotlight.Bind(
-                source: MusicPlayer,
-                path: nameof(MusicPlayer.CurrentState),
-                convert: (MediaElementState currentState) =>
-                {
-                    if (currentState != MediaElementState.Playing)
+                int randomSize = randomGenerator.Next(20, 120);
+                uint randomAnimationLength = (uint)randomGenerator.Next(500, 2000);
+
+                Spotlight spotlight = new Spotlight(randomColor, randomSize, x, y, randomAnimationLength);
+
+                spotlight.Bind(
+                    source: MusicPlayer,
+                    path: nameof(MusicPlayer.CurrentState),
+                    convert: (MediaElementState currentState) =>
                     {
-                        spotlight.StopAnimation();
-                    }
-                    else
-                    {
-                        spotlight.StartAnimation();
-                    }
+                        if (currentState != MediaElementState.Playing)
+                            spotlight.StopAnimation();
+                        else
+                            spotlight.StartAnimation();
 
-                    return true;
-                });
+                        return true;
+                    });
 
-            spotlights.Add(spotlight);
+                spotlights.Add(spotlight);
+            }
         }
 
         TopLayout.Add(spotlights);
@@ -163,7 +166,6 @@ public class MusicPlayerView : ContentPage
             );
 
         MusicPlayer.MediaEnded += MusicPlayer_MediaEnded;
-        MusicPlayer.MediaOpened += MusicPlayer_MediaOpened;
     }
 
     #endregion
@@ -487,11 +489,6 @@ public class MusicPlayerView : ContentPage
     void MusicPlayer_MediaEnded(object sender, EventArgs e)
     {
         (BindingContext as MusicPlayerViewModel).AssessRepeatOrSkip();
-    }
-
-    void MusicPlayer_MediaOpened(object sender, EventArgs e)
-    {
-        InitDanceFloor();
     }
 
     #endregion

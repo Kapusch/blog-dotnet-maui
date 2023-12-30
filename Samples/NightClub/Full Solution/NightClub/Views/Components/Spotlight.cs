@@ -7,12 +7,11 @@ namespace NightClub.Views.Components;
 public class Spotlight : BoxView
 {
     const string AnimationName = "fadeInAndOut";
-    public uint AnimationLength { get; set; }
-    public Animation SpotlightAnimation { get; set; }
+    uint AnimationLength { get; set; }
+    Animation SpotlightAnimation { get; set; }
 
     public Spotlight(Color color, double size, double positionX, double positionY, uint animationLength = 0, MediaElement bindableMediaElement = null)
     {
-        Opacity = 0;
         Background = new RadialGradientBrush()
         {
             GradientStops = new GradientStopCollection

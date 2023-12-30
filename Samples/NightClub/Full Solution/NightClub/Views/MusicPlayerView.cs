@@ -125,20 +125,7 @@ public class MusicPlayerView : ContentPage
                 int randomSize = randomGenerator.Next(20, 120);
                 uint randomAnimationLength = (uint)randomGenerator.Next(500, 2000);
 
-                Spotlight spotlight = new Spotlight(randomColor, randomSize, x, y, randomAnimationLength);
-
-                spotlight.Bind(
-                    source: MusicPlayer,
-                    path: nameof(MusicPlayer.CurrentState),
-                    convert: (MediaElementState currentState) =>
-                    {
-                        if (currentState != MediaElementState.Playing)
-                            spotlight.StopAnimation();
-                        else
-                            spotlight.StartAnimation();
-
-                        return true;
-                    });
+                Spotlight spotlight = new Spotlight(randomColor, randomSize, x, y, randomAnimationLength, MusicPlayer);
 
                 spotlights.Add(spotlight);
             }

@@ -1,4 +1,7 @@
-﻿using Microsoft.Maui.Layouts;
+﻿using CommunityToolkit.Maui.Core.Primitives;
+using CommunityToolkit.Maui.Markup;
+using CommunityToolkit.Maui.Views;
+using Microsoft.Maui.Layouts;
 
 namespace NightClub.Views.Components;
 public class Spotlight : BoxView
@@ -7,7 +10,7 @@ public class Spotlight : BoxView
     public uint AnimationLength { get; set; }
     public Animation SpotlightAnimation { get; set; }
 
-    public Spotlight(Color color, double size, double positionX, double positionY, uint animationLength = 0)
+    public Spotlight(Color color, double size, double positionX, double positionY, uint animationLength = 0, MediaElement bindableMediaElement = null)
     {
         Opacity = 0;
         Background = new RadialGradientBrush()
@@ -31,10 +34,10 @@ public class Spotlight : BoxView
         AbsoluteLayout.SetLayoutFlags(this, AbsoluteLayoutFlags.PositionProportional);
 
         this.AnimationLength = animationLength;
-        SetAnimation();
+        SetAnimation(bindableMediaElement);
     }
 
-    void SetAnimation()
+    void SetAnimation(MediaElement mediaElement = null)
     {
         if (AnimationLength <= 0) return;
 
@@ -46,6 +49,22 @@ public class Spotlight : BoxView
             { 0, 0.5, fadeInAnimation },
             { 0.5, 1, fadeOutAnimation }
         };
+
+        if(mediaElement != null)
+        {
+            this.Bind(
+                source: mediaElement,
+                path: nameof(mediaElement.CurrentState),
+                convert: (MediaElementState currentState) =>
+                {
+                    if (currentState != MediaElementState.Playing)
+                        StopAnimation();
+                    else
+                        StartAnimation();
+
+                    return true;
+                });
+        }
     }
 
     public void StartAnimation()

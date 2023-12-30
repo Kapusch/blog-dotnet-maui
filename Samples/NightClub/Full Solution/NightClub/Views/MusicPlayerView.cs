@@ -52,24 +52,9 @@ public class MusicPlayerView : ContentPage
 
     #region Main Layouts
 
-    Grid TopLayout => new Grid
+    Grid TopLayout = new Grid
     {
-        BackgroundColor = Colors.Black,
-        Children =
-        {
-            new AbsoluteLayout()
-            {
-                Children =
-                {
-                    new Spotlight(Colors.Blue, 200, 0, 0, 2000, 0.1),
-                    new Spotlight(Colors.Orange, 150, 0.8, 0.9, 1000, 0.2),
-                    new Spotlight(Colors.Pink, 100, 0.9, 0.2, 500, 0.3),
-                    new Spotlight(Colors.Yellow, 120, 0.3, 0.6, 1500, 0.4),
-                }
-            },
-            new Image() { Source = "speakers.png"} .Bottom(),
-            new Image() { Source = "joyful_dancers.png"} .Bottom()
-        }
+        BackgroundColor = Colors.Black
     };
 
     Grid BottomLayout => new Grid
@@ -120,6 +105,49 @@ public class MusicPlayerView : ContentPage
 
     #endregion
 
+    #region Dance Floor
+
+    void InitDanceFloor()
+    {
+        AbsoluteLayout spotlights = new AbsoluteLayout();
+        Color[] spotlightColors = new Color[] { Colors.Pink, Colors.Yellow, Colors.Orange, Colors.Blue };
+
+        for (int i = 1; i <= 4; i++)
+        {
+            Spotlight spotlight = new Spotlight(
+                color: spotlightColors[i - 1],
+                size: 50 * i,
+                positionX: i * 0.25,
+                positionY: i * 0.25,
+                animationLength: (uint)(500 * i));
+
+            spotlight.Bind(
+                source: MusicPlayer,
+                path: nameof(MusicPlayer.CurrentState),
+                convert: (MediaElementState currentState) =>
+                {
+                    if (currentState != MediaElementState.Playing)
+                    {
+                        spotlight.StopAnimation();
+                    }
+                    else
+                    {
+                        spotlight.StartAnimation();
+                    }
+
+                    return true;
+                });
+
+            spotlights.Add(spotlight);
+        }
+
+        TopLayout.Add(spotlights);
+        TopLayout.Add(new Image() { Source = "speakers.png" }.Bottom());
+        TopLayout.Add(new Image() { Source = "joyful_dancers.png" }.Bottom());
+    }
+
+    #endregion
+
     #region MusicPlayer
 
     MediaElement MusicPlayer = new MediaElement();
@@ -135,6 +163,7 @@ public class MusicPlayerView : ContentPage
             );
 
         MusicPlayer.MediaEnded += MusicPlayer_MediaEnded;
+        MusicPlayer.MediaOpened += MusicPlayer_MediaOpened;
     }
 
     #endregion
@@ -458,6 +487,11 @@ public class MusicPlayerView : ContentPage
     void MusicPlayer_MediaEnded(object sender, EventArgs e)
     {
         (BindingContext as MusicPlayerViewModel).AssessRepeatOrSkip();
+    }
+
+    void MusicPlayer_MediaOpened(object sender, EventArgs e)
+    {
+        InitDanceFloor();
     }
 
     #endregion

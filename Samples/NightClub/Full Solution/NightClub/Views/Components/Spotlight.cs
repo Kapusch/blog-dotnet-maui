@@ -10,6 +10,15 @@ public class Spotlight : BoxView
     uint AnimationLength { get; set; }
     Animation SpotlightAnimation { get; set; }
 
+    /// <summary>
+    /// A rounded BoxView giving impression of a spotlight
+    /// </summary>
+    /// <param name="color">Main color of the spotlight</param>
+    /// <param name="size">Size of the spotlight</param>
+    /// <param name="positionX">Horizontal position of the spotlight</param>
+    /// <param name="positionY">Custom vertical position of the spotlight</param>
+    /// <param name="animationLength">Animation pattern duration in milliseconds</param>
+    /// <param name="bindableMediaElement">MediaElement to bind the animation to</param>
     public Spotlight(Color color, double size, double positionX, double positionY, uint animationLength = 0, MediaElement bindableMediaElement = null)
     {
         Background = new RadialGradientBrush()

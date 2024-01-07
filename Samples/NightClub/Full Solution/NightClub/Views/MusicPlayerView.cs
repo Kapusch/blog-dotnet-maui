@@ -109,6 +109,27 @@ public class MusicPlayerView : ContentPage
 
     void InitDanceFloor()
     {
+        // Uncomment if you'd like random spotlights instead
+        //AbsoluteLayout spotlights = GenerateRandomSpotlights();
+
+        AbsoluteLayout spotlights = new AbsoluteLayout()
+        {
+            Children =
+            {
+                new Spotlight(Colors.Blue, 200, 0, 0, 2000, MusicPlayer),
+                new Spotlight(Colors.Orange, 150, 0.8, 0.9, 1000, MusicPlayer),
+                new Spotlight(Colors.Pink, 100, 0.9, 0.2, 500, MusicPlayer),
+                new Spotlight(Colors.Yellow, 120, 0.3, 0.6, 1500, MusicPlayer),
+            }
+        };
+
+        TopLayout.Add(spotlights);
+        TopLayout.Add(new Image() { Source = "speakers.png" }.Bottom());
+        TopLayout.Add(new Image() { Source = "joyful_dancers.png" }.Bottom());
+    }
+
+    AbsoluteLayout GenerateRandomSpotlights()
+    {
         AbsoluteLayout spotlights = new AbsoluteLayout();
         Random randomGenerator = new Random();
 
@@ -130,9 +151,7 @@ public class MusicPlayerView : ContentPage
             }
         }
 
-        TopLayout.Add(spotlights);
-        TopLayout.Add(new Image() { Source = "speakers.png" }.Bottom());
-        TopLayout.Add(new Image() { Source = "joyful_dancers.png" }.Bottom());
+        return spotlights;
     }
 
     #endregion

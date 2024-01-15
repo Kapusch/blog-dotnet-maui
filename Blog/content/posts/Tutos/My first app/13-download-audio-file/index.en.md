@@ -1,5 +1,5 @@
 ---
-Topic: "download-audio-file"
+PostURL: "download-audio-file"
 Title: "Download an audio file in .NET MAUI"
 Category: "Tutos"
 Subcategory: "My first app"

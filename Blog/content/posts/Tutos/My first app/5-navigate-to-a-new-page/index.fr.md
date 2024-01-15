@@ -1,5 +1,5 @@
 ---
-Topic: "navigate-to-a-new-page"
+PostURL: "navigate-to-a-new-page"
 Title: "Naviguer vers une nouvelle page en .NET MAUI"
 Category: "Tutos"
 Subcategory: "My first app"

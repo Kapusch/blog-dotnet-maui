@@ -1,5 +1,5 @@
 ---
-Topic: "skip-next-or-previous-with-mediaelement"
+PostURL: "skip-next-or-previous-with-mediaelement"
 Title: "Écouter une playlist avec MediaElement"
 Category: "Tutos"
 Subcategory: "My first app"
@@ -415,11 +415,11 @@ On peut désormais profiter de l’application et écouter quelques titres à la
 
 
 {{< admonition type=info title="‎ " open=true >}}
-Pour récupérer le projet reprenant toutes les étapes appliquées jusqu’ici dans ce cours, réfère-toi au [guide d’installation du projet](http://localhost:1313/posts/tutos/my-first-app/2-setup-the-project/) et repars de l’exemple situé dans le dossier *“5 - Music Player”*.
+Pour récupérer le projet reprenant toutes les étapes appliquées jusqu’ici dans ce cours, réfère-toi au <a href="../2-setup-the-project/">guide d’installation du projet</a> et repars de l’exemple situé dans le dossier *“5 - Music Player”*.
 {{< /admonition >}}
 Mais ça manque un peu d’animation pour une ambiance “boîte de nuit”… Or c’était la <a href="../1-introduction/">promesse du début</a> !
 
-On va remédier à ça dans le prochain article, et ce sera le dernier de cette série !!
+On va remédier à ça dans le <a href="../15-add-animations-to-an-app/">prochain article</a>, et ce sera le dernier de cette série !!
 
 ___
 Plus d'articles dans la même série:

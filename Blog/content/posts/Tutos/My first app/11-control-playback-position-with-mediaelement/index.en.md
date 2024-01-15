@@ -1,5 +1,5 @@
 ---
-Topic: "control-playback-position-with-mediaelement"
+PostURL: "control-playback-position-with-mediaelement"
 Title: "Control the playback position with MediaElement"
 Category: "Tutos"
 Subcategory: "My first app"

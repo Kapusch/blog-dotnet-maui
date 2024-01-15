@@ -1,5 +1,5 @@
 ---
-Topic: "arrange-elements-on-a-page"
+PostURL: "arrange-elements-on-a-page"
 Title: "Arrange elements on a .NET MAUI page"
 Category: "Tutos"
 Subcategory: "My first app"

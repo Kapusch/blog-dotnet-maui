@@ -1,5 +1,5 @@
 ---
-Topic: "arrange-elements-on-a-page"
+PostURL: "arrange-elements-on-a-page"
 Title: "Agencer les éléments d'une page .NET MAUI"
 Category: "Tutos"
 Subcategory: "My first app"

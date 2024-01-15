@@ -1,5 +1,5 @@
 ---
-Topic: "mvvm-for-successful-apps"
+PostURL: "mvvm-for-successful-apps"
 Title: "MVVM, for a successful application"
 Category: "Tutos"
 Subcategory: "My first app"

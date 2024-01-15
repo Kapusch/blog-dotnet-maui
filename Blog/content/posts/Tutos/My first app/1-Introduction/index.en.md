@@ -1,5 +1,5 @@
 ---
-Topic: "introduction"
+PostURL: "introduction"
 Title: "My very first app with .NET MAUI"
 Category: "Tutos"
 Subcategory: "My first app"
@@ -100,7 +100,7 @@ You'll probably make a few mistakes, but failing is the best way to learn, so ma
 {{< /admonition >}}
 
 
-Here we go, see you at <a href="../3-first-run-of-the-project/">next article</a> !
+Here we go, see you at <a href="../2-setup-the-project/">next article</a> !
 
 ___
 More articles in the series:

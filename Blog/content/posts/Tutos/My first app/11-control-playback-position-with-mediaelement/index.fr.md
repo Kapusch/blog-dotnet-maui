@@ -1,5 +1,5 @@
 ---
-Topic: "control-playback-position-with-mediaelement"
+PostURL: "control-playback-position-with-mediaelement"
 Title: "Contrôler la tête de lecture avec MediaElement"
 Category: "Tutos"
 Subcategory: "My first app"

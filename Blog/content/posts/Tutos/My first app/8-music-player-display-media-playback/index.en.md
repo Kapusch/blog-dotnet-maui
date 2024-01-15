@@ -1,5 +1,5 @@
 ---
-Topic: "music-player-display-media-playback"
+PostURL: "music-player-display-media-playback"
 Title: "Music player display - Media playback"
 Category: "Tutos"
 Subcategory: "My first app"
@@ -8,7 +8,7 @@ Index: "8"
 PublishDate: "2023-02-27 00:00:08Z"
 Language: "English"
 Description: "More and more buttons! In this chapter, we will integrate the controls for manipulating the media."
-Tags: ["Image","ImageButton","Visual Studio","Round Button","ColumnSpan"]
+Tags: ["Image","ImageButton","Visual Studio","Round Effect","ColumnSpan"]
 featuredImagePreview: 'featured-image-preview-en'
 resources:
 - name: 'featured-image-preview-en'

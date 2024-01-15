@@ -1,5 +1,5 @@
 ---
-Topic: "setup-the-project"
+PostURL: "setup-the-project"
 Title: "Setup the project .NET MAUI"
 Category: "Tutos"
 Subcategory: "My first app"

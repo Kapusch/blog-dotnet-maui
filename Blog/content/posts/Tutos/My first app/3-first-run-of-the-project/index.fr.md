@@ -1,5 +1,5 @@
 ---
-Topic: "first-run-of-the-project"
+PostURL: "first-run-of-the-project"
 Title: "Première exécution de l’app .NET MAUI"
 Category: "Tutos"
 Subcategory: "My first app"
@@ -105,7 +105,7 @@ Et si tu veux savoir comment sont définis ces deux composants, il te suffit de 
 
 Image NightClubImage => new Image
 {
-    // .NET MAUI converts SVG files to PNG files.
+    // .NET MAUI convertit les fichiers SVG au format PNG.
     Source = "night_club.png"
 };
 

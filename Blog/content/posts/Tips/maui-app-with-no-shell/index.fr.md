@@ -1,5 +1,5 @@
 ---
-Topic: "maui-app-with-no-shell"
+PostURL: "maui-app-with-no-shell"
 Title: "Créer une app .NET MAUI sans Shell"
 Category: "Tips"
 Subcategory: ""

@@ -1,5 +1,5 @@
 ---
-Topic: "play-music-with-mediaelement"
+PostURL: "play-music-with-mediaelement"
 Title: "Écouter de la musique en .NET MAUI avec MediaElement"
 Category: "Tutos"
 Subcategory: "My first app"

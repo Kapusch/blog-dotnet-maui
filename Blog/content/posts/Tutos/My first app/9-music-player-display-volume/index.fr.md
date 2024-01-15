@@ -1,5 +1,5 @@
 ---
-Topic: "music-player-display-volume"
+PostURL: "music-player-display-volume"
 Title: "Affichage du lecteur MP3 - Volume"
 Category: "Tutos"
 Subcategory: "My first app"
@@ -52,7 +52,7 @@ Maintenant que tu as les images, il ne te reste alors plus qu’à les inclure d
 
 
 {{< admonition type=info title="‎ " open=true >}}
-Si tu as des doutes, tu peux te référer <a href="../8-music-player-display-media-playback/">au chapitre précédent</a> .
+Si tu as des doutes, tu peux te référer <a href="../8-music-player-display-media-playback/">au chapitre précédent</a>.
 {{< /admonition >}}
 ## À vos marques, prêt ? Codez !
 C’est bon, tout est prêt ? Allez on passe au code !

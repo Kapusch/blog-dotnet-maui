@@ -1,5 +1,5 @@
 ---
-Topic: "skip-next-or-previous-with-mediaelement"
+PostURL: "skip-next-or-previous-with-mediaelement"
 Title: "Listen to a playlist with MediaElement"
 Category: "Tutos"
 Subcategory: "My first app"
@@ -417,7 +417,7 @@ To retrieve the project containing all the different steps applied so far in thi
 {{< /admonition >}}
 But it lacks a bit of animation for a "nightclub" atmosphere... Yet that was the <a href="../1-introduction/">promise of the beginning</a>!
 
-We'll remedy that in the next article, and it'll be the last in this series!!!
+We'll remedy that in the <a href="../15-add-animations-to-an-app/">next post</a>, and it'll be the last in this series!!!
 
 ___
 More articles in the series:

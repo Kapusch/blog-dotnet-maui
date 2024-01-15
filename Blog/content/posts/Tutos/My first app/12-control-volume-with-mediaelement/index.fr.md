@@ -1,5 +1,5 @@
 ---
-Topic: "control-volume-with-mediaelement"
+PostURL: "control-volume-with-mediaelement"
 Title: "Contrôler le volume avec MediaElement"
 Category: "Tutos"
 Subcategory: "My first app"

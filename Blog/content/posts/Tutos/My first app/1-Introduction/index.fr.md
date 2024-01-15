@@ -1,5 +1,5 @@
 ---
-Topic: "introduction"
+PostURL: "introduction"
 Title: "Ma toute première app en .NET MAUI"
 Category: "Tutos"
 Subcategory: "My first app"

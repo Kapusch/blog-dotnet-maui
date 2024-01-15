@@ -1,5 +1,5 @@
 ---
-Topic: "music-player-display-time-tracker"
+PostURL: "music-player-display-time-tracker"
 Title: "Affichage du lecteur MP3 - Durée d'écoute"
 Category: "Tutos"
 Subcategory: "My first app"

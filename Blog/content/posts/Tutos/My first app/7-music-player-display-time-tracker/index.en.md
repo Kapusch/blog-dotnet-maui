@@ -1,5 +1,5 @@
 ---
-Topic: "music-player-display-time-tracker"
+PostURL: "music-player-display-time-tracker"
 Title: "Music player display - Time tracker"
 Category: "Tutos"
 Subcategory: "My first app"

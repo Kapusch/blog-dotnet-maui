@@ -1,5 +1,5 @@
 ---
-Topic: "multi-environments-project-configuration"
+PostURL: "multi-environments-project-configuration"
 Title: "Target multiple environments in .NET MAUI"
 Category: "Tips"
 Subcategory: ""

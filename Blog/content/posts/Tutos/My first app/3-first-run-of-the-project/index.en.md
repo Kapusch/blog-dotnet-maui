@@ -1,5 +1,5 @@
 ---
-Topic: "first-run-of-the-project"
+PostURL: "first-run-of-the-project"
 Title: "First run of the app .NET MAUI"
 Category: "Tutos"
 Subcategory: "My first app"

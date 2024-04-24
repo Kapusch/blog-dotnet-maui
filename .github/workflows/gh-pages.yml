@@ -2,7 +2,7 @@ name: GitHub Pages
 
 on:
   schedule:
-    - cron: "0 10 * * *" # daily
+    - cron: "0 10 * * 1" # every Monday
   workflow_dispatch:
 
 jobs:

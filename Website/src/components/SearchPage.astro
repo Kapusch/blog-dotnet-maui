@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { localePath, type Locale } from "../config";
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const fr = locale === "fr";
+const title = fr ? "Rechercher" : "Search";
+const description = fr ? "Rechercher dans les tutoriels et articles .NET MAUI." : "Search .NET MAUI tutorials and articles.";
+---
+<BaseLayout {locale} {title} {description} path={localePath(locale,"/search/")} alternatePath={localePath(fr ? "en" : "fr","/search/")} noindex>
+  <header class="page-hero narrow"><p class="eyebrow">{fr ? "Toute la bibliothèque" : "The full library"}</p><h1>{title}</h1><p class="lead">{description}</p></header>
+  <section class="search-shell narrow" data-pagefind-ignore>
+    <pagefind-config excerpt-length="24"></pagefind-config>
+    <pagefind-input placeholder={fr ? "Rechercher un concept, un composant…" : "Search for a concept or component…"} autofocus></pagefind-input>
+    <pagefind-summary></pagefind-summary>
+    <pagefind-results></pagefind-results>
+    <noscript>{fr ? "La recherche nécessite JavaScript." : "Search requires JavaScript."}</noscript>
+  </section>
+  <link rel="stylesheet" href="/pagefind/pagefind-component-ui.css" />
+  <script is:inline src="/pagefind/pagefind-component-ui.js" type="module"></script>
+</BaseLayout>
+<style>
+  .search-shell{min-height:32rem;padding-bottom:7rem;--pagefind-ui-primary:var(--accent);--pagefind-ui-text:var(--ink);--pagefind-ui-background:white;--pagefind-ui-border:var(--line);--pagefind-ui-border-width:1px;--pagefind-ui-border-radius:.85rem;--pagefind-ui-font:inherit}
+  pagefind-input,pagefind-summary,pagefind-results{display:block}
+  pagefind-summary{margin-block:1rem}
+</style>

@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { localePath, type Locale } from "../config";
+import { taxonomySlug, type Article } from "../lib/content";
+interface Props { locale: Locale; articles: Article[] }
+const { locale, articles } = Astro.props;
+const tags = [...articles.reduce((map, article) => {
+  for (const tag of article.data.tags) map.set(tag, (map.get(tag) ?? 0) + 1);
+  return map;
+}, new Map<string, number>())].sort(([left], [right]) => left.localeCompare(right));
+const fr = locale === "fr";
+---
+<BaseLayout {locale} title={fr ? "Tous les tags" : "All tags"} description={fr ? "Parcourir les articles .NET MAUI par technologie et notion." : "Browse .NET MAUI articles by technology and concept."} path={localePath(locale,"/tags/")} alternatePath={localePath(fr ? "en" : "fr","/tags/")}>
+  <header class="page-hero container"><p class="eyebrow">{tags.length} tags</p><h1>{fr ? "Explorer par notion" : "Explore by topic"}</h1><p class="lead">{fr ? "Retrouvez les articles qui abordent une technologie, un composant ou un principe précis." : "Find articles covering a particular technology, component or principle."}</p></header>
+  <section class="tag-cloud container">
+    {tags.map(([tag,count]) => <a href={localePath(locale,`/tags/${encodeURIComponent(taxonomySlug(tag))}/`)}><strong>{tag}</strong><span>{count}</span></a>)}
+  </section>
+</BaseLayout>
+<style>.tag-cloud{display:flex;flex-wrap:wrap;gap:.7rem;padding-bottom:7rem}.tag-cloud a{display:flex;align-items:center;gap:.65rem;padding:.75rem .9rem;border:1px solid var(--line);border-radius:.75rem;background:rgba(255,255,255,.7);color:var(--ink);text-decoration:none}.tag-cloud a:hover{border-color:#c8bced;color:var(--accent);background:white}.tag-cloud span{display:grid;place-items:center;min-width:1.45rem;height:1.45rem;border-radius:50%;background:var(--accent-soft);color:var(--accent);font:750 .68rem ui-monospace,monospace}</style>

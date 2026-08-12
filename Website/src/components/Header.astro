@@ -1,0 +1,246 @@
+---
+import { labels, localePath, type Locale } from "../config";
+
+interface Props {
+  locale: Locale;
+  alternatePath?: string;
+}
+
+const { locale, alternatePath } = Astro.props;
+const t = labels[locale];
+const currentPath = Astro.url.pathname;
+const navigation = [
+  [t.nav.articles, localePath(locale, "/posts/")],
+  [t.nav.tutorials, localePath(locale, "/posts/tutos/")],
+  [t.nav.tips, localePath(locale, "/posts/tips/")],
+  [t.nav.tags, localePath(locale, "/tags/")],
+  [t.nav.about, localePath(locale, "/about/")],
+] as const;
+---
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href={localePath(locale)} aria-label="MAUI, c’est clair !">
+      <span class="brand-symbol" aria-hidden="true"><span>M</span><i></i></span>
+      <span class="brand-copy"><strong>MAUI,</strong><span>c’est clair !</span></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label={locale === "fr" ? "Navigation principale" : "Main navigation"}>
+      {navigation.map(([label, href]) => (
+        <a href={href} aria-current={currentPath === href ? "page" : undefined}>{label}</a>
+      ))}
+    </nav>
+
+    <div class="header-actions">
+      <a class="search-link" href={localePath(locale, "/search/")} aria-label={t.nav.search}>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+        <span>{t.nav.search}</span>
+      </a>
+      {alternatePath && <a class="language-link" href={alternatePath} hreflang={locale === "fr" ? "en" : "fr"}>{t.alternateLocale}</a>}
+      <details class="mobile-nav">
+        <summary aria-label={locale === "fr" ? "Ouvrir le menu" : "Open menu"}>
+          <span></span><span></span><span></span>
+        </summary>
+        <nav aria-label={locale === "fr" ? "Navigation mobile" : "Mobile navigation"}>
+          {navigation.map(([label, href]) => <a href={href}>{label}</a>)}
+          <a href={localePath(locale, "/search/")}>{t.nav.search}</a>
+          {alternatePath && <a href={alternatePath}>{t.alternateLocale}</a>}
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    z-index: 50;
+    top: 0;
+    border-bottom: 1px solid rgba(23, 32, 42, 0.1);
+    background: rgba(246, 245, 241, 0.9);
+    backdrop-filter: blur(18px);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    width: min(var(--content), calc(100% - 2.5rem));
+    min-height: 4.75rem;
+    margin-inline: auto;
+  }
+
+  .brand,
+  .header-actions,
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .brand {
+    gap: 0.7rem;
+    flex: 0 0 auto;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .brand-symbol {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 2.35rem;
+    height: 2.35rem;
+    overflow: hidden;
+    border-radius: 0.7rem;
+    background: var(--accent);
+    color: white;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 1.12rem;
+    font-weight: 850;
+  }
+
+  .brand-symbol i {
+    position: absolute;
+    right: 0.28rem;
+    bottom: 0.28rem;
+    width: 0.32rem;
+    height: 0.32rem;
+    border-radius: 50%;
+    background: var(--yellow);
+  }
+
+  .brand-copy {
+    display: flex;
+    gap: 0.3em;
+    font-size: 1.05rem;
+    letter-spacing: -0.025em;
+  }
+
+  .brand-copy strong {
+    font-weight: 850;
+  }
+
+  .desktop-nav {
+    gap: 0.2rem;
+  }
+
+  .desktop-nav a,
+  .search-link,
+  .language-link {
+    min-height: 2.55rem;
+    padding: 0.64rem 0.78rem;
+    border-radius: 0.65rem;
+    color: var(--ink);
+    font-size: 0.91rem;
+    font-weight: 680;
+    text-decoration: none;
+  }
+
+  .desktop-nav a:hover,
+  .desktop-nav a[aria-current="page"],
+  .search-link:hover,
+  .language-link:hover {
+    background: white;
+    color: var(--accent);
+  }
+
+  .header-actions {
+    gap: 0.35rem;
+  }
+
+  .search-link {
+    gap: 0.45rem;
+  }
+
+  .search-link svg {
+    width: 1rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+  }
+
+  .language-link {
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .mobile-nav {
+    position: relative;
+    display: none;
+  }
+
+  .mobile-nav summary {
+    display: grid;
+    place-content: center;
+    gap: 0.24rem;
+    width: 2.55rem;
+    height: 2.55rem;
+    border: 1px solid var(--line);
+    border-radius: 0.65rem;
+    background: white;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .mobile-nav summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-nav summary span {
+    width: 1.15rem;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--ink);
+  }
+
+  .mobile-nav nav {
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    right: 0;
+    display: grid;
+    min-width: min(17rem, calc(100vw - 2rem));
+    padding: 0.55rem;
+    border: 1px solid var(--line);
+    border-radius: 0.9rem;
+    background: white;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .mobile-nav nav a {
+    padding: 0.8rem;
+    border-radius: 0.55rem;
+    color: var(--ink);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .mobile-nav nav a:hover {
+    background: var(--surface-soft);
+  }
+
+  @media (max-width: 940px) {
+    .desktop-nav,
+    .header-actions > .search-link,
+    .header-actions > .language-link {
+      display: none;
+    }
+
+    .mobile-nav {
+      display: block;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .header-inner {
+      width: calc(100% - 2rem);
+    }
+
+    .brand-copy {
+      display: grid;
+      gap: 0;
+      font-size: 0.93rem;
+      line-height: 1.05;
+    }
+  }
+</style>

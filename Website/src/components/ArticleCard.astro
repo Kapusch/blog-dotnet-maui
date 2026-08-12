@@ -1,0 +1,157 @@
+---
+import { articleKindLabel, formatDate, readingMinutes, type Article } from "../lib/content";
+
+interface Props {
+  article: Article;
+  featured?: boolean;
+}
+
+const { article, featured = false } = Astro.props;
+const { data } = article;
+---
+
+<article class:list={["article-card", { "article-card--featured": featured }]}>
+  {data.featuredImage && (
+    <a class="card-image" href={data.url} tabindex="-1" aria-hidden="true">
+      <img src={data.featuredImage} alt="" width="1050" height="322" loading="lazy" decoding="async" />
+    </a>
+  )}
+  <div class="card-content">
+    <div class="card-meta">
+      <span>{articleKindLabel(article)}</span>
+      {data.seriesOrder && <span>{data.locale === "fr" ? `Chapitre ${data.seriesOrder}` : `Chapter ${data.seriesOrder}`}</span>}
+    </div>
+    <h3><a href={data.url}>{data.title}</a></h3>
+    <p>{data.description}</p>
+    <footer>
+      <span>{formatDate(data.publishedAt, data.locale)}</span>
+      <span>{readingMinutes(article)} min</span>
+    </footer>
+  </div>
+</article>
+
+<style>
+  .article-card {
+    display: grid;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: var(--shadow-sm);
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  }
+
+  .article-card:hover {
+    transform: translateY(-3px);
+    border-color: #cbc4e5;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .card-image {
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+    background: #151827;
+  }
+
+  .card-image img {
+    width: 100%;
+    aspect-ratio: 3.15 / 1;
+    object-fit: cover;
+    transition: transform 240ms ease;
+  }
+
+  .article-card:hover .card-image img {
+    transform: scale(1.015);
+  }
+
+  .card-content {
+    display: grid;
+    align-content: start;
+    padding: 1.35rem;
+  }
+
+  .card-meta,
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.9rem;
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .card-meta span:first-child {
+    color: var(--accent);
+    font-weight: 850;
+  }
+
+  h3 {
+    margin: 0.85rem 0 0;
+    font-size: clamp(1.28rem, 3vw, 1.65rem);
+    line-height: 1.18;
+    letter-spacing: -0.035em;
+  }
+
+  h3 a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  p {
+    display: -webkit-box;
+    margin: 0.8rem 0 1.3rem;
+    overflow: hidden;
+    color: var(--muted);
+    line-height: 1.62;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  footer {
+    align-self: end;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+    text-transform: none;
+  }
+
+  .article-card--featured {
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(18rem, 1.1fr) minmax(18rem, 0.9fr);
+  }
+
+  .article-card--featured .card-image {
+    border-right: 1px solid var(--line);
+    border-bottom: 0;
+  }
+
+  .article-card--featured .card-image img {
+    height: 100%;
+    min-height: 19rem;
+    aspect-ratio: auto;
+  }
+
+  .article-card--featured .card-content {
+    padding: clamp(1.5rem, 4vw, 2.4rem);
+  }
+
+  @media (max-width: 760px) {
+    .article-card--featured {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .article-card--featured .card-image {
+      border-right: 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .article-card--featured .card-image img {
+      min-height: 0;
+      aspect-ratio: 3.15 / 1;
+    }
+  }
+</style>

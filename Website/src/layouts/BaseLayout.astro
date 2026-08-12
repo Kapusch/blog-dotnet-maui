@@ -1,0 +1,71 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { site, type Locale } from "../config";
+import "../styles/global.css";
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  path: string;
+  alternatePath?: string;
+  image?: string;
+  article?: boolean;
+  noindex?: boolean;
+}
+
+const {
+  locale,
+  title,
+  description,
+  path,
+  alternatePath,
+  image = "/social-card.svg",
+  article = false,
+  noindex = false,
+} = Astro.props;
+const pageTitle = title === site.name ? title : `${title} — ${site.name}`;
+const canonical = new URL(path, site.url).toString();
+const alternate = alternatePath ? new URL(alternatePath, site.url).toString() : undefined;
+const socialImage = new URL(image, site.url).toString();
+const alternateLocale = locale === "fr" ? "en" : "fr";
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang={locale} href={canonical} />
+    {alternate && <link rel="alternate" hreflang={alternateLocale} href={alternate} />}
+    <link rel="alternate" hreflang="x-default" href={locale === "fr" ? canonical : alternate ?? site.url} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title={site.name} href={locale === "fr" ? "/index.xml" : "/en/index.xml"} />
+    <meta name="theme-color" content="#f6f5f1" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:type" content={article ? "article" : "website"} />
+    <meta property="og:locale" content={locale === "fr" ? "fr_FR" : "en_GB"} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <title>{pageTitle}</title>
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">{locale === "fr" ? "Aller au contenu" : "Skip to content"}</a>
+    <Header locale={locale} alternatePath={alternatePath} />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer locale={locale} />
+  </body>
+</html>

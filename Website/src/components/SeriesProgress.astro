@@ -1,0 +1,198 @@
+---
+import { labels } from "../config";
+import type { Article } from "../lib/content";
+
+interface Props {
+  article: Article;
+  articles: Article[];
+  compact?: boolean;
+}
+
+const { article, articles, compact = false } = Astro.props;
+const t = labels[article.data.locale];
+const currentIndex = articles.findIndex(({ id }) => id === article.id);
+const current = currentIndex + 1;
+const progress = Math.max(0, Math.round((current / articles.length) * 100));
+const previous = articles[currentIndex - 1];
+const next = articles[currentIndex + 1];
+---
+
+{compact ? (
+  <nav class="series-navigation" aria-label={t.series}>
+    {previous ? (
+      <a href={previous.data.url} rel="prev"><span>← {t.previous}</span><strong>{previous.data.title}</strong></a>
+    ) : <span></span>}
+    {next && (
+      <a class="next" href={next.data.url} rel="next"><span>{t.next} →</span><strong>{next.data.title}</strong></a>
+    )}
+  </nav>
+) : (
+  <aside class="series-progress" style={`--series-progress: ${progress}%`}>
+    <div class="series-copy">
+      <span class="series-label">{t.series}</span>
+      <strong>{article.data.seriesTitle}</strong>
+    </div>
+    <div class="series-count">
+      <strong>{current}<span> / {articles.length}</span></strong>
+      <span>{articles.length > 1 ? t.chapters : t.chapter}</span>
+    </div>
+    <div class="progress-track" aria-label={`${progress}%`}><span></span></div>
+    <details>
+      <summary>{article.data.locale === "fr" ? "Voir le parcours" : "View course outline"}</summary>
+      <ol>
+        {articles.map((item) => (
+          <li class:list={{ current: item.id === article.id }}>
+            <a href={item.data.url} aria-current={item.id === article.id ? "step" : undefined}>
+              <span>{item.data.seriesOrder?.toString().padStart(2, "0")}</span>{item.data.title}
+            </a>
+          </li>
+        ))}
+      </ol>
+    </details>
+  </aside>
+)}
+
+<style>
+  .series-progress {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.9rem 1.5rem;
+    margin-top: 1.8rem;
+    padding: 1.1rem 1.2rem;
+    border: 1px solid #d8d0f3;
+    border-radius: 0.9rem;
+    background: linear-gradient(135deg, #f2effd, #fff 70%);
+  }
+
+  .series-copy,
+  .series-count {
+    display: grid;
+  }
+
+  .series-label,
+  .series-count > span {
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.69rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .series-copy strong {
+    margin-top: 0.18rem;
+    font-size: 1.08rem;
+  }
+
+  .series-count {
+    text-align: right;
+  }
+
+  .series-count strong {
+    color: var(--accent);
+    font-size: 1.1rem;
+  }
+
+  .series-count strong span {
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+
+  .progress-track {
+    grid-column: 1 / -1;
+    height: 0.32rem;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #ddd7f0;
+  }
+
+  .progress-track span {
+    display: block;
+    width: var(--series-progress);
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--accent), #8b6cff);
+  }
+
+  details {
+    grid-column: 1 / -1;
+  }
+
+  summary {
+    width: fit-content;
+    color: var(--accent-strong);
+    font-size: 0.82rem;
+    font-weight: 760;
+    cursor: pointer;
+  }
+
+  ol {
+    display: grid;
+    gap: 0.15rem;
+    margin: 0.8rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li a {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.55rem;
+    padding: 0.42rem 0.55rem;
+    border-radius: 0.45rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    text-decoration: none;
+  }
+
+  li.current a {
+    background: white;
+    color: var(--ink);
+    font-weight: 760;
+  }
+
+  li a span {
+    color: var(--accent);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  .series-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 4rem;
+  }
+
+  .series-navigation a {
+    display: grid;
+    gap: 0.35rem;
+    min-width: 0;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 0.8rem;
+    background: white;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .series-navigation a.next {
+    text-align: right;
+  }
+
+  .series-navigation a span {
+    color: var(--accent);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.69rem;
+    text-transform: uppercase;
+  }
+
+  .series-navigation a strong {
+    overflow-wrap: break-word;
+  }
+
+  @media (max-width: 600px) {
+    .series-navigation {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

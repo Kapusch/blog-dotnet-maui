@@ -1,0 +1,6 @@
+---
+import CollectionPage from "../../../components/CollectionPage.astro";
+import { getPublishedArticles } from "../../../lib/content";
+const articles = (await getPublishedArticles("fr")).filter(({data}) => data.type === "tutorial");
+---
+<CollectionPage locale="fr" title="Cours .NET MAUI" description="Des parcours progressifs pour construire des applications multiplateformes, étape par étape." path="/posts/tutos/" alternatePath="/en/posts/tutos/" {articles} />

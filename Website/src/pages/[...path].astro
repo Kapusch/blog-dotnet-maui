@@ -1,0 +1,24 @@
+---
+import { render } from "astro:content";
+import Callout from "../components/Callout.astro";
+import DeepDive from "../components/DeepDive.astro";
+import DownloadLink from "../components/DownloadLink.astro";
+import Figure from "../components/Figure.astro";
+import ArticleLayout from "../layouts/ArticleLayout.astro";
+import { getPublishedArticles, type Article } from "../lib/content";
+
+export async function getStaticPaths() {
+  const articles = await getPublishedArticles();
+  return articles.map((article) => ({
+    params: { path: article.data.url.replace(/^\//, "").replace(/\/$/, "") },
+    props: { article },
+  }));
+}
+
+interface Props { article: Article }
+const { article } = Astro.props;
+const { Content, headings } = await render(article);
+---
+<ArticleLayout {article} {headings}>
+  <Content components={{ Callout, DeepDive, DownloadLink, Figure }} />
+</ArticleLayout>

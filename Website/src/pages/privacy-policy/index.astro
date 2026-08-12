@@ -1,0 +1,8 @@
+---
+import { getCollection, render } from "astro:content";
+import LegalLayout from "../../layouts/LegalLayout.astro";
+const entry = (await getCollection("legal")).find(({data}) => data.path === "/privacy-policy/");
+if (!entry) throw new Error("Missing preserved privacy policy");
+const { Content } = await render(entry);
+---
+<LegalLayout {...entry.data}><Content /></LegalLayout>

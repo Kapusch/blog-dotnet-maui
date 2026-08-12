@@ -1,0 +1,7 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout locale="fr" title="Page introuvable" description="Cette page n’existe pas ou a été déplacée." path="/404/" noindex>
+  <section class="page-hero narrow"><p class="eyebrow">Erreur 404</p><h1>Cette page s’est égarée.</h1><p class="lead">Le contenu a peut-être été déplacé. La recherche ou la liste des articles devraient vous remettre sur la bonne piste.</p><p class="actions"><a class="button" href="/search/">Rechercher</a><a class="button button--secondary" href="/posts/">Voir les articles</a></p></section>
+</BaseLayout>
+<style>.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}.page-hero{padding-bottom:8rem}</style>

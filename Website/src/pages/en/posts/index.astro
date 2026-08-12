@@ -1,0 +1,6 @@
+---
+import CollectionPage from "../../../components/CollectionPage.astro";
+import { getPublishedArticles } from "../../../lib/content";
+const articles = await getPublishedArticles("en");
+---
+<CollectionPage locale="en" title="All articles" description="Browse every .NET MAUI course, tip and practical write-up." path="/en/posts/" alternatePath="/posts/" {articles} />

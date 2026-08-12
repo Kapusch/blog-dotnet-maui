@@ -1,0 +1,8 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout locale="fr" title="Séries" description="Les parcours guidés de MAUI, c’est clair !" path="/series/" alternatePath="/en/series/">
+  <header class="page-hero container"><p class="eyebrow">Parcours guidés</p><h1>Apprendre dans la durée</h1><p class="lead">Les séries conservent le contexte et font progresser une application réelle d’un chapitre au suivant.</p></header>
+  <section class="series-link container"><a href="/posts/tutos/my-first-app/"><span>15 chapitres</span><h2>Ma première app</h2><p>Construire et publier une application .NET MAUI complète.</p><strong>Découvrir le parcours →</strong></a></section>
+</BaseLayout>
+<style>.series-link{padding-bottom:7rem}.series-link a{display:block;padding:clamp(1.6rem,5vw,3rem);border:1px solid #d2c9f3;border-radius:var(--radius-lg);background:linear-gradient(135deg,var(--accent-soft),white 75%);color:var(--ink);text-decoration:none}.series-link span{color:var(--accent);font:750 .75rem ui-monospace,monospace;text-transform:uppercase}.series-link h2{margin:.8rem 0;font-size:clamp(2rem,5vw,3.5rem)}.series-link p{color:var(--muted);font-size:1.08rem}.series-link strong{display:block;margin-top:1.5rem;color:var(--accent)}</style>

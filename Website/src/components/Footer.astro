@@ -1,0 +1,86 @@
+---
+import { localePath, site, type Locale } from "../config";
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <strong>{site.name}</strong>
+      <p>{locale === "fr" ? "Des tutoriels .NET MAUI conçus pour passer de l’idée à l’application." : ".NET MAUI tutorials designed to take you from idea to app."}</p>
+    </div>
+    <nav aria-label={locale === "fr" ? "Liens de pied de page" : "Footer links"}>
+      <a href={site.repository}>GitHub</a>
+      <a href={localePath(locale, "/about/")}>{locale === "fr" ? "À propos" : "About"}</a>
+      <a href="/privacy-policy/">{locale === "fr" ? "Confidentialité" : "Privacy"}</a>
+      <a href="/terms-of-use/">{locale === "fr" ? "Conditions" : "Terms"}</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© {new Date().getFullYear()} {site.author}</span>
+    <span>CC BY-NC 4.0</span>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    padding: 3rem max(1.25rem, calc((100vw - var(--content)) / 2));
+    border-top: 1px solid var(--line);
+    background: #eeece7;
+  }
+
+  .footer-inner,
+  .footer-bottom,
+  nav {
+    display: flex;
+  }
+
+  .footer-inner {
+    align-items: start;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  strong {
+    font-size: 1.05rem;
+  }
+
+  p {
+    max-width: 31rem;
+    margin: 0.55rem 0 0;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+  }
+
+  a {
+    color: var(--ink);
+    font-size: 0.9rem;
+    font-weight: 650;
+    text-decoration: none;
+  }
+
+  .footer-bottom {
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(23, 32, 42, 0.12);
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.72rem;
+  }
+
+  @media (max-width: 700px) {
+    .footer-inner,
+    .footer-bottom {
+      display: grid;
+    }
+  }
+</style>

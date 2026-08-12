@@ -1,0 +1,76 @@
+---
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  headings: Heading[];
+  title: string;
+}
+
+const { headings, title } = Astro.props;
+const visibleHeadings = headings.filter(({ depth }) => depth === 2 || depth === 3);
+---
+
+{visibleHeadings.length > 0 && (
+  <nav class="toc" aria-label={title}>
+    <strong>{title}</strong>
+    <ol>
+      {visibleHeadings.map((heading) => (
+        <li class:list={{ nested: heading.depth === 3 }}>
+          <a href={`#${heading.slug}`}>{heading.text}</a>
+        </li>
+      ))}
+    </ol>
+  </nav>
+)}
+
+<style>
+  .toc {
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 0.85rem;
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 0.7rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  ol {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    min-width: 0;
+  }
+
+  li.nested {
+    padding-left: 0.8rem;
+    border-left: 2px solid var(--accent-soft);
+  }
+
+  a {
+    display: block;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.4;
+    text-decoration: none;
+    overflow-wrap: break-word;
+  }
+
+  a:hover {
+    color: var(--accent);
+  }
+</style>

@@ -1,0 +1,6 @@
+---
+import SeriesPage from "../../../../../components/SeriesPage.astro";
+import { getPublishedArticles } from "../../../../../lib/content";
+const articles = (await getPublishedArticles("en")).filter(({data}) => data.series === "my-first-app");
+---
+<SeriesPage locale="en" {articles} />

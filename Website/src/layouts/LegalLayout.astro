@@ -1,0 +1,14 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import { site } from "../config";
+interface Props { title: string; description: string; path: string; sourcePath: string }
+const { title, description, path, sourcePath } = Astro.props;
+const sourceUrl = `${site.repository}/blob/main/${sourcePath.split("/").map(encodeURIComponent).join("/")}`;
+---
+<BaseLayout locale="en" {title} {description} {path}>
+  <header class="page-hero narrow"><p class="eyebrow">Legal</p><h1>{title}</h1><p class="source-note">This document is preserved from the currently published site. <a href={sourceUrl}>View its source</a>.</p></header>
+  <article class="legal narrow"><slot /></article>
+</BaseLayout>
+<style>
+  .source-note{margin:1.2rem 0 0;color:var(--muted);line-height:1.6}.legal{padding-bottom:7rem;color:var(--muted);font-size:1rem;line-height:1.72}.legal :global(h1){display:none}.legal :global(h2){margin:3.2rem 0 1rem;color:var(--ink);font-size:clamp(1.7rem,4vw,2.35rem);line-height:1.15;letter-spacing:-.035em}.legal :global(h3){margin:2.3rem 0 .8rem;color:var(--ink);font-size:1.35rem}.legal :global(li+li){margin-top:.65rem}.legal :global(a){overflow-wrap:anywhere}
+</style>

@@ -1,0 +1,8 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout locale="fr" title="Catégories" description="Les cours et astuces .NET MAUI." path="/categories/" alternatePath="/en/categories/">
+  <header class="page-hero container"><p class="eyebrow">Deux formats</p><h1>Apprendre ou résoudre</h1><p class="lead">Choisissez un parcours progressif ou une solution ciblée.</p></header>
+  <section class="category-grid container"><a href="/categories/tutos/"><span>01</span><h2>Cours</h2><p>Des parcours complets, reliés chapitre après chapitre.</p></a><a href="/categories/tips/"><span>02</span><h2>Astuces</h2><p>Des réponses directes à un besoin technique précis.</p></a></section>
+</BaseLayout>
+<style>.category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;padding-bottom:7rem}.category-grid a{padding:2rem;border:1px solid var(--line);border-radius:var(--radius);background:white;color:var(--ink);text-decoration:none}.category-grid span{color:var(--accent);font:750 .75rem ui-monospace,monospace}.category-grid h2{margin:1rem 0 .6rem;font-size:2rem}.category-grid p{margin:0;color:var(--muted);line-height:1.6}@media(max-width:650px){.category-grid{grid-template-columns:1fr}}</style>

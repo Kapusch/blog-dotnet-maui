@@ -1,0 +1,172 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import SeriesProgress from "../components/SeriesProgress.astro";
+import TableOfContents from "../components/TableOfContents.astro";
+import { labels, localePath, site } from "../config";
+import {
+  articleKindLabel,
+  formatDate,
+  getArticleTranslation,
+  getSeriesArticles,
+  readingMinutes,
+  type Article,
+} from "../lib/content";
+
+interface Heading { depth: number; slug: string; text: string }
+interface Props { article: Article; headings: Heading[] }
+
+const { article, headings } = Astro.props;
+const { data } = article;
+const t = labels[data.locale];
+const translation = await getArticleTranslation(article);
+const seriesArticles = await getSeriesArticles(article);
+const sourceUrl = `${site.repository}/blob/main/${data.sourcePath.split("/").map(encodeURIComponent).join("/")}`;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": data.type === "tutorial" ? "TechArticle" : "Article",
+  headline: data.title,
+  description: data.description,
+  inLanguage: data.locale,
+  datePublished: data.publishedAt.toISOString(),
+  dateModified: (data.updatedAt ?? data.publishedAt).toISOString(),
+  mainEntityOfPage: new URL(data.url, site.url).toString(),
+  author: { "@type": "Person", name: site.author, url: site.authorUrl },
+  image: data.featuredImage ? new URL(data.featuredImage, site.url).toString() : undefined,
+};
+---
+
+<BaseLayout
+  locale={data.locale}
+  title={data.title}
+  description={data.description}
+  path={data.url}
+  alternatePath={translation?.data.url}
+  image={data.featuredImage}
+  article
+>
+  <Fragment slot="head"><script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script></Fragment>
+
+  <header class="article-header">
+    <div class="container article-header-inner">
+      <nav class="breadcrumbs" aria-label={data.locale === "fr" ? "Fil d’Ariane" : "Breadcrumb"}>
+        <a href={localePath(data.locale, "/posts/")}>{t.nav.articles}</a>
+        <span>/</span>
+        <a href={localePath(data.locale, data.type === "tip" ? "/posts/tips/" : "/posts/tutos/")}>{articleKindLabel(article)}</a>
+        {data.seriesTitle && <><span>/</span><a href={localePath(data.locale, `/posts/tutos/${data.series}/`)}>{data.seriesTitle}</a></>}
+      </nav>
+
+      <p class="eyebrow">{articleKindLabel(article)}{data.seriesOrder ? ` · ${data.locale === "fr" ? "Chapitre" : "Chapter"} ${data.seriesOrder}` : ""}</p>
+      <h1 data-pagefind-meta="title">{data.title}</h1>
+      <p class="article-description" data-pagefind-meta="description">{data.description}</p>
+      <div class="article-meta">
+        <span>{t.published} <time datetime={data.publishedAt.toISOString()}>{formatDate(data.publishedAt, data.locale)}</time></span>
+        <span>{readingMinutes(article)} {t.readingTime}</span>
+        <a href={sourceUrl}>{t.source}</a>
+      </div>
+      {seriesArticles.length > 0 && <SeriesProgress article={article} articles={seriesArticles} />}
+    </div>
+  </header>
+
+  <div class="container article-shell">
+    <article class="article-main" data-pagefind-body data-pagefind-filter={`type:${data.type}`}>
+      <details class="mobile-toc">
+        <summary>{t.contents}</summary>
+        <TableOfContents headings={headings} title={t.contents} />
+      </details>
+      <div class="article-body"><slot /></div>
+      <div class="article-tags" data-pagefind-ignore>
+        {data.tags.map((tag) => <span class="tag">{tag}</span>)}
+      </div>
+      {seriesArticles.length > 0 && <SeriesProgress article={article} articles={seriesArticles} compact />}
+    </article>
+    <aside class="article-aside" data-pagefind-ignore>
+      <TableOfContents headings={headings} title={t.contents} />
+    </aside>
+  </div>
+</BaseLayout>
+
+<style>
+  .article-header {
+    padding-block: 2.2rem 2.4rem;
+    border-bottom: 1px solid var(--line);
+    background:
+      linear-gradient(120deg, rgba(81, 43, 212, 0.08), transparent 42%),
+      rgba(255, 255, 255, 0.48);
+  }
+
+  .article-header-inner {
+    max-width: 63rem;
+  }
+
+  .breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.55rem;
+    margin-bottom: 2.4rem;
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+  .breadcrumbs a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  h1 {
+    max-width: 21ch;
+    margin: 0;
+    font-size: clamp(2.45rem, 6vw, 4.9rem);
+    line-height: 0.98;
+    letter-spacing: -0.058em;
+  }
+
+  .article-description {
+    max-width: 46rem;
+    margin: 1.3rem 0 0;
+    color: var(--muted);
+    font-size: clamp(1.07rem, 2vw, 1.25rem);
+    line-height: 1.62;
+  }
+
+  .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.15rem;
+    margin-top: 1.35rem;
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.72rem;
+  }
+
+  .article-meta a {
+    color: var(--accent);
+  }
+
+  .mobile-toc {
+    overflow: hidden;
+    border-radius: 0.85rem;
+  }
+
+  .mobile-toc > summary {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 0.85rem;
+    background: white;
+    font-weight: 760;
+    cursor: pointer;
+  }
+
+  .mobile-toc :global(.toc) {
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .article-header {
+      padding-top: 1.5rem;
+    }
+
+    .breadcrumbs {
+      margin-bottom: 1.7rem;
+    }
+  }
+</style>

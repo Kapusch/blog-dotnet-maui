@@ -1,0 +1,167 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ArticleCard from "./ArticleCard.astro";
+import { labels, localePath, type Locale } from "../config";
+import type { Article } from "../lib/content";
+
+interface Props {
+  locale: Locale;
+  articles: Article[];
+}
+
+const { locale, articles } = Astro.props;
+const t = labels[locale];
+const recent = articles.slice(0, 5);
+const course = articles
+  .filter(({ data }) => data.series === "my-first-app")
+  .sort((left, right) => (left.data.seriesOrder ?? 0) - (right.data.seriesOrder ?? 0));
+const copy = locale === "fr" ? {
+  description: "Des tutoriels .NET MAUI progressifs, illustrés et pensés pour construire de vraies applications multiplateformes.",
+  eyebrow: "Développement multiplateforme · en profondeur",
+  titleStart: "Comprendre .NET MAUI,",
+  titleAccent: "vraiment.",
+  intro: "Des explications claires, du code exécutable et des parcours guidés pour transformer une idée en application — sans masquer les détails qui comptent.",
+  start: "Commencer le parcours",
+  browse: "Explorer les articles",
+  courseLabel: "Parcours guidé",
+  courseTitle: "Construire sa première application",
+  courseText: "Un cours complet, du premier écran jusqu’à la publication, découpé en étapes lisibles et reliées entre elles.",
+  latest: "Dernières publications",
+  latestText: "Tutoriels détaillés, solutions ciblées et retours d’expérience autour de .NET MAUI.",
+  all: "Voir tous les articles",
+  method: "Une lecture pensée pour apprendre",
+  methodTitle: "L’essentiel d’abord. Les détails quand ils deviennent utiles.",
+  pillars: [
+    ["Parcours continus", "Chaque série garde le contexte, la progression et l’étape suivante visibles."],
+    ["Code lisible", "Fichiers, lignes importantes et commandes restent identifiables d’un coup d’œil."],
+    ["Approfondissements calmes", "Les explications annexes se déplient sans interrompre le fil principal."],
+  ],
+} : {
+  description: "Progressive, illustrated .NET MAUI tutorials designed to help you build real cross-platform applications.",
+  eyebrow: "Cross-platform development · in depth",
+  titleStart: "Understand .NET MAUI,",
+  titleAccent: "for real.",
+  intro: "Clear explanations, runnable code and guided learning paths that turn an idea into an app — without hiding the details that matter.",
+  start: "Start the course",
+  browse: "Browse articles",
+  courseLabel: "Guided course",
+  courseTitle: "Build your first application",
+  courseText: "A complete course, from the first screen to publishing, split into readable and connected steps.",
+  latest: "Latest posts",
+  latestText: "Detailed tutorials, focused solutions and practical experience with .NET MAUI.",
+  all: "View all articles",
+  method: "Designed for learning",
+  methodTitle: "The essentials first. The details when they become useful.",
+  pillars: [
+    ["Continuous paths", "Every series keeps the context, your progress and the next step visible."],
+    ["Readable code", "Files, important lines and commands stay identifiable at a glance."],
+    ["Quiet deep dives", "Supporting explanations expand without interrupting the main flow."],
+  ],
+};
+---
+
+<BaseLayout locale={locale} title="MAUI, c’est clair !" description={copy.description} path={localePath(locale)} alternatePath={localePath(locale === "fr" ? "en" : "fr")}>
+  <section class="home-hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">{copy.eyebrow}</p>
+        <h1>{copy.titleStart}<br /><em>{copy.titleAccent}</em></h1>
+        <p class="hero-intro">{copy.intro}</p>
+        <div class="hero-actions">
+          <a class="button" href={localePath(locale, "/posts/tutos/my-first-app/")}>{copy.start}</a>
+          <a class="button button--secondary" href={localePath(locale, "/posts/")}>{copy.browse}</a>
+        </div>
+      </div>
+
+      <div class="code-window" aria-label={locale === "fr" ? "Exemple de code .NET MAUI" : ".NET MAUI code example"}>
+        <div class="window-bar"><span></span><span></span><span></span><strong>MainPage.xaml.cs</strong></div>
+        <pre><code><span class="muted">// {locale === "fr" ? "Une interface, toutes les plateformes" : "One UI, every platform"}</span>
+<span class="keyword">public partial class</span> <span class="type">MainPage</span> : ContentPage
+&#123;
+    <span class="keyword">public</span> MainPage()
+    &#123;
+        InitializeComponent();
+        Learn.<span class="method">StepByStep</span>();
+    &#125;
+&#125;</code></pre>
+        <div class="platforms"><span>Android</span><span>iOS</span><span>macOS</span><span>Windows</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="course-strip">
+    <div class="container course-grid">
+      <div>
+        <p class="eyebrow">{copy.courseLabel}</p>
+        <h2>{copy.courseTitle}</h2>
+        <p>{copy.courseText}</p>
+      </div>
+      <div class="course-progress">
+        <strong>{course.length}</strong>
+        <span>{course.length > 1 ? t.chapters : t.chapter}</span>
+        <i></i>
+        <a href={localePath(locale, "/posts/tutos/my-first-app/")}>{copy.start} <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section-heading">
+      <div><p class="eyebrow">{copy.latest}</p><h2>{copy.latest}</h2></div>
+      <p>{copy.latestText}</p>
+    </div>
+    <div class="card-grid">
+      {recent.map((article, index) => <ArticleCard article={article} featured={index === 0} />)}
+    </div>
+    <p class="section-action"><a class="button button--secondary" href={localePath(locale, "/posts/")}>{copy.all}</a></p>
+  </section>
+
+  <section class="method-section">
+    <div class="container">
+      <p class="eyebrow">{copy.method}</p>
+      <h2>{copy.methodTitle}</h2>
+      <div class="pillar-grid">
+        {copy.pillars.map(([title, text], index) => <article><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .home-hero { padding-block: clamp(4rem, 10vw, 8rem); overflow: hidden; }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(22rem, .95fr); gap: clamp(3rem, 7vw, 7rem); align-items: center; }
+  h1 { max-width: 12ch; margin: 0; font-size: clamp(3.4rem, 8vw, 7rem); line-height: .89; letter-spacing: -.07em; }
+  h1 em { color: var(--accent); font-style: normal; }
+  .hero-intro { max-width: 40rem; margin: 1.8rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.34rem); line-height: 1.65; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+  .code-window { min-width: 0; overflow: hidden; transform: rotate(1.25deg); border: 1px solid #303449; border-radius: 1.15rem; background: #151827; color: #eef0f8; box-shadow: 0 35px 90px rgba(25, 18, 62, .24); }
+  .window-bar { display: flex; align-items: center; gap: .42rem; min-height: 3rem; padding: .7rem 1rem; border-bottom: 1px solid #303449; background: #1c2031; }
+  .window-bar > span { width: .68rem; height: .68rem; border-radius: 50%; background: #ff6b5f; }
+  .window-bar > span:nth-child(2) { background: #f2c14e; }
+  .window-bar > span:nth-child(3) { background: #55c784; }
+  .window-bar strong { margin-left: .5rem; color: #aeb4c8; font: 600 .7rem ui-monospace, monospace; }
+  pre { min-width: 34rem; margin: 0; padding: clamp(1.4rem, 4vw, 2.2rem); overflow: hidden; font: 500 clamp(.75rem, 1.5vw, .94rem)/1.8 ui-monospace, SFMono-Regular, Menlo, monospace; }
+  code { font: inherit; }
+  .muted { color: #7f879f; } .keyword { color: #c792ea; } .type { color: #82d9cb; } .method { color: #77bdfb; }
+  .platforms { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0 1.25rem 1.25rem; }
+  .platforms span { padding: .3rem .55rem; border: 1px solid #343a50; border-radius: 999px; color: #aeb4c8; font: 600 .66rem ui-monospace, monospace; }
+  .course-strip { border-block: 1px solid var(--line); background: rgba(255,255,255,.54); }
+  .course-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3rem; align-items: center; padding-block: 2.4rem; }
+  .course-grid h2 { margin: 0; font-size: clamp(1.75rem, 4vw, 2.7rem); letter-spacing: -.04em; }
+  .course-grid p:last-child { max-width: 44rem; margin: .8rem 0 0; color: var(--muted); line-height: 1.6; }
+  .course-progress { display: grid; grid-template-columns: auto 1fr; min-width: 16rem; }
+  .course-progress > strong { color: var(--accent); font-size: 2.8rem; line-height: .9; }
+  .course-progress > span { align-self: end; margin-left: .45rem; color: var(--muted); font-size: .82rem; }
+  .course-progress i { grid-column: 1/-1; height: .3rem; margin: .85rem 0; border-radius: 1rem; background: linear-gradient(90deg, var(--accent) 42%, var(--accent-soft) 42%); }
+  .course-progress a { grid-column: 1/-1; justify-self: end; font-weight: 760; text-decoration: none; }
+  .section-action { margin: 2rem 0 0; text-align: center; }
+  .method-section { padding-block: clamp(4rem, 9vw, 7rem); background: #171a27; color: white; }
+  .method-section h2 { max-width: 18ch; margin: 0; font-size: clamp(2.4rem, 6vw, 4.7rem); line-height: 1; letter-spacing: -.055em; }
+  .pillar-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1px; margin-top: 3.5rem; background: #363a4a; }
+  .pillar-grid article { padding: clamp(1.4rem,4vw,2.4rem); background: #171a27; }
+  .pillar-grid span { color: #9a83ee; font: 700 .76rem ui-monospace,monospace; }
+  .pillar-grid h3 { margin: 1.2rem 0 .7rem; font-size: 1.35rem; }
+  .pillar-grid p { margin: 0; color: #b8becd; line-height: 1.65; }
+  @media (max-width: 850px) { .hero-grid { grid-template-columns: 1fr; } .code-window { transform: none; } .course-grid { grid-template-columns: 1fr; } .course-progress { justify-self: stretch; } }
+  @media (max-width: 700px) { .pillar-grid { grid-template-columns: 1fr; } pre { min-width: 29rem; transform: scale(.86); transform-origin: left top; margin-bottom: -2.8rem; } }
+</style>

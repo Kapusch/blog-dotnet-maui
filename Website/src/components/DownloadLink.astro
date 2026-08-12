@@ -1,0 +1,44 @@
+---
+interface Props { href: string; label: string }
+const { href, label } = Astro.props;
+const isEnglish = Astro.url.pathname.startsWith("/en/");
+---
+
+<a class="download" href={href} download>
+  <span aria-hidden="true">↓</span>
+  <span><strong>{label}</strong><small>{isEnglish ? "Download file" : "Télécharger le fichier"}</small></span>
+</a>
+
+<style>
+  .download {
+    display: inline-grid;
+    grid-template-columns: 2.4rem minmax(0, 1fr);
+    gap: 0.8rem;
+    align-items: center;
+    max-width: 100%;
+    margin-block: 1rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid #d8d0f3;
+    border-radius: 0.8rem;
+    background: white;
+    color: var(--ink);
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .download > span:first-child {
+    display: grid;
+    place-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 0.6rem;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 1.25rem;
+    font-weight: 850;
+  }
+
+  strong,
+  small { display: block; overflow-wrap: anywhere; }
+  small { margin-top: 0.15rem; color: var(--muted); font-size: 0.75rem; }
+</style>

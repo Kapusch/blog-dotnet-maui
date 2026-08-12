@@ -1,0 +1,6 @@
+---
+import TagIndex from "../../../components/TagIndex.astro";
+import { getPublishedArticles } from "../../../lib/content";
+const articles = await getPublishedArticles("en");
+---
+<TagIndex locale="en" {articles} />

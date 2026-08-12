@@ -1,0 +1,6 @@
+---
+import HomePage from "../components/HomePage.astro";
+import { getPublishedArticles } from "../lib/content";
+const articles = await getPublishedArticles("fr");
+---
+<HomePage locale="fr" {articles} />

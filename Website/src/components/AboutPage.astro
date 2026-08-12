@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { localePath, site, type Locale } from "../config";
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const fr = locale === "fr";
+const title = fr ? "À propos" : "About";
+const description = fr ? "L’histoire et l’intention derrière MAUI, c’est clair !" : "The story and intent behind MAUI, c’est clair!";
+---
+<BaseLayout {locale} {title} {description} path={localePath(locale,"/about/")} alternatePath={localePath(fr ? "en" : "fr","/about/")}>
+  <header class="page-hero narrow"><p class="eyebrow">{fr ? "Derrière le blog" : "Behind the blog"}</p><h1>{title}</h1><p class="lead">{description}</p></header>
+  <article class="about narrow">
+    <p class="intro">{fr ? "Je suis Jean-Emmanuel Baillat, développeur passionné par l’écosystème .NET et la création d’applications mobiles." : "I’m Jean-Emmanuel Baillat, a developer passionate about the .NET ecosystem and building mobile applications."}</p>
+    <h2>{fr ? "Pourquoi ce blog ?" : "Why this blog?"}</h2>
+    <p>{fr ? "MAUI, c’est clair ! est né pour partager ce que j’apprends en construisant avec .NET MAUI : les concepts, les choix d’architecture, les difficultés concrètes et les solutions qui tiennent dans la durée." : "MAUI, c’est clair! was created to share what I learn while building with .NET MAUI: concepts, architecture decisions, real-world difficulties and solutions that hold up over time."}</p>
+    <p>{fr ? "Les articles privilégient une progression claire et du code que l’on peut comprendre, adapter et exécuter. Les sujets complexes ne sont pas évités : ils sont découpés jusqu’à devenir abordables." : "The articles favor clear progression and code you can understand, adapt and run. Complex topics are not avoided: they are broken down until they become approachable."}</p>
+    <h2>{fr ? "Un contenu ouvert" : "Open content"}</h2>
+    <p>{fr ? "Le contenu et les exemples sont disponibles sur GitHub. Vous pouvez signaler une erreur, proposer une amélioration ou suivre l’évolution du nouveau site directement dans le dépôt." : "The content and samples are available on GitHub. You can report an error, suggest an improvement or follow the new site’s evolution directly in the repository."}</p>
+    <a class="button" href={site.repository}>{fr ? "Voir le dépôt GitHub" : "View the GitHub repository"}</a>
+  </article>
+</BaseLayout>
+<style>
+  .about{padding-bottom:7rem;font-size:1.1rem;line-height:1.78}.intro{font-size:clamp(1.3rem,3vw,1.7rem);line-height:1.55;color:var(--ink)}h2{margin:3.2rem 0 1rem;font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-.035em}.about p{color:var(--muted)}.about .intro{color:var(--ink)}.button{margin-top:1rem}
+</style>

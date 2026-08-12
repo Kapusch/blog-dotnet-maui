@@ -1,0 +1,77 @@
+---
+interface Props {
+  kind?: "note" | "info" | "tip" | "comment" | "warning" | "danger";
+  title?: string;
+}
+
+const { kind = "note", title } = Astro.props;
+const icons = { note: "i", info: "i", tip: "✦", comment: "?", warning: "!", danger: "!" };
+---
+
+<aside class:list={["callout", `callout--${kind}`]}>
+  <span class="callout-icon" aria-hidden="true">{icons[kind]}</span>
+  <div>
+    {title && <strong>{title}</strong>}
+    <div class="callout-content"><slot /></div>
+  </div>
+</aside>
+
+<style>
+  .callout {
+    display: grid;
+    grid-template-columns: 1.85rem minmax(0, 1fr);
+    gap: 0.9rem;
+    margin-block: 1.7rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid #cfd8e2;
+    border-left: 4px solid var(--cyan);
+    border-radius: 0.8rem;
+    background: #eef8f8;
+  }
+
+  .callout--tip {
+    border-color: #d9cf9c;
+    border-left-color: #b38600;
+    background: #fff9df;
+  }
+
+  .callout--comment {
+    border-color: #d8d0f3;
+    border-left-color: var(--accent);
+    background: #f2effd;
+  }
+
+  .callout--warning,
+  .callout--danger {
+    border-color: #e8c7be;
+    border-left-color: var(--coral);
+    background: #fff2ee;
+  }
+
+  .callout-icon {
+    display: grid;
+    place-items: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    background: var(--cyan);
+    color: white;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.82rem;
+    font-style: normal;
+    font-weight: 850;
+  }
+
+  .callout--tip .callout-icon { background: #9a7600; }
+  .callout--comment .callout-icon { background: var(--accent); }
+  .callout--warning .callout-icon,
+  .callout--danger .callout-icon { background: var(--coral); }
+
+  strong {
+    display: block;
+    margin: 0.1rem 0 0.35rem;
+  }
+
+  .callout-content :global(> :first-child) { margin-top: 0; }
+  .callout-content :global(> :last-child) { margin-bottom: 0; }
+</style>

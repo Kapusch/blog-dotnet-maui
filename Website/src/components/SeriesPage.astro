@@ -1,0 +1,67 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { formatDate, readingMinutes, type Article } from "../lib/content";
+import { localePath, type Locale } from "../config";
+
+interface Props { locale: Locale; articles: Article[] }
+const { locale, articles } = Astro.props;
+const sorted = [...articles].sort((a, b) => (a.data.seriesOrder ?? 0) - (b.data.seriesOrder ?? 0));
+const copy = locale === "fr" ? {
+  eyebrow: "Cours · débutant à intermédiaire", title: "Construire ma première app .NET MAUI",
+  description: "Un parcours progressif en quinze chapitres pour concevoir, structurer et publier une vraie application multiplateforme.",
+  start: "Commencer au chapitre 1", outline: "Le parcours", read: "min", chapter: "Chapitre",
+} : {
+  eyebrow: "Course · beginner to intermediate", title: "Build my first .NET MAUI app",
+  description: "A progressive fifteen-chapter course to design, structure and publish a real cross-platform application.",
+  start: "Start with chapter 1", outline: "Course outline", read: "min", chapter: "Chapter",
+};
+---
+
+<BaseLayout locale={locale} title={copy.title} description={copy.description} path={localePath(locale, "/posts/tutos/my-first-app/")} alternatePath={localePath(locale === "fr" ? "en" : "fr", "/posts/tutos/my-first-app/")}>
+  <header class="series-hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">{copy.eyebrow}</p>
+        <h1>{copy.title}</h1>
+        <p class="lead">{copy.description}</p>
+        {sorted[0] && <a class="button" href={sorted[0].data.url}>{copy.start}</a>}
+      </div>
+      <div class="course-number" aria-hidden="true"><strong>{sorted.length}</strong><span>chapters</span></div>
+    </div>
+  </header>
+  <section class="container outline">
+    <p class="eyebrow">{copy.outline}</p>
+    <ol>
+      {sorted.map((article) => <li>
+        <a href={article.data.url}>
+          <span class="number">{article.data.seriesOrder?.toString().padStart(2, "0")}</span>
+          <span class="copy"><small>{copy.chapter} {article.data.seriesOrder} · {formatDate(article.data.publishedAt, locale)}</small><strong>{article.data.title}</strong><p>{article.data.description}</p></span>
+          <span class="duration">{readingMinutes(article)} {copy.read}<i>→</i></span>
+        </a>
+      </li>)}
+    </ol>
+  </section>
+</BaseLayout>
+
+<style>
+  .series-hero { padding-block: clamp(4rem,9vw,7.5rem); border-bottom: 1px solid var(--line); background: linear-gradient(135deg,rgba(81,43,212,.11),transparent 55%); }
+  .hero-grid { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:3rem; align-items:center; }
+  h1 { max-width: 14ch; margin:0; font-size:clamp(3rem,7vw,6rem); line-height:.94; letter-spacing:-.06em; }
+  .lead { max-width:44rem; margin:1.4rem 0 2rem; color:var(--muted); font-size:clamp(1.1rem,2vw,1.3rem); line-height:1.65; }
+  .course-number { display:grid; place-items:center; width:13rem; aspect-ratio:1; border:1px solid #d2c9f3; border-radius:50%; background:rgba(255,255,255,.65); }
+  .course-number strong { font-size:4.6rem; line-height:.8; color:var(--accent); }
+  .course-number span { margin-top:-2.6rem; color:var(--muted); font:700 .75rem ui-monospace,monospace; text-transform:uppercase; }
+  .outline { padding-block:clamp(4rem,8vw,7rem); }
+  ol { margin:1.8rem 0 0; padding:0; border-top:1px solid var(--line); list-style:none; }
+  li { border-bottom:1px solid var(--line); }
+  li a { display:grid; grid-template-columns:4rem minmax(0,1fr) auto; gap:1.3rem; align-items:center; padding:1.5rem .4rem; color:var(--ink); text-decoration:none; transition:padding 160ms ease,background 160ms ease; }
+  li a:hover { padding-inline:1rem; background:rgba(255,255,255,.6); }
+  .number { color:var(--accent); font:750 1rem ui-monospace,monospace; }
+  .copy { min-width:0; }
+  .copy small { color:var(--muted); font:650 .68rem ui-monospace,monospace; text-transform:uppercase; }
+  .copy strong { display:block; margin-top:.35rem; font-size:clamp(1.15rem,2.5vw,1.55rem); letter-spacing:-.025em; }
+  .copy p { max-width:48rem; margin:.45rem 0 0; color:var(--muted); line-height:1.55; }
+  .duration { display:grid; gap:.4rem; color:var(--muted); font:650 .72rem ui-monospace,monospace; text-align:right; }
+  .duration i { color:var(--accent); font-size:1.4rem; font-style:normal; }
+  @media(max-width:700px){ .hero-grid{grid-template-columns:1fr}.course-number{display:none} li a{grid-template-columns:2.2rem minmax(0,1fr)} .duration{display:none}.copy p{font-size:.92rem} }
+</style>

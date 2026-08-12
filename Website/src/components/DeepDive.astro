@@ -1,0 +1,47 @@
+---
+interface Props { title?: string }
+const fallbackTitle = Astro.url.pathname.startsWith("/en/") ? "Go further" : "Pour aller plus loin";
+const { title = fallbackTitle } = Astro.props;
+---
+
+<details class="deep-dive">
+  <summary><span aria-hidden="true">＋</span>{title}</summary>
+  <div class="deep-dive-content"><slot /></div>
+</details>
+
+<style>
+  .deep-dive {
+    margin-block: 1.7rem;
+    overflow: hidden;
+    border: 1px solid #d8d0f3;
+    border-radius: 0.85rem;
+    background: #f8f6ff;
+  }
+
+  summary {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.95rem 1.1rem;
+    color: var(--accent-strong);
+    font-weight: 780;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+
+  summary span {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 1.1rem;
+  }
+
+  details[open] summary span { transform: rotate(45deg); }
+
+  .deep-dive-content {
+    padding: 0 1.1rem 1.1rem 2.85rem;
+  }
+
+  .deep-dive-content :global(> :first-child) { margin-top: 0; }
+  .deep-dive-content :global(> :last-child) { margin-bottom: 0; }
+</style>

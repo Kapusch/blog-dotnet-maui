@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ArticleCard from "./ArticleCard.astro";
+import type { Locale } from "../config";
+import type { Article } from "../lib/content";
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  path: string;
+  alternatePath: string;
+  articles: Article[];
+}
+
+const { locale, title, description, path, alternatePath, articles } = Astro.props;
+---
+
+<BaseLayout {locale} {title} {description} {path} {alternatePath}>
+  <header class="page-hero container">
+    <p class="eyebrow">{locale === "fr" ? `${articles.length} publications` : `${articles.length} posts`}</p>
+    <h1>{title}</h1>
+    <p class="lead">{description}</p>
+  </header>
+  <section class="container listing" data-pagefind-ignore>
+    <div class="card-grid">
+      {articles.map((article, index) => <ArticleCard article={article} featured={index === 0} />)}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .listing {
+    padding-bottom: 7rem;
+  }
+</style>

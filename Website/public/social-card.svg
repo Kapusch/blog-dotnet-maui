@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f6f5f1"/>
+  <circle cx="105" cy="30" r="330" fill="#e9e3ff"/>
+  <rect x="760" y="115" width="360" height="400" rx="28" fill="#171a27" transform="rotate(2 940 315)"/>
+  <path d="M820 285h80m-80 48h195m-195 48h155" stroke="#7f879f" stroke-width="16" stroke-linecap="round"/>
+  <path d="M860 237l-38 34 38 34m98-68 38 34-38 34" fill="none" stroke="#c792ea" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="90" y="105" width="86" height="86" rx="23" fill="#512bd4"/>
+  <path d="M109 169v-45h12l12 24 12-24h12v45h-12v-23l-12 22-12-22v23z" fill="#fff"/>
+  <circle cx="160" cy="174" r="8" fill="#f2c14e"/>
+  <text x="90" y="298" fill="#17202a" font-family="system-ui,sans-serif" font-size="76" font-weight="800" letter-spacing="-4">MAUI, c’est clair !</text>
+  <text x="90" y="375" fill="#512bd4" font-family="ui-monospace,monospace" font-size="27" font-weight="700">TUTORIELS .NET MAUI · FR / EN</text>
+  <text x="90" y="440" fill="#65707c" font-family="system-ui,sans-serif" font-size="32">Comprendre. Construire. Approfondir.</text>
+</svg>

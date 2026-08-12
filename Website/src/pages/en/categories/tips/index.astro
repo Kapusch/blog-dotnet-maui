@@ -1,0 +1,6 @@
+---
+import CollectionPage from "../../../../components/CollectionPage.astro";
+import { getPublishedArticles } from "../../../../lib/content";
+const articles = (await getPublishedArticles("en")).filter(({data}) => data.type === "tip");
+---
+<CollectionPage locale="en" title=".NET MAUI tips" description="Focused solutions from MAUI, c’est clair!" path="/en/categories/tips/" alternatePath="/categories/tips/" {articles} />

@@ -1,0 +1,17 @@
+---
+import CollectionPage from "../../components/CollectionPage.astro";
+import { getPublishedArticles, taxonomySlug, type Article } from "../../lib/content";
+export async function getStaticPaths() {
+  const articles = await getPublishedArticles("fr");
+  const tags = new Map<string, { label: string; articles: Article[] }>();
+  for (const article of articles) for (const label of article.data.tags) {
+    const slug = taxonomySlug(label);
+    const value = tags.get(slug) ?? { label, articles: [] };
+    value.articles.push(article); tags.set(slug, value);
+  }
+  return [...tags].map(([tag, props]) => ({ params: { tag }, props }));
+}
+const { label, articles } = Astro.props;
+const encodedTag = encodeURIComponent(Astro.params.tag!);
+---
+<CollectionPage locale="fr" title={label} description={`Articles associés au tag « ${label} ».`} path={`/tags/${encodedTag}/`} alternatePath={`/en/tags/${encodedTag}/`} {articles} />

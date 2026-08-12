@@ -12,6 +12,14 @@ tarballs/
 test-results/
 Blog/public/
 
+# Astro redesign (generated locally and in CI)
+Website/node_modules/
+Website/dist/
+Website/.astro/
+Website/.generated/
+Website/public/posts/
+Website/public/en/posts/
+
 # Mac bundle stuff
 *.dmg
 *.app

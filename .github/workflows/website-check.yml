@@ -1,0 +1,35 @@
+name: Website preview checks
+
+on:
+  pull_request:
+    paths:
+      - "Website/**"
+      - "Blog/content/**"
+      - ".github/workflows/website-check.yml"
+  push:
+    branches:
+      - "refonte/**"
+    paths:
+      - "Website/**"
+      - "Blog/content/**"
+      - ".github/workflows/website-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: Website
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: Website/package-lock.json
+      - run: npm ci
+      - run: npm test
